@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectDeployHistory>
+    <sql>
+      dbo.AssemblyDeployHistory_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectDeployHistory>
+  
+</xmlquery>

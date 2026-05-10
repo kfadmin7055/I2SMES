@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Data.CodeUtil</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Data.CodeUtil.MESCode">
+            <summary>
+            생산관리 시스템에서 공통으로 사용할 Code Util Method를 정의합니다.
+            </summary>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.MESCode.GetCodes(System.String,System.String[],System.Object[])">
+            <summary>
+            Code Master
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Param Names</param>
+            <param name="valueList">Param Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.MESCode.GetCodeMaster(System.String,System.String,System.String)">
+            <summary>
+            Code Master
+            </summary>
+            <param name="pCodeValue">대구분 코드</param>
+            <param name="codeValue">소구분 코드</param>
+            <param name="includedisplay">Code View 여부</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="T:EBAP.Data.CodeUtil.AppCode">
+            <summary>
+            시스템에서 공통으로 사용할 Code Util Method를 정의합니다.
+            </summary>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetCodes(System.String,System.String[],System.Object[])">
+            <summary>
+            Code Master
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Param Names</param>
+            <param name="valueList">Param Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetCodeMaster(System.String,System.String,System.String)">
+            <summary>
+            Code Master
+            </summary>
+            <param name="pCodeValue">대구분 코드</param>
+            <param name="codeValue">소구분 코드</param>
+            <param name="includedisplay">Code View 여부</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetCodeMasterMES(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            upQComboList의 콤보 생성 마스터
+            </summary>
+            <param name="ListGubun"></param>
+            <param name="Plant"></param>
+            <param name="Line"></param>
+            <param name="Factory"></param>
+            <param name="Value"></param>
+            <param name="vendorcode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetServerID">
+            <summary>
+            Server ID 를 가져옵니다.
+            </summary>
+            <returns></returns>
+            <remarks>
+            2016-06-25 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetDatabaseID(System.Int32)">
+            <summary>
+            Database ID 를 가져옵니다.
+            </summary>
+            <param name="server_id">서버 ID</param>
+            <returns></returns>
+            <remarks>
+            2016-06-25 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetTableID(System.Int32,System.Int32)">
+            <summary>
+            Table ID 를 가져옵니다.
+            </summary>
+            <param name="server_id">서버 ID</param>
+            <param name="database_id">Database ID</param>
+            <returns></returns>
+            <remarks>
+            2016-06-25 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetDatabaseLogEvent(System.Int32,System.Int32)">
+            <summary>
+            Database Log의 Event 를 가져옵니다.
+            </summary>
+            <param name="server_id">서버 ID</param>
+            <param name="database_id">Database ID</param>
+            <returns></returns>
+            <remarks>
+            2016-06-25 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetDatabaseLogObject(System.Int32,System.Int32)">
+            <summary>
+            Database Log의 Object 를 가져옵니다.
+            </summary>
+            <param name="server_id">서버 ID</param>
+            <param name="database_id">Database ID</param>
+            <returns></returns>
+            <remarks>
+            2016-06-25 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetDatabaseLogObjectType(System.Int32,System.Int32)">
+            <summary>
+            Database Log의 Object Type 을 가져옵니다.
+            </summary>
+            <param name="server_id">서버 ID</param>
+            <param name="database_id">Database ID</param>
+            <returns></returns>
+            <remarks>
+            2016-06-25 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetFileID">
+            <summary>
+            FileID 를 가져옵니다.
+            </summary>
+            <returns></returns>
+            <remarks>
+            2024-01-04 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetFileConents(System.String)">
+            <summary>
+            DB에서 FILE 컨텐츠를 가져옵니다.
+            </summary>
+            <param name="fileId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetAssemblyID">
+            <summary>
+            AssemblyID 를 가져옵니다.
+            </summary>
+            <returns></returns>
+            <remarks>
+            2010-11-24 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetVendorCode(System.String)">
+            <summary>
+            Vendor Code를 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetPlantCode(System.String)">
+            <summary>
+            Vendor에 맞는 Plant Code를 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetUseVendor">
+            <summary>
+            사용 Vendor ID 를 가져옵니다.
+            </summary>
+            <returns></returns>
+            <remarks>
+            2017-06-25 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetUsePlant(System.String)">
+            <summary>
+            사용 PLANT ID 를 가져옵니다.
+            </summary>
+            <param name="vendorCode"></param>
+            <returns></returns>
+            <remarks>
+            2017-06-25 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetMessageKey(System.String,System.String,System.String)">
+            <summary>
+            메시지 키를 가져옵니다.
+            </summary>
+            <param name="vendorCode"></param>
+            <param name="userId"></param>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.CodeUtil.AppCode.GetUserToken(System.String)">
+            <summary>
+            사용자 토큰 값을 가져옵니다.
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Exe.MainUI</name>
+    </assembly>
+    <members>
+        <member name="M:EBAP.Exe.MainUI.CheckUpdate.checkUpdate(System.String)">
+            <summary>
+            Download List와 Assembly를 검사합니다.
+            </summary>
+            <param name="userid">사용자 ID</param>
+            <returns>0: Download 할 Assembly 없음</returns>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.CheckUpdate.AddUpdateReason(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="reason"></param>
+        </member>
+        <member name="T:EBAP.Exe.MainUI.frmMain">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="menuid"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.frmMain_Load(System.Object,System.EventArgs)">
+            <summary>
+            폼이 Load 될 때 초기화 및 사용자 Log를 저장합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.frmMain_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Main Form이 닫힐 때 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.ExecuteCellInfo">
+            <summary>
+            CELL 설정화면으로 이동합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.InitializeMainForm">
+            <summary>
+            Main Form을 초기화합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.StartTimer">
+            <summary>
+            타이머를 시작합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.t10_Tick(System.Object,System.EventArgs)">
+            <summary>
+            10분 마다 업데이트 검사
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.t30_Tick(System.Object,System.EventArgs)">
+            <summary>
+            30분 후 시스템 종료
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.ExecuteStartMenu">
+            <summary>
+            시작 메뉴를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.SignOn(System.Boolean)">
+            <summary>
+            사용자 Sign ON 처리합니다.
+            </summary>
+            <param name="firstLogin">처음 로그인</param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.SignIn(System.Boolean,System.Data.DataTable)">
+            <summary>
+            사용자 Sign IN 처리합니다.
+            </summary>
+            <param name="sso">Single Sign 사용유무</param>
+            <param name="loginInfo">SSO 정보</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.SaveSignLog(System.Int32)">
+            <summary>
+            Database에 사용자 Sign On Log를 저장합니다.
+            </summary>
+            <param name="seq"></param>
+            <remarks>
+            2010-12-15 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.SaveLanguageMaster(System.String)">
+            <summary>
+            언어 마스터(단어)를 XML 파일로 저장합니다.
+            </summary>
+            <param name="language"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.SaveLanguageMessageMaster(System.String)">
+            <summary>
+            언어 마스터(메시지)를 XML 파일로 저장합니다.
+            </summary>
+            <param name="language"></param>
+        </member>
+        <member name="F:EBAP.Exe.MainUI.frmMain.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmMain.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EBAP.Exe.MainUI.frmSignOn">
+            <summary>
+            사용자 Sign 처리를 담당하는 Form입니다.
+            </summary>
+            <remarks>
+            2016-06-24 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.#ctor">
+            <summary>
+            사용자 Sign 처리 Form을 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.frmSignOn_Load(System.Object,System.EventArgs)">
+            <summary>
+            Form이 Load 시 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.InitComboBox">
+            <summary>
+            ComboBox Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.InitControls">
+            <summary>
+            기타 Control Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.SetPopParams">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.btnSignOn_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sign On 처리합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.txtPWD_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            비밀번호에서 Enter 키를 누르면 Sign On 버튼을 누른 기능을 합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.txtID_Validated(System.Object,System.EventArgs)">
+            <summary>
+            아이디와 비밀번호 입력 후 Validation
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.CheckCondition">
+            <summary>
+            로그인 필수조건 Check
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EBAP.Exe.MainUI.frmSignOn.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.frmSignOn.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.Program.Main(System.String[])">
+            <summary>
+            해당 응용 프로그램의 주 진입점입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.Program.Application_ThreadException(System.Object,System.Threading.ThreadExceptionEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.Program.MakeFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.MainUI.Program.MoveUpdateFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EBAP.Exe.MainUI.Properties.Resources">
+            <summary>
+              지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Exe.MainUI.Properties.Resources.ResourceManager">
+            <summary>
+              이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Exe.MainUI.Properties.Resources.Culture">
+            <summary>
+              이 강력한 형식의 리소스 클래스를 사용하여 모든 리소스 조회에 대해 현재 스레드의 CurrentUICulture 속성을
+              재정의합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Exe.MainUI.Properties.Resources.icon">
+            <summary>
+              (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+            </summary>
+        </member>
+    </members>
+</doc>

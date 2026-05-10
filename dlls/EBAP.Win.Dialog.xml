@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Win.Dialog</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Win.Dialog.ExceptionBox">
+            <summary>
+            Exception Dialog를 생성합니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionBox.Show(System.Exception)">
+            <summary>
+            Exception Form을 보여줍니다.
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionBox.Show(System.Windows.Forms.Form,System.Exception)">
+            <summary>
+            Exception Form을 보여줍니다.
+            </summary>
+            <param name="owner"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionBox.Show(System.Windows.Forms.Form,System.Exception,System.Boolean)">
+            <summary>
+            Exception Form을 보여줍니다.
+            </summary>
+            <param name="owner"></param>
+            <param name="ex"></param>
+            <param name="isAdmin"></param>
+        </member>
+        <member name="T:EBAP.Win.Dialog.ExceptionDialog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.#ctor">
+            <summary>
+            Exception Form 생성합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Dialog.ExceptionDialog.Except">
+            <summary>
+            예외를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Dialog.ExceptionDialog.IsAdmin">
+            <summary>
+            관리자 권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.HideDetail">
+            <summary>
+            Detail 구간을 숨김니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.ShowDetail">
+            <summary>
+            Detail 구간을 보입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.frmException_Load(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.GetCallStack(System.Exception,System.Text.StringBuilder@)">
+            <summary>
+            Exception의 Inner Exception을 Call Stack에 담습니다.
+            </summary>
+            <param name="_exception"></param>
+            <param name="callStack"></param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.btnOK_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.btnDetail_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.btnCopy_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.btnReport_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.btnResize_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.btnExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:EBAP.Win.Dialog.ExceptionDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EBAP.Win.Dialog.ExceptionDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.Dialog.MsgBox">
+            <summary>
+            MessageBox를 만듭니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.Show(System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.Show(System.String,System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <param name="defaultButton">처음에 Focuse를 가질 Button</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="owner">Owner Form</param>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <param name="defaultButton">처음에 Focuse를 가질 Button</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.Show(DevExpress.LookAndFeel.UserLookAndFeel,System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.DialogResult[],System.Drawing.Icon,System.Int32)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="lookAndFeel"></param>
+            <param name="owner">Owner Form</param>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <param name="defaultButton">처음에 Focuse를 가질 Button</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.MessageBoxButtonsToDialogResults(System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            
+            </summary>
+            <param name="buttons"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.MessageBoxIconToIcon(System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            
+            </summary>
+            <param name="icon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Dialog.MsgBox.MessageBoxDefaultButtonToInt(System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            
+            </summary>
+            <param name="defButton"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.Dialog.Properties.Resources">
+            <summary>
+              지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Dialog.Properties.Resources.ResourceManager">
+            <summary>
+              이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Dialog.Properties.Resources.Culture">
+            <summary>
+              이 강력한 형식의 리소스 클래스를 사용하여 모든 리소스 조회에 대해 현재 스레드의 CurrentUICulture 속성을
+              재정의합니다.
+            </summary>
+        </member>
+    </members>
+</doc>

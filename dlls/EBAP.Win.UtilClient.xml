@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Win.UtilClient</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Win.UtilClient.FTPClient">
+            <summary>
+            시스템에서 공통으로 사용할 FTP Client를 정의합니다.
+            </summary>
+            <remarks>
+            2016-05-30 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.UtilClient.FTPClient.#ctor(EBAP.Win.BaseFrame.UIFrame,System.String,System.String,System.String)">
+            <summary>
+            생성자
+            </summary>
+            <param name="uiForm">UI Form</param>
+            <param name="ftpId">FTP ID</param>
+            <param name="uiId">UIID</param>
+            <param name="key">FTP Key</param>
+        </member>
+        <member name="M:EBAP.Win.UtilClient.FTPClient.#ctor(EBAP.Win.BaseFrame.UIFrame,System.String,System.String,System.String,System.String)">
+            <summary>
+            생성자
+            </summary>
+            <param name="uiForm">UI Form</param>
+            <param name="ftpId">FTP ID</param>
+            <param name="uiId">UIID</param>
+            <param name="key">FTP Key</param>
+            <param name="key2">FTP Key2</param>
+        </member>
+        <member name="P:EBAP.Win.UtilClient.FTPClient.FTPID">
+            <summary>
+            FTP ID
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UtilClient.FTPClient.UIID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UtilClient.FTPClient.KEY">
+            <summary>
+            KEY
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UtilClient.FTPClient.KEY2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UtilClient.FTPClient.InitFtp">
+            <summary>
+            FTP 정보를 DB에서 가져옵니다.
+            </summary>
+            <returns>FTP 정보가 있으면 true, 없으면 false</returns>
+        </member>
+        <member name="M:EBAP.Win.UtilClient.FTPClient.OpenFtpForm">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.UtilClient.FTPClient.DownloadFile">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.UtilClient.FTPClient.UploadFile(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="serverFile"></param>
+            <param name="localFile"></param>
+        </member>
+    </members>
+</doc>

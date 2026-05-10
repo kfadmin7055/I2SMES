@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectTableList>
+    <sql>
+      dbo.TableList_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectTableList>
+  <saveTableList>
+    <sql>
+      dbo.TableList_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveTableList>
+</xmlquery>

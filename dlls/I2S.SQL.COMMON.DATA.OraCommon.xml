@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>I2S.SQL.COMMON.DATA.OraCommon</name>
+    </assembly>
+    <members>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery">
+            <summary>
+            쿼리 추가 메서드
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.GetWhereText(System.String,System.String[],System.Data.DataTable,System.String[],System.String[],System.String)">
+            <summary>
+            where 절 문자 만들기
+            </summary>
+            <param name="selectText"></param>
+            <param name="paramList"></param>
+            <param name="dt"></param>
+            <param name="rightLikeColumn"></param>
+            <param name="fullLikeColumn"></param>
+            <param name="alias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.GetWhereText(System.String,I2S.SQL.COMMON.DATA.OraData.Collections.ParamCollection,System.String[],System.String[],System.String)">
+            <summary>
+            where 절 문자 만들기
+            </summary>
+            <param name="selectText"></param>
+            <param name="param"></param>
+            <param name="rightLikeColumn"></param>
+            <param name="fullLikeColumn"></param>
+            <param name="alias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.GetWhereText(System.String,System.String[],System.Object[],System.String[],System.String[],System.String)">
+            <summary>
+            where 절 문자 만들기
+            </summary>
+            <param name="selectText"></param>
+            <param name="paramList"></param>
+            <param name="valueList"></param>
+            <param name="rightLikeColumn"></param>
+            <param name="fullLikeColumn"></param>
+            <param name="alias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.GetCombo(System.String,System.String,System.String,System.String,System.String[],System.Object[],System.String)">
+            <summary>
+            콤보리스트 쿼리
+            </summary>
+            <param name="tableName"></param>
+            <param name="codeColumn"></param>
+            <param name="displayColumn"></param>
+            <param name="orderByColumn"></param>
+            <param name="paramList"></param>
+            <param name="valueList"></param>
+            <param name="includedisplay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.InitUserMenu">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.InitLinkMenu">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.InitFavoritesMenu(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.SaveMenuExecuteLog">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.GetDatabaseID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.GetServerID">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.DatabaseLogEvent_Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.DatabaseLogObject_Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.COMMON.CommonQuery.DatabaseLogObjectType_Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

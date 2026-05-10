@@ -1,0 +1,2361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetImageFromFTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="directory" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serverFile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="port" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageFromFTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImageFromFTPResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_LIST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="plant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wareHouse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materialCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_LISTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RFC_PACKING_MATERIAL_LISTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_HIST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gubun" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="plant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wareHouse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materialCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_HISTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RFC_PACKING_MATERIAL_HISTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_CANCEL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="docNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postingDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_CANCELResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rfcNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_MOVE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="plant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wareHouse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materialCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="useQty" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="receiveWarehouse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_MOVEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rfcNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_INPUT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="plant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wareHouse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materialCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="useQty" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RFC_PACKING_MATERIAL_INPUTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rfcNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfcMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="H101_Execute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sourceChannel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetChannel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="H101_ExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="H101_ExecuteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="H101_MakeBoxTagLabel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="values" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="H101_MakeBoxTagLabelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="H101_MakeBoxTagLabelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="H101_BunddleInfoSave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="values" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnValue" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="H101_BunddleInfoSaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="H101_BunddleInfoSaveResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="returnValue" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="NTx_ExecuteDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_ExecuteDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_ExecuteDataSetCompressResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetFromXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetFromXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_ExecuteDataSetFromXMLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetFromXMLCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetFromXMLCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_ExecuteDataSetFromXMLCompressResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetFromQueryId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetFromQueryIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_ExecuteDataSetFromQueryIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetFromQueryIdCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteDataSetFromQueryIdCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_ExecuteDataSetFromQueryIdCompressResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteScalar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteScalarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_ExecuteScalarResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteScalarFromXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteScalarFromXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_ExecuteScalarFromXMLResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteScalarFromQueryId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_ExecuteScalarFromQueryIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_ExecuteScalarFromQueryIdResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_GetQueryInfoFromXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NTx_GetQueryInfoFromXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NTx_GetQueryInfoFromXMLResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tx_ExecuteNonQueryResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryByDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryByDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tx_ExecuteNonQueryByDataTableResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryByDataTableCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="bData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryByDataTableCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tx_ExecuteNonQueryByDataTableCompressResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tx_ExecuteNonQueryFromXMLResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromXMLByDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromXMLByDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tx_ExecuteNonQueryFromXMLByDataTableResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromXMLByDataTableCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="bData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromXMLByDataTableCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tx_ExecuteNonQueryFromXMLByDataTableCompressResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromQueryId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromQueryIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tx_ExecuteNonQueryFromQueryIdResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromQueryIdByDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromQueryIdByDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tx_ExecuteNonQueryFromQueryIdByDataTableResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromQueryIdByDataTableCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="bData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tx_ExecuteNonQueryFromQueryIdByDataTableCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Tx_ExecuteNonQueryFromQueryIdByDataTableCompressResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ONTx_ExecuteDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ONTx_ExecuteDataSetCompressResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetFromXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetFromXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ONTx_ExecuteDataSetFromXMLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetFromXMLCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetFromXMLCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ONTx_ExecuteDataSetFromXMLCompressResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetFromQueryId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetFromQueryIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ONTx_ExecuteDataSetFromQueryIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetFromQueryIdCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteDataSetFromQueryIdCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ONTx_ExecuteDataSetFromQueryIdCompressResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteScalar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteScalarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ONTx_ExecuteScalarResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteScalarFromXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteScalarFromXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ONTx_ExecuteScalarFromXMLResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteScalarFromQueryId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ONTx_ExecuteScalarFromQueryIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ONTx_ExecuteScalarFromQueryIdResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OTx_ExecuteNonQueryResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryByDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryByDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OTx_ExecuteNonQueryByDataTableResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryByDataTableCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmdType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="bData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryByDataTableCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OTx_ExecuteNonQueryByDataTableCompressResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OTx_ExecuteNonQueryFromXMLResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromXMLByDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromXMLByDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OTx_ExecuteNonQueryFromXMLByDataTableResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromXMLByDataTableCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="bData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromXMLByDataTableCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OTx_ExecuteNonQueryFromXMLByDataTableCompressResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromQueryId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueList" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromQueryIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OTx_ExecuteNonQueryFromQueryIdResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromQueryIdByDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromQueryIdByDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OTx_ExecuteNonQueryFromQueryIdByDataTableResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromQueryIdByDataTableCompress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="bData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="outParam" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTx_ExecuteNonQueryFromQueryIdByDataTableCompressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OTx_ExecuteNonQueryFromQueryIdByDataTableCompressResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="outValue" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetImageFromFTPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImageFromFTP" />
+  </wsdl:message>
+  <wsdl:message name="GetImageFromFTPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImageFromFTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_LISTSoapIn">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_LIST" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_LISTSoapOut">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_LISTResponse" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_HISTSoapIn">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_HIST" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_HISTSoapOut">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_HISTResponse" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_CANCELSoapIn">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_CANCEL" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_CANCELSoapOut">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_CANCELResponse" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_MOVESoapIn">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_MOVE" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_MOVESoapOut">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_MOVEResponse" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_INPUTSoapIn">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_INPUT" />
+  </wsdl:message>
+  <wsdl:message name="RFC_PACKING_MATERIAL_INPUTSoapOut">
+    <wsdl:part name="parameters" element="tns:RFC_PACKING_MATERIAL_INPUTResponse" />
+  </wsdl:message>
+  <wsdl:message name="H101_ExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:H101_Execute" />
+  </wsdl:message>
+  <wsdl:message name="H101_ExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:H101_ExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="H101_MakeBoxTagLabelSoapIn">
+    <wsdl:part name="parameters" element="tns:H101_MakeBoxTagLabel" />
+  </wsdl:message>
+  <wsdl:message name="H101_MakeBoxTagLabelSoapOut">
+    <wsdl:part name="parameters" element="tns:H101_MakeBoxTagLabelResponse" />
+  </wsdl:message>
+  <wsdl:message name="H101_BunddleInfoSaveSoapIn">
+    <wsdl:part name="parameters" element="tns:H101_BunddleInfoSave" />
+  </wsdl:message>
+  <wsdl:message name="H101_BunddleInfoSaveSoapOut">
+    <wsdl:part name="parameters" element="tns:H101_BunddleInfoSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSet" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetCompress" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetFromXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetFromXML" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetFromXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetFromXMLCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetFromXMLCompress" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetFromXMLCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetFromXMLCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetFromQueryIdSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetFromQueryId" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetFromQueryIdSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetFromQueryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetFromQueryIdCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetFromQueryIdCompress" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteDataSetFromQueryIdCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteDataSetFromQueryIdCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteScalarSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteScalar" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteScalarSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteScalarResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteScalarFromXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteScalarFromXML" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteScalarFromXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteScalarFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteScalarFromQueryIdSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteScalarFromQueryId" />
+  </wsdl:message>
+  <wsdl:message name="NTx_ExecuteScalarFromQueryIdSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_ExecuteScalarFromQueryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="NTx_GetQueryInfoFromXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:NTx_GetQueryInfoFromXML" />
+  </wsdl:message>
+  <wsdl:message name="NTx_GetQueryInfoFromXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:NTx_GetQueryInfoFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryByDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryByDataTable" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryByDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryByDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryByDataTableCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryByDataTableCompress" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryByDataTableCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryByDataTableCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromXML" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromXMLByDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromXMLByDataTable" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromXMLByDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromXMLByDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromXMLByDataTableCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromXMLByDataTableCompress" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromXMLByDataTableCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromXMLByDataTableCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromQueryIdSoapIn">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromQueryId" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromQueryIdSoapOut">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromQueryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromQueryIdByDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromQueryIdByDataTable" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromQueryIdByDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromQueryIdByDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromQueryIdByDataTableCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromQueryIdByDataTableCompress" />
+  </wsdl:message>
+  <wsdl:message name="Tx_ExecuteNonQueryFromQueryIdByDataTableCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:Tx_ExecuteNonQueryFromQueryIdByDataTableCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSet" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetCompress" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetFromXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetFromXML" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetFromXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetFromXMLCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetFromXMLCompress" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetFromXMLCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetFromXMLCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetFromQueryIdSoapIn">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetFromQueryId" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetFromQueryIdSoapOut">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetFromQueryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetFromQueryIdCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetFromQueryIdCompress" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteDataSetFromQueryIdCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteDataSetFromQueryIdCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteScalarSoapIn">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteScalar" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteScalarSoapOut">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteScalarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteScalarFromXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteScalarFromXML" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteScalarFromXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteScalarFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteScalarFromQueryIdSoapIn">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteScalarFromQueryId" />
+  </wsdl:message>
+  <wsdl:message name="ONTx_ExecuteScalarFromQueryIdSoapOut">
+    <wsdl:part name="parameters" element="tns:ONTx_ExecuteScalarFromQueryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryByDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryByDataTable" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryByDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryByDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryByDataTableCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryByDataTableCompress" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryByDataTableCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryByDataTableCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromXML" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromXMLByDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromXMLByDataTable" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromXMLByDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromXMLByDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromXMLByDataTableCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromXMLByDataTableCompress" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromXMLByDataTableCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromXMLByDataTableCompressResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromQueryIdSoapIn">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromQueryId" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromQueryIdSoapOut">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromQueryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromQueryIdByDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromQueryIdByDataTable" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromQueryIdByDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromQueryIdByDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromQueryIdByDataTableCompressSoapIn">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromQueryIdByDataTableCompress" />
+  </wsdl:message>
+  <wsdl:message name="OTx_ExecuteNonQueryFromQueryIdByDataTableCompressSoapOut">
+    <wsdl:part name="parameters" element="tns:OTx_ExecuteNonQueryFromQueryIdByDataTableCompressResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetImageFromFTP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[FTP]를 사용하여 Image를 가져옵니다.</wsdl:documentation>
+      <wsdl:input message="tns:GetImageFromFTPSoapIn" />
+      <wsdl:output message="tns:GetImageFromFTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_LIST">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[SAP Connector]를 사용하여 RFC(Z_PACKING_MATERIAL_01)를 호출합니다.</wsdl:documentation>
+      <wsdl:input message="tns:RFC_PACKING_MATERIAL_LISTSoapIn" />
+      <wsdl:output message="tns:RFC_PACKING_MATERIAL_LISTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_HIST">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[SAP Connector]를 사용하여 RFC(Z_PACKING_MATERIAL_02)를 호출합니다.</wsdl:documentation>
+      <wsdl:input message="tns:RFC_PACKING_MATERIAL_HISTSoapIn" />
+      <wsdl:output message="tns:RFC_PACKING_MATERIAL_HISTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_CANCEL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[SAP Connector]를 사용하여 RFC(Z_PACKING_MATERIAL_05)를 호출합니다.</wsdl:documentation>
+      <wsdl:input message="tns:RFC_PACKING_MATERIAL_CANCELSoapIn" />
+      <wsdl:output message="tns:RFC_PACKING_MATERIAL_CANCELSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_MOVE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[SAP Connector]를 사용하여 RFC(Z_PACKING_MATERIAL_04)를 호출합니다.</wsdl:documentation>
+      <wsdl:input message="tns:RFC_PACKING_MATERIAL_MOVESoapIn" />
+      <wsdl:output message="tns:RFC_PACKING_MATERIAL_MOVESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_INPUT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[SAP Connector]를 사용하여 RFC(Z_PACKING_MATERIAL_03)를 호출합니다.</wsdl:documentation>
+      <wsdl:input message="tns:RFC_PACKING_MATERIAL_INPUTSoapIn" />
+      <wsdl:output message="tns:RFC_PACKING_MATERIAL_INPUTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="H101_Execute">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Highway101]서비스를 사용하여 XML 메시지를 전송합니다.(2022-11-16-REAL)</wsdl:documentation>
+      <wsdl:input message="tns:H101_ExecuteSoapIn" />
+      <wsdl:output message="tns:H101_ExecuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="H101_MakeBoxTagLabel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Highway101]서비스를 사용하여 BOX Tag 라벨을 생성합니다.(2022-11-16-REAL)</wsdl:documentation>
+      <wsdl:input message="tns:H101_MakeBoxTagLabelSoapIn" />
+      <wsdl:output message="tns:H101_MakeBoxTagLabelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="H101_BunddleInfoSave">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Highway101]서비스를 사용하여 번들정보를 저장합니다.(2022-11-16-REAL)</wsdl:documentation>
+      <wsdl:input message="tns:H101_BunddleInfoSaveSoapIn" />
+      <wsdl:output message="tns:H101_BunddleInfoSaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]쿼리를 실행하여 DataSet을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_ExecuteDataSetSoapIn" />
+      <wsdl:output message="tns:NTx_ExecuteDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]쿼리를 실행하여 DataSet을 압축하여 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_ExecuteDataSetCompressSoapIn" />
+      <wsdl:output message="tns:NTx_ExecuteDataSetCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]XML 파일에서 쿼리를 실행하여 DataSet을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_ExecuteDataSetFromXMLSoapIn" />
+      <wsdl:output message="tns:NTx_ExecuteDataSetFromXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromXMLCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]XML 파일에서 쿼리를 실행하여 DataSet을 압축하여 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_ExecuteDataSetFromXMLCompressSoapIn" />
+      <wsdl:output message="tns:NTx_ExecuteDataSetFromXMLCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromQueryId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]DB에서 Query ID로 쿼리를 실행하여 DataSet을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_ExecuteDataSetFromQueryIdSoapIn" />
+      <wsdl:output message="tns:NTx_ExecuteDataSetFromQueryIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromQueryIdCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]DB에서 Query ID로 쿼리를 실행하여 DataSet을 압축하여 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_ExecuteDataSetFromQueryIdCompressSoapIn" />
+      <wsdl:output message="tns:NTx_ExecuteDataSetFromQueryIdCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteScalar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]쿼리를 실행하여 object을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_ExecuteScalarSoapIn" />
+      <wsdl:output message="tns:NTx_ExecuteScalarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteScalarFromXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]쿼리를 실행하여 object을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_ExecuteScalarFromXMLSoapIn" />
+      <wsdl:output message="tns:NTx_ExecuteScalarFromXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteScalarFromQueryId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]쿼리를 실행하여 object을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_ExecuteScalarFromQueryIdSoapIn" />
+      <wsdl:output message="tns:NTx_ExecuteScalarFromQueryIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NTx_GetQueryInfoFromXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">XML에서 Query ID로 쿼리정보를 가져옵니다.</wsdl:documentation>
+      <wsdl:input message="tns:NTx_GetQueryInfoFromXMLSoapIn" />
+      <wsdl:output message="tns:NTx_GetQueryInfoFromXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:Tx_ExecuteNonQuerySoapIn" />
+      <wsdl:output message="tns:Tx_ExecuteNonQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryByDataTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:Tx_ExecuteNonQueryByDataTableSoapIn" />
+      <wsdl:output message="tns:Tx_ExecuteNonQueryByDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryByDataTableCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:Tx_ExecuteNonQueryByDataTableCompressSoapIn" />
+      <wsdl:output message="tns:Tx_ExecuteNonQueryByDataTableCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]XML파일에서 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:Tx_ExecuteNonQueryFromXMLSoapIn" />
+      <wsdl:output message="tns:Tx_ExecuteNonQueryFromXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromXMLByDataTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]XML과 DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:Tx_ExecuteNonQueryFromXMLByDataTableSoapIn" />
+      <wsdl:output message="tns:Tx_ExecuteNonQueryFromXMLByDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromXMLByDataTableCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]XML과 DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:Tx_ExecuteNonQueryFromXMLByDataTableCompressSoapIn" />
+      <wsdl:output message="tns:Tx_ExecuteNonQueryFromXMLByDataTableCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromQueryId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]DB의 Qury ID를 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:Tx_ExecuteNonQueryFromQueryIdSoapIn" />
+      <wsdl:output message="tns:Tx_ExecuteNonQueryFromQueryIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromQueryIdByDataTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]DB의 Qury ID와 DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:Tx_ExecuteNonQueryFromQueryIdByDataTableSoapIn" />
+      <wsdl:output message="tns:Tx_ExecuteNonQueryFromQueryIdByDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromQueryIdByDataTableCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-SQL]DB의 Qury ID와 DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:Tx_ExecuteNonQueryFromQueryIdByDataTableCompressSoapIn" />
+      <wsdl:output message="tns:Tx_ExecuteNonQueryFromQueryIdByDataTableCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]쿼리를 실행하여 DataSet을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:ONTx_ExecuteDataSetSoapIn" />
+      <wsdl:output message="tns:ONTx_ExecuteDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]쿼리를 실행하여 DataSet을 압축하여 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:ONTx_ExecuteDataSetCompressSoapIn" />
+      <wsdl:output message="tns:ONTx_ExecuteDataSetCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]XML 파일에서 쿼리를 실행하여 DataSet을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:ONTx_ExecuteDataSetFromXMLSoapIn" />
+      <wsdl:output message="tns:ONTx_ExecuteDataSetFromXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromXMLCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]XML 파일에서 쿼리를 실행하여 DataSet을 압축하여 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:ONTx_ExecuteDataSetFromXMLCompressSoapIn" />
+      <wsdl:output message="tns:ONTx_ExecuteDataSetFromXMLCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromQueryId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]DB Query Master에서 쿼리를 실행하여 DataSet을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:ONTx_ExecuteDataSetFromQueryIdSoapIn" />
+      <wsdl:output message="tns:ONTx_ExecuteDataSetFromQueryIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromQueryIdCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]DB Query Master에서 쿼리를 실행하여 DataSet을 압축하여 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:ONTx_ExecuteDataSetFromQueryIdCompressSoapIn" />
+      <wsdl:output message="tns:ONTx_ExecuteDataSetFromQueryIdCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteScalar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]쿼리를 실행하여 object을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:ONTx_ExecuteScalarSoapIn" />
+      <wsdl:output message="tns:ONTx_ExecuteScalarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteScalarFromXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[MS-Oracle]쿼리를 실행하여 object을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:ONTx_ExecuteScalarFromXMLSoapIn" />
+      <wsdl:output message="tns:ONTx_ExecuteScalarFromXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteScalarFromQueryId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]쿼리를 실행하여 object을 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:ONTx_ExecuteScalarFromQueryIdSoapIn" />
+      <wsdl:output message="tns:ONTx_ExecuteScalarFromQueryIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:OTx_ExecuteNonQuerySoapIn" />
+      <wsdl:output message="tns:OTx_ExecuteNonQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryByDataTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:OTx_ExecuteNonQueryByDataTableSoapIn" />
+      <wsdl:output message="tns:OTx_ExecuteNonQueryByDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryByDataTableCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:OTx_ExecuteNonQueryByDataTableCompressSoapIn" />
+      <wsdl:output message="tns:OTx_ExecuteNonQueryByDataTableCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]XML파일에서 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:OTx_ExecuteNonQueryFromXMLSoapIn" />
+      <wsdl:output message="tns:OTx_ExecuteNonQueryFromXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromXMLByDataTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]XML과 DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:OTx_ExecuteNonQueryFromXMLByDataTableSoapIn" />
+      <wsdl:output message="tns:OTx_ExecuteNonQueryFromXMLByDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromXMLByDataTableCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]XML과 DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:OTx_ExecuteNonQueryFromXMLByDataTableCompressSoapIn" />
+      <wsdl:output message="tns:OTx_ExecuteNonQueryFromXMLByDataTableCompressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromQueryId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]DB의 Qury ID를 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:OTx_ExecuteNonQueryFromQueryIdSoapIn" />
+      <wsdl:output message="tns:OTx_ExecuteNonQueryFromQueryIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromQueryIdByDataTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]DB의 Qury ID와 DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:OTx_ExecuteNonQueryFromQueryIdByDataTableSoapIn" />
+      <wsdl:output message="tns:OTx_ExecuteNonQueryFromQueryIdByDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromQueryIdByDataTableCompress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[Oracle]DB의 Qury ID와 DataTable을 사용하여 쿼리를 실행하여 처리하고 영향을 받은 Row 수를 반환하는 Web Method 입니다.</wsdl:documentation>
+      <wsdl:input message="tns:OTx_ExecuteNonQueryFromQueryIdByDataTableCompressSoapIn" />
+      <wsdl:output message="tns:OTx_ExecuteNonQueryFromQueryIdByDataTableCompressSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetImageFromFTP">
+      <soap:operation soapAction="http://tempuri.org/GetImageFromFTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_LIST">
+      <soap:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_LIST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_HIST">
+      <soap:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_HIST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_CANCEL">
+      <soap:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_CANCEL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_MOVE">
+      <soap:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_MOVE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_INPUT">
+      <soap:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_INPUT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H101_Execute">
+      <soap:operation soapAction="http://tempuri.org/H101_Execute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H101_MakeBoxTagLabel">
+      <soap:operation soapAction="http://tempuri.org/H101_MakeBoxTagLabel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H101_BunddleInfoSave">
+      <soap:operation soapAction="http://tempuri.org/H101_BunddleInfoSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSet">
+      <soap:operation soapAction="http://tempuri.org/NTx_ExecuteDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetCompress">
+      <soap:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromXML">
+      <soap:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetFromXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromXMLCompress">
+      <soap:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetFromXMLCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromQueryId">
+      <soap:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetFromQueryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromQueryIdCompress">
+      <soap:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetFromQueryIdCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteScalar">
+      <soap:operation soapAction="http://tempuri.org/NTx_ExecuteScalar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteScalarFromXML">
+      <soap:operation soapAction="http://tempuri.org/NTx_ExecuteScalarFromXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteScalarFromQueryId">
+      <soap:operation soapAction="http://tempuri.org/NTx_ExecuteScalarFromQueryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_GetQueryInfoFromXML">
+      <soap:operation soapAction="http://tempuri.org/NTx_GetQueryInfoFromXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQuery">
+      <soap:operation soapAction="http://tempuri.org/Tx_ExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryByDataTable">
+      <soap:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryByDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryByDataTableCompress">
+      <soap:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromXML">
+      <soap:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromXMLByDataTable">
+      <soap:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromXMLByDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromXMLByDataTableCompress">
+      <soap:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromXMLByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromQueryId">
+      <soap:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromQueryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromQueryIdByDataTable">
+      <soap:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromQueryIdByDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromQueryIdByDataTableCompress">
+      <soap:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromQueryIdByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSet">
+      <soap:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetCompress">
+      <soap:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromXML">
+      <soap:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetFromXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromXMLCompress">
+      <soap:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetFromXMLCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromQueryId">
+      <soap:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetFromQueryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromQueryIdCompress">
+      <soap:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetFromQueryIdCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteScalar">
+      <soap:operation soapAction="http://tempuri.org/ONTx_ExecuteScalar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteScalarFromXML">
+      <soap:operation soapAction="http://tempuri.org/ONTx_ExecuteScalarFromXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteScalarFromQueryId">
+      <soap:operation soapAction="http://tempuri.org/ONTx_ExecuteScalarFromQueryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQuery">
+      <soap:operation soapAction="http://tempuri.org/OTx_ExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryByDataTable">
+      <soap:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryByDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryByDataTableCompress">
+      <soap:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromXML">
+      <soap:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromXMLByDataTable">
+      <soap:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromXMLByDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromXMLByDataTableCompress">
+      <soap:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromXMLByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromQueryId">
+      <soap:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromQueryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromQueryIdByDataTable">
+      <soap:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromQueryIdByDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromQueryIdByDataTableCompress">
+      <soap:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromQueryIdByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetImageFromFTP">
+      <soap12:operation soapAction="http://tempuri.org/GetImageFromFTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_LIST">
+      <soap12:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_LIST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_HIST">
+      <soap12:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_HIST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_CANCEL">
+      <soap12:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_CANCEL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_MOVE">
+      <soap12:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_MOVE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFC_PACKING_MATERIAL_INPUT">
+      <soap12:operation soapAction="http://tempuri.org/RFC_PACKING_MATERIAL_INPUT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H101_Execute">
+      <soap12:operation soapAction="http://tempuri.org/H101_Execute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H101_MakeBoxTagLabel">
+      <soap12:operation soapAction="http://tempuri.org/H101_MakeBoxTagLabel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H101_BunddleInfoSave">
+      <soap12:operation soapAction="http://tempuri.org/H101_BunddleInfoSave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSet">
+      <soap12:operation soapAction="http://tempuri.org/NTx_ExecuteDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetCompress">
+      <soap12:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromXML">
+      <soap12:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetFromXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromXMLCompress">
+      <soap12:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetFromXMLCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromQueryId">
+      <soap12:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetFromQueryId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteDataSetFromQueryIdCompress">
+      <soap12:operation soapAction="http://tempuri.org/NTx_ExecuteDataSetFromQueryIdCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteScalar">
+      <soap12:operation soapAction="http://tempuri.org/NTx_ExecuteScalar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteScalarFromXML">
+      <soap12:operation soapAction="http://tempuri.org/NTx_ExecuteScalarFromXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_ExecuteScalarFromQueryId">
+      <soap12:operation soapAction="http://tempuri.org/NTx_ExecuteScalarFromQueryId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NTx_GetQueryInfoFromXML">
+      <soap12:operation soapAction="http://tempuri.org/NTx_GetQueryInfoFromXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQuery">
+      <soap12:operation soapAction="http://tempuri.org/Tx_ExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryByDataTable">
+      <soap12:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryByDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryByDataTableCompress">
+      <soap12:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromXML">
+      <soap12:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromXMLByDataTable">
+      <soap12:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromXMLByDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromXMLByDataTableCompress">
+      <soap12:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromXMLByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromQueryId">
+      <soap12:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromQueryId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromQueryIdByDataTable">
+      <soap12:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromQueryIdByDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_ExecuteNonQueryFromQueryIdByDataTableCompress">
+      <soap12:operation soapAction="http://tempuri.org/Tx_ExecuteNonQueryFromQueryIdByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSet">
+      <soap12:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetCompress">
+      <soap12:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromXML">
+      <soap12:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetFromXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromXMLCompress">
+      <soap12:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetFromXMLCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromQueryId">
+      <soap12:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetFromQueryId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteDataSetFromQueryIdCompress">
+      <soap12:operation soapAction="http://tempuri.org/ONTx_ExecuteDataSetFromQueryIdCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteScalar">
+      <soap12:operation soapAction="http://tempuri.org/ONTx_ExecuteScalar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteScalarFromXML">
+      <soap12:operation soapAction="http://tempuri.org/ONTx_ExecuteScalarFromXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ONTx_ExecuteScalarFromQueryId">
+      <soap12:operation soapAction="http://tempuri.org/ONTx_ExecuteScalarFromQueryId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQuery">
+      <soap12:operation soapAction="http://tempuri.org/OTx_ExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryByDataTable">
+      <soap12:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryByDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryByDataTableCompress">
+      <soap12:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromXML">
+      <soap12:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromXMLByDataTable">
+      <soap12:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromXMLByDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromXMLByDataTableCompress">
+      <soap12:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromXMLByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromQueryId">
+      <soap12:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromQueryId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromQueryIdByDataTable">
+      <soap12:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromQueryIdByDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTx_ExecuteNonQueryFromQueryIdByDataTableCompress">
+      <soap12:operation soapAction="http://tempuri.org/OTx_ExecuteNonQueryFromQueryIdByDataTableCompress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://16.100.6.150/EBAPService/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://16.100.6.150/EBAPService/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

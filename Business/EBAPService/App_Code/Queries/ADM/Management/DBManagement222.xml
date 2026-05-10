@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>  
+  <backupDatabase>
+    <sql>
+      BACKUP DATABASE [{0}] TO DISK = N'{1}' WITH NOFORMAT, NOINIT, NAME = N'{2}-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10
+    </sql>
+    <commandtype>Text</commandtype>
+    <connection>METADB</connection>
+  </backupDatabase>
+  <restoreDatabase>
+    <sql>
+      USE MASTER RESTORE DATABASE [{0}] FROM DISK = N'{1}' WITH FILE = 1, NOUNLOAD, STATS = 10
+    </sql>
+    <commandtype>Text</commandtype>
+    <connection>METADB</connection>
+  </restoreDatabase>
+</xmlquery>

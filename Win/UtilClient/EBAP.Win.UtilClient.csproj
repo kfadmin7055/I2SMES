@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6C9C6AF-147A-4A5E-9A3C-D690EB8803F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EBAP.Win.UtilClient</RootNamespace>
+    <AssemblyName>EBAP.Win.UtilClient</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>false</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\dlls\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\dlls\EBAP.Win.UtilClient.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FTPClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business\WSBiz\EBAP.Business.WSBiz.csproj">
+      <Project>{0527FA80-E449-4E37-926F-9F46E2DC4BDC}</Project>
+      <Name>EBAP.Business.WSBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Core\EBAP.Core.csproj">
+      <Project>{5EB313DE-1422-4DB5-9061-A53F61EECD48}</Project>
+      <Name>EBAP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseFrame\EBAP.Win.BaseFrame.csproj">
+      <Project>{5939A38B-F978-4E0C-BC98-63F44135AB1A}</Project>
+      <Name>EBAP.Win.BaseFrame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dialog\EBAP.Win.Dialog.csproj">
+      <Project>{B8099960-63F9-4DED-A03D-2682F6F7A4E8}</Project>
+      <Name>EBAP.Win.Dialog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\EBAP.Win.Utility.csproj">
+      <Project>{0F89A30C-13C8-4AE7-B860-8AB338A49B1E}</Project>
+      <Name>EBAP.Win.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

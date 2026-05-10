@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5EB313DE-1422-4DB5-9061-A53F61EECD48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EBAP.Core</RootNamespace>
+    <AssemblyName>EBAP.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\dlls\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\dlls\EBAP.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Async\AsyncCaller.cs" />
+    <Compile Include="Collections\ParamCollection.cs" />
+    <Compile Include="Extention\ADOExtension.cs" />
+    <Compile Include="Extention\StringExtension.cs" />
+    <Compile Include="Info\AppConfig.cs" />
+    <Compile Include="Info\ConnectionString.cs" />
+    <Compile Include="Info\DataType.cs" />
+    <Compile Include="Info\ExportType.cs" />
+    <Compile Include="Info\PlcStatus.cs" />
+    <Compile Include="Info\PlcType.cs" />
+    <Compile Include="Info\UnboundType.cs" />
+    <Compile Include="Info\HorzAlign.cs" />
+    <Compile Include="Info\MsgType.cs" />
+    <Compile Include="Info\SummaryType.cs" />
+    <Compile Include="Info\UserInfo.cs" />
+    <Compile Include="Interface\ICancelModified.cs" />
+    <Compile Include="Interface\IAuth.cs" />
+    <Compile Include="Interface\IBindings.cs" />
+    <Compile Include="Interface\ICheckModified.cs" />
+    <Compile Include="Interface\IDBParams.cs" />
+    <Compile Include="Interface\IDialog.cs" />
+    <Compile Include="Interface\IEnterKeySelectEvent.cs" />
+    <Compile Include="Interface\IExport.cs" />
+    <Compile Include="Interface\IFillData.cs" />
+    <Compile Include="Interface\IFrameUI.cs" />
+    <Compile Include="Interface\IGridColumnSet.cs" />
+    <Compile Include="Interface\IInitBandedColumn.cs" />
+    <Compile Include="Interface\IInitColumn.cs" />
+    <Compile Include="Interface\IInitData.cs" />
+    <Compile Include="Interface\IInitEditValue.cs" />
+    <Compile Include="Interface\IInitVerticalRow.cs" />
+    <Compile Include="Interface\ILocaleConverter.cs" />
+    <Compile Include="Interface\ILocaleCtrl.cs" />
+    <Compile Include="Interface\IMandatoryColumns.cs" />
+    <Compile Include="Interface\IMandatory.cs" />
+    <Compile Include="Interface\IPrint.cs" />
+    <Compile Include="Interface\IRaiseEvent.cs" />
+    <Compile Include="Interface\IValueChangeSelectEvent.cs" />
+    <Compile Include="Localization\LocaleConverter.cs" />
+    <Compile Include="Localization\MsgId.cs" />
+    <Compile Include="Localization\StrId.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Cryptography.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

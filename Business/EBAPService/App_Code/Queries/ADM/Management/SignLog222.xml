@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectSignLog>
+    <sql>
+      dbo.SignLog_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>LOG</connection>
+  </selectSignLog>
+  <selectMenuExecuteLog>
+    <sql>
+      dbo.MenuExecuteLog_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>LOG</connection>
+  </selectMenuExecuteLog>
+</xmlquery>

@@ -1,0 +1,1126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Web.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Service">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.#ctor">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.GetImageFromFTPCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_LISTCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_HISTCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_CANCELCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_MOVECompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_INPUTCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.H101_ExecuteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.H101_MakeBoxTagLabelCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.H101_BunddleInfoSaveCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromXMLCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromXMLCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromQueryIdCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromQueryIdCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarFromXMLCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarFromQueryIdCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.NTx_GetQueryInfoFromXMLCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryByDataTableCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryByDataTableCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLByDataTableCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLByDataTableCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdByDataTableCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdByDataTableCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromXMLCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromXMLCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromQueryIdCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromQueryIdCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarFromXMLCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarFromQueryIdCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryByDataTableCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryByDataTableCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLByDataTableCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLByDataTableCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdByDataTableCompleted">
+            <remarks/>
+        </member>
+        <member name="E:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdByDataTableCompressCompleted">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.GetImageFromFTP(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.GetImageFromFTPAsync(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.GetImageFromFTPAsync(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_LIST(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_LISTAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_LISTAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_HIST(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_HISTAsync(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_HISTAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_CANCEL(System.String,System.String,System.String@,System.String@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_CANCELAsync(System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_CANCELAsync(System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_MOVE(System.String,System.String,System.String,System.Int64,System.String,System.String@,System.String@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_MOVEAsync(System.String,System.String,System.String,System.Int64,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_MOVEAsync(System.String,System.String,System.String,System.Int64,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_INPUT(System.String,System.String,System.String,System.Int64,System.String@,System.String@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_INPUTAsync(System.String,System.String,System.String,System.Int64,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.RFC_PACKING_MATERIAL_INPUTAsync(System.String,System.String,System.String,System.Int64,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.H101_Execute(System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.H101_ExecuteAsync(System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.H101_ExecuteAsync(System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.H101_MakeBoxTagLabel(System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.H101_MakeBoxTagLabelAsync(System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.H101_MakeBoxTagLabelAsync(System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.H101_BunddleInfoSave(System.String[],System.Int32@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.H101_BunddleInfoSaveAsync(System.String[],System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.H101_BunddleInfoSaveAsync(System.String[],System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSet(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetCompress(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetCompressAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetCompressAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromXML(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromXMLCompress(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromXMLCompressAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromXMLCompressAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromQueryId(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromQueryIdCompress(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromQueryIdCompressAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteDataSetFromQueryIdCompressAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalar(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarFromXML(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarFromQueryId(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_ExecuteScalarFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_GetQueryInfoFromXML(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_GetQueryInfoFromXMLAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.NTx_GetQueryInfoFromXMLAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryByDataTable(System.String,System.String,System.String,System.String[],System.Data.DataTable,System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryByDataTableAsync(System.String,System.String,System.String,System.String[],System.Data.DataTable,System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryByDataTableAsync(System.String,System.String,System.String,System.String[],System.Data.DataTable,System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryByDataTableCompress(System.String,System.String,System.String,System.String[],System.Byte[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryByDataTableCompressAsync(System.String,System.String,System.String,System.String[],System.Byte[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryByDataTableCompressAsync(System.String,System.String,System.String,System.String[],System.Byte[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXML(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLByDataTable(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLByDataTableAsync(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLByDataTableAsync(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLByDataTableCompress(System.String,System.String[],System.Byte[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLByDataTableCompressAsync(System.String,System.String[],System.Byte[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromXMLByDataTableCompressAsync(System.String,System.String[],System.Byte[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryId(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdByDataTable(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdByDataTableAsync(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdByDataTableAsync(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdByDataTableCompress(System.String,System.String[],System.Byte[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdByDataTableCompressAsync(System.String,System.String[],System.Byte[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.Tx_ExecuteNonQueryFromQueryIdByDataTableCompressAsync(System.String,System.String[],System.Byte[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSet(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetCompress(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetCompressAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetCompressAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromXML(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromXMLCompress(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromXMLCompressAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromXMLCompressAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromQueryId(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromQueryIdCompress(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromQueryIdCompressAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteDataSetFromQueryIdCompressAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalar(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarFromXML(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarFromQueryId(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.ONTx_ExecuteScalarFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryAsync(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryByDataTable(System.String,System.String,System.String,System.String[],System.Data.DataTable,System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryByDataTableAsync(System.String,System.String,System.String,System.String[],System.Data.DataTable,System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryByDataTableAsync(System.String,System.String,System.String,System.String[],System.Data.DataTable,System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryByDataTableCompress(System.String,System.String,System.String,System.String[],System.Byte[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryByDataTableCompressAsync(System.String,System.String,System.String,System.String[],System.Byte[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryByDataTableCompressAsync(System.String,System.String,System.String,System.String[],System.Byte[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXML(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLByDataTable(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLByDataTableAsync(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLByDataTableAsync(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLByDataTableCompress(System.String,System.String[],System.Byte[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLByDataTableCompressAsync(System.String,System.String[],System.Byte[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromXMLByDataTableCompressAsync(System.String,System.String[],System.Byte[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryId(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdAsync(System.String,System.String[],System.Object[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdByDataTable(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdByDataTableAsync(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdByDataTableAsync(System.String,System.String[],System.Data.DataTable,System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdByDataTableCompress(System.String,System.String[],System.Byte[],System.String[],System.Object[]@)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdByDataTableCompressAsync(System.String,System.String[],System.Byte[],System.String[],System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.OTx_ExecuteNonQueryFromQueryIdByDataTableCompressAsync(System.String,System.String[],System.Byte[],System.String[],System.Object[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:EBAP.Web.Proxy.EBAPService.Service.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.GetImageFromFTPCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.GetImageFromFTPCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.GetImageFromFTPCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_LISTCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_LISTCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_LISTCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_HISTCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_HISTCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_HISTCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_CANCELCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_CANCELCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_CANCELCompletedEventArgs.rfcNo">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_CANCELCompletedEventArgs.rfcMessage">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_MOVECompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_MOVECompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_MOVECompletedEventArgs.rfcNo">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_MOVECompletedEventArgs.rfcMessage">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_INPUTCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_INPUTCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_INPUTCompletedEventArgs.rfcNo">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.RFC_PACKING_MATERIAL_INPUTCompletedEventArgs.rfcMessage">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.H101_ExecuteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.H101_ExecuteCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.H101_ExecuteCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.H101_MakeBoxTagLabelCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.H101_MakeBoxTagLabelCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.H101_MakeBoxTagLabelCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.H101_BunddleInfoSaveCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.H101_BunddleInfoSaveCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.H101_BunddleInfoSaveCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.H101_BunddleInfoSaveCompletedEventArgs.returnValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromXMLCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromXMLCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromXMLCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromXMLCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromXMLCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromXMLCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromXMLCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromXMLCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromQueryIdCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromQueryIdCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromQueryIdCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromQueryIdCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromQueryIdCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromQueryIdCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromQueryIdCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteDataSetFromQueryIdCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarFromXMLCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarFromXMLCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarFromXMLCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarFromXMLCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarFromQueryIdCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarFromQueryIdCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarFromQueryIdCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_ExecuteScalarFromQueryIdCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_GetQueryInfoFromXMLCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.NTx_GetQueryInfoFromXMLCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.NTx_GetQueryInfoFromXMLCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryByDataTableCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryByDataTableCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryByDataTableCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryByDataTableCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryByDataTableCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryByDataTableCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryByDataTableCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryByDataTableCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLByDataTableCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLByDataTableCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLByDataTableCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLByDataTableCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLByDataTableCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLByDataTableCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLByDataTableCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromXMLByDataTableCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdByDataTableCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdByDataTableCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdByDataTableCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdByDataTableCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdByDataTableCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdByDataTableCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdByDataTableCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.Tx_ExecuteNonQueryFromQueryIdByDataTableCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromXMLCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromXMLCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromXMLCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromXMLCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromXMLCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromXMLCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromXMLCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromXMLCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromQueryIdCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromQueryIdCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromQueryIdCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromQueryIdCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromQueryIdCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromQueryIdCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromQueryIdCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteDataSetFromQueryIdCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarFromXMLCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarFromXMLCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarFromXMLCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarFromXMLCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarFromQueryIdCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarFromQueryIdCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarFromQueryIdCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.ONTx_ExecuteScalarFromQueryIdCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryByDataTableCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryByDataTableCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryByDataTableCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryByDataTableCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryByDataTableCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryByDataTableCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryByDataTableCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryByDataTableCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLByDataTableCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLByDataTableCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLByDataTableCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLByDataTableCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLByDataTableCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLByDataTableCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLByDataTableCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromXMLByDataTableCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdByDataTableCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdByDataTableCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdByDataTableCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdByDataTableCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdByDataTableCompressCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdByDataTableCompressCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdByDataTableCompressCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:EBAP.Web.Proxy.EBAPService.OTx_ExecuteNonQueryFromQueryIdByDataTableCompressCompletedEventArgs.outValue">
+            <remarks/>
+        </member>
+        <member name="T:EBAP.Web.Proxy.WSProxy">
+            <summary>
+            Application에서 사용할 Web Service Proxy입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Web.Proxy.WSProxy.#ctor(System.String)">
+            <summary>
+            Web Service Proxy를 생성합니다.
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:EBAP.Web.Proxy.WSProxy.GetWebRequest(System.Uri)">
+            <summary>
+            Web Request를 가져옵니다.
+            </summary>
+            <param name="svrUri"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,846 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>I2S.SQL.COMMON.DATA.OraData</name>
+    </assembly>
+    <members>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Base.Q_CAR_MASTER">
+            <summary>
+            CAR_MASTER 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Base.Q_CAR_MASTER.CAR_MASTERCombo">
+            <summary>
+            자동차 번호 콤보
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Base.Q_CAR_MASTER.Merge">
+            <summary>
+            CAR_MASTER 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Base.Q_CAR_MASTER.Delete">
+            <summary>
+            CAR_MASTER 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Item.Q_Product">
+            <summary>
+            PRODUCT 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_Product.Merge">
+            <summary>
+            PRODUCT 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_Product.Delete">
+            <summary>
+            PRODUCT 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_Bin">
+            <summary>
+            BIN 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_Bin.Sel_BinPriorityChange">
+            <summary>
+            빈 우선 순위 변경 조회
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_Bin.Merge">
+            <summary>
+            BIN 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_Bin.UpdateBinSEQ(System.String)">
+            <summary>
+            BIN 테이블의 SEQ 컬럼을 업데이트 한다
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_Bin.UpdateFirstBin">
+            <summary>
+            스케일에 원료가 1개인 빈은 순번 1로 조정
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_Bin.Delete">
+            <summary>
+            BIN 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_CAR_MASTER">
+            <summary>
+            INGRED 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_CAR_MASTER.IngredCombo">
+            <summary>
+            원료 콤보
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_CAR_MASTER.Merge">
+            <summary>
+            INGRED 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_CAR_MASTER.Delete">
+            <summary>
+            INGRED 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_MIX_RESULT">
+            <summary>
+            MIX_RESULT 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_MIX_RESULT.Merge">
+            <summary>
+            MIX_RESULT 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_MIX_RESULT.Delete">
+            <summary>
+            MIX_RESULT 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_MIX_SETTING">
+            <summary>
+            TEMPTABLE 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_MIX_SETTING.Merge">
+            <summary>
+            TEMPTABLE 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_MIX_SETTING.Delete">
+            <summary>
+            TEMPTABLE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_Scale">
+            <summary>
+            Scale 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_Scale.Merge">
+            <summary>
+            Scale 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_Scale.Delete">
+            <summary>
+            Scale 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_WORK_DETAIL">
+            <summary>
+            WORK_DETAIL 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_WORK_DETAIL.Merge">
+            <summary>
+            WORK_DETAIL 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_WORK_DETAIL.Delete">
+            <summary>
+            WORK_DETAIL 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_WORK_ORDER">
+            <summary>
+            WORK_ORDER 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_WORK_ORDER.Merge">
+            <summary>
+            WORK_ORDER 테이블 머지 쿼리
+            </summary>/// <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_WORK_ORDER.UpdateProgress">
+            <summary>
+            WORK_ORDER 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Dosing.Q_WORK_ORDER.Delete">
+            <summary>
+            WORK_ORDER 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_Assembly">
+            <summary>
+            Assembly 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_Assembly.SelectQuery(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sUIserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_Assembly.Merge(System.String[],System.Data.DataRow)">
+            <summary>
+            Assembly 테이블 머지 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_Assembly.Delete(System.String[],System.Data.DataTable)">
+            <summary>
+            Assembly 테이블 삭제 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroup">
+            <summary>
+            AuthGroup 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroup.Merge">
+            <summary>
+            AuthGroup 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroup.Delete">
+            <summary>
+            AuthGroup 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupMenu">
+            <summary>
+            TEMPTABLE 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupMenu.CheckUserMenuAuth">
+            <summary>
+            TEMPTABLE 테이블 조회 쿼리
+            특정 조인 쿼리는 Select_[화면명] 등으로 새로 만든다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupMenu.Merge">
+            <summary>
+            TEMPTABLE 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupMenu.AuthGroupMenu_Save">
+            <summary>
+            그룹별 메뉴 권한 관리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupMenu.AdminInsert">
+            <summary>
+            TEMPTABLE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupMenu.ManagerInsert">
+            <summary>
+            TEMPTABLE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupMenu.Delete">
+            <summary>
+            TEMPTABLE 테이블 삭제 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupUser">
+            <summary>
+            AuthGroupUser 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupUser.MenuAuth_Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupUser.Merge">
+            <summary>
+            AuthGroupUser 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_AuthGroupUser.Delete">
+            <summary>
+            AuthGroupUser 테이블 삭제 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster">
+            <summary>
+            CodeMaster 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.ComboList(System.String[],System.Object[])">
+            <summary>
+            CodeMaster 테이블 조회 쿼리
+            특정 조인 쿼리는 Select_[화면명] 등으로 새로 만든다.
+            </summary>
+            <param name="param">where 문</param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.CodeMaster_Get(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.CodeMaster_GetRef(System.String,System.String,System.String)">
+            <summary>
+            공통코드에서 참조값을 가져오기 위함
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.GetVendorCode(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.GetPlantCode(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.GetUseVendor">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.GetUsePlant">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.GetCodeValue(System.String)">
+            <summary>
+            공통코드 가져오기
+            </summary>
+            /// <param name="PCODEVALUE"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.GetRefValue(System.String,System.String,System.String)">
+            <summary>
+            공통코드 상세코드로 참조값 가져오기
+            </summary>
+            <param name="RefNumber"></param>
+            <param name="PCODEVALUE"></param>
+            <param name="CODEVALUE"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.Delete">
+            <summary>
+            CodeMaster 테이블 삭제 쿼리
+            </summary>
+            <param name="param">where 문</param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CodeMaster.DeleteDetail">
+            <summary>
+            CodeMaster 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo">
+            <summary>
+            TEMPTABLE 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.SignLog">
+            <summary>
+            테이블1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.UserToken">
+            <summary>
+            테이블2
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.UserInfo">
+            <summary>
+            테이블3
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.AuthGroupUser">
+            <summary>
+            테이블4
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.MyMenuS">
+            <summary>
+            테이블5
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.MyMenuF">
+            <summary>
+            테이블6
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.MyMenuT">
+            <summary>
+            테이블7
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.VendorAuth">
+            <summary>
+            테이블8
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.Merge(System.String[],System.Data.DataRow)">
+            <summary>
+            TEMPTABLE 테이블 머지 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_CurrentUserInfo.Delete(System.String[],System.Data.DataTable)">
+            <summary>
+            TEMPTABLE 테이블 삭제 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_HtmlContentsMaster">
+            <summary>
+            TEMPTABLE 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_HtmlContentsMaster.Merge">
+            <summary>
+            TEMPTABLE 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_HtmlContentsMaster.Delete">
+            <summary>
+            TEMPTABLE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_LinkMenu">
+            <summary>
+            LinkMenu 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_LinkMenu.Merge">
+            <summary>
+            LinkMenu 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_LinkMenu.Delete">
+            <summary>
+            LinkMenu 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_LocaleMaster">
+            <summary>
+            LocaleMaster 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_LocaleMaster.LanguageMaster">
+            <summary>
+            LocaleMaster 테이블 조회 쿼리
+            특정 조인 쿼리는 Select_[화면명] 등으로 새로 만든다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_LocaleMaster.PopLanguageMaster_Select">
+            <summary>
+            LocaleMaster 테이블 조회 쿼리
+            특정 조인 쿼리는 Select_[화면명] 등으로 새로 만든다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_LocaleMaster.Merge">
+            <summary>
+            LocaleMaster 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_LocaleMaster.Delete">
+            <summary>
+            LocaleMaster 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_LocaleMessageMaster">
+            <summary>
+            LocaleMessageMaster 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_LocaleMessageMaster.Merge">
+            <summary>
+            LocaleMessageMaster 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_LocaleMessageMaster.Delete">
+            <summary>
+            LocaleMessageMaster 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_MenuLog">
+            <summary>
+            MenuLog 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_MenuLog.Merge">
+            <summary>
+            MenuLog 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_MenuLog.Delete">
+            <summary>
+            MenuLog 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_MenuMaster">
+            <summary>
+            TEMPTABLE 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_MenuMaster.MenuAuth_Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_MenuMaster.Merge">
+            <summary>
+            TEMPTABLE 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_MenuMaster.Delete">
+            <summary>
+            TEMPTABLE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_MyMenu">
+            <summary>
+            MyMenu 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_MyMenu.Merge">
+            <summary>
+            MyMenu 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_MyMenu.Delete">
+            <summary>
+            MyMenu 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_Notify">
+            <summary>
+            NOTIFY 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_Notify.Merge">
+            <summary>
+            NOTIFY 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_Notify.Delete">
+            <summary>
+            NOTIFY 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_PlantAuth">
+            <summary>
+            PlantAuth 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_PlantAuth.Merge">
+            <summary>
+            PlantAuth 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_PlantAuth.Delete">
+            <summary>
+            PlantAuth 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_QueryMaster">
+            <summary>
+            QueryMaster 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_QueryMaster.Merge">
+            <summary>
+            QueryMaster 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_QueryMaster.Insert">
+            <summary>
+            QueryMaster 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_QueryMaster.Delete">
+            <summary>
+            QueryMaster 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenColumnSet">
+            <summary>
+            ScreenColumnSet 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenColumnSet.Merge">
+            <summary>
+            ScreenColumnSet 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenColumnSet.Delete">
+            <summary>
+            ScreenColumnSet 테이블 삭제 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenColumnSetDetail">
+            <summary>
+            ScreenColumnSetDetail 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenColumnSetDetail.Upsert(I2S.SQL.COMMON.DATA.OraData.Collections.ParamCollection)">
+            <summary>
+            ScreenColumnSetDetail 테이블 업서트 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenColumnSetDetail.Upsert(System.String[],System.Data.DataRow)">
+            <summary>
+            ScreenColumnSetDetail 테이블 업서트 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenColumnSetDetail.Merge">
+            <summary>
+            ScreenColumnSetDetail 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenColumnSetDetail.Delete(System.String[],System.Data.DataTable)">
+            <summary>
+            ScreenColumnSetDetail 테이블 삭제 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenMaster">
+            <summary>
+            ScreenMaster 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenMaster.ScreenColumnSetMenu_Select">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenMaster.Sel_MaxId">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_ScreenMaster.Delete">
+            <summary>
+            ScreenMaster 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_UserCell">
+            <summary>
+            UserCell 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_UserCell.Merge">
+            <summary>
+            UserCell 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_UserCell.Delete(System.String[],System.Data.DataTable)">
+            <summary>
+            UserCell 테이블 삭제 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_UserInfo">
+            <summary>
+            UserInfo 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_UserInfo.SelectQuery(System.String)">
+            <summary>
+            UserInfo 테이블 조회 쿼리
+            특정 조인 쿼리는 Select_[화면명] 등으로 새로 만든다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_UserInfo.UserSignOn">
+            <summary>
+            UserInfo 테이블 조회 쿼리
+            특정 조인 쿼리는 Select_[화면명] 등으로 새로 만든다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_UserInfo.UserInfo_Get">
+            <summary>
+            UserInfo 테이블 조회 쿼리
+            특정 조인 쿼리는 Select_[화면명] 등으로 새로 만든다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_UserInfo.Merge">
+            <summary>
+            UserInfo 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_UserInfo.Delete(System.String[],System.Data.DataTable)">
+            <summary>
+            UserInfo 테이블 삭제 쿼리
+            </summary>
+            <param name="paramList"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Common.Q_VendorAuth">
+            <summary>
+            TEMPTABLE 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_VendorAuth.Merge">
+            <summary>
+            TEMPTABLE 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_VendorAuth.AuthGroupUserInsert">
+            <summary>
+            TEMPTABLE 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_VendorAuth.Delete">
+            <summary>
+            TEMPTABLE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.ProductInfo.Q_Company">
+            <summary>
+            COMPANY 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.ProductInfo.Q_Company.Merge">
+            <summary>
+            Scale 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.ProductInfo.Q_Company.Delete">
+            <summary>
+            Scale 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.ProductInfo.Q_Scale">
+            <summary>
+            Scale 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.ProductInfo.Q_Scale.Merge">
+            <summary>
+            Scale 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.ProductInfo.Q_Scale.Delete">
+            <summary>
+            Scale 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

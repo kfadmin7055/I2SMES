@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Exe.AutoUpdater</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Exe.AutoUpdater.Download">
+            <summary>
+            Assembly Download Form 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.#ctor">
+            <summary>
+            Download Form을 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.createDownloadList">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.checkDownloadAssembly">
+            <summary>
+            Download List와 Assembly를 검사합니다.
+            </summary>
+            <returns>0: Download 할 Assembly 없음</returns>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.addDownloadListItem(System.Data.DataRow)">
+            <summary>
+            Download List를 생성합니다.
+            </summary>
+            <param name="dr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.DownloadAssembly">
+            <summary>
+            Assembly를 Download 합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.DownloadAssembly(System.Data.DataRow)">
+            <summary>
+            Assembly를 Download 합니다.
+            </summary>
+            <param name="dr"></param>
+            <returns>예외가 발생하면 예외 Message를 Return</returns>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.CheckFontType(System.String)">
+            <summary>
+            Font인지 아닌지 확인합니다.
+            </summary>
+            <param name="extention">확장자</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.GetFontPath">
+            <summary>
+            시스템 폰트 Path를 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.GetAssemblyFileContent(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="assemblyID"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.Download_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.Download_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:EBAP.Exe.AutoUpdater.Download.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Download.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.Program.Main">
+            <summary>
+            해당 응용 프로그램의 주 진입점입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Exe.AutoUpdater.UpdateInfo.CONNECTTYPE">
+            <summary>
+            사내, 외주를 구분합니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Exe.AutoUpdater.UpdateInfo.IP">
+            <summary>
+            IP를 저장합니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Exe.AutoUpdater.UpdateInfo.assemblyFolder">
+            <summary>
+            Dll이 저장될 Folder입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Exe.AutoUpdater.UpdateInfo.xmlPath">
+            <summary>
+            Download 이력을 저장할 XML 파일 위치입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.UpdateInfo.CheckConnectType(System.String)">
+            <summary>
+            IP Address가 192 일 경우 IntraNet 아닐 경우 DMZ로 구분
+            </summary>
+            <param name="ip">IP Address</param>
+            <returns>사내일 경우 IntraNet, 사외일 경우 DMZ</returns>
+        </member>
+        <member name="M:EBAP.Exe.AutoUpdater.UpdateInfo.GetSHA256Hash(System.String)">
+            <summary>
+            암호화 된 MD5 Text를 가져옵니다..
+            </summary>
+            <param name="input">입력값</param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Exe.AutoUpdater.Properties.Resources">
+            <summary>
+              지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Exe.AutoUpdater.Properties.Resources.ResourceManager">
+            <summary>
+              이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Exe.AutoUpdater.Properties.Resources.Culture">
+            <summary>
+              이 강력한 형식의 리소스 클래스를 사용하여 모든 리소스 조회에 대해 현재 스레드의 CurrentUICulture 속성을
+              재정의합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Exe.AutoUpdater.Properties.Resources.icon">
+            <summary>
+              (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
+            </summary>
+        </member>
+    </members>
+</doc>

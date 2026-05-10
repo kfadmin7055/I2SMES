@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <getCodeMaster>
+    <sql>
+      dbo.CodeMaster_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getCodeMaster>
+
+  <getServerID>
+    <sql>
+      dbo.ServerID_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getServerID>
+
+  <getDatabaseID>
+    <sql>
+      dbo.DatabaseID_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getDatabaseID>
+
+  <getTableID>
+    <sql>
+      dbo.TableID_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getTableID>
+
+  <getDatabaseLogEvent>
+    <sql>
+      dbo.DatabaseLogEvent_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getDatabaseLogEvent>
+
+  <getDatabaseLogObject>
+    <sql>
+      dbo.DatabaseLogObject_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getDatabaseLogObject>
+
+  <getDatabaseLogObjectType>
+    <sql>
+      dbo.DatabaseLogObjectType_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getDatabaseLogObjectType>
+
+  <getAssemblyID>
+    <sql>
+      dbo.AssemblyID_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getAssemblyID>
+
+  <getUseVendor>
+    <sql>
+      dbo.UseVendor_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getUseVendor>
+
+  <getUsePlant>
+    <sql>
+      dbo.UsePlant_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getUsePlant>
+  
+</xmlquery>

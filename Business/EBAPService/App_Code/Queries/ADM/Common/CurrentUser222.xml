@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectCurrentUser>
+    <sql>
+      dbo.CurrentUserInfo_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectCurrentUser>
+
+  <deleteFavoritesMenu>
+    <sql>
+      dbo.FavoritesMenu_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteFavoritesMenu>
+
+  <changeCurrentUserPwd>
+    <sql>
+      dbo.UserInfo_ChangePassword
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </changeCurrentUserPwd>
+  
+  <saveCurrentUser>
+    <sql>
+      dbo.CurrentUserInfo_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveCurrentUser>
+</xmlquery>

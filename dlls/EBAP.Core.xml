@@ -1,0 +1,3707 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Core</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Core.Async.AsyncMethodCaller">
+            <summary>
+            [비동기 처리] DB Query Master에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryid"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.Async.MethodCaller">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.Collections.ParamCollection">
+            <summary>
+            System의 Parameter 를 생성하는 Class 입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="P:EBAP.Core.Collections.ParamCollection.Item(System.Object)">
+            <summary>
+            DbParams의 Index를 설정합니다.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EBAP.Core.Collections.ParamCollection.Keys">
+            <summary>
+            DbParams의 Key를 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Collections.ParamCollection.Values">
+            <summary>
+            DbParams의 값을 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Collections.ParamCollection.Add(System.String,System.Object)">
+            <summary>
+            DbParams의 값을 추가 합니다.
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EBAP.Core.Collections.ParamCollection.Add(System.Int32,System.Object)">
+            <summary>
+            DbParams의 값을 추가 합니다.
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EBAP.Core.Collections.ParamCollection.Remove(System.String)">
+            <summary>
+            DbParams의 값을 제거 합니다.
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:EBAP.Core.Collections.ParamCollection.Remove(System.Int32)">
+            <summary>
+            DbParams의 값을 제거 합니다.
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:EBAP.Core.Collections.ParamCollection.Contains(System.String)">
+            <summary>
+            DbParams의 값이 있는지 Check 합니다.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Collections.ParamCollection.Contains(System.Int32)">
+            <summary>
+            DbParams의 값이 있는지 Check 합니다.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Collections.ParamCollection.GetParamList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Collections.ParamCollection.GetValueList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.ADOExtension">
+            <summary>
+            DataTable Class 확장 메서드 입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.AddColumn(System.Data.DataTable,System.String[])">
+            <summary>
+            해당 DataTable에 컬럼을 추가합니다.
+            </summary>
+            <param name="dt">해당 DataTable</param>
+            <param name="cols">Columns</param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.SelectData(System.Data.DataTable,System.String)">
+            <summary>
+            DataTable에서 조건에 맞는 데이터를 추출합니다.
+            </summary>
+            <param name="dt"></param>
+            <param name="filterExpresstion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.ToUpperColumnName(System.Data.DataTable)">
+            <summary>
+            컬럼명을 대문자로 변환합니다.
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.TrimColumnData(System.Data.DataTable)">
+            <summary>
+            해당 DataTable의 컬럼 데이터의 공백을 제거합니다.
+            </summary>
+            <param name="dt">해당 DataTable</param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.TrimColumnData(System.Data.DataTable,System.String[])">
+            <summary>
+            해당 DataTable의 컬럼 데이터의 공백을 제거합니다.
+            </summary>
+            <param name="dt">해당 DataTable</param>
+            <param name="cols">Columns</param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.SetColumnValue(System.Data.DataTable,System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="dt"></param>
+            <param name="col"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.AddColumnWithValue(System.Data.DataTable,System.String[],System.Object[])">
+            <summary>
+            해당 DataTable에 컬럼을 추가하며 일괄적으로 값을 입력합니다.
+            </summary>
+            <param name="dt">해당 DataTable</param>
+            <param name="cols">Columns</param>
+            <param name="values">Value</param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.AddColumnWithValueType(System.Data.DataTable,System.String[],System.Object[])">
+            <summary>
+            해당 DataTable에 컬럼을 추가하며 일괄적으로 값을 입력합니다.
+            </summary>
+            <param name="dt">해당 DataTable</param>
+            <param name="cols">Columns</param>
+            <param name="values">Value</param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.AddColumnWithValueNewRow(System.Data.DataTable,System.String[],System.Object[])">
+            <summary>
+            해당 DataTable에 컬럼을 추가하며 일괄적으로 값을 입력합니다.
+            </summary>
+            <param name="dt">해당 DataTable</param>
+            <param name="cols">Columns</param>
+            <param name="values">Value</param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.InsertRow(System.Data.DataTable,System.String[],System.Object[],System.Int32)">
+            <summary>
+            해당 DataTable에 컬럼을 추가하며 일괄적으로 값을 입력합니다.
+            </summary>
+            <param name="dt">해당 DataTable</param>
+            <param name="cols">Columns</param>
+            <param name="values">Value</param>
+            <param name="pos">넣을 위치</param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.CheckDataTableValue(System.Data.DataTable,System.String[],System.Object,System.Boolean)">
+            <summary>
+            데이터 테이블의 값을 검사하여 같은 값이 있으면 False를 Return합니다.
+            </summary>
+            <param name="dt">대상 DataTable</param>
+            <param name="cols">검사할 Columns</param>
+            <param name="value">검사 Value</param>
+            <param name="check">같은 값 : True, 다른 값 : False</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.CopyColumnData(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            Column Data를 복사합니다.
+            </summary>
+            <param name="dt"></param>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.DeleteRow(System.Data.DataTable,System.String,System.Object)">
+            <summary>
+            Data Table에서 Row를 삭제합니다.
+            </summary>
+            <param name="dt"></param>
+            <param name="col"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.IsEmpty(System.Data.DataTable)">
+            <summary>
+            데이터가 비어있는지 확인합니다.
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.GetColumnsFromDataTable(System.Data.DataTable)">
+            <summary>
+            DataTable에서 Column을 가져옵니다.
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.GetStringFromColumnValue(System.Data.DataTable,System.String)">
+            <summary>
+            컬럼의 값을 연결하여 가져옵니다.
+            </summary>
+            <param name="dt"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.GetColumns(System.Data.DataTable)">
+            <summary>
+            DataTable에서 Column을 가져옵니다.
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.MakeDataTableScheme(System.Data.DataSet,System.String[])">
+            <summary>
+            DataTable Scheme를 생성합니다.
+            </summary>
+            <param name="ds">기본으로 생성된 DataSet</param>
+            <param name="cols">Column Field</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.MakeDataTableScheme(System.Data.DataTable,System.String[])">
+            <summary>
+            DataTable Scheme를 생성합니다.
+            </summary>
+            <param name="dt">기본으로 생성된 DataTable</param>
+            <param name="cols">Column Field</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.RemoveColumn(System.Data.DataTable,System.Boolean,System.String[])">
+            <summary>
+            해당 DataTable 컬럼을 삭제합니다.
+            </summary>
+            <param name="dt">해당 DataTable</param>
+            <param name="match">포함된 컬럼여부</param>
+            <param name="cols">삭제할 컬럼</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.ADOExtension.RemoveRow(System.Data.DataTable,System.String,System.Object)">
+            <summary>
+            해당 DataTable의 컬럼에 지정된 값이 있는 Row를 삭제합니다.
+            </summary>
+            <param name="dt"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:EBAP.Core.StringExtension">
+            <summary>
+            String Class 확장 메서드 입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="F:EBAP.Core.StringExtension.EmailAddressRegex">
+            <summary>
+            이메일 정규식 패턴 샘플
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.StringExtension.CurrencyRegex">
+            <summary>
+            통화 정규식 패턴 샘플
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.StringExtension.DateRegex">
+            <summary>
+            일자 정규식 패턴 샘플
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.StringExtension.NumericRegex">
+            <summary>
+            숫자 정규식 패턴 샘플
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.StringExtension.ContainAlphabeta">
+            <summary>
+            영문 포함 패턴 샘플
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.IsMatch(System.String,System.String)">
+            <summary>
+            해당 문자열이 지정된 정규식 패턴 부합 결과를 반환합니다.
+            </summary>
+            <param name="s">해당 문자열</param>
+            <param name="pattern">정규식 패턴</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.Left(System.String,System.Int32)">
+            <summary>
+            해당 문자열을 왼쪽에서부터 지정된 길이만큼 나누어 반환합니다.
+            </summary>
+            <param name="s">해당 문자열</param>
+            <param name="length">문자열을 나눌 길이</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.Left(System.String,System.Int32,System.Boolean)">
+            <summary>
+            해당 문자열을 지정된 Encoding에 맞춰 왼쪽에서부터 지정된 길이만큼 나누어 반환합니다.
+            </summary>
+            <param name="s">해당 문자열</param>
+            <param name="length">문자열을 나눌 길이</param>
+            <param name="isAscii">ASCII 코드 길이로 계산할지 지정합니다.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.ToByteArray(System.String)">
+            <summary>
+            해당 문자열을 바이트 배열로 반환합니다.
+            </summary>
+            <param name="s">해당 문자열</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.ToByteArray(System.String,System.Text.Encoding)">
+            <summary>
+            해당 문자열을 지정된 Encoding에 맞춰 바이트 배열로 반환합니다.
+            </summary>
+            <param name="s">해당 문자열</param>
+            <param name="encoding">Encoding</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.ToList(System.String,System.String)">
+            <summary>
+            해당 문자열을 Split하여 List Collection으로 반환합니다.
+            </summary>
+            <param name="s"></param>
+            <param name="separator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.Right(System.String,System.Int32)">
+            <summary>
+            해당 문자열을 오른쪽에서부터 지정된 길이만큼 나누어 반환합니다.
+            </summary>
+            <param name="s">해당 문자열</param>
+            <param name="length">문자열을 나눌 길이</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.Split(System.String,System.String)">
+            <summary>
+            해당 문자열을 Split 하여 문자열 배열로 반환합니다.
+            </summary>
+            <param name="s"></param>
+            <param name="separator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.LPAD(System.String,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <param name="length"></param>
+            <param name="pad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.RPAD(System.String,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <param name="length"></param>
+            <param name="pad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.In(System.String,System.String[])">
+            <summary>
+            포함된 문자열이 있는지 검사합니다.
+            </summary>
+            <param name="s"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.NotIn(System.String,System.String[])">
+            <summary>
+            포함된 문자열이 있는지 검사합니다.
+            </summary>
+            <param name="s"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.TryParseInt32(System.Object,System.Int32)">
+            <summary>
+            문자열을 숫자로 변환하여 반환합니다.
+            </summary>
+            <param name="o">문자열</param>
+            <param name="baseVale">기본값</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.TryParseInt32(System.String,System.Int32)">
+            <summary>
+            문자열을 숫자로 변환하여 반환합니다.
+            </summary>
+            <param name="s">문자열</param>
+            <param name="baseVale">기본값</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.TryParseDouble(System.Object,System.Double)">
+            <summary>
+            문자열을 숫자로 변환하여 반환합니다.
+            </summary>
+            <param name="o">문자열</param>
+            <param name="baseVale">기본값</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.TryParseDouble(System.String,System.Double)">
+            <summary>
+            문자열을 숫자로 변환하여 반환합니다.
+            </summary>
+            <param name="s">문자열</param>
+            <param name="baseVale">기본값</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.GetWordCount(System.String)">
+            <summary>
+            문자열에 포함된 단어 수를 반환합니다.
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.IsEmpty(System.String)">
+            <summary>
+            데이터가 비어있는지 확인합니다.
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.GetASCValue(System.String,System.String,System.Int32)">
+            <summary>
+            문자 증가
+            </summary>
+            <param name="schar"></param>
+            <param name="sValue"></param> 
+            /// <param name="endSeq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.StringExtension.GetWeekToDate(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.Info.AppConfig">
+            <summary>
+            System에서 공통으로 사용할 Configuration을 담당하는 Class 입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.SYSTEMNAME">
+            <summary>
+            System 이름입니다.
+            Value : "EBAP™"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.VALUEMEMBER">
+            <summary>
+            ComboBox 에서 사용할 ValueMember
+            Value : "CODEVALUE"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.DISPLAYMEMBER">
+            <summary>
+            ComboBox 에서 사용할 DisplayMember
+            Value : "DISPLAYVALUE"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.DEFAULTPLANT">
+            <summary>
+            Default Plant 입니다.
+            Value : "POOO"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.DATECOLUMNNAME">
+            <summary>
+            DB에 오늘 날짜로 변경할 컬럼 명
+            Value : "CHANGEDTTM"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.USERCOLUMNNAME">
+            <summary>
+            DB에 현재 사용자로 변경할 컬럼 명
+            Value : "CHANGEBY"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.ASSEMBLYFOLDER">
+            <summary>
+            Assembly가 저장될 Folder
+            VALUE : Path.Combine(Environment.GetLogicalDrives()[0], SYSTEMNAME)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.SETTINGFOLDER">
+            <summary>
+            Setting Filter이 저장될 Folder
+            Value : Path.Combine(ASSEMBLYFOLDER, "Setting")
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.GRIDLAYOUTFOLDER">
+            <summary>
+            Grid Layout XML이 저장될 Folder
+            VALUE : Path.Combine(ASSEMBLYFOLDER, "GridLayout")
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.DOWNLOADFOLDER">
+            <summary>
+            Grid Layout XML이 저장될 Folder
+            VALUE : Path.Combine(ASSEMBLYFOLDER, "Download")
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.LOCALEFOLDER">
+            <summary>
+            다국어 XML이 저장될 Folder
+            VALUE : Path.Combine(ASSEMBLYFOLDER, "Locale")
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.SETTINGFILEPATH">
+            <summary>
+            사용자 정보(ini) File을 저장할 경로입니다.
+            Value : Path.Combine(SETTINGFOLDER, "BaseSettings.ini")
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.LOCALEXMLPATH">
+            <summary>
+            Locale Master의 저장 Path
+            VALUE : Path.Combine(LOCALEFOLDER, "LocaleMaster.xml")
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.MESSAGEXMLPATH">
+            <summary>
+            Locale Message Master의 저장 Path
+            VALUE : Path.Combine(LOCALEFOLDER, "MessageMaster.xml")
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.CHECKCOLUMNNAME">
+            <summary>
+            GridView에서 사용할 기본 Check Column 명입니다.
+            Value : "isCheck"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.DEFAULTDATETIMEFORMAT">
+            <summary>
+            시스템에서 사용할 기본 Date Format입니다.
+            VALUE : AppConfig.DEFAULTDATEFORMAT
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.DEFAULTDATEFORMAT">
+            <summary>
+            시스템에서 사용할 기본 Date Format입니다.
+            VALUE : AppConfig.DEFAULTDATEFORMAT
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.WEBSERVICEURL">
+            <summary>
+            사용할 Web Service의 주소입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.DMZSERVICEURL">
+            <summary>
+            DMZ Web Service의 주소입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.COMMANDSP">
+            <summary>
+            Sql Command에 StoredProcedure를 사용합니다.
+            Value : "StoredProcedure"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.COMMANDTEXT">
+            <summary>
+            Sql Command에 Text를 사용합니다.
+            Value : "Text"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.AppConfig.CONDITIONCOLOR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.ConnectionString">
+            <summary>
+            Web.config 의 ConnectionString과 Mapping 할 정보입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="F:EBAP.Core.Info.ConnectionString.DEFAULTDB">
+            <summary>
+            기본적으로 사용할 Database입니다.
+            Value : METADB
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ConnectionString.METADB">
+            <summary>
+            기준정보 Database를 사용합니다.
+            Value : "MetaDB"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ConnectionString.ORAMETADB">
+            <summary>
+            기준정보 Oracle Database를 사용합니다.
+            Value : "MetaDB"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ConnectionString.MESDB">
+            <summary>
+            MES Database를 사용합니다.
+            Value : "MES"
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ConnectionString.LOGDB">
+            <summary>
+            LOG Database를 사용합니다.
+            VALUE : LOGDB
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ConnectionString.FILEDB">
+            <summary>
+            File DB를 사용합니다.
+            Value : "FILEDB"
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.DataType">
+            <summary>
+            시스템에서 사용할 Data Type을 정의합니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Default">
+            <summary>
+            기본(String) 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.CheckEdit">
+            <summary>
+            Check 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.CheckedComboBox">
+            <summary>
+            CheckedComboBoxEdit 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.ComboBox">
+            <summary>
+            ComboBoxEdit 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Date">
+            <summary>
+            날짜형식 yyyy-MM-dd
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.DateTime">
+            <summary>
+            날짜형식 yyyy-MM-dd HH:mm:ss
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Time">
+            <summary>
+            시간형식 HH:mm:ss
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.TimeHM">
+            <summary>
+            시간형식 HH:mm
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.TimeHMMS">
+            <summary>
+            시간형식 HH:mm:ss.fff
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Number">
+            <summary>
+            숫자형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Currency">
+            <summary>
+            통화 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Percentage">
+            <summary>
+            퍼센트 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Popup">
+            <summary>
+            팝업 컨트롤 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Button">
+            <summary>
+            Button 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.ButtonEdit">
+            <summary>
+            Button Edit 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.LinkButton">
+            <summary>
+            LinkButtonEdit 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.ColorSelect">
+            <summary>
+            Color 선택 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Image">
+            <summary>
+            그림 형식(클릭 후 보임)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Picture">
+            <summary>
+            그림형식(미리보기)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.File">
+            <summary>
+            파일 경로 형식(FileOpenDialog 사용)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Memo">
+            <summary>
+            Memo 형식(MemoEx Edit 사용, 아이콘 없음)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.MemoEx">
+            <summary>
+            Memo 형식(MemoEx Edit 사용, 아이콘 표시)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Password">
+            <summary>
+            비밀번호 형식(******)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Progress">
+            <summary>
+            ProgessBar 형태
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.MarqueeProgress">
+            <summary>
+            Marquee Progress 형태
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.DataType.Language">
+            <summary>
+            다국어 입력 형태
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.ExportType">
+            <summary>
+            Grid Export Type
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ExportType.Excel">
+            <summary>
+            Excel
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ExportType.Html">
+            <summary>
+            Html
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ExportType.Pdf">
+            <summary>
+            Pdf
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ExportType.Rtf">
+            <summary>
+            Rtf
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.ExportType.Text">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.PlcStatus">
+            <summary>
+             PLC 접속 상태
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.PlcType">
+            <summary>
+            연결 PLC 종류
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.UnboundType">
+            <summary>
+            
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="F:EBAP.Core.Info.UnboundType.Bound">
+            <summary>
+            요약:
+                Indicates that the column is bound to a field in the control’s underlying data
+                source. The type of data this column contains is determined by the bound field.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.UnboundType.Integer">
+            <summary>
+            요약:
+                Indicates that the column is unbound and it contains integer values (the System.Int32
+                type).
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.UnboundType.Decimal">
+            <summary>
+            요약:
+                Indicates that the column is unbound and it contains decimal values (the System.Decimal
+                type).
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.UnboundType.DateTime">
+            <summary>
+            요약:
+                Indicates that the column is unbound and it contains date/time values (the System.DateTime
+                type).
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.UnboundType.String">
+            <summary>
+            요약:
+                Indicates that the column is unbound and it contains string values (the System.String
+                type).
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.UnboundType.Boolean">
+            <summary>
+            요약:
+                Indicates that the column is unbound and it contains Boolean values (the System.Boolean
+                type).
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.UnboundType.Object">
+            <summary>
+            요약:
+                Indicates that the column is unbound and it contains values of any type. A DevExpress.XtraEditors.TextEdit
+                editor is assigned for the in-place editing of such a column.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.HorzAlign">
+            <summary>
+            
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="F:EBAP.Core.Info.HorzAlign.Default">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.HorzAlign.Center">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.HorzAlign.Far">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.HorzAlign.Near">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.MsgType">
+            <summary>
+            
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="F:EBAP.Core.Info.MsgType.Select">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.MsgType.Save">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.MsgType.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.MsgType.Copy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.MsgType.Operate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.SummaryType">
+            <summary>
+            Summary Type을 정의합니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.SummaryType.Sum">
+            <summary>
+            SUM
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.SummaryType.Min">
+            <summary>
+            MIN
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.SummaryType.Max">
+            <summary>
+            MAX
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.SummaryType.Count">
+            <summary>
+            COUNT
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.SummaryType.Average">
+            <summary>
+            Average
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.SummaryType.Custom">
+            <summary>
+            CUSTOM
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Info.SummaryType.None">
+            <summary>
+            NONE
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.UserInfo">
+            <summary>
+            사용자 정보를 저장하고 있는 Class 입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Core.Info.UserInfo.#ctor">
+            <summary>
+            User Inforatmion을 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Info.UserInfo.#ctor(System.Data.DataRow)">
+            <summary>
+            User Inforatmion을 생성합니다.
+            </summary>
+            <param name="dr"></param>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.ISADMIN">
+            <summary>
+            Admin 권한 여부
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.ISSSO">
+            <summary>
+            SSO 사용 여부
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.ISEXT">
+            <summary>
+            외주 사용자 여부
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.SIGNINSEQ">
+            <summary>
+            Login Seq
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.EPID">
+            <summary>
+            EP ID
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.USERID">
+            <summary>
+            사용자 ID
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.LOGINID">
+            <summary>
+            로그인 ID
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.USERNAME">
+            <summary>
+            사용자 명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.PWD">
+            <summary>
+            비밀번호
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.EMPLOYEENUM">
+            <summary>
+            사번
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.EMPLOYEENAME">
+            <summary>
+            사원명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.DEPARTMENTCODE">
+            <summary>
+            부서코드
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.DEPARTMENTNAME">
+            <summary>
+            부서명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.GRADECODE">
+            <summary>
+            직급코드
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.GRADENAME">
+            <summary>
+            직급명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.GTPSID">
+            <summary>
+            GTPS ID
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.WORKERX">
+            <summary>
+            작업자
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.PLANTCODE">
+            <summary>
+            사업장코드
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.PLANTNAME">
+            <summary>
+            사업장명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.LINECODE">
+            <summary>
+            라인코드
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.LINENAME">
+            <summary>
+            라인명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.CELLCODE">
+            <summary>
+            CELL코드
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.CELLNAME">
+            <summary>
+            CELL 명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.STATIONGROUP">
+            <summary>
+            설비그룹코드
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.STATIONGROUPNAME">
+            <summary>
+            설비그룹 명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.COMPANY">
+            <summary>
+            회사코드
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.VENDORCODE">
+            <summary>
+            업체코드
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.BASEVENDORCODE">
+            <summary>
+            기준업체코드 고정
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.BASEPLANT">
+            <summary>
+            기준 PLANT코드 고정
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.BASEFACTORY">
+            <summary>
+            기준 FACTORY 코드 고정
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.USERTOKEN">
+            <summary>
+            암호화 KEY
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.CURRENTLANGUAGE">
+            <summary>
+            사용 언어
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.COMPANYNAME">
+            <summary>
+            회사명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.VENDORNAME">
+            <summary>
+            업체명
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.PHONENUM">
+            <summary>
+            기본 전화번호
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.OFFICEPHONENUM">
+            <summary>
+            사내 전화번호
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.CELLPHONENUM">
+            <summary>
+            휴대폰 전화번호
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.EMAIL">
+            <summary>
+            E mail
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.IP">
+            <summary>
+            IP Address
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.PROCESSAUTH">
+            <summary>
+            공정 권한
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Info.UserInfo.RESTRICTIONS">
+            <summary>
+            예외 권한
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Info.UserInfo.CheckRestrictionsAuth(System.String[])">
+            <summary>
+            예외 권한을 체크합니다.
+            </summary>
+            <param name="checkAuths">체크할 예외 권한</param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.Interface.ICancelEditRow">
+            <summary>
+            행 추가/수정을 취소하는 Interface입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.ICancelEditRow.CancelEditRow">
+            <summary>
+            행 추가/수정을 취소합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.Interface.IAuth">
+            <summary>
+            권한 설정 기능을 정의하는 Interface입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IAuth.SelectAuth">
+            <summary>
+            조회권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IAuth.NewAuth">
+            <summary>
+            신규권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IAuth.SaveAuth">
+            <summary>
+            저장권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IAuth.DelAuth">
+            <summary>
+            삭제권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Interface.IBindings">
+            <summary>
+            데이터 바인딩을 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IBindings.BindingMember">
+            <summary>
+            데이터 바인딩 멤버
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IBindings.BindingMapping(System.Data.DataTable,System.String)">
+            <summary>
+            데이터 바인딩 설정
+            </summary>
+            <param name="dt"></param>
+            <param name="dataMember"></param>
+        </member>
+        <member name="T:EBAP.Core.Interface.ICheckModified">
+            <summary>
+            컨트롤의 값이 변경되었을 때 UIFrame에 수정 여부 알림을 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.ICheckModified.CheckModified">
+            <summary>
+            컨트롤의 값이 변경되었을 때 UIFrame에 수정 여부 알림을 설정합니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Interface.IDBParams">
+            <summary>
+            Database Parameter로 사용 여부를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IDBParams.ParamName">
+            <summary>
+            Parameter 명
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDBParams.GetControlParamValue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.Interface.IDialog">
+            <summary>
+            메시지 박스와 Exception 박스를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowExceptionBox(System.Exception)">
+            <summary>
+            Exception Box를 보여줍니다.
+            </summary>
+            <param name="ex">Exception</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowWaitDialog(System.String)">
+            <summary>
+            Wait Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowWaitDialog(System.String,System.String)">
+            <summary>
+            Wait Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowAlertMessage(System.String,System.String,System.String)">
+            <summary>
+            Alert Message를 보여줍니다.
+            </summary>
+            <param name="caption">Alert Control Caption</param>
+            <param name="text">Alert Message</param>
+            <param name="hotTrackedText">Hot Tracked Text</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.CloseWaitDialog">
+            <summary>
+            Wait Dialog를 닫습니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowFlyoutDialog(System.String,System.String)">
+            <summary>
+            Flyout Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowMsgBox(System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">Message</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowMsgBox(System.String,System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">Message</param>
+            <param name="caption">Caption</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Interface.IDialog.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <param name="defaultButton">Default Button</param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.Interface.IEnterKeySelectEvent">
+            <summary>
+            엔터키를 눌렀을때 조회이벤트 발생 여부를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IEnterKeySelectEvent.EnterKeySelectEvent">
+            <summary>
+            엔터키를 눌렀을때 조회이벤트 발생 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Interface.IExport">
+            <summary>
+            Excel, PDF 파일로 내보내기 사용 여부를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IExport.DisableExport">
+            <summary>
+            Export를 비활성화 합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IExport.ExportXlsx(System.String)">
+            <summary>
+            Excel로 Export 합니다.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IExport.ExportPdf(System.String)">
+            <summary>
+            PDF로 Export 합니다.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="T:EBAP.Core.Interface.IFillData">
+            <summary>
+            DataSource의 데이터를 채우는 기능을 정의하는 Interface입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IFillData.FillData">
+            <summary>
+            DataSource의 데이터를 채웁니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IFillData.FillData(System.Data.DataSet)">
+            <summary>
+            DataSource의 데이터를 채웁니다.
+            </summary>
+            <param name="ds">DataSource</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IFillData.FillData(System.Data.DataSet,System.String)">
+            <summary>
+            DataSource의 데이터를 채웁니다.
+            </summary>
+            <param name="ds">DataSource</param>
+            <param name="tableName">Table 명</param>
+        </member>
+        <member name="T:EBAP.Core.Interface.IFrameUI">
+            <summary>
+            Main Frame과 UI 설정 기능을 정의하는 Interface입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IFrameUI.CurrentUser">
+            <summary>
+            현재 사용자의 정보를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IFrameUI.MENUID">
+            <summary>
+            메뉴ID를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IFrameUI.OKMESSAGE">
+            <summary>
+            저장/삭제 처리 후 보여줄 메시지
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IFrameUI.TOPMENUID">
+            <summary>
+            최상위 메뉴 ID를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IFrameUI.MIDDLEMENUID">
+            <summary>
+            중간 메뉴 ID를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IFrameUI.AddCommomParam">
+            <summary>
+            공통 Parameter 포함 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IFrameUI.ISMODIFIED">
+            <summary>
+            UI 수정여부를 Check 하여 수정여부를 Caption에 표시합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IFrameUI.ISLOADING">
+            <summary>
+            LOAD 상태를 체크합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IFrameUI.ExecutePopup(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+             <summary>
+             Popup을 생성하고 실행합니다.
+             </summary>
+             <param name="text">Popup 제목</param>
+             <param name="dllPath">Dll 경로</param>
+             <param name="className">Class 명</param>
+             <param name="popParams">Popup Parameters</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Core.Interface.IFrameUI.GetCurrentTime">
+            <summary>
+            시스템의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Interface.IFrameUI.SaveOperationLog(System.String,System.DateTime)">
+            <summary>
+            Database에 실행 Log를 저장합니다.
+            </summary>
+            <param name="opertion"></param>
+            <param name="dtStart"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IFrameUI.SaveOperationLog(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Database에 실행 Log를 저장합니다.
+            </summary>
+            <param name="opertion"></param>
+            <param name="dtStart"></param>
+            <param name="dtEnd"></param>
+        </member>
+        <member name="T:EBAP.Core.Interface.IGridColumnSet">
+            <summary>
+            Database에서 컬럼 정보 설정 기능을 정의하는 Interface입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IGridColumnSet.GetGridColumnSet(System.String)">
+            <summary>
+            Database에서 컬럼 정보를 가져옵니다.
+            </summary>
+            <param name="gridName"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IGridColumnSet.GetGridColumnSet(System.String,System.String)">
+            <summary>
+            Database에서 컬럼 정보를 가져옵니다.
+            </summary>
+            <param name="screenId"></param>
+            <param name="gridName"></param>
+        </member>
+        <member name="T:EBAP.Core.Interface.IInitBandedColumn">
+            <summary>
+            Banded Column Initialize 기능을 정의하는 Interface입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitBandedColumn.InitBand(System.String,System.String)">
+            <summary>
+            Grid Band를 초기화합니다.
+            </summary>
+            <param name="name">Band 명</param>
+            <param name="caption">Band Header Text</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitBandedColumn.InitBandedColumn(System.String,System.String,System.String)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="bandName">Band 명</param>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitBandedColumn.InitBandedColumn(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="bandName">Band 명</param>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitBandedColumn.InitBandedColumn(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="bandName">Band 명</param>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+            <param name="maxLength">Data의 최대 길이, 0이면 설정 안 함</param>
+            <param name="allowEdit">Column Cell 수정 여부</param>
+            <param name="visible">Column 숨김/보임 여부</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitBandedColumn.InitBandedColumn(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,EBAP.Core.Info.DataType)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="bandName">Band 명</param>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+            <param name="maxLength">Data의 최대 길이, 0이면 설정 안 함</param>
+            <param name="allowEdit">Column Cell 수정 여부</param>
+            <param name="visible">Column 숨김/보임 여부</param>
+            <param name="dataType">Column DataType</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitBandedColumn.InitBandedColumn(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,EBAP.Core.Info.DataType,EBAP.Core.Info.HorzAlign)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="bandName">Band 명</param>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+            <param name="maxLength">Data의 최대 길이, 0이면 설정 안 함</param>
+            <param name="allowEdit">Column Cell 수정 여부</param>
+            <param name="visible">Column 숨김/보임 여부</param>
+            <param name="dataType">Column DataType</param>
+            <param name="horzAlign">Column Cell 정렬</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitBandedColumn.InitBandedColumn(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,EBAP.Core.Info.DataType,EBAP.Core.Info.HorzAlign)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="bandName">Band 명</param>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+            <param name="maxLength">Data의 최대 길이, 0이면 설정 안 함</param>
+            <param name="decimalPlace">소숫점 길이 수, 기본값 0</param>
+            <param name="allowEdit">Column Cell 수정 여부</param>
+            <param name="visible">Column 숨김/보임 여부</param>
+            <param name="dataType">Column DataType</param>
+            <param name="horzAlign">Column Cell 정렬</param>
+        </member>
+        <member name="T:EBAP.Core.Interface.IInitColumn">
+            <summary>
+            Column Initialize 기능을 정의하는 Interface입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitColumn.InitColumn(System.String,System.String)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitColumn.InitColumn(System.String,System.String,System.Int32)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitColumn.InitColumn(System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+            <param name="maxLength">Data의 최대 길이, 0이면 설정 안 함</param>
+            <param name="allowEdit">Column Cell 수정 여부</param>
+            <param name="visible">Column 숨김/보임 여부</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitColumn.InitColumn(System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,EBAP.Core.Info.DataType)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+            <param name="maxLength">Data의 최대 길이, 0이면 설정 안 함</param>
+            <param name="allowEdit">Column Cell 수정 여부</param>
+            <param name="visible">Column 숨김/보임 여부</param>
+            <param name="dataType">Column DataType</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitColumn.InitColumn(System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,EBAP.Core.Info.DataType,EBAP.Core.Info.HorzAlign)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+            <param name="maxLength">Data의 최대 길이, 0이면 설정 안 함</param>
+            <param name="allowEdit">Column Cell 수정 여부</param>
+            <param name="visible">Column 숨김/보임 여부</param>
+            <param name="dataType">Column DataType</param>
+            <param name="horzAlign">Column Cell 정렬</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitColumn.InitColumn(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,EBAP.Core.Info.DataType,EBAP.Core.Info.HorzAlign)">
+            <summary>
+            Grid Column을 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="caption">Column Header Text</param>
+            <param name="width">Column 너비</param>
+            <param name="maxLength">Data의 최대 길이, 0이면 설정 안 함</param>
+            <param name="decimalPlace">소숫점 길이 수, 기본값 0</param>
+            <param name="allowEdit">Column Cell 수정 여부</param>
+            <param name="visible">Column 숨김/보임 여부</param>
+            <param name="dataType">Column DataType</param>
+            <param name="horzAlign">Column Cell 정렬</param>
+        </member>
+        <member name="T:EBAP.Core.Interface.IInitData">
+            <summary>
+            컨트롤의 DataSource 를 초기화 하는 Method Interface 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitData.InitData(System.Object[],System.String[])">
+            <summary>
+            DataSource를 초기화합니다.
+            </summary>
+            <param name="valueList">값으로 사용할 List</param>
+            <param name="displayList">보여지는 값으로 사용할 List</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitData.InitData(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            DataSource를 초기화합니다.
+            </summary>
+            <param name="dt">DataSource</param>
+            <param name="valueMember">Value Member</param>
+            <param name="displayMember">Display Member</param>
+        </member>
+        <member name="T:EBAP.Core.Interface.IInitEditValue">
+            <summary>
+            컨트롤이 초기화를 지원 여부를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IInitEditValue.IsInitEditValue">
+            <summary>
+            컨트롤이 초기화를 지원 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitEditValue.InitEditValue">
+            <summary>
+            컨트롤을 초기화합니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Interface.IInitVerticalRow">
+            <summary>
+            Vertical GridControl Row Initialize 기능을 정의하는 Interface입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitVerticalRow.InitRow(System.String,System.String)">
+            <summary>
+            Vertical GridControl Row 를 초기화합니다.
+            </summary>
+            <param name="fieldName">Field Name</param>
+            <param name="caption">Row Header Text</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitVerticalRow.InitRow(System.String,System.String,System.Int32)">
+            <summary>
+            Vertical GridControl Row 를 초기화합니다.
+            </summary>
+            <param name="fieldName"></param>
+            <param name="caption"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitVerticalRow.InitRow(System.String,System.String,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Vertical GridControl Row 를 초기화합니다.
+            </summary>
+            <param name="fieldName"></param>
+            <param name="caption"></param>
+            <param name="width"></param>
+            <param name="allowEdit"></param>
+            <param name="visible"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitVerticalRow.InitRow(System.String,System.String,System.Int32,System.Boolean,System.Boolean,EBAP.Core.Info.DataType)">
+            <summary>
+            Vertical GridControl Row 를 초기화합니다.
+            </summary>
+            <param name="fieldName"></param>
+            <param name="caption"></param>
+            <param name="width"></param>
+            <param name="allowEdit"></param>
+            <param name="visible"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitVerticalRow.InitRow(System.String,System.String,System.Int32,System.Boolean,System.Boolean,EBAP.Core.Info.DataType,EBAP.Core.Info.HorzAlign)">
+            <summary>
+            Vertical GridControl Row 를 초기화합니다.
+            </summary>
+            <param name="fieldName"></param>
+            <param name="caption"></param>
+            <param name="width"></param>
+            <param name="allowEdit"></param>
+            <param name="visible"></param>
+            <param name="dataType"></param>
+            <param name="horzAlign"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitVerticalRow.InitRow(System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,EBAP.Core.Info.DataType,EBAP.Core.Info.HorzAlign)">
+            <summary>
+            Vertical GridControl Row 를 초기화합니다.
+            </summary>
+            <param name="fieldName"></param>
+            <param name="caption"></param>
+            <param name="width"></param>
+            <param name="decimalPlace"></param>
+            <param name="allowEdit"></param>
+            <param name="visible"></param>
+            <param name="dataType"></param>
+            <param name="horzAlign"></param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitVerticalRow.InitMultiEditorRow(System.String,System.String[],System.String[])">
+            <summary>
+            Vertical GridControl MultiEditor Row 를 초기화합니다.
+            </summary>
+            <param name="name"></param>
+            <param name="fieldnames">Multi Editor Row Name</param>
+            <param name="captions">Captions</param>
+        </member>
+        <member name="M:EBAP.Core.Interface.IInitVerticalRow.InitCategoryRow(System.String,System.String)">
+            <summary>
+            Vertical GridControl Category Row 를 초기화합니다.
+            </summary>
+            <param name="fieldName">Field Name</param>
+            <param name="caption">Caption</param>
+        </member>
+        <member name="T:EBAP.Core.Interface.ILocaleConverter">
+            <summary>
+            다국어 사용여부를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.ILocaleConverter.LOCALECONVERTER">
+            <summary>
+            다국어 지원에 사용할 Localizer
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Interface.ILocaleCtrl">
+            <summary>
+            다국어 사용 여부를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.ILocaleCtrl.LocaleEnumClass">
+            <summary>
+            Language String ID 명
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.ILocaleCtrl.SetLocaleString">
+            <summary>
+            컨트롤의 다국어 텍스트를 설정합니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Interface.IMandatoryColumns">
+            <summary>
+            필수 컬럼 입력 여부를 체크하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IMandatoryColumns.CheckMandatoryColumns">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.Interface.IMandatory">
+            <summary>
+            필수입력 체크 여부를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IMandatory.IsMandatoryForSave">
+            <summary>
+            필수입력(저장) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IMandatory.IsMandatoryForSelect">
+            <summary>
+            필수입력(조회) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Interface.IPrint">
+            <summary>
+            Excel, PDF 파일로 내보내기 사용 여부를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IPrint.PrintPreview">
+            <summary>
+            데이터를 미리보기 합니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Interface.IRaiseEvent">
+            <summary>
+            이벤트 강제 발생을 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IRaiseEvent.RaiseSelectEvent">
+            <summary>
+            조회 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IRaiseEvent.RaiseNewEvent">
+            <summary>
+            신규 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IRaiseEvent.RaiseSaveEvent">
+            <summary>
+            Save Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Interface.IRaiseEvent.RaiseDeleteEvent">
+            <summary>
+            삭제 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Interface.IValueChangeSelectEvent">
+            <summary>
+            선택 값이 변경되었을 때 조회이벤트 발생 여부를 설정하는 Interface 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Core.Interface.IValueChangeSelectEvent.ValueChangeSelectEvent">
+            <summary>
+            선택 값이 변경 되었을때 조회이벤트 발생 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Localization.LocaleConverter">
+            <summary>
+            System에서 사용할 다국어지원 Class 입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Core.Localization.LocaleConverter.#ctor(System.String)">
+            <summary>
+            다국어지원 Class Instance를 생성합니다.
+            </summary>
+            <param name="locale">사용 언어</param>
+        </member>
+        <member name="M:EBAP.Core.Localization.LocaleConverter.SetLocale(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="locale"></param>
+        </member>
+        <member name="M:EBAP.Core.Localization.LocaleConverter.GetLocaleString(System.String)">
+            <summary>
+            Enum Class로 해당 문화권의 언어를 가져옵니다.
+            </summary>
+            <param name="enumClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Localization.LocaleConverter.GetLocaleMessage(System.String)">
+            <summary>
+            MessageId로 해당 문화권의 메시지를 가져옵니다.
+            </summary>
+            <param name="enumClass"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Core.Localization.MsgId">
+            <summary>
+            다국어코드와 Mapping 될 Enum Class 입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.None">
+            <summary>
+            없음
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_Save">
+            <summary>
+            [ {0} ] 을(를) 저장하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_Delete">
+            <summary>
+            [ {0} ] 을(를) 삭제할까요?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_S_Delete">
+            <summary>
+            선택한 [ {0} ] 을(를) 삭제할까요?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_Print">
+            <summary>
+            [ {0} ] 을(를) 인쇄하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_Do">
+            <summary>
+            [ {0} ] 하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_Cancel">
+            <summary>
+            [ {0} ] 을(를) 취소하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.OK_SELECT">
+            <summary>
+            정상으로 조회 되었습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.OK_SAVE">
+            <summary>
+            정상으로 저장 되었습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.OK_DELETE">
+            <summary>
+            정상으로 삭제 되었습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.OK_PROCESS">
+            <summary>
+            정상으로 처리 되었습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.OK_WORK">
+            <summary>
+            [ {0} ] 작업이 정상으로 처리 되었습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_Exit">
+            <summary>
+            [ {0} ] 을(를) 종료하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_EssentialItem">
+            <summary>
+            [ {0} ] 은(는) 필수 입력 항목입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_NoData">
+            <summary>
+            [ {0} ] 처리할 데이터가 없어요.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_JigDiscard">
+            <summary>
+            치공구를 폐기하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_JigDisuseCancel">
+            <summary>
+            치공구를 폐기취소 하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_JigPeculiar">
+            <summary>
+            치공구의 특이사항을 등록하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_JigStatusChange">
+            <summary>
+            치공구를 [ {0} ] 상태로 변경할까요?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_S_JigRequest">
+            <summary>
+            선택한 치공구를 요청 처리 하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_S_JigMove">
+            <summary>
+            선택한 치공구를 이동 처리 하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_S_JigMoveInOut">
+            <summary>
+            선택한 치공구를 불출이동 처리 하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_S_JigStatusChange">
+            <summary>
+            선택한 치공구를 [ {0} ] 상태로 변경할까요?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_S_JigDiscard">
+            <summary>
+            선택한 치공구를 폐기 하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_MakeProcess">
+            <summary>
+            [ {0} ] 제작(검사)공정을 시작하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_JigCompletion">
+            <summary>
+            치공구 [ {0} ] 을(를) 완료하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.CF_JigMakeRequest">
+            <summary>
+            치공구 신규 제작을 요청하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_NotExist">
+            <summary>
+            [ {0} ] 이(가) 없어요.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_Select">
+            <summary>
+            [ {0} ] 을(를) 선택하세요.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_DupValue">
+            <summary>
+            중복된 데이터가 존재합니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_Save">
+            <summary>
+            [ {0} ] 이(가) 저장되었습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_BlankItem">
+            <summary>
+            미입력된 항목이 존재합니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_S_Select">
+            <summary>
+            [ {0} ] 할 [ {1} ] 을(를) 선택하세요.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_RollPitch">
+            <summary>
+            인쇄 ROLL [ {0} ] Pitch는 숫자(3 or 4자리)입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_JigRequestCancel">
+            <summary>
+            치공구가 요청 취소 되었습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_S_JigCompletion">
+            <summary>
+            {0} 개의 치공구 [ {1} ] 처리가 완료되었습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_NotPrint4">
+            <summary>
+            4개 이상의 바코드는 출력되지 않습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_SameMntPrint">
+            <summary>
+            같은 관리번호만 출력 가능합니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_EssentialMakeStation">
+            <summary>
+            [ {0} 제작(검사)공정 ] 시 검사장비는 필수 완료 조건입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_CheckFilmNumber">
+            <summary>
+            신청 필름번호를 확인하세요. [ {0} ] 을(를) 입력하세요.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_NotExistWIP">
+            <summary>
+            현 재공에 없는 [ {0} ] 입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_JigMakeRequestComplete">
+            <summary>
+            치공구 신규 제작 요청이 완료 되었습니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_RegisterMntSpec">
+            <summary>
+            [ 관리번호 SPEC ]이 등록되지 않아 신규신청을 할 수 없어요.\n\n[ 관리번호 SPEC ]을 등록하시겠습니까?
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_NotRequestContents">
+            <summary>
+            요청 불가 내역이 존재합니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_IncorrectCheck">
+            <summary>
+            [ {0} ] 이(가) 정확하지 않습니다. [ {0} ] 을(를) 확인하세요.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.MsgId.IF_RepairValue">
+            <summary>
+            최소 1개 이상의 수리값을 입력해야 합니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Localization.StrId">
+            <summary>
+            다국어코드와 Mapping 될 Enum Class 입니다.
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.None">
+            <summary>
+            없음
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Refresh">
+            <summary>
+            새로고침
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Floating">
+            <summary>
+            플로팅
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.New">
+            <summary>
+            신규
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Save">
+            <summary>
+            저장
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Delete">
+            <summary>
+            삭제
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Print">
+            <summary>
+            인쇄
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Chart">
+            <summary>
+            차트
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CaptureScreen">
+            <summary>
+            화면캡쳐
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Export">
+            <summary>
+            내보내기Dot
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ManagerInfo">
+            <summary>
+            담당자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Close">
+            <summary>
+            닫기
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Exit">
+            <summary>
+            종료
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Inquiry">
+            <summary>
+            조회
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Select">
+            <summary>
+            선택
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ChangeUser">
+            <summary>
+            사용자변경
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Sync">
+            <summary>
+            동기화
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SystemUpdate">
+            <summary>
+            시스템 업데이트
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Help">
+            <summary>
+            도움말
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Expand">
+            <summary>
+            확장
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Collapse">
+            <summary>
+            축소
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InquiryOption">
+            <summary>
+            조회조건
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SystemCode">
+            <summary>
+            시스템코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.LCategory">
+            <summary>
+            대분류
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MCategory">
+            <summary>
+            중분류
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SCategory">
+            <summary>
+            소분류
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CommonCodeManagement">
+            <summary>
+            공통코드 관리
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CodeValue">
+            <summary>
+            코드값
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DisplayValue">
+            <summary>
+            표시값
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Category">
+            <summary>
+            분류
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CommonCode">
+            <summary>
+            공통코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseFlag">
+            <summary>
+            사용여부
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Data">
+            <summary>
+            데이터
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CloseAll">
+            <summary>
+            모두 닫기
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Ready">
+            <summary>
+            준비
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ChangeBy">
+            <summary>
+            등록자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Factory">
+            <summary>
+            공장
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.GroupCode">
+            <summary>
+            그룹코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.GroupName">
+            <summary>
+            그룹명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ChangeDttm">
+            <summary>
+            등록 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Name">
+            <summary>
+            이름
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Confirm">
+            <summary>
+            확정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.NewPassword">
+            <summary>
+            새 비밀번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ConfirmNewPassword">
+            <summary>
+            새 비밀번호 확인
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CurrentPassword">
+            <summary>
+            현재 비밀번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Change">
+            <summary>
+            변경
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CellPhoneNo">
+            <summary>
+            휴대폰번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Description">
+            <summary>
+            설명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ScreenId">
+            <summary>
+            스크린 ID
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ScreenName">
+            <summary>
+            스크린 명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DllName">
+            <summary>
+            DLL 명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ClassName">
+            <summary>
+            클래스 명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.User">
+            <summary>
+            사용자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Menu">
+            <summary>
+            메뉴
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MenuId">
+            <summary>
+            메뉴 ID
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MenuName">
+            <summary>
+            메뉴명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.HelpUrl">
+            <summary>
+            도움말 URL
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.IDX">
+            <summary>
+            순서
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SEQ">
+            <summary>
+            순서
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Width">
+            <summary>
+            너비
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Height">
+            <summary>
+            높이
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Visible">
+            <summary>
+            보임
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ControlName">
+            <summary>
+            컨트롤 명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Length">
+            <summary>
+            길이
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MaxLength">
+            <summary>
+            최대 길이
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ParentMenuId">
+            <summary>
+            부모 메뉴
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Project">
+            <summary>
+            프로젝트
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ProjectManagement">
+            <summary>
+            프로젝트 관리
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StartDate">
+            <summary>
+            시작 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.EndDate">
+            <summary>
+            완료 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StartDttm">
+            <summary>
+            시작 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.EndDttm">
+            <summary>
+            종료 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ProjectCode">
+            <summary>
+            프로젝트 코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ProjectName">
+            <summary>
+            프로젝트 명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Status">
+            <summary>
+            상태
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DeveloperCode">
+            <summary>
+            개발자 코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DeveloperName">
+            <summary>
+            개발자 명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.AssignDate">
+            <summary>
+            투입 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.AssignEndDate">
+            <summary>
+            투입종료 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Customer">
+            <summary>
+            고객
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ProjectManager">
+            <summary>
+            프로젝트 관리자(PM)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DeptCode">
+            <summary>
+            부서코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DeptName">
+            <summary>
+            부서명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ParentDept">
+            <summary>
+            상위 부서
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DeptLeader">
+            <summary>
+            부서장
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Company">
+            <summary>
+            회사
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.EmpNo">
+            <summary>
+            사번
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.EmpName">
+            <summary>
+            사원명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Grade">
+            <summary>
+            직급
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.GradeCode">
+            <summary>
+            직급코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Gender">
+            <summary>
+            성별
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.HighestEducation">
+            <summary>
+            최종학력
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Major">
+            <summary>
+            전공
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Marriage">
+            <summary>
+            결혼여부
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Address">
+            <summary>
+            주소
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Contact">
+            <summary>
+            연락처
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Family">
+            <summary>
+            가족사항
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.GradeYear">
+            <summary>
+            년차
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.TechGrade">
+            <summary>
+            기술 등급
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.TechLanguage">
+            <summary>
+            기술(언어)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DispatchDate">
+            <summary>
+            파견 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.HireType">
+            <summary>
+            채용구분
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.HireDate">
+            <summary>
+            입사 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.JoinDate">
+            <summary>
+            입사 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.BirthDate">
+            <summary>
+            생일
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Lunar">
+            <summary>
+            음력
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.AssignedTask">
+            <summary>
+            담당 업무
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Technical">
+            <summary>
+            기술
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Workplace">
+            <summary>
+            근무지
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Image">
+            <summary>
+            사진
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Picture">
+            <summary>
+            사진
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Dup">
+            <summary>
+            중복
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.LotNumber">
+            <summary>
+            LOT 번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ProductType">
+            <summary>
+            제품 타입
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.FilmNumber">
+            <summary>
+            필름번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ManagementCode">
+            <summary>
+            관리번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Process">
+            <summary>
+            공정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Line">
+            <summary>
+            라인
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Customer2">
+            <summary>
+            거래선
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ProductGroup">
+            <summary>
+            제품군
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CurrentProcess">
+            <summary>
+            현 공정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.LotCount">
+            <summary>
+            LOT 수량
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.PrearrangedTime">
+            <summary>
+            도착예정 시간
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SalesOrder">
+            <summary>
+            수주 구분
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Plant">
+            <summary>
+            사업장
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Vendor">
+            <summary>
+            업체
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ConfirmNumber">
+            <summary>
+            확정 번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Injection">
+            <summary>
+            투입
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.JigNumber">
+            <summary>
+            치공구 번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.JigType">
+            <summary>
+            치공구 종류
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.JigFace">
+            <summary>
+            작업면
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.PublicCode">
+            <summary>
+            공유 번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.HasSpec">
+            <summary>
+            스펙 유무
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Jig">
+            <summary>
+            치공구
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RequestCode">
+            <summary>
+            신청 코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeProcess">
+            <summary>
+            제작공정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeProcessClass">
+            <summary>
+            대표제작공정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeRouting">
+            <summary>
+            제작 Routing
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseRatio">
+            <summary>
+            사용률
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ParentFilmNumber">
+            <summary>
+            부모 필름번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ParentManagementCode">
+            <summary>
+            부모 관리번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeInspect">
+            <summary>
+            제작(검사)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Begin">
+            <summary>
+            시작
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Start">
+            <summary>
+            시작
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.End">
+            <summary>
+            완료
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Worker">
+            <summary>
+            작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Time">
+            <summary>
+            시간
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Count">
+            <summary>
+            수량
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Possess">
+            <summary>
+            보유여부
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Spec">
+            <summary>
+            사양
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SpecCode">
+            <summary>
+            사양코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Unit">
+            <summary>
+            단위
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InputType">
+            <summary>
+            입력 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DataType">
+            <summary>
+            데이터 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SelectCondition">
+            <summary>
+            선택 조건
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SelectConditionCode">
+            <summary>
+            선택조건 코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Length2">
+            <summary>
+            자릿수
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DecimalPoint">
+            <summary>
+            소수점
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ToleranceType">
+            <summary>
+            공차 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeRoutingName">
+            <summary>
+            제작 Routing 명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeProcessName">
+            <summary>
+            제작공정명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RepeatCnt">
+            <summary>
+            반복횟수
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeType">
+            <summary>
+            제작형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ProcessClass">
+            <summary>
+            대표공정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.LocationGroup">
+            <summary>
+            위치그룹
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StationType">
+            <summary>
+            설비 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Station">
+            <summary>
+            설비
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StationName">
+            <summary>
+            설비명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.BaseValue">
+            <summary>
+            기준값
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Tolerance">
+            <summary>
+            공차
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SpecType">
+            <summary>
+            사양 형식
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SpecSave">
+            <summary>
+            사양 저장
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InspectFlag">
+            <summary>
+            검사 구분
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SpecName">
+            <summary>
+            사양명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Layer">
+            <summary>
+            층
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.VOPSpec">
+            <summary>
+            VOP 사양
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Flattener">
+            <summary>
+            Flattener
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.FlattenerProcess">
+            <summary>
+            Flattener 공정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ThickManage">
+            <summary>
+            두께 관리
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InkThick">
+            <summary>
+            잉크 두께
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MINHoleSize">
+            <summary>
+            최소 Hole Size
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.FinalThick">
+            <summary>
+            최종 두께
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.BaseInfo">
+            <summary>
+            기준 정보
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SpecChangeReason">
+            <summary>
+            사양변경 사유
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.PLUGProcess">
+            <summary>
+            PLUG 공정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SpecInfo">
+            <summary>
+            사양 정보
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Square">
+            <summary>
+            면적
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.PossessCount">
+            <summary>
+            보유 수량
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeCount">
+            <summary>
+            제작 수량
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.WorkSize">
+            <summary>
+            Work size
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Request">
+            <summary>
+            요청
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RequestDate">
+            <summary>
+            요청 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CompleteDate">
+            <summary>
+            완료 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Rack">
+            <summary>
+            Rack
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Rework">
+            <summary>
+            재작업
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeStatus">
+            <summary>
+            제작 상태
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Location">
+            <summary>
+            위치
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.FilmLocation">
+            <summary>
+            필름 위치
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Confirm2">
+            <summary>
+            확인
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Modify">
+            <summary>
+            수정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Register">
+            <summary>
+            등록
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RequestFilmNumber">
+            <summary>
+            요청 필름번호
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ProductName">
+            <summary>
+            제품명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.TotalUseCount">
+            <summary>
+            총 사용수
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Disuse">
+            <summary>
+            폐기
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.DisuseDot">
+            <summary>
+            폐기Dot
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Stop">
+            <summary>
+            중지
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RequestCancel">
+            <summary>
+            요청 취소
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.PeculiarRegister">
+            <summary>
+            특이사항 등록
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.PeculiarRegisterDot">
+            <summary>
+            특이사항 등록Dot
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Barcode">
+            <summary>
+            바코드
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.BarcodePrint">
+            <summary>
+            바코드 인쇄
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StopDot">
+            <summary>
+            중지Dot
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.EndFlag">
+            <summary>
+            완료 구분
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.EndWorker">
+            <summary>
+            완료 작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InspectStation">
+            <summary>
+            검사 설비
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.BeginWorker">
+            <summary>
+            시작 작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StartWorker">
+            <summary>
+            시작 작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CompleteDttm">
+            <summary>
+            완료 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.BeginDttm">
+            <summary>
+            시작 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CompleteWorker">
+            <summary>
+            완료 작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InspectValue">
+            <summary>
+            검사 값
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InspectResult">
+            <summary>
+            검사 결과
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ToleranceValue">
+            <summary>
+            공차 값
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RequestDttm">
+            <summary>
+            요청 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MinSpace">
+            <summary>
+            최소 회로폭
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RunningSheet">
+            <summary>
+            Running sheet
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SampleFlag">
+            <summary>
+            샘플 구분
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ScreenJig">
+            <summary>
+            Screen Jig
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseCount">
+            <summary>
+            사용수
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RequestWorker">
+            <summary>
+            요청자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InOutWorker">
+            <summary>
+            불출자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InOutDttm">
+            <summary>
+            불출시간
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.WorkTime">
+            <summary>
+            작업시간
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InspectCount">
+            <summary>
+            검사수
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RequestDot">
+            <summary>
+            요청Dot
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseComplete">
+            <summary>
+            사용 완료
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseInspect">
+            <summary>
+            사용 검사
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseInspectDot">
+            <summary>
+            사용 검사Dot
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.RequestRackBatch">
+            <summary>
+            요청랙 일괄지정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InquiryDate">
+            <summary>
+            조회 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InOutDate">
+            <summary>
+            불출 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Stock">
+            <summary>
+            입고
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MoveInOut">
+            <summary>
+            불출이동
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Move">
+            <summary>
+            이동
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MoveDot">
+            <summary>
+            이동Dot
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StockWorker">
+            <summary>
+            입고 작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StockDttm">
+            <summary>
+            입고 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StockDate">
+            <summary>
+            입고 일자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ReworkCount">
+            <summary>
+            재작업 수량
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeInspectProcess">
+            <summary>
+            제작(검사) 공정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MakeInspectProcessType">
+            <summary>
+            제작(검사) 공정 구분
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InspectWorker">
+            <summary>
+            검사 작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InspectDttm">
+            <summary>
+            검사 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.InspectItem">
+            <summary>
+            검사 항목
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.PrevLocation">
+            <summary>
+            이전 위치
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CarryIn">
+            <summary>
+            반입
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CarryOut">
+            <summary>
+            반출
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CarryInDttm">
+            <summary>
+            반입 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CarryInWorker">
+            <summary>
+            반입작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CarryOutDttm">
+            <summary>
+            반출 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.CarryOutWorker">
+            <summary>
+            반출작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseDttm">
+            <summary>
+            사용 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseWorker">
+            <summary>
+            사용 작업자
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseStation">
+            <summary>
+            사용 설비
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ChangeReason">
+            <summary>
+            변경 사유
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.PeculiarType">
+            <summary>
+            특이사항 구분
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.JigRequest">
+            <summary>
+            치공구 요청
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Complete">
+            <summary>
+            완료
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Add">
+            <summary>
+            추가
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ParentFilmNumberAdd">
+            <summary>
+            부모 관리번호 추가
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SOLDBACKSameApply">
+            <summary>
+            SOLD(Back) 동일 적용
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.SelfSeparation">
+            <summary>
+            단독 분리
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.GroupSeparation">
+            <summary>
+            그룹 분리
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UserName">
+            <summary>
+            사용자 명
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ToleranceP">
+            <summary>
+            공차(+)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ToleranceM">
+            <summary>
+            공차(-)
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.ExeDttm">
+            <summary>
+            실행 일시
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Operation">
+            <summary>
+            작업
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Interval">
+            <summary>
+            소요 시간
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Use">
+            <summary>
+            사용
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.UseCancel">
+            <summary>
+            사용 취소
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.MoveLocation">
+            <summary>
+            이동 위치
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.HorizonAlign">
+            <summary>
+            가로정렬
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.Edit">
+            <summary>
+            수정
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.WIPVSJIG">
+            <summary>
+            재공대비 치공구 보유현황
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StatusManagement">
+            <summary>
+            현황 관리
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.StockManagement">
+            <summary>
+            불출 이동 관리
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.JigInfomation">
+            <summary>
+            치공구 상세정보
+            </summary>
+        </member>
+        <member name="F:EBAP.Core.Localization.StrId.PublicCodeManagement">
+            <summary>
+            공유정보 관리
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Security.Cryptography">
+            <summary>
+            암/복호화를 담당하는 Class 입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Core.Security.Cryptography.Dispose">
+            <summary>
+            할당된 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Core.Security.Cryptography.RijndaelEncrypt(System.String)">
+            <summary>
+            Rijndael 알고리즘을 이용하여 문자열을 암호화합니다.
+            </summary>
+            <param name="encryptString">암호화할 문자열</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Security.Cryptography.RijndaelDecrypt(System.String)">
+            <summary>
+            Rijndael 알고리즘을 이용하여 문자열을 복호화합니다.
+            </summary>
+            <param name="decryptString">복호화할 문자열</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Security.Cryptography.GetMD5Hash(System.String)">
+            <summary>
+            암호화 된 MD5 Text를 가져옵니다..
+            </summary>
+            <param name="input">입력값</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Security.Cryptography.ValidateMd5Hash(System.String,System.String)">
+            <summary>
+            MD5를 검증합니다.
+            </summary>
+            <param name="input">입력값</param>
+            <param name="hash">해쉬 코드값(DB 저장 값)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Security.Cryptography.GetSHA256Hash(System.String)">
+            <summary>
+            암호화 된 SHA256 Text를 가져옵니다.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Core.Security.Cryptography.ValidateSHA256Hash(System.String,System.String)">
+            <summary>
+            SHA256을 검증합니다.
+            </summary>
+            <param name="input">입력값</param>
+            <param name="hash">해쉬 코드값(DB 저장 값)</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

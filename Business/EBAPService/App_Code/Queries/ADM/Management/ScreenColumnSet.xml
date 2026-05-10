@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectScreenColumnSetMenu>
+    <sql>
+      dbo.ScreenColumnSetMenu_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectScreenColumnSetMenu>
+  <selectScreenColumnSet>
+    <sql>
+      dbo.ScreenColumnSet_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectScreenColumnSet>
+  <selectScreenColumnSetDetail>
+    <sql>
+      dbo.ScreenColumnSetDetail_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectScreenColumnSetDetail>
+  <saveScreenColumnSet>
+    <sql>
+      dbo.ScreenColumnSet_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveScreenColumnSet>
+  <saveScreenColumnSetDetail>
+    <sql>
+      dbo.ScreenColumnSetDetail_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveScreenColumnSetDetail>
+  <deleteScreenColumnSet>
+    <sql>
+      dbo.ScreenColumnSet_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteScreenColumnSet>
+</xmlquery>

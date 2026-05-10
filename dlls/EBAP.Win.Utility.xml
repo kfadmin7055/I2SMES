@@ -1,0 +1,610 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Win.Utility</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Win.Utility.ApprovalRoute">
+            <summary>
+            결재 라인 지정
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ApprovalRoute.requesterID">
+            <summary>
+            요청자
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ApprovalRoute.AppType">
+            <summary>
+            결재 경로 구분
+            0 : 기안, 1 : 결재, 2 : 합의, 9 : 통보
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ApprovalRoute.AppSeq">
+            <summary>
+            결재자 순서
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.Utility.AppUtil">
+             <summary>
+             Application에서 사용할 Util Method를 정의합니다.
+             </summary>
+             <remarks>
+             2023-02-01 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.CreateInstance``1(System.String,System.String)">
+             <summary>
+             T를 생성합니다.
+             </summary>
+             <param name="dllPath">DLL 명</param>
+             <param name="className">Class 명</param>
+             <returns></returns>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.ExecuteMethod(System.Windows.Forms.Form,System.String)">
+            <summary>
+            Form의 Method를 실행합니다.
+            </summary>
+            <param name="form">Form</param>
+            <param name="methodName">Method 이름</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.ExecuteMethod(System.Windows.Forms.Form,System.String,System.Object[])">
+            <summary>
+            Form의 Method를 실행합니다.
+            </summary>
+            <param name="form">Form</param>
+            <param name="methodName">Method 이름</param>
+            <param name="methodParam">Method Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.FindFocusedControl``1(System.Collections.Generic.List{System.Windows.Forms.Control},System.Windows.Forms.Control)">
+            <summary>
+            지정한 형식의 Control을 찾습니다.
+            </summary>
+            <param name="ctrlList"></param>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.FindControl``1(System.Collections.Generic.List{System.Windows.Forms.Control},System.Windows.Forms.Control)">
+            <summary>
+            지정한 형식의 Control을 찾습니다.
+            </summary>
+            <param name="ctrlList"></param>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.RemoveDataRow(System.Data.DataTable,System.String,System.Object)">
+            <summary>
+            DataTable의 Columns에서 같은 값을 찾아 있으면 해당 Row를 삭제합니다.
+            </summary>
+            <param name="dt">해당 DataTable</param>
+            <param name="column">해당 컬럼</param>
+            <param name="value">찾을 값</param>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetBinaryFromFile(System.String)">
+             <summary>
+             File에서 Binary를 가져옵니다.
+             </summary>
+             <param name="path"></param>
+             <returns></returns>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.CheckConnectType(System.String)">
+            <summary>
+            IP Address가 10. 으로 시작할 경우 IntraNet 아닐 경우 DMZ로 구분
+            </summary>
+            <param name="ip">IP Address</param>
+            <returns>IntraNet, DMZ</returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetWebImage(System.String,System.String,System.String)">
+             <summary>
+             Image를 가져옵니다.
+             </summary>
+             <param name="rootPath">Root Path</param>
+             <param name="subPath">Sub Path</param>
+             <param name="fileName">File 명</param>
+             <returns></returns>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetImage(System.String)">
+             <summary>
+             Image를 가져옵니다.
+             </summary>
+             <param name="fileName">File 명</param>
+             <returns></returns>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.FormToBitmap(System.Windows.Forms.Control,System.Drawing.Size)">
+            <summary>
+            
+            </summary>
+            <param name="form"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetImageFromBinary(System.Byte[])">
+            <summary>
+            Image를 가져옵니다.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetImageFromStream(System.IO.Stream)">
+            <summary>
+            Image를 가져옵니다.
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetBlankParam(System.Int32)">
+            <summary>
+            빈공간의 파라미터를 만들때 사용합니다.
+            </summary>
+            <param name="length">파라미터 길이</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetIPAddress">
+            <summary>
+            로컬 컴퓨터의 IP를 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetMacAddress">
+             <summary>
+             로컬 컴퓨터의 MAC Address를 가져옵니다.
+             </summary>
+             <returns></returns>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.CreateFolder(System.String)">
+            <summary>
+            Folder Path를 확인하여 없으면 Folder를 만듭니다.
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.SaveFile(System.IO.Stream,System.Byte[])">
+            <summary>
+            파일 저장
+            </summary>
+            <param name="fStream"></param>
+            <param name="fileContent"></param>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.OpenFile(System.String,System.Boolean)">
+            <summary>
+            파일 실행
+            </summary>
+            <param name="fileName">파일명</param>
+            <param name="checkExecute">실행여부 확인</param>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.OpenFile(System.String,System.Byte[])">
+            <summary>
+            파일 실행
+            </summary>
+            <param name="fileName">파일명</param>
+            <param name="byteArray">파일 바이너리</param>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetExcelUploadData(System.String)">
+             <summary>
+             Excel에서 DataTable을 추출합니다.
+             </summary>
+             <param name="sheetName">Sheet 이름(대소문자 구분 필수)</param>
+             <returns></returns>
+             <remarks>
+             2017-10-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetCVSUploadData(System.String,System.Boolean)">
+             <summary>
+             CVS에서 DataTable을 추출합니다.
+             </summary>
+             <param name="filePath">파일 경로</param>
+             <param name="isFirstRowHeader">첫번째 행 이름 사용 여부</param>
+             
+             <returns></returns>
+             <remarks>
+             2017-10-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.MakeShortCut(System.String,System.String)">
+            <summary>
+            바탕화면에 바로가기를 만듭니다.
+            </summary>
+            <param name="shortcutName">바로가기 이름</param>
+            <param name="targetPath">바로가기 경로(전체)</param>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.N2H(System.Int64)">
+            <summary>
+            숫자를 한글로 변환합니다.
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.TimeSynchronize">
+            <summary>
+            인터넷 시간 동기화
+            클라이언트에 W32Time 서비스가 실행되지 않을 때 실행되지 않음
+            확인 방법 필요함
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.GetASCValue(System.Int32,System.String,System.Int32)">
+            <summary>
+            문자 증가
+            </summary>
+            <param name="ichar"></param>
+            <param name="sValue"></param> 
+            /// <param name="endSeq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.AppUtil.StringToEnum``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.Utility.DateArithmetic">
+            <summary>
+            Application에서 사용할 날짜 관련 Method를 정의합니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.Utility.DateArithmetic.GetYearFrom(System.DateTime)">
+            <summary>
+            현재 시간과 비교하여 연수를 Return 합니다.
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.DateArithmetic.GetAddDate(System.String,EBAP.Win.Utility.DateTimeType,System.Int32)">
+            <summary>
+            날짜 형식에 날짜를 더합니다.
+            </summary>
+            <param name="dateString">날짜문자열</param>
+            <param name="type">YEAR, MONTH, DAY</param>
+            <param name="gap">더할 숫자</param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.Utility.DateTimeType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Win.Utility.DateTimeType.YEAR">
+            <summary>
+            년
+            </summary>
+        </member>
+        <member name="F:EBAP.Win.Utility.DateTimeType.MONTH">
+            <summary>
+            월
+            </summary>
+        </member>
+        <member name="F:EBAP.Win.Utility.DateTimeType.DAY">
+            <summary>
+            일
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.Utility.EFTP">
+            <summary>
+            FTP의 업로드/다운로드 기능을 담당합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Utility.EFTP.#ctor(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ip">IP</param>
+            <param name="port">PORT</param>
+            <param name="directory"></param>
+            <param name="user"></param>
+            <param name="pwd"></param>
+        </member>
+        <member name="M:EBAP.Win.Utility.EFTP.Dispose">
+            <summary>
+            할당된 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Utility.EFTP.DownloadFile(System.String,System.String)">
+            <summary>
+            FTP 서버에서 파일을 다운로드 합니다.
+            </summary>
+            <param name="serverFile">서버 파일 경로</param>
+            <param name="localFile">로컬 파일 경로</param>
+        </member>
+        <member name="M:EBAP.Win.Utility.EFTP.UploadFile(System.String,System.String)">
+            <summary>
+            FTP 서버로 파일을 업로드 합니다.
+            </summary>
+            <param name="serverFile">서버 파일 경로</param>
+            <param name="localFile">로컬 파일 경로</param>
+        </member>
+        <member name="M:EBAP.Win.Utility.EFTP.GetImageFromFTP(System.String)">
+            <summary>
+            FTP 서버에서 파일을 다운로드 합니다.
+            </summary>
+            <param name="serverFile">서버 파일 경로</param>
+        </member>
+        <member name="T:EBAP.Win.Utility.ESBParam">
+            <summary>
+            싱글 결재 및 메일 관련 파라미터를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Utility.ESBParam.#ctor">
+            <summary>
+            ESB 파라미터를 기본값으로 생성합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ESBParam.SUBJECT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ESBParam.MESSAGE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ESBParam.LOCALE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ESBParam.ENCODING">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ESBParam.REQUESTERID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ESBParam.STRPROCEDURENAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ESBParam.REQUESTERCREDENTIAL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ESBParam.TIMEZONE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.Utility.ESBParam.INTEROCKYN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.Utility.ESBUtil">
+             <summary>
+             Application에서 사용할 ESB(싱글 결재 및 메일) Method를 정의합니다.
+             </summary>
+             <remarks>
+             2018-02-13 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="F:EBAP.Win.Utility.ESBUtil.Param">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Utility.ESBUtil.ApprovalSend(System.String,System.String,System.String,System.Collections.Generic.List{EBAP.Win.Utility.ApprovalRoute},System.String)">
+            <summary>
+            결재 전송
+            </summary>
+            <param name="subject"></param>
+            <param name="message"></param>
+            <param name="requesterID"></param>
+            <param name="approutes"></param>
+            <param name="MailKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.ESBUtil.MailSend(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            메일 전송
+            </summary>
+            <param name="subject"></param>
+            <param name="message"></param>
+            <param name="locale"></param>
+            <param name="encoding"></param>
+            <param name="requesterID"></param>
+            <param name="requesterCredential"></param>
+            <param name="timeZone"></param>
+            <param name="sendMailAddress"></param>
+            <param name="reciveMailAddress"></param>
+            <param name="filePath"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.Utility.InternetConnectionState">
+            <summary>
+            InternetConnectionState
+            </summary>
+        </member>
+        <member name="F:EBAP.Win.Utility.InternetConnectionState.INTERNET_CONNECTION_CONFIGURED">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:EBAP.Win.Utility.InternetConnectionState.INTERNET_CONNECTION_LAN">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:EBAP.Win.Utility.InternetConnectionState.INTERNET_CONNECTION_MODEM">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:EBAP.Win.Utility.InternetConnectionState.INTERNET_CONNECTION_OFFLINE">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:EBAP.Win.Utility.InternetConnectionState.INTERNET_CONNECTION_PROXY">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:EBAP.Win.Utility.InternetConnectionState.INTERNET_RAS_INSTALLED">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:EBAP.Win.Utility.Win32Util">
+             <summary>
+             Application에서 사용할 Win32 Util Method를 정의합니다.
+             </summary>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="F:EBAP.Win.Utility.Win32Util.SW_RESTORE">
+            <summary>
+            RESTORE입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="section"></param>
+             <param name="keyName"></param>
+             <param name="value"></param>
+             <param name="filePath"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="section"></param>
+             <param name="keyName"></param>
+             <param name="defaultValue"></param>
+             <param name="returnString"></param>
+             <param name="size"></param>
+             <param name="filePath"></param>
+             <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.Utility.Win32Util.SYSTEMTIME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.ChangeTime(System.DateTime)">
+            <summary>
+            시스템 시간을 변경합니다.
+            </summary>
+            <param name="dt">변경할 시간</param>
+            <returns>시스템 시간 변경 여부</returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.IsIconic(System.IntPtr)">
+            <summary>
+            해당 윈도우의 최소화 여부를 리턴합니다.
+            </summary>
+            <param name="hWnd">해당 윈도우 핸들</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.InternetGetConnectedState(EBAP.Win.Utility.InternetConnectionState@,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="lpdwFlags"></param>
+             <param name="dwReserved"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.PlaySound(System.String,System.IntPtr,System.Int32)">
+            <summary>
+            Play Sound
+            </summary>
+            <param name="szPath"></param>
+            <param name="hModule"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.SetForegroundWindow(System.IntPtr)">
+            <summary>
+            해당 핸들의 윈도우를 가장 앞으로 설정합니다.
+            </summary>
+            <param name="hWnd">윈도우 핸들</param>
+            <returns>성공 여부</returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.ShowWindowAsync(System.IntPtr,System.Int32)">
+            <summary>
+            Show Window의 비동기 메서드입니다.
+            </summary>
+            <param name="hWnd">윈도우 핸들입니다.</param>
+            <param name="nCmdShow">ShowWindow 동작입니다.</param>
+            <returns>성공 여부</returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.GetIniValue(System.String,System.String,System.String)">
+            <summary>
+            설정을 Ini 파일에서 가져옵니다.
+            </summary>
+            <param name="filePath">파일 경로</param>
+            <param name="section">Section</param>
+            <param name="keyName">Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.GetIniValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            설정을 Ini 파일에서 가져옵니다.
+            </summary>
+            <param name="filePath">파일 경로</param>
+            <param name="section">Section</param>
+            <param name="keyName">Key</param>
+            <param name="defautValue">기본값</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.Utility.Win32Util.SetIniValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            설정을 Ini 파일에 저장합니다.
+            </summary>
+            <param name="filePath">파일 경로</param>
+            <param name="section">Section</param>
+            <param name="keyName">Key</param>
+            <param name="value">저장 값</param>
+        </member>
+    </members>
+</doc>

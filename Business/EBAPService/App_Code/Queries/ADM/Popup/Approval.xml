@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <getApprovalContents>
+    <sql>
+      dbo.HtmlContents_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getApprovalContents>
+
+  <saveESBLog>
+    <sql>
+      dbo.ESBLog_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>LOG</connection>
+  </saveESBLog>
+</xmlquery>

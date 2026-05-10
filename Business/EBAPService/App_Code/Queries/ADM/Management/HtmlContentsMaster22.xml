@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectHtmlContentsMaster>
+    <sql>
+      dbo.HtmlContentsMaster_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectHtmlContentsMaster>
+  <saveHtmlContentsMaster>
+    <sql>
+      dbo.HtmlContentsMaster_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveHtmlContentsMaster>
+  <deleteHtmlContentsMaster>
+    <sql>
+      dbo.HtmlContentsMaster_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteHtmlContentsMaster>
+</xmlquery>

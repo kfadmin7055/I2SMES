@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <initFTPClient>
+    <sql>
+      dbo.FTPInfo_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </initFTPClient>
+
+  <selectFTPForm>
+    <sql>
+      dbo.FTPFileInfo_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectFTPForm>
+
+  <saveFTPForm>
+    <sql>
+      dbo.FTPFileInfo_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveFTPForm>
+
+  <deleteFTPForm>
+    <sql>
+      dbo.FTPFileInfo_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteFTPForm>
+
+</xmlquery>

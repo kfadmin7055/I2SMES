@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Data.Compaction</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Data.Compaction.CompressDataSet">
+            <summary>
+            데이터 압축/압축해제를 담당하는 Class 입니다.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.Compaction.CompressDataSet.ZipData(System.Data.DataSet)">
+            <summary>
+            DataSet을 압축하여 byte[]로 리턴합니다.
+            </summary>
+            <param name="ds">압축할 DataSet</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Compaction.CompressDataSet.ZipData(System.Data.DataTable)">
+            <summary>
+            DataSet을 압축하여 byte[]로 리턴합니다.
+            </summary>
+            <param name="dt">압축할 DataSet</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Compaction.CompressDataSet.UnzipData(System.Byte[])">
+            <summary>
+            byte[]를 UnZip 하여 DataSet을 리턴합니다.
+            </summary>
+            <param name="bData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Compaction.CompressDataSet.UnzipDataDataTable(System.Byte[])">
+            <summary>
+            byte[]를 UnZip 하여 DataSet을 리턴합니다.
+            </summary>
+            <param name="bData"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

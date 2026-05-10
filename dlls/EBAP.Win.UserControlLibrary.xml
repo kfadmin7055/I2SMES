@@ -1,0 +1,471 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Win.UserControlLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Win.UserControlLibrary.PCustomerEdit">
+             <summary>
+             Language Edit 입니다.
+             MultiLanguage를 설정할 때 사용합니다.
+             </summary>
+             <remarks>
+             2023-02-01 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PCustomerEdit.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.IsInitEditValue">
+            <summary>
+            일괄 초기화 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PCustomerEdit.InitEditValue">
+            <summary>
+            컨트롤을 초기화 합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.LocaleEnumClass">
+            <summary>
+            Database Parameter Name 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PCustomerEdit.SetLocaleString">
+            <summary>
+            컨트롤의 다국어 텍스트를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PCustomerEdit.BindingMapping(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            DataTable과 EditValue를 Mapping 합니다.
+            </summary>
+            <param name="dt"></param>
+            <param name="id"></param>
+            <param name="caption"></param>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.EnterKeySelectEvent">
+            <summary>
+            엔터키를 눌렀을때 조회이벤트 발생 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.IsMandatoryForSave">
+            <summary>
+            필수입력(저장) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.IsMandatoryForSelect">
+            <summary>
+            필수입력(조회) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.Id">
+            <summary>
+            ID를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.CustomerName">
+            <summary>
+            CustomerName을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.IdParamName">
+            <summary>
+            Id의 Parameter 명을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.CaptionParamName">
+            <summary>
+            Caption의 Parameter 명을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PCustomerEdit.UseAdvancedMode">
+            <summary>
+            Advanced 모드 사용 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PCustomerEdit.Edit_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Enter Key를 입력하면 조회 이벤트를 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PCustomerEdit.ButtonEdit_ButtonClick(System.Object,DevExpress.XtraEditors.Controls.ButtonPressedEventArgs)">
+            <summary>
+            ID, CAPTION을 클릭하면 다국어 검색 Popup을 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:EBAP.Win.UserControlLibrary.PCustomerEdit.components">
+            <summary> 
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PCustomerEdit.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PCustomerEdit.InitializeComponent">
+            <summary> 
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.UserControlLibrary.PDateFromToEdit">
+             <summary>
+             From To DateEdit 입니다.
+             DevExpress DateEdit를 Wrapping 하여 사용합니다.
+             </summary>
+             <remarks>
+             2023-02-01 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.LocaleEnumClass">
+            <summary>
+            Database Parameter Name 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.SetLocaleString">
+            <summary>
+            컨트롤의 다국어 텍스트를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.BindingMapping(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            DataTable과 EditValue를 Mapping 합니다.
+            </summary>
+            <param name="dt"></param>
+            <param name="startMember"></param>
+            <param name="endMember"></param>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.ValueChangeSelectEvent">
+            <summary>
+            선택 값이 변경 되었을때 조회이벤트 발생 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.IsMandatoryForSave">
+            <summary>
+            필수입력(저장) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.IsMandatoryForSelect">
+            <summary>
+            필수입력(조회) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.StartDate">
+            <summary>
+            시작일자를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.EndDate">
+            <summary>
+            종료일자를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.StartParamName">
+            <summary>
+            시작일자의 Parameter 명을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.EndParamName">
+            <summary>
+            종료일자의 Parameter 명을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.UseAdvancedMode">
+            <summary>
+            Advanced 모드 사용 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PDateFromToEdit.MaximumDays">
+            <summary>
+            시작일자와 종료일자의 최대 일수를 지정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.SetDate(System.Object,System.Object)">
+            <summary>
+            시작/종료 일자를 설정합니다.
+            </summary>
+            <param name="start">시작일자</param>
+            <param name="end">종료일자</param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.SetFullMonthDate(System.DateTime)">
+            <summary>
+            일자에 해당하는 월의 시작일과 종료일을 설정합니다.
+            </summary>
+            <param name="now">일자</param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.SetWeekDate(System.DateTime)">
+            <summary>
+            일자에 해당하는 주의 시작일과 종료일을 설정합니다.
+            </summary>
+            <param name="now">일자</param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.SetWorkWeekDate(System.DateTime)">
+            <summary>
+            일자에 해당하는 주의 근무 시작일과 종료일을 설정합니다.
+            </summary>
+            <param name="now">일자</param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.DateEdit_EditValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            EditValue가 변경되면 조회 이벤트를 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:EBAP.Win.UserControlLibrary.PDateFromToEdit.components">
+            <summary> 
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PDateFromToEdit.InitializeComponent">
+            <summary> 
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.UserControlLibrary.PEmployeeEdit">
+             <summary>
+             Language Edit 입니다.
+             MultiLanguage를 설정할 때 사용합니다.
+             </summary>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PEmployeeEdit.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.IsInitEditValue">
+            <summary>
+            일괄 초기화 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PEmployeeEdit.InitEditValue">
+            <summary>
+            컨트롤을 초기화 합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.LocaleEnumClass">
+            <summary>
+            Database Parameter Name 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PEmployeeEdit.SetLocaleString">
+            <summary>
+            컨트롤의 다국어 텍스트를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PEmployeeEdit.BindingMapping(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            DataTable과 EditValue를 Mapping 합니다.
+            </summary>
+            <param name="dt"></param>
+            <param name="id"></param>
+            <param name="caption"></param>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.EnterKeySelectEvent">
+            <summary>
+            엔터키를 눌렀을때 조회이벤트 발생 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.IsMandatoryForSave">
+            <summary>
+            필수입력(저장) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.IsMandatoryForSelect">
+            <summary>
+            필수입력(조회) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.Id">
+            <summary>
+            ID를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.UserName">
+            <summary>
+            UserName을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.IdParamName">
+            <summary>
+            Id의 Parameter 명을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.CaptionParamName">
+            <summary>
+            Caption의 Parameter 명을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PEmployeeEdit.UseAdvancedMode">
+            <summary>
+            Advanced 모드 사용 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PEmployeeEdit.Edit_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Enter Key를 입력하면 조회 이벤트를 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PEmployeeEdit.ButtonEdit_ButtonClick(System.Object,DevExpress.XtraEditors.Controls.ButtonPressedEventArgs)">
+            <summary>
+            ID, CAPTION을 클릭하면 다국어 검색 Popup을 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:EBAP.Win.UserControlLibrary.PEmployeeEdit.components">
+            <summary> 
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PEmployeeEdit.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PEmployeeEdit.InitializeComponent">
+            <summary> 
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.UserControlLibrary.PLanguageEdit">
+             <summary>
+             Language Edit 입니다.
+             MultiLanguage를 설정할 때 사용합니다.
+             </summary>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PLanguageEdit.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PLanguageEdit.LocaleEnumClass">
+            <summary>
+            Database Parameter Name 입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PLanguageEdit.SetLocaleString">
+            <summary>
+            컨트롤의 다국어 텍스트를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PLanguageEdit.BindingMapping(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            DataTable과 EditValue를 Mapping 합니다.
+            </summary>
+            <param name="dt"></param>
+            <param name="id"></param>
+            <param name="caption"></param>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PLanguageEdit.EnterKeySelectEvent">
+            <summary>
+            엔터키를 눌렀을때 조회이벤트 발생 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PLanguageEdit.IsMandatoryForSave">
+            <summary>
+            필수입력(저장) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PLanguageEdit.IsMandatoryForSelect">
+            <summary>
+            필수입력(조회) 체크 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PLanguageEdit.Id">
+            <summary>
+            ID를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PLanguageEdit.Caption">
+            <summary>
+            CAPTION을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PLanguageEdit.IdParamName">
+            <summary>
+            Id의 Parameter 명을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PLanguageEdit.CaptionParamName">
+            <summary>
+            Caption의 Parameter 명을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.UserControlLibrary.PLanguageEdit.UseAdvancedMode">
+            <summary>
+            Advanced 모드 사용 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PLanguageEdit.Edit_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Enter Key를 입력하면 조회 이벤트를 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PLanguageEdit.ButtonEdit_ButtonClick(System.Object,DevExpress.XtraEditors.Controls.ButtonPressedEventArgs)">
+            <summary>
+            ID, CAPTION을 클릭하면 다국어 검색 Popup을 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:EBAP.Win.UserControlLibrary.PLanguageEdit.components">
+            <summary> 
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PLanguageEdit.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:EBAP.Win.UserControlLibrary.PLanguageEdit.InitializeComponent">
+            <summary> 
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+            </summary>
+        </member>
+    </members>
+</doc>

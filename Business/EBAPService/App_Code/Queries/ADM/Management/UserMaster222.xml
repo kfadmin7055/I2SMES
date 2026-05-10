@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectUserMaster>
+    <sql>
+      dbo.UserInfo_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectUserMaster>
+  <saveUserMaster>
+    <sql>
+      dbo.UserInfo_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveUserMaster>
+  <deleteUserMaster>
+    <sql>
+      dbo.UserInfo_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteUserMaster>
+  <initUserPwd>
+    <sql>
+      dbo.UserInfo_ChangePassword
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </initUserPwd>
+</xmlquery>

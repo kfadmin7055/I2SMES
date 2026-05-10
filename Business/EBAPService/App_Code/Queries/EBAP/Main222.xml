@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectMenuAuth>
+    <sql>
+      dbo.MenuAuth_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectMenuAuth>
+  
+  <checkUserMenuAuth>
+    <sql>
+      dbo.UserMenuAuth_Check
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </checkUserMenuAuth>
+  
+  <saveSignLog>
+    <sql>
+      dbo.SignLog_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>LOG</connection>
+  </saveSignLog>
+  
+  <saveMenuExecuteLog>
+    <sql>
+      dbo.MenuExecuteLog_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>LOG</connection>
+  </saveMenuExecuteLog>
+  
+  <saveOperationLog>
+    <sql>
+      dbo.OperationLog_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>LOG</connection>
+  </saveOperationLog>
+
+  <saveUseLog>
+    <sql>
+      dbo.UseLog_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>LOG</connection>
+  </saveUseLog>
+  
+  <getLocaleMaster>
+    <sql>
+      dbo.LocaleMaster_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getLocaleMaster>
+  <getLocaleMessageMaster>
+    <sql>
+      dbo.LocaleMessageMaster_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getLocaleMessageMaster>
+
+  <UserSignOn>
+    <sql>
+      dbo.UserSignOn
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </UserSignOn>
+
+  <saveSSOInfo>
+    <sql>
+      dbo.SSOInfo_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveSSOInfo>
+
+  <saveFavoritesMenu>
+    <sql>
+      dbo.FavoritesMenu_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveFavoritesMenu>
+
+  <selectDownloadList>
+    <sql>
+      dbo.AssemblyDownloadList_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectDownloadList>
+
+  <getScreenColumnSet>
+    <sql>
+      dbo.ScreenColumnSetInfo_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getScreenColumnSet>
+
+  <getVendorCode>
+    <sql>
+      dbo.VendorAuth_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getVendorCode>
+
+  <getPlantCode>
+    <sql>
+      dbo.PlantCode_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </getPlantCode>
+</xmlquery>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectMenuMaster>
+    <sql>
+      dbo.MenuMaster_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectMenuMaster>
+  <saveMenuMaster>
+    <sql>
+      dbo.MenuMaster_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveMenuMaster>
+  <deleteMenuMaster>
+    <sql>
+      dbo.MenuMaster_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteMenuMaster>
+</xmlquery>

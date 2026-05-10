@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectDeploy>
+    <sql>
+      dbo.AssemblyMaster_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectDeploy>
+  
+  <saveDeploy>
+    <sql>
+      dbo.AssemblyMaster_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveDeploy>
+  
+  <deleteDeploy>
+    <sql>
+      dbo.AssemblyMaster_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteDeploy>
+
+
+  <saveDeployHistory>
+    <sql>
+      dbo.AssemblyDeployHistory_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveDeployHistory>
+  
+</xmlquery>

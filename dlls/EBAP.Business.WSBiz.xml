@@ -1,0 +1,1065 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Business.WSBiz</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Business.WSBiz.OraBiz">
+            <summary>
+            Oracle Biz Class
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.#ctor">
+            <summary>
+            Sql Biz를 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.#ctor(System.String)">
+            <summary>
+            Sql Biz를 생성합니다.
+            </summary>
+            <param name="url">Web Service URL입니다.</param>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Dispose">
+            <summary>
+            할당된 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.GetServerTime">
+            <summary>
+            서버의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteDataSet(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="dbParams">Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteDataSet(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteDataSet(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteDataSetFromXML(System.String,System.String[],System.Object[])">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteDataSetFromXML(System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="dbParams">DB Params</param>
+            <returns></returns>     
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteDataSetFromXML(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteDataSetFromQueryId(System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="dbParams">DB Params</param>
+            <returns></returns>     
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteDataSetFromQueryId(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteDataSetFromQueryId(System.String,System.String[],System.Object[])">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteScalar(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteScalarFromXML(System.String,System.String[],System.Object[])">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 Object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteScalarFromXML(System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 Object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="dbParams">Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteScalarFromQueryId(System.String,System.String[],System.Object[])">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 Object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.NTx_ExecuteScalarFromQueryId(System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 Object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="dbParams">Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQueryFromXML(System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQueryFromXML(System.String,System.String[],System.Object[])">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQueryFromXML(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQueryFromQueryId(System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQueryFromQueryId(System.String,System.String[],System.Object[])">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQueryFromQueryId(System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.UseLogSave(System.String,System.String,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="methodName"></param>
+            <param name="queryid"></param>
+            <param name="startDTTM"></param>
+        </member>
+        <member name="T:EBAP.Business.WSBiz.OraBiz_CS">
+            <summary>
+            Oracle Biz Client/Server Class
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.#ctor">
+            <summary>
+            Sql Biz를 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.#ctor(System.String)">
+            <summary>
+            Sql Biz를 생성합니다.
+            </summary>
+            <param name="url">Web Service URL입니다.</param>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.Dispose">
+            <summary>
+            할당된 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.GetServerTime">
+            <summary>
+            서버의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.NTx_ExecuteDataSet(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="dbParams">Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.NTx_ExecuteDataSet(System.String,System.String[],System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.NTx_ExecuteDataSet(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.NTx_ExecuteScalar(System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+            쿼리를 실행하여 object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="param">Command Parameters</param>
+            <param name="value">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.NTx_ExecuteScalar(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.NTx_ExecuteScalar(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.Tx_ExecuteNonQuery(System.String,System.String[],System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.Tx_ExecuteNonQuery(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="dbParams"></param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.Tx_ExecuteNonQuery(System.String,System.String[],System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz_CS.UseLogSave(System.String,System.String,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="methodName"></param>
+            <param name="queryid"></param>
+            <param name="startDTTM"></param>
+        </member>
+        <member name="T:EBAP.Business.WSBiz.SqlBiz">
+            <summary>
+            MS-SQL Biz Class
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.#ctor">
+            <summary>
+            Sql Biz를 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.#ctor(System.String)">
+            <summary>
+            Sql Biz를 생성합니다.
+            </summary>
+            <param name="url">Web Service URL입니다.</param>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Dispose">
+            <summary>
+            할당된 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.RFC_PACKING_MATERIAL_LIST(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="plant"></param>
+            <param name="wareHouse"></param>
+            <param name="materialCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.RFC_PACKING_MATERIAL_HIST(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="gubun"></param>
+            <param name="plant"></param>
+            <param name="wareHouse"></param>
+            <param name="materialCode"></param>
+            <param name="fromDate"></param>
+            <param name="toDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.RFC_PACKING_MATERIAL_CANCEL(System.String,System.String,System.String@,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="docNo"></param>
+            <param name="postingDate"></param>
+            <param name="rfcNo"></param>
+            <param name="rfcMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.RFC_PACKING_MATERIAL_MOVE(System.String,System.String,System.String,System.Int64,System.String,System.String@,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="plant"></param>
+            <param name="wareHouse"></param>
+            <param name="materialCode"></param>
+            <param name="useQty"></param>
+            <param name="receiveWarehouse"></param>
+            <param name="rfcNo"></param>
+            <param name="rfcMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.RFC_PACKING_MATERIAL_INPUT(System.String,System.String,System.String,System.Int64,System.String@,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="plant"></param>
+            <param name="wareHouse"></param>
+            <param name="materialCode"></param>
+            <param name="useQty"></param>
+            <param name="rfcNo"></param>
+            <param name="rfcMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.H101_Execute(System.String,System.String,System.String,System.String)">
+            <summary>
+            [Highway101]서비스를 사용하여 XML 메시지를 전송합니다.
+            </summary>
+            <param name="messageName"></param>
+            <param name="sourceChannel"></param>
+            <param name="targetChannel"></param>
+            <param name="strXML"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.H101_MakeBoxTagLabel(System.String[])">
+            <summary>
+            [Highway101]서비스를 사용하여 BOX Tag 라벨을 생성합니다.
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.H101_BunddleInfoSave(System.String[],System.Int32@)">
+            <summary>
+            [Highway101]서비스를 사용하여 번들정보를 저장합니다.
+            </summary>
+            <param name="values"></param>
+            <param name="returnValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.GetImageFromFTP(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ip"></param>
+            <param name="directory"></param>
+            <param name="fileName"></param>
+            <param name="user"></param>
+            <param name="pwd"></param>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.GetServerTime">
+            <summary>
+            서버의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteDataSet(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="dbParams">Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteDataSet(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteDataSet(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteDataSetFromXML(System.String,System.String[],System.Object[])">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteDataSetFromXML(System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="dbParams">DB Params</param>
+            <returns></returns>     
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteDataSetFromQueryId(System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="dbParams">DB Params</param>
+            <returns></returns>     
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteDataSetFromQueryId(System.String,System.String[],System.Object[])">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteScalar(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="dbParams">Command Parameters</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteScalar(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteScalarFromXML(System.String,System.String[],System.Object[])">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 Object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteScalarFromXML(System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 Object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="dbParams">Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteScalarFromQueryId(System.String,System.String[],System.Object[])">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 Object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>        
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.NTx_ExecuteScalarFromQueryId(System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 Object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="dbParams">Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam">Output 파라미터</param>
+            <param name="outValue">Output 파라미터 값</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Tx_ExecuteNonQuery(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="dbParams"></param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Data.DataTable,System.String[],System.Object[]@)">
+            <summary>
+            DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Tx_ExecuteNonQueryFromXML(System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Tx_ExecuteNonQueryFromXML(System.String,System.String[],System.Object[])">
+            <summary>
+            XML 파일에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Tx_ExecuteNonQueryFromQueryId(System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.Tx_ExecuteNonQueryFromQueryId(System.String,System.String[],System.Object[])">
+            <summary>
+            DB Query Master에서 쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="queryId">쿼리 ID</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz.UseLogSave(System.String,System.String,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="methodName"></param>
+            <param name="queryid"></param>
+            <param name="startDTTM"></param>
+        </member>
+        <member name="T:EBAP.Business.WSBiz.SqlBiz_CS">
+            <summary>
+            MS-SQL Biz Class
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.#ctor">
+            <summary>
+            Sql Biz를 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.#ctor(System.String)">
+            <summary>
+            Sql Biz를 생성합니다.
+            </summary>
+            <param name="url">Web Service URL입니다.</param>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.Dispose">
+            <summary>
+            할당된 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.GetServerTime">
+            <summary>
+            서버의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.NTx_ExecuteDataSet(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="dbParams">Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.NTx_ExecuteDataSet(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.NTx_ExecuteDataSet(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            쿼리를 실행하여 DataSet을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.NTx_ExecuteScalar(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="dbParams">Command Parameters</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.NTx_ExecuteScalar(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam">Output 파라미터</param>
+            <param name="outValue">Output 파라미터 값</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.Tx_ExecuteNonQuery(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="dbParams"></param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Data.DataTable,System.String[],System.Object[]@)">
+            <summary>
+            DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <param name="outParam"></param>
+            <param name="outValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Business.WSBiz.SqlBiz_CS.UseLogSave(System.String,System.String,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="methodName"></param>
+            <param name="queryid"></param>
+            <param name="startDTTM"></param>
+        </member>
+    </members>
+</doc>

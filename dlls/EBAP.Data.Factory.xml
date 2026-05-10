@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Data.Factory</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Data.Factory.OracleFactory">
+            <summary>
+            Oracle Database와 연동하는 Oracle Factory 클래스입니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.#ctor(System.String)">
+            <summary>
+            Oracle Factory를 생성합니다.
+            </summary>
+            <param name="connectionStr">연결문자열</param>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.Dispose">
+            <summary>
+            할당된 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.NTx_ExecuteDataSet(System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            Transaction이 없는 일반 queryText 및 SP 를 담당하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.NTx_ExecuteDataSetMultiTable(System.String,System.String[],System.String,System.String[],System.Object[])">
+            <summary>
+            Transaction이 없는 일반 queryText 및 SP 를 담당하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.NTx_ExecuteScalar(System.String,System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            Transaction이 없는 일반 queryText로 단일 값을 Return 하는 Method입니다.
+            </summary>/// <summary>
+            쿼리를 실행하여 object을 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.NTx_ExecuteScalar(System.String,System.String,System.String[],System.Object[])">
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.Tx_ExecuteNonQuery(System.String,System.String,System.String[],System.Object[])">
+            <summary>
+            Transaction이 있는 단일 queryText로 영향을 받은 Row 수를 Return 하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.Tx_ExecuteNonQuery(System.String[],System.String,System.String[],System.Object[])">
+            <summary>
+            Transaction이 있는 단일 query로 영향을 받은 Row 수를 Return 하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.Tx_ExecuteNonQueryByDataTable(System.String,System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            Transaction이 있는 queryText로 DataTable을 사용하여 Multi 처리하고 영향을 받은 Row 수를 Return 하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.Tx_ExecuteNonQueryByDataTable(System.String[],System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            Transaction이 있는 queryText로 DataTable을 사용하여 Multi 처리하고 영향을 받은 Row 수를 Return 하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.OracleFactory.GetParameterOracleType(System.Object)">
+            <summary>
+            파라미터의 값에 따라 OracleType을 정의합니다.
+            </summary>
+            <param name="value">파라미터의 값</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="T:EBAP.Data.Factory.QueryFinder">
+            <summary>
+            DB Table의 Query Id로 쿼리를 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Data.Factory.QueryFinder.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Data.Factory.QueryFinder.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="queryId"></param>
+        </member>
+        <member name="P:EBAP.Data.Factory.QueryFinder.QUERY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Data.Factory.QueryFinder.DBNAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Data.Factory.QueryFinder.COMMANDTYPE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EBAP.Data.Factory.SqlFactory">
+            <summary>
+            MS-SQL Database와 연동하는 Sql Factory 클래스입니다.
+            Microsoft.Practices.EnterpriseLibrary 5.0을 사용합니다.
+            </summary>
+            <remarks>
+            2023-02-01 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.Factory.SqlFactory.#ctor(System.String)">
+            <summary>
+            Sql Factory를 생성합니다.
+            </summary>
+            <param name="connectionStr">연결문자열</param>
+        </member>
+        <member name="M:EBAP.Data.Factory.SqlFactory.Dispose">
+            <summary>
+            할당된 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Data.Factory.SqlFactory.NTx_ExecuteDataSet(System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            Transaction이 없는 일반 Query 및 SP 를 담당하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam">Command Out Parameters</param>
+            <param name="outValue">Command Out Parameters Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.SqlFactory.NTx_ExecuteScalar(System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            Transaction이 없는 일반 Query로 단일 값을 Return 하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam">Command Out Parameters</param>
+            <param name="outValue">Command Out Parameters Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.SqlFactory.Tx_ExecuteNonQuery(System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
+            <summary>
+            Transaction이 있는 단일 Query로 영향을 받은 Row 수를 Return 하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="valueList">Command Parameters Values</param>
+            <param name="outParam">Command Out Parameters</param>
+            <param name="outValue">Command Out Parameters Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.SqlFactory.Tx_ExecuteNonQueryByDataTable(System.String,System.String,System.String[],System.Data.DataTable,System.String[],System.Object[]@)">
+            <summary>
+            Transaction이 있는 Query로 DataTable을 사용하여 Multi 처리하고 영향을 받은 Row 수를 Return 하는 Method입니다.
+            </summary>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <param name="outParam">Command Out Parameters</param>
+            <param name="outValue">Command Out Parameters Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Data.Factory.SqlFactory.GetParameterDbType(System.Data.DataColumn)">
+            <summary>
+            파라미터의 값에 따라 DbType을 정의합니다.
+            </summary>
+            <param name="value">파라미터의 값</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Data.Factory.SqlFactory.GetParameterDbType(System.Object)">
+            <summary>
+            파라미터의 값에 따라 DbType을 정의합니다.
+            </summary>
+            <param name="value">파라미터의 값</param>
+            <returns></returns>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉(msNib)
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="T:EBAP.Data.Factory.XMLQueryParser">
+            <summary>
+            XML 파일에서 Query Id로 쿼리를 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Data.Factory.XMLQueryParser.#ctor">
+            <summary>
+            XML Parser 를 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Data.Factory.XMLQueryParser.#ctor(System.String)">
+            <summary>
+            XML Parser 를 생성합니다.
+            </summary>
+            <param name="fullPath">전체 경로</param>
+        </member>
+        <member name="P:EBAP.Data.Factory.XMLQueryParser.QUERY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Data.Factory.XMLQueryParser.DBNAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Data.Factory.XMLQueryParser.COMMANDTYPE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Data.Factory.XMLQueryParser.GetXMLQuery">
+            <summary>
+            XML Query를 설정하고 실행합니다.
+            </summary>
+        </member>
+    </members>
+</doc>

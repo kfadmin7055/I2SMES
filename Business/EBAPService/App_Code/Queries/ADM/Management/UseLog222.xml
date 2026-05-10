@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectUseLog>
+    <sql>
+      dbo.UseLog_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>LOG</connection>
+  </selectUseLog>
+</xmlquery>

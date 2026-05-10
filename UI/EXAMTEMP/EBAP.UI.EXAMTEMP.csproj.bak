@@ -1,0 +1,147 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{059C550B-607C-4892-971B-E41B3A840B39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EBAP.UI.EXAMTEMP</RootNamespace>
+    <AssemblyName>EBAP.UI.EXAMTEMP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\dlls\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2" />
+    <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Interop.XGCommLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\dlls\Interop.XGCommLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExampleTemplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExampleTemplete.Designer.cs">
+      <DependentUpon>ExampleTemplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LSPLCConnectTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LSPLCConnectTest.Designer.cs">
+      <DependentUpon>LSPLCConnectTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ExampleTemplete.resx">
+      <DependentUpon>ExampleTemplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LSPLCConnectTest.resx">
+      <DependentUpon>LSPLCConnectTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business\WSBiz\EBAP.Business.WSBiz.csproj">
+      <Project>{0527fa80-e449-4e37-926f-9f46e2dc4bdc}</Project>
+      <Name>EBAP.Business.WSBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Core\EBAP.Core.csproj">
+      <Project>{5eb313de-1422-4db5-9061-a53f61eecd48}</Project>
+      <Name>EBAP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\CodeUtil\EBAP.Data.CodeUtil.csproj">
+      <Project>{dfc71d88-7e59-4f0d-943d-fc97d7f69ef1}</Project>
+      <Name>EBAP.Data.CodeUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Win\BaseFrame\EBAP.Win.BaseFrame.csproj">
+      <Project>{5939a38b-f978-4e0c-bc98-63f44135ab1a}</Project>
+      <Name>EBAP.Win.BaseFrame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Win\ControlLibrary\EBAP.Win.ControlLibrary.csproj">
+      <Project>{4bf925ec-4f08-41e9-83a1-242717ce69a3}</Project>
+      <Name>EBAP.Win.ControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Win\Dialog\EBAP.Win.Dialog.csproj">
+      <Project>{b8099960-63f9-4ded-a03d-2682f6f7a4e8}</Project>
+      <Name>EBAP.Win.Dialog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Win\UserControlLibrary\EBAP.Win.UserControlLibrary.csproj">
+      <Project>{0e94d5bd-256f-417d-be15-e235c235ef6d}</Project>
+      <Name>EBAP.Win.UserControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Win\Utility\EBAP.Win.Utility.csproj">
+      <Project>{0f89a30c-13c8-4ae7-b860-8ab338a49b1e}</Project>
+      <Name>EBAP.Win.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

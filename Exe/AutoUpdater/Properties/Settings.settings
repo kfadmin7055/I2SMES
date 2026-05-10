@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EBAP.Exe.AutoUpdater.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="XmlFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DownloadList.xml</Value>
+    </Setting>
+    <Setting Name="DEFAULTDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">METADB</Value>
+    </Setting>
+    <Setting Name="COMMANDSP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">StoredProcedure</Value>
+    </Setting>
+    <Setting Name="COMMANDTEXT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Text</Value>
+    </Setting>
+    <Setting Name="ExeFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EBAP.Exe.MainUI.exe</Value>
+    </Setting>
+    <Setting Name="SystemName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">I2S</Value>
+    </Setting>
+    <Setting Name="WebServiceURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://10.8.0.127/EBAPService/</Value>
+    </Setting>
+    <Setting Name="DMZServiceURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://49.247.172.63/EBAPService/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

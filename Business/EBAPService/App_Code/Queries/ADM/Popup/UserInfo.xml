@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectUserInfo>
+    <sql>
+      dbo.UserInfo_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectUserInfo>
+
+  <selectSSOUserInfo>
+    <sql>
+      dbo.SSOUserInfo_Get
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectSSOUserInfo>
+</xmlquery>

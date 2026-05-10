@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectVendorList>
+    <sql>
+      dbo.VendorList_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectVendorList>
+
+  <selectVendorAuth>
+    <sql>
+      dbo.VendorAuth_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectVendorAuth>
+  
+  <saveVendorAuth>
+    <sql>
+      dbo.VendorAuth_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveVendorAuth>
+  
+  <deleteVendorAuth>
+    <sql>
+      dbo.VendorAuth_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteVendorAuth>
+</xmlquery>

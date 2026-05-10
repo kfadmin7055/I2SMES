@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectAuthGroup>
+    <sql>
+      dbo.AuthGroup_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectAuthGroup>
+  
+  <selectAuthGroupMenu>
+    <sql>
+      dbo.AuthGroupMenu_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectAuthGroupMenu>
+  
+  <selectAuthGroupUser>
+    <sql>
+      dbo.AuthGroupUser_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectAuthGroupUser>
+
+  <saveAuthGroup>
+    <sql>
+      dbo.AuthGroup_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveAuthGroup>
+
+  <saveAuthGroupMenu>
+    <sql>
+      dbo.AuthGroupMenu_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveAuthGroupMenu>
+
+  <saveAuthGroupUser>
+    <sql>
+      dbo.AuthGroupUser_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveAuthGroupUser>
+  
+  <deleteAuthGroup>
+    <sql>
+      dbo.AuthGroup_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteAuthGroup>
+  
+  <deleteAuthGroupUser>
+    <sql>
+      dbo.AuthGroupUser_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteAuthGroupUser>
+  
+</xmlquery>

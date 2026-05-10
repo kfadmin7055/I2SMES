@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFD20BE3-54A9-485A-8D86-DB3BF8B7B42A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EBAP.UI.ADM</RootNamespace>
+    <AssemblyName>EBAP.UI.ADM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\dlls\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\dlls\EBAP.UI.ADM.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.Wizard, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EBAP.Win.ControlLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dlls\EBAP.Win.ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CurrentUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\CurrentUser.Designer.cs">
+      <DependentUpon>CurrentUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Notify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Notify.Designer.cs">
+      <DependentUpon>Notify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserCell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\UserCell.Designer.cs">
+      <DependentUpon>UserCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Auth.Designer.cs">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\CodeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\CodeMaster.Designer.cs">
+      <DependentUpon>CodeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\CodeMasterVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\CodeMasterVendor.designer.cs">
+      <DependentUpon>CodeMasterVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\DatabaseLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\DatabaseLog.Designer.cs">
+      <DependentUpon>DatabaseLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\DBManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\DBManagement.Designer.cs">
+      <DependentUpon>DBManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\FileDeployHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\FileDeployHistory.Designer.cs">
+      <DependentUpon>FileDeployHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\FileMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\FileMaster.Designer.cs">
+      <DependentUpon>FileMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Deploy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Deploy.Designer.cs">
+      <DependentUpon>Deploy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\DeployHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\DeployHistory.Designer.cs">
+      <DependentUpon>DeployHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\FTPInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\FTPInfo.Designer.cs">
+      <DependentUpon>FTPInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\HtmlContentsMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\HtmlContentsMaster.Designer.cs">
+      <DependentUpon>HtmlContentsMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\LinkMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\LinkMenu.Designer.cs">
+      <DependentUpon>LinkMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\LocaleMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\LocaleMaster.Designer.cs">
+      <DependentUpon>LocaleMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\LocaleMessageMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\LocaleMessageMaster.Designer.cs">
+      <DependentUpon>LocaleMessageMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\MenuMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\MenuMaster.Designer.cs">
+      <DependentUpon>MenuMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\MenuOperationLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\MenuOperationLog.Designer.cs">
+      <DependentUpon>MenuOperationLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\PlantAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\PlantAuth.Designer.cs">
+      <DependentUpon>PlantAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\QueryExecute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\QueryExecute.Designer.cs">
+      <DependentUpon>QueryExecute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\QueryMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\QueryMaster.Designer.cs">
+      <DependentUpon>QueryMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\RestrictionAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\RestrictionAuth.Designer.cs">
+      <DependentUpon>RestrictionAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\ScreenColumnSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\ScreenColumnSet.Designer.cs">
+      <DependentUpon>ScreenColumnSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\ScreenMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\ScreenMaster.Designer.cs">
+      <DependentUpon>ScreenMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\SignLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\SignLog.Designer.cs">
+      <DependentUpon>SignLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\TableInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\TableInfo.Designer.cs">
+      <DependentUpon>TableInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\TableList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\TableList.Designer.cs">
+      <DependentUpon>TableList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\UseLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\UseLog.Designer.cs">
+      <DependentUpon>UseLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\UserMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\UserMaster.Designer.cs">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\VendorAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\VendorAuth.Designer.cs">
+      <DependentUpon>VendorAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopApproval.Designer.cs">
+      <DependentUpon>PopApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopApprovalStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopApprovalStatus.Designer.cs">
+      <DependentUpon>PopApprovalStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopDocument.Designer.cs">
+      <DependentUpon>PopDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopLanguageMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopLanguageMaster.Designer.cs">
+      <DependentUpon>PopLanguageMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopMenuNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopMenuNavigator.Designer.cs">
+      <DependentUpon>PopMenuNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopMsgKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopMsgKey.Designer.cs">
+      <DependentUpon>PopMsgKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopMultiInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopMultiInput.Designer.cs">
+      <DependentUpon>PopMultiInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopNotifyConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopNotifyConfirm.Designer.cs">
+      <DependentUpon>PopNotifyConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopScreenMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopScreenMaster.Designer.cs">
+      <DependentUpon>PopScreenMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopSSOUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopSSOUserInfo.Designer.cs">
+      <DependentUpon>PopSSOUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopUserInfo.Designer.cs">
+      <DependentUpon>PopUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopViewEvidence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PopViewEvidence.Designer.cs">
+      <DependentUpon>PopViewEvidence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\CurrentUser.resx">
+      <DependentUpon>CurrentUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Notify.resx">
+      <DependentUpon>Notify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\UserCell.resx">
+      <DependentUpon>UserCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Auth.resx">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\CodeMaster.resx">
+      <DependentUpon>CodeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\CodeMasterVendor.resx">
+      <DependentUpon>CodeMasterVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\DatabaseLog.resx">
+      <DependentUpon>DatabaseLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\FileMaster.resx">
+      <DependentUpon>FileMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Deploy.resx">
+      <DependentUpon>Deploy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\MenuMaster.resx">
+      <DependentUpon>MenuMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\MenuOperationLog.resx">
+      <DependentUpon>MenuOperationLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\PlantAuth.resx">
+      <DependentUpon>PlantAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\ScreenColumnSet.resx">
+      <DependentUpon>ScreenColumnSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\SignLog.resx">
+      <DependentUpon>SignLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\UseLog.resx">
+      <DependentUpon>UseLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\UserMaster.resx">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\VendorAuth.resx">
+      <DependentUpon>VendorAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\PopApproval.resx">
+      <DependentUpon>PopApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business\WSBiz\EBAP.Business.WSBiz.csproj">
+      <Project>{0527FA80-E449-4E37-926F-9F46E2DC4BDC}</Project>
+      <Name>EBAP.Business.WSBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Core\EBAP.Core.csproj">
+      <Project>{5eb313de-1422-4db5-9061-a53f61eecd48}</Project>
+      <Name>EBAP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\CodeUtil\EBAP.Data.CodeUtil.csproj">
+      <Project>{DFC71D88-7E59-4F0D-943D-FC97D7F69EF1}</Project>
+      <Name>EBAP.Data.CodeUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Win\BaseFrame\EBAP.Win.BaseFrame.csproj">
+      <Project>{5939a38b-f978-4e0c-bc98-63f44135ab1a}</Project>
+      <Name>EBAP.Win.BaseFrame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Win\UserControlLibrary\EBAP.Win.UserControlLibrary.csproj">
+      <Project>{0e94d5bd-256f-417d-be15-e235c235ef6d}</Project>
+      <Name>EBAP.Win.UserControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Win\Utility\EBAP.Win.Utility.csproj">
+      <Project>{0f89a30c-13c8-4ae7-b860-8ab338a49b1e}</Project>
+      <Name>EBAP.Win.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmlquery>
+  <selectCodeMaster>
+    <sql>
+      dbo.CodeMaster_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectCodeMaster>
+
+  <selectCodeMasterDetail>
+    <sql>
+      dbo.CodeMasterDetail_Select
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </selectCodeMasterDetail>
+  
+  <saveCodeMaster>
+    <sql>
+      dbo.CodeMaster_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveCodeMaster>
+
+  <saveCodeMasterDetail>
+    <sql>
+      dbo.CodeMasterDetail_Save
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </saveCodeMasterDetail>
+  
+  <deleteCodeMaster>
+    <sql>
+      dbo.CodeMaster_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteCodeMaster>
+
+  <deleteCodeMasterDetail>
+    <sql>
+      dbo.CodeMasterDetail_Delete
+    </sql>
+    <commandtype>StoredProcedure</commandtype>
+    <connection>METADB</connection>
+  </deleteCodeMasterDetail>
+</xmlquery>

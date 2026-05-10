@@ -1,0 +1,11 @@
+<!-- collapse_all_dev.svg -->
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 리스트 -->
+  <rect x="8" y="14" width="30" height="3" fill="currentColor"/>
+  <rect x="8" y="26" width="30" height="3" fill="currentColor"/>
+  <rect x="8" y="38" width="30" height="3" fill="currentColor"/>
+
+  <!-- 오른쪽 화살표 -->
+  <path d="M44 18 L50 24 L44 30 Z" fill="currentColor"/>
+  <path d="M44 30 L50 36 L44 42 Z" fill="currentColor"/>
+</svg>

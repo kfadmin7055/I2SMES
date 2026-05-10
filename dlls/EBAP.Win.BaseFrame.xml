@@ -1,0 +1,2461 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EBAP.Win.BaseFrame</name>
+    </assembly>
+    <members>
+        <member name="T:EBAP.Win.BaseFrame.PAlertControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertControl.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertControl.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertControl.Show(System.Windows.Forms.Form,System.String,System.String,System.String,System.Drawing.Image,System.Object,System.Drawing.Color)">
+            <summary>
+            Alert Form을 보여줍니다.
+            </summary>
+            <param name="owner"></param>
+            <param name="caption"></param>
+            <param name="text"></param>
+            <param name="hotTrackedText"></param>
+            <param name="image"></param>
+            <param name="tag"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertControl.CreateAlertForm(System.Drawing.Point,DevExpress.XtraBars.Alerter.AlertControl,DevExpress.XtraBars.Alerter.AlertInfo)">
+            <summary>
+            Alert Form을 생성합니다.
+            </summary>
+            <param name="location"></param>
+            <param name="control"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.PAlertForm">
+            <summary>
+            Alert Form을 지정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertForm.#ctor(System.Drawing.Point,DevExpress.XtraBars.Alerter.IAlertControl,DevExpress.XtraBars.Alerter.AlertInfo)">
+            <summary>
+            
+            </summary>
+            <param name="location"></param>
+            <param name="control"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertForm.CreatePainter">
+            <summary>
+            페인터를 지정합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.PAlertInfo">
+            <summary>
+            Alert Form의 표시 정보를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertInfo.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="caption"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertInfo.#ctor(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="caption"></param>
+            <param name="text"></param>
+            <param name="hotTrackedText"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertInfo.#ctor(System.String,System.String,System.Drawing.Image)">
+            <summary>
+            
+            </summary>
+            <param name="caption"></param>
+            <param name="text"></param>
+            <param name="image"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertInfo.#ctor(System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            
+            </summary>
+            <param name="caption"></param>
+            <param name="text"></param>
+            <param name="hotTrackedText"></param>
+            <param name="image"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertInfo.#ctor(System.String,System.String,System.String,System.Drawing.Image,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="caption"></param>
+            <param name="text"></param>
+            <param name="hotTrackedText"></param>
+            <param name="image"></param>
+            <param name="tag"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertInfo.#ctor(System.String,System.String,System.String,System.Drawing.Image,System.Object,System.Drawing.Color)">
+            <summary>
+            
+            </summary>
+            <param name="caption"></param>
+            <param name="text"></param>
+            <param name="hotTrackedText"></param>
+            <param name="image"></param>
+            <param name="tag"></param>
+            <param name="color"></param>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PAlertInfo.BackColor">
+            <summary>
+            배경색
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.PAlertPainter">
+            <summary>
+            Alert Form Painter
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertPainter.#ctor(DevExpress.XtraBars.Alerter.AlertFormCore)">
+            <summary>
+            
+            </summary>
+            <param name="form"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PAlertPainter.DrawContent(DevExpress.Utils.Drawing.GraphicsCache,DevExpress.Skins.Skin)">
+            <summary>
+            콘텐츠를 그립니다.
+            </summary>
+            <param name="graphicsCache"></param>
+            <param name="skin"></param>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.PBarButtonItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PBarButtonItem.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PBarButtonItem.DLLNAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PBarButtonItem.CLASSNAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Win.BaseFrame.PBarButtonItem.components">
+            <summary>
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PBarButtonItem.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PBarButtonItem.InitializeComponent">
+            <summary>
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.PBarSubItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PBarSubItem.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PBarSubItem.DLLNAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PBarSubItem.CLASSNAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Win.BaseFrame.PBarSubItem.components">
+            <summary>
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PBarSubItem.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PBarSubItem.InitializeComponent">
+            <summary>
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.POfficeResLocalizer">
+            <summary>
+            DevExpress.Office Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.POfficeResLocalizer.GetLocalizedString(DevExpress.Office.Localization.OfficeStringId)">
+            <summary>
+            Control에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PEditControlLocalizer">
+            <summary>
+            EditControl Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PEditControlLocalizer.GetLocalizedString(DevExpress.XtraEditors.Controls.StringId)">
+            <summary>
+            Editor Control에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PGridLocalizer">
+            <summary>
+            Grid Control Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PGridLocalizer.GetLocalizedString(DevExpress.XtraGrid.Localization.GridStringId)">
+            <summary>
+            Grid Control에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PPivotGridLocalizer">
+            <summary>
+            PivotGrid Control Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PPivotGridLocalizer.GetLocalizedString(DevExpress.XtraPivotGrid.Localization.PivotGridStringId)">
+            <summary>
+            Pivot Grid Control에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PPreviewLocalizer">
+            <summary>
+            미리보기 Control Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PPreviewLocalizer.GetLocalizedString(DevExpress.XtraPrinting.Localization.PreviewStringId)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PRichEditLocalizer">
+            <summary>
+            Rich Edit Control Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PRichEditLocalizer.GetLocalizedString(DevExpress.XtraRichEdit.Localization.XtraRichEditStringId)">
+            <summary>
+            Editor Control에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PSchedulerLocalizer">
+            <summary>
+            Schedule Control Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PSchedulerLocalizer.GetLocalizedString(DevExpress.XtraScheduler.Localization.SchedulerStringId)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PTreeListLocalizer">
+            <summary>
+            TreeList Control Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PTreeListLocalizer.GetLocalizedString(DevExpress.XtraTreeList.Localization.TreeListStringId)">
+            <summary>
+            TreeList Control에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PEditResAccLocalizer">
+            <summary>
+            Edit Resource Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PEditResAccLocalizer.GetLocalizedString(DevExpress.Accessibility.AccStringId)">
+            <summary>
+            Edit Resource Element 에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PFilterUIElementLocalizer">
+            <summary>
+            Filter UI Element Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PFilterUIElementLocalizer.GetLocalizedString(DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId)">
+            <summary>
+            Filter UI Element 에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PLayoutResLocalizer">
+            <summary>
+            Layout Control Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PLayoutResLocalizer.GetLocalizedString(DevExpress.XtraLayout.Localization.LayoutStringId)">
+            <summary>
+            Layout Control에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PSpreadsheetResLocalizer">
+            <summary>
+            Spreadsheet Control Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PSpreadsheetResLocalizer.GetLocalizedString(DevExpress.XtraSpreadsheet.Localization.XtraSpreadsheetStringId)">
+            <summary>
+            Spreadsheet Control에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Localization.PVGridLocalizer">
+            <summary>
+            Vertical Grid Control Library를 한국어로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.Localization.PVGridLocalizer.GetLocalizedString(DevExpress.XtraVerticalGrid.Localization.VGridStringId)">
+            <summary>
+            Vertical Grid Control에서 보여지는 Text를 설정합니다.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.MainFrame">
+             <summary>
+             시스템에서 사용할 Main Form의 Super Class 입니다.
+             </summary>
+             <remarks>
+             2023-02-01 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.#ctor">
+            <summary>
+            MainFrame을 생성합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.MainFrame.LOCALECONVERTER">
+            <summary>
+            다국어 지원에 사용할 Localizer
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.MainFrame.CURRENTLANGUAGE">
+            <summary>
+            현재 사용 언어를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.MainFrame.CurrentUser">
+            <summary>
+            현재 사용자의 정보를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.MainFrame.ISMODIFIED">
+            <summary>
+            UI 수정여부를 Check 하여 수정여부를 Caption에 표시합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.MainFrame.RUNMODE">
+            <summary>
+            운영/개발 모드를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.iVendorCode_EditValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Vendor를 선택하면 UserInformation의 Vendor를 변경합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.iPlantCode_EditValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Plant를 선택하면 UserInformation의 ORGANIZATIONID를 변경합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CloseAllMdiChildren(System.Boolean)">
+            <summary>
+            실행 중인 Form을 모두 종료합니다.
+            </summary>
+            <param name="allClose"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.InitUserMenu">
+            <summary>
+            사용자 Menu를 초기화합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.InitLinkMenu">
+            <summary>
+            Link Menu를 초기화합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.InitFavoritesMenu">
+            <summary>
+            즐겨찾기 Menu를 초기화합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CreateMenu(System.Data.DataSet)">
+             <summary>
+             사용자 권한에 따라 Menu의 데이터를 채웁니다.
+             </summary>
+             <param name="ds">Menu의 DataSource</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CreateTopMenu(System.Data.DataSet)">
+            <summary>
+            
+            </summary>
+            <param name="ds"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.iNavigator_EditValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Navigator의 메뉴 ID가 변경되면 해당 ID의 UI를 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.GetMenuFullPath(System.Object)">
+            <summary>
+            Menu의 Full Path를 가져옵니다.
+            </summary>
+            <param name="menuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.iRun_EditValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            운영/개발 모드를 지정합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.iLinkMenu_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.iLanguage_EditValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            사용언어가 변경되면 UI의 언어를 변경합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetLocale(System.String)">
+            <summary>
+            시스템 언어에 따라 Ribbon의 Caption을 변경합니다.
+            </summary>
+            <param name="locale"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.tlMenu_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse를 Double Click 하면 해당 UI를 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.tlMenu_FocusedNodeChanged(System.Object,DevExpress.XtraTreeList.FocusedNodeChangedEventArgs)">
+            <summary>
+            메뉴의 Focused Node가 변경되면 해당 UI를 실행합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.tlMenu_GetSelectImage(System.Object,DevExpress.XtraTreeList.GetSelectImageEventArgs)">
+            <summary>
+            메뉴의 선택 Image를 가져와 설정합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.barManagerTop_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetLoginStatus(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="login"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CreateMiddleMenu(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="parentMenuId"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.barManagerMiddle_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.Create2DepthMenu(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.Create3DepthMenu(EBAP.Win.BaseFrame.PBarSubItem,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="parentMenuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.barManagerMenu_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.barManagerStatus_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ToggleColor(DevExpress.XtraBars.BarManager,DevExpress.XtraBars.BarItem)">
+            <summary>
+            
+            </summary>
+            <param name="barManager"></param>
+            <param name="clickItem"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.xtraTabbedMdiManager_SelectedPageChanged(System.Object,System.EventArgs)">
+            <summary>
+            Active Mdi Child가 변경되면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.TopMenuSelect(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="selectMenuId"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.MiddleMenuSelect(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="selectMenuId"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.xtraTabbedMdiManager_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            탭 머리글 도구 설명에 썸네일을 표시합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowThumbnails(DevExpress.XtraTab.IXtraTabPage)">
+            <summary>
+            
+            </summary>
+            <param name="page"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.xtraTabbedMdiManager_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetWebserviceURL(System.String,System.String)">
+            <summary>
+            웹서비스의 URL을 설정합니다.(RUN/DEV)
+            </summary>
+            <param name="runURL">운영 웹서비스</param>
+            <param name="devURL">개발 웹서비스</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowInfoMessage(System.String,System.String,System.String)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="title">Alert Control Caption</param>
+             <param name="subject">Alert Message</param>
+             <param name="text">Hot Tracked Text</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowInfoMessage(System.String,System.String,System.String,System.Drawing.Color)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="title">Alert Control Caption</param>
+             <param name="subject">Alert Message</param>
+             <param name="text">Hot Tracked Text</param>
+             <param name="color">색깔</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.RemoveMessage(System.String)">
+            <summary>
+            메세지 삭제
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ExecuteUI(System.Object,EBAP.Core.Collections.ParamCollection)">
+             <summary>
+             UI를 실행합니다.
+             </summary>
+             <param name="menuID">MENU ID</param>
+             <param name="linkParams">Link Event Parameters</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.FindMenuNode(System.Object)">
+            <summary>
+            Tree에서 메뉴 ID를 확인합니다.
+            </summary>
+            <param name="menuID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.GetFocusedMenuRow(System.Object)">
+            <summary>
+            Tree에서 선택한 Menu를 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.GetLastParentMenu(System.Object)">
+            <summary>
+            Menu의 Full Path를 가져옵니다.
+            </summary>
+            <param name="menuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.GetMenuFullPath(EBAP.Core.Interface.IFrameUI,System.Object)">
+            <summary>
+            Menu의 Full Path를 가져옵니다.
+            </summary>
+            <param name="ui"></param>
+            <param name="menuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ExecuteUI(System.String,System.String,System.String,System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection,System.Boolean,System.Boolean)">
+             <summary>
+             UI를 실행합니다.
+             </summary>
+             <param name="menuId">MENU ID</param>
+             <param name="screenId">SCREEN ID</param>
+             <param name="text">Form 제목</param>
+             <param name="dllPath">Dll 경로</param>
+             <param name="className">Class 명</param>
+             <param name="helpPath">도움말 경로</param>
+             <param name="linkParams">Link Event Parameters</param>
+             <param name="isCommon">Plant 사용 여부</param>
+             <param name="isMulti">다중 실행 여부</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CheckExecuteUI(System.String,System.Boolean,EBAP.Core.Collections.ParamCollection)">
+             <summary>
+             실행 중인 UI 가 있는지를 검사합니다.
+             </summary>
+             <param name="menuID">MENU ID</param>
+             <param name="isCommon">Plant 사용 여부</param>
+             <param name="linkParams">Link Event Parameters</param>
+             <returns></returns>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CreateUI(System.String,System.String,System.String,System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection,System.Boolean)">
+             <summary>
+             Form을 생성하고 실행합니다.
+             </summary>
+             <param name="menuId">MENU ID</param>
+             <param name="screenId">SCREEN ID</param>
+             <param name="text">Form 제목</param>
+             <param name="dllPath">Dll 경로</param>
+             <param name="className">Class 명</param>
+             <param name="helpPath">도움말 경로</param>
+             <param name="linkParams">Link Event Parameters</param>
+             <param name="isCommon">공통 사용 여부</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CheckUserMenuAuth(System.String)">
+            <summary>
+            사용자 권한을 UI가 실행될 때 실시간으로 CHECK 하여 실행합니다.
+            </summary>
+            <param name="menuId">메뉴 ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.GetClassCaption(System.String)">
+             <summary>
+             Class Caption을 가져옵니다.
+             </summary>
+             <param name="className"></param>
+             <returns></returns>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ExecutePopup(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+             <summary>
+             Popup을 생성하고 실행합니다.
+             </summary>
+             <param name="text">Popup 제목</param>
+             <param name="dllPath">Dll 경로</param>
+             <param name="className">Class 명</param>
+             <param name="popParams">Popup Parameters</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetMenuPath(System.String,System.String)">
+            <summary>
+            메뉴 정보를 Status Bar에 보여줍니다.
+            </summary>
+            <param name="menuid"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetSiMessage(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="caption"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetConnectionType(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="caption"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetSiDBTime(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="caption"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetPlcStatus(EBAP.Core.Info.PlcType,EBAP.Core.Info.PlcStatus)">
+            <summary>
+            PLC 접속 상태를 보여줍니다.
+            </summary>
+            <param name="status"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.InitVendorCode(System.Data.DataTable)">
+            <summary>
+            Ribbon의 Vendor Data를 초기화합니다.
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.InitPlantCode(System.Data.DataTable)">
+            <summary>
+            Ribbon의 Plant Data를 초기화합니다.
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ExitAndUpdate(System.Boolean)">
+            <summary>
+            업데이트를 하기 위해 시스템을 종료합니다.
+            </summary>
+            <param name="ismessage"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.InitDocking(System.String)">
+            <summary>
+            메뉴 위치를 초기화합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SignOn(System.Boolean)">
+            <summary>
+            사용자 Sign ON 처리합니다.
+            </summary>
+            <param name="firstLogin">처음 로그인</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetUpdateButtonVisible(System.Boolean,System.String)">
+            <summary>
+            업데이트 버튼의 Visible을 설정합니다.
+            </summary>
+            <param name="visible"></param>
+            <param name="hint"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetVendor(System.String)">
+            <summary>
+            Ribbon의 Vendor을 설정합니다.
+            </summary>
+            <param name="vendorCode">업체코드</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetPlant(System.String)">
+            <summary>
+            Ribbon의 Plant를 설정합니다.
+            </summary>
+            <param name="plantCode">사업장코드</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetUserInfo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CaptureImage">
+            <summary>
+            현재 화면을 Capture 합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CaptureBitmap(System.Drawing.Graphics,System.Drawing.Rectangle)">
+             <summary>
+            
+             </summary>
+             <param name="g"></param>
+             <param name="rect"></param>
+             <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowWaitDialog(System.String)">
+            <summary>
+            Wait Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowWaitDialog(System.String,System.String)">
+            <summary>
+            Wait Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CloseWaitDialog">
+            <summary>
+            Wait Dialog를 닫습니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.GetCurrentTime">
+            <summary>
+            시스템의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.GetServerTime">
+            <summary>
+            서버의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EBAP.Win.BaseFrame.MainFrame.pinBtnDown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.alertControl_FormLoad(System.Object,DevExpress.XtraBars.Alerter.AlertFormLoadEventArgs)">
+            <summary>
+            Pin 버튼 강제 클릭을 지정합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.alertControl_BeforeFormShow(System.Object,DevExpress.XtraBars.Alerter.AlertFormEventArgs)">
+            <summary>
+            Alert Form의 모양을 지정합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.alertControl_ButtonClick(System.Object,DevExpress.XtraBars.Alerter.AlertButtonClickEventArgs)">
+            <summary>
+            복사 버튼을 클릭하면 Messgage 내용을 복사합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowAlertMessage(System.String,System.String,System.String)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="caption">Alert Control Caption</param>
+             <param name="text">Alert Message</param>
+             <param name="hotTrackedText">Hot Tracked Text</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.AlertControlShow(System.String,System.String,System.String,System.Object,System.Drawing.Color)">
+            <summary>
+            
+            </summary>
+            <param name="title"></param>
+            <param name="subject"></param>
+            <param name="text"></param>
+            <param name="idx"></param>
+            <param name="backColor"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowFlyoutDialog(System.String,System.String)">
+            <summary>
+            Flyout Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowMsgBox(System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">Message</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowMsgBox(System.String,System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">Message</param>
+            <param name="caption">Caption</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <param name="defaultButton">Default Button</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.ShowExceptionBox(System.Exception)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="ex">Exception</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.lbMessage_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            Message List를 더블클릭하면 해당 Message를 다시 보여줍니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.TaskBarAssist(DevExpress.Utils.Taskbar.Core.TaskbarButtonProgressMode)">
+            <summary>
+            Window Task Bar에 알람을 알립니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.UpdateControls(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="blinkTaskbarItem"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SaveMenuExecuteLog(System.String)">
+            <summary>
+            Database에 Menu 실행 Log를 저장합니다.
+            </summary>
+            <param name="menuId">실행한 MENU ID</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.RegistorFavorites">
+            <summary>
+            자주 쓰는 메뉴를 등록합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.RegistorMyMenu(System.String,System.String)">
+            <summary>
+            사용자 메뉴를 등록합니다.
+            </summary>
+            <param name="menuId">프로그램 ID</param>
+            <param name="gubun">구분(F : 즐겨찾기, S : 시작, T : 숏컷)</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.SetBarItemVisible(System.Boolean)">
+            <summary>
+            ToolBar Item의 Visible을 설정합니다.
+            </summary>
+            <param name="visible"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.RegistorStartMenu">
+            <summary>
+            사용자별 시작 메뉴를 등록합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.OnLoad(System.EventArgs)">
+            <summary>
+            처음 Loading 때 Skin을 설정합니다.
+            </summary>
+            <remarks>
+            2016-06-17 최초생성 : 오인봉
+            변경내역
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.InitMessageControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.CheckSystemFont">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.OnLookAndFeelChangedCore">
+            <summary>
+            Skin이 변경되면 메뉴바의 색상도 변경합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.OnFormClosing(System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Form이 종료될 때 사용자 설정 내용을 저장합니다.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:EBAP.Win.BaseFrame.MainFrame.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.MainFrame.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.PopupFrame">
+             <summary>
+             PopUp Form의 기본이 되는 Frame 입니다.
+             </summary>
+             <remarks>
+             2016-07-06 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.#ctor">
+            <summary>
+            Popup Frame을 생성합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.ISSELECTING">
+            <summary>
+            조회 중
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.ISLOADING">
+            <summary>
+            LOAD 중
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.FRAME">
+            <summary>
+            System MainFrame 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.CurrentUser">
+            <summary>
+            현재 사용자의 정보를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.LOCALECONVERTER">
+            <summary>
+            다국어 지원에 사용할 언어
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.LANGUAGE">
+            <summary>
+            현재 사용 언어를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.POPUPVALUE">
+            <summary>
+            Popup의 Return 값(명시적으로 형변환하여 사용해야 합니다.)
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.PopParams">
+            <summary>
+            Popup 실행 시에 사용할 Parameter
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.DatabaseParams">
+            <summary>
+            Database 에 사용할 Parameter
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.GetCurrentTime">
+            <summary>
+            시스템의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.ConfirmCaption">
+            <summary>
+            확인 버튼의 Caption을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.MENUID">
+            <summary>
+            UI의 Menu ID 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.TOPMENUID">
+            <summary>
+            최상위 메뉴 ID 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.MIDDLEMENUID">
+            <summary>
+            중간 메뉴 ID 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.AddCommomParam">
+            <summary>
+            공통 Parameter 포함 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.ISMODIFIED">
+            <summary>
+            UI 수정여부를 Check 하여 수정여부를 Caption에 표시합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.OKSAVE">
+            <summary>
+            저장 이상 여부 체크
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.OKDELETE">
+            <summary>
+            삭제 이상 여부 체크
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.PopupFrame.OKMESSAGE">
+            <summary>
+            저장/삭제 처리 후 보여줄 메시지
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.PopupFrame.Delete">
+            <summary>
+            삭제 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.PopupFrame.New">
+            <summary>
+            신규(추가) 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.PopupFrame.Save">
+            <summary>
+            저장 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.PopupFrame.Selection">
+            <summary>
+            조회 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.PopupFrame.Confirm">
+            <summary>
+            확인 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.CheckMandatoryForSave">
+            <summary>
+             UI Form의 필수 입력항목을 검사하여 검사결과를 반환 합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.CheckMandatoryForSave(System.Windows.Forms.Control)">
+            <summary>
+             UI Form의 필수 입력항목을 검사하여 검사결과를 반환 합니다.
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.CheckMandatoryForSelect">
+            <summary>
+             UI Form의 필수 입력항목을 검사하여 검사결과를 반환 합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.CheckMandatoryForSelect(System.Windows.Forms.Control)">
+            <summary>
+             UI Form의 필수 입력항목을 검사하여 검사결과를 반환 합니다.
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.SetToolBarVisible(System.Boolean)">
+            <summary>
+            툴바의 Visible을 설정합니다.
+            </summary>
+            <param name="visible"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.SetToolBarButtonEnable(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            버튼 Enable을 설정합니다.
+            </summary>
+            <param name="selectAuth"></param>
+            <param name="newAuth"></param>
+            <param name="saveAuth"></param>
+            <param name="deleteAuth"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.GetDatabaseParams">
+            <summary>
+            UI Form의 Database Parameter로 사용할 Control을 찾아서 반환 합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.GetDatabaseParams(System.Windows.Forms.Control)">
+            <summary>
+            UI Form의 Database Parameter로 사용할 Control을 찾아서 반환 합니다.
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.SaveOperationLog(System.String,System.DateTime)">
+            <summary>
+            Database에 실행 Log를 저장합니다.
+            </summary>
+            <param name="opertion"></param>
+            <param name="dtStart"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.SaveOperationLog(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Database에 실행 Log를 저장합니다.
+            </summary>
+            <param name="opertion"></param>
+            <param name="dtStart"></param>
+            <param name="dtEnd"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowMsgBox(System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">Message</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowMsgBox(System.String,System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">Message</param>
+            <param name="caption">Caption</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <param name="defaultButton">Default Button</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowInfoMessage(System.String,System.String,System.String)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="caption">Alert Control Caption</param>
+             <param name="text">Alert Message</param>
+             <param name="hotTrackedText">Hot Tracked Text</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowInfoMessage(System.String,System.String,System.String,System.Drawing.Color)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="caption">Alert Control Caption</param>
+             <param name="text">Alert Message</param>
+             <param name="hotTrackedText">Hot Tracked Text</param>
+             <param name="color">색 지정</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowAlertMessage(System.String,System.String)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="text">Alert Message</param>
+             <param name="caption">Alert Control Caption</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowAlertMessage(System.String,System.String,System.String)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="caption">Alert Control Caption</param>
+             <param name="text">Alert Message</param>
+             <param name="hotTrackedText">Hot Tracked Text</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowExceptionBox(System.Exception)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="ex">Exception</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowWaitDialog(System.String)">
+            <summary>
+            Wait Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowWaitDialog(System.String,System.String)">
+            <summary>
+            Wait Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.CloseWaitDialog">
+            <summary>
+            Wait Dialog를 닫습니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.RaiseSelectEvent">
+            <summary>
+            조회 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.RaiseNewEvent">
+            <summary>
+            신규 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.RaiseSaveEvent">
+            <summary>
+            Save Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.RaiseDeleteEvent">
+            <summary>
+            삭제 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ExecutePopup(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+             <summary>
+             Popup을 생성하고 실행합니다.
+             </summary>
+             <param name="text">Popup 제목</param>
+             <param name="dllPath">Dll 경로</param>
+             <param name="className">Class 명</param>
+             <param name="popParams">Popup Parameters</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ExecuteUI(System.Object,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            UI를 실행합니다.
+            </summary>
+            <param name="menuID">MENU ID</param>
+            <param name="linkParams">Link Event Parameters</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ShowFlyoutDialog(System.String,System.String)">
+            <summary>
+            Flyout Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.barManager_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            Bar Item을 Click 하면 해당 Event를 발생시킵니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.ExportTo(EBAP.Core.Info.ExportType,System.Windows.Forms.Control)">
+             <summary>
+             Grid Data를 Export 합니다.
+             </summary>
+             <param name="eType"></param>
+             <param name="control"></param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.OnLoad(System.EventArgs)">
+            <summary>
+            Popup 창이 로드될 때 버튼권한을 설정합니다.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.InitLocaleString(System.Windows.Forms.Control)">
+            <summary>
+            
+            </summary>
+            <param name="ctrls"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.RemoveAlertMessage(System.String)">
+            <summary>
+            메세지 삭제 합니다.
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="F:EBAP.Win.BaseFrame.PopupFrame.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.PopupFrame.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.Properties.Resources">
+            <summary>
+              지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.Properties.Resources.ResourceManager">
+            <summary>
+              이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.Properties.Resources.Culture">
+            <summary>
+              이 강력한 형식의 리소스 클래스를 사용하여 모든 리소스 조회에 대해 현재 스레드의 CurrentUICulture 속성을
+              재정의합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.Properties.Resources.con">
+            <summary>
+              System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.Properties.Resources.Conn">
+            <summary>
+              System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.Properties.Resources.DisConn">
+            <summary>
+              System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.Properties.Resources.menusearch">
+            <summary>
+              System.Byte[] 형식의 지역화된 리소스를 찾습니다.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.SplashDialog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.SplashDialog.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.SplashDialog.ProcessCommand(System.Enum,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="cmd"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.SplashDialog.SplashScreenCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EBAP.Win.BaseFrame.SplashDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.SplashDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.SplashDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.UIFrame">
+             <summary>
+             시스템에서 사용할 UI의 Super Class 입니다.
+             </summary>
+             <remarks>
+             2016-05-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.#ctor">
+            <summary>
+            UI Frame을 생성합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.ISSELECTING">
+            <summary>
+            조회 중
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.ISLINKING">
+            <summary>
+            조회 중
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.ISLOADING">
+            <summary>
+            LOAD 중
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.FRAME">
+            <summary>
+            System MainFrame 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.CurrentUser">
+            <summary>
+            현재 사용자의 정보를 설정합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetVendor(System.String)">
+            <summary>
+            Ribbon의 Vendor을 설정합니다.
+            </summary>
+            <param name="vendorCode">업체코드</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetPlant(System.String)">
+            <summary>
+            Ribbon의 Plant를 설정합니다.
+            </summary>
+            <param name="plantCode">사업장코드</param>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.ISMODIFIED">
+            <summary>
+            UI 수정여부를 Check 하여 수정여부를 Caption에 표시합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.IsLoadSelectEvent">
+            <summary>
+            LOAD 시 Select Event 발생 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.LOCALECONVERTER">
+            <summary>
+            다국어 지원에 사용할 Localizer
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.CURRENTLANGUAGE">
+            <summary>
+            현재 사용 언어를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.SelectAuth">
+            <summary>
+            조회권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.NewAuth">
+            <summary>
+            신규권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.SaveAuth">
+            <summary>
+            저장권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.DelAuth">
+            <summary>
+            삭제권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.CopyAuth">
+            <summary>
+            삭제권한을 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.MENUID">
+            <summary>
+            UI의 Menu ID 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.TOPMENUID">
+            <summary>
+            최상위 메뉴 ID 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.MIDDLEMENUID">
+            <summary>
+            중간 메뉴 ID 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.SCREENID">
+            <summary>
+            UI의 Screen ID 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.CLASSNAME">
+            <summary>
+            UI의 Class Name 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.HELPPATH">
+            <summary>
+            도움말 파일의 경로입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.AddCommomParam">
+            <summary>
+            공통 Parameter 포함 여부를 설정합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.VENDORCODE">
+            <summary>
+            UI의 VENDOR ID 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.PLANTCODE">
+            <summary>
+            UI의 PLANT ID 입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.LinkParams">
+            <summary>
+            Form 간 통신 시에 사용할 Parameter
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.DatabaseParams">
+            <summary>
+            Database 에 사용할 Parameter
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.OKSAVE">
+            <summary>
+            저장 이상 여부 체크
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.OKDELETE">
+            <summary>
+            삭제 이상 여부 체크
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.OKCOPY">
+            <summary>
+            저장 이상 여부 체크
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.OKMESSAGE">
+            <summary>
+            저장/삭제 처리 후 보여줄 메시지
+            </summary>
+        </member>
+        <member name="P:EBAP.Win.BaseFrame.UIFrame.ISSHOWFLYOUT">
+            <summary>
+            저장/삭제 처리 확인 메시지 창 표시 여부
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.UIFrame.Authentication">
+            <summary>
+            사용자 권한 설정 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.UIFrame.Chart">
+            <summary>
+            Chart 출력 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.UIFrame.Delete">
+            <summary>
+            삭제 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.UIFrame.Link">
+            <summary>
+            Form간 통신시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.UIFrame.New">
+            <summary>
+            신규(추가) 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.UIFrame.Save">
+            <summary>
+            저장 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.UIFrame.Copy">
+            <summary>
+            복사 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.UIFrame.Selection">
+            <summary>
+            조회 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="E:EBAP.Win.BaseFrame.UIFrame.Reload">
+            <summary>
+            Reload 이벤트 발생 시에 사용합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseCancelEdit">
+             <summary>
+             Grid Data를 Export 합니다.
+             </summary>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.GetDatabaseParams">
+            <summary>
+            UI Form의 Database Parameter로 사용할 Control을 찾아서 반환 합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.GetDatabaseParams(System.Windows.Forms.Control)">
+            <summary>
+            UI Form의 Database Parameter로 사용할 Control을 찾아서 반환 합니다.
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ExportTo(EBAP.Core.Info.ExportType,System.Windows.Forms.Control)">
+             <summary>
+             Grid Data를 Export 합니다.
+             </summary>
+             <param name="eType"></param>
+             <param name="control"></param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.PreviewData(System.Windows.Forms.Control)">
+             <summary>
+             Grid Data를 Export 합니다.
+             </summary>
+             <param name="control"></param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseLoadEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseAuthEvent">
+            <summary>
+            Authentication Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseLinkEvent">
+            <summary>
+            Link Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseReloadEvent">
+            <summary>
+            Link Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseSelectEvent">
+            <summary>
+            조회 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseChartEvent">
+            <summary>
+            차트 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseNewEvent">
+            <summary>
+            신규 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseSaveEvent">
+            <summary>
+            Save Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseDeleteEvent">
+            <summary>
+            삭제 Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RaiseCopyEvent">
+            <summary>
+            Copy Event를 강제로 발생시킵니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetRibbonBarButtonEnabled">
+            <summary>
+            이벤트와 권한에 따라 Ribbon Button Enabled 설정하기
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetToolBarVisible(System.Boolean)">
+            <summary>
+            Docking/Floating 여부에 따라 툴바의 Visible을 설정합니다.
+            </summary>
+            <param name="visible"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.OnRibbonItemClick(System.String)">
+            <summary>
+            UI Form의 툴바를 클릭하면 발생합니다.
+            </summary>
+            <param name="itemName"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetMenuPath(System.String)">
+            <summary>
+            메뉴 정보를 Status Bar에 보여줍니다.
+            </summary>
+            <param name="menuPath"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ExecuteHelp">
+            <summary>
+            도움말 문서를 실행합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckControlValidate(System.Windows.Forms.Control)">
+             <summary>
+             UI Form의 Control을 초기화 합니다.
+             </summary>
+             <param name="control">컨트롤</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckMandatoryForSave">
+            <summary>
+             UI Form의 필수 입력항목을 검사하여 검사결과를 반환 합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckMandatoryForSave(System.Windows.Forms.Control)">
+            <summary>
+             UI Form의 필수 입력항목을 검사하여 검사결과를 반환 합니다.
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckMandatoryForSelect">
+            <summary>
+             UI Form의 필수 입력항목을 검사하여 검사결과를 반환 합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckMandatoryForSelect(System.Windows.Forms.Control)">
+            <summary>
+             UI Form의 필수 입력항목을 검사하여 검사결과를 반환 합니다.
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.GetCurrentTime">
+            <summary>
+            시스템의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.GetServerTime">
+            <summary>
+            서버의 현재 시간을 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ExecuteUI(System.Object,EBAP.Core.Collections.ParamCollection)">
+            <summary>
+            UI를 실행합니다.
+            </summary>
+            <param name="menuID">MENU ID</param>
+            <param name="linkParams">Link Event Parameters</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ExecutePopup(System.String,System.String,System.String,EBAP.Core.Collections.ParamCollection)">
+             <summary>
+             Popup을 생성하고 실행합니다.
+             </summary>
+             <param name="text">Popup 제목</param>
+             <param name="dllPath">Dll 경로</param>
+             <param name="className">Class 명</param>
+             <param name="popParams">Popup Parameters</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SaveOperationLog(System.String,System.DateTime)">
+            <summary>
+            Database에 실행 Log를 저장합니다.
+            </summary>
+            <param name="opertion"></param>
+            <param name="dtStart"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SaveOperationLog(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Database에 실행 Log를 저장합니다.
+            </summary>
+            <param name="opertion"></param>
+            <param name="dtStart"></param>
+            <param name="dtEnd"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckNewCondition">
+            <summary>
+            신규 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckSelectionCondition">
+            <summary>
+            조회 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckDeleteCondition">
+            <summary>
+            삭제 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckDeleteCondition(System.Data.DataTable)">
+            <summary>
+            삭제 조건 Check Method
+            </summary>
+            <param name="dt">Check할 Data</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckSaveCondition">
+            <summary>
+            저장 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckSaveCondition(System.Data.DataTable)">
+            <summary>
+            저장 조건 Check Method
+            </summary>
+            <param name="dt">Check할 Data</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckCopyCondition">
+            <summary>
+            복사 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckCopyCondition(System.Data.DataTable)">
+            <summary>
+            복사 조건 Check Method
+            </summary>
+            <param name="dt">Check할 Data</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CheckChartCondition">
+            <summary>
+            Chart 조회 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.showCheckMessage(EBAP.Core.Info.MsgType)">
+            <summary>
+            저장 삭제 시 메시지를 보여줍니다.
+            </summary>
+            <param name="msgType">Message Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.showCheckMessage(EBAP.Core.Info.MsgType,System.Data.DataTable)">
+            <summary>
+            저장 삭제 시 메시지를 보여줍니다.
+            </summary>
+            <param name="msgType">Message Type</param>
+            <param name="dt">체크할 DataTable</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetBindingMapping(System.Data.DataSet)">
+             <summary>
+             Control을 데이터와 바인딩합니다.
+             </summary>
+             <param name="ds"></param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetBindingMapping(System.Windows.Forms.Control,System.Data.DataSet)">
+             <summary>
+             Control을 데이터와 바인딩합니다.
+             </summary>
+             <param name="control">컨트롤</param>
+             <param name="ds"></param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetBindingMapping(DevExpress.XtraLayout.LayoutControlGroup,System.Data.DataSet)">
+             <summary>
+             Control을 데이터와 바인딩합니다.
+             </summary>
+             <param name="group">Layout Group</param>
+             <param name="ds"></param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.InitEditValue">
+             <summary>
+             UI Form의 Control을 초기화 합니다.
+             </summary>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.InitEditValue(System.Windows.Forms.Control)">
+             <summary>
+             UI Form의 Control을 초기화 합니다.
+             </summary>
+             <param name="control">컨트롤</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.InitEditValue(DevExpress.XtraLayout.LayoutControlGroup)">
+             <summary>
+             UI Form의 Control을 초기화 합니다.
+             </summary>
+             <param name="group">Layout Group</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowWaitDialog(System.String)">
+            <summary>
+            Wait Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowWaitDialog(System.String,System.String)">
+            <summary>
+            Wait Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CloseWaitDialog">
+            <summary>
+            Wait Dialog를 닫습니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowMsgBox(System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">Message</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowMsgBox(System.String,System.String)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">Message</param>
+            <param name="caption">Caption</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowMsgBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            MessageBox를 보여줍니다.
+            </summary>
+            <param name="text">보여질 Message</param>
+            <param name="caption">MessageBox Caption</param>
+            <param name="buttons">Button 종류</param>
+            <param name="icon">Icon 종류</param>
+            <param name="defaultButton">Default Button</param>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowExceptionBox(System.Exception)">
+            <summary>
+            Exception Box를 보여줍니다.
+            </summary>
+            <param name="ex">Exception</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowFlyoutDialog(System.String,System.String)">
+            <summary>
+            Flyout Dialog를 보여줍니다.
+            </summary>
+            <param name="caption"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.GetGridColumnSet(System.String)">
+            <summary>
+            Database에서 컬럼 정보를 가져옵니다.
+            </summary>
+            <param name="gridName"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.GetGridColumnSet(System.String,System.String)">
+            <summary>
+            Database에서 컬럼 정보를 가져옵니다.
+            </summary>
+            <param name="screenId"></param>
+            <param name="gridName"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowInfoMessage(System.String,System.String,System.String)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="caption">Alert Control Caption</param>
+             <param name="text">Alert Message</param>
+             <param name="hotTrackedText">Hot Tracked Text</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowInfoMessage(System.String,System.String,System.String,System.Drawing.Color)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="caption">Alert Control Caption</param>
+             <param name="text">Alert Message</param>
+             <param name="hotTrackedText">Hot Tracked Text</param>
+             <param name="color">색 지정</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowAlertMessage(System.String,System.String)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="text">Alert Message</param>
+             <param name="caption">Alert Control Caption</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.ShowAlertMessage(System.String,System.String,System.String)">
+             <summary>
+             Alert Message를 보여줍니다.
+             </summary>
+             <param name="caption">Alert Control Caption</param>
+             <param name="text">Alert Message</param>
+             <param name="hotTrackedText">Hot Tracked Text</param>
+             <remarks>
+             2016-06-17 최초생성 : 오인봉
+             변경내역
+            
+             </remarks>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.RemoveAlertMessage(System.String)">
+            <summary>
+            메세지 삭제 합니다.
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.barManager_ItemClick(System.Object,DevExpress.XtraBars.ItemClickEventArgs)">
+            <summary>
+            UI Form의 툴바를 클릭하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.OnActivated(System.EventArgs)">
+            <summary>
+            Form 이 Activated 되면 MainFrame의 Button을 재설정합니다.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.OnLoad(System.EventArgs)">
+            <summary>
+            UI Form이 로드될 때 버튼권한을 설정합니다.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetSplitPanelProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetSelectionButtonEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.SetFilterProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.CollapsedPanel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.FindLayoutGroup(System.Collections.Generic.List{DevExpress.XtraLayout.BaseLayoutItem},System.Windows.Forms.Control,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="list"></param>
+            <param name="ctrls"></param>
+            <param name="controlName"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.InitLocaleString(System.Windows.Forms.Control)">
+            <summary>
+            
+            </summary>
+            <param name="ctrls"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.OnClosed(System.EventArgs)">
+            <summary>
+            Form이 Close 되면 MainFrame의 Button을 재설정합니다.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:EBAP.Win.BaseFrame.UIFrame.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.UIFrame.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.WaitDialog">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.WaitDialog.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.WaitDialog.SetCaption(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="caption"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.WaitDialog.SetDescription(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="description"></param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.WaitDialog.ProcessCommand(System.Enum,System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="cmd"></param>
+             <param name="arg"></param>
+        </member>
+        <member name="T:EBAP.Win.BaseFrame.WaitDialog.WaitFormCommand">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:EBAP.Win.BaseFrame.WaitDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.WaitDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EBAP.Win.BaseFrame.WaitDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
