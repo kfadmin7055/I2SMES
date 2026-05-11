@@ -237,7 +237,7 @@ namespace EBAP.UI.BSE.Product
             //ParamCollection param = DatabaseParams;
             //param.Add("", "");
 
-            using (OraBiz_CS wb = new OraBiz_CS())
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
                 ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, param);
                 //ds = wb.NTx_ExecuteDataSet(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, param);
@@ -336,7 +336,7 @@ namespace EBAP.UI.BSE.Product
 
             queryId = new string[] { Q_Company.Merge() };
 
-            using (OraBiz_CS wb = new OraBiz_CS())
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
                 wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
             }
@@ -383,7 +383,7 @@ namespace EBAP.UI.BSE.Product
 
             queryId = new string[] { Q_Company.Delete() };
 
-            using (OraBiz_CS wb = new OraBiz_CS())
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
                 wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
             }

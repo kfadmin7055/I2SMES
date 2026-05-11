@@ -27,20 +27,37 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:I2S.SQL.COMMON.DATA.OraData.Item.Q_Product">
+        <member name="T:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE">
             <summary>
-            PRODUCT 테이블 쿼리
+            COMMON_CODE 테이블 쿼리
             </summary>
         </member>
-        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_Product.Merge">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.Merge(System.String)">
             <summary>
-            PRODUCT 테이블 머지 쿼리
+            COMMON_CODE 테이블 머지 쿼리
             </summary>
             <returns></returns>
         </member>
-        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_Product.Delete">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.Delete(System.String)">
             <summary>
-            PRODUCT 테이블 삭제 쿼리
+            COMMON_CODE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Item.Q_MATERIALS">
+            <summary>
+            MATERIALS 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MATERIALS.Merge">
+            <summary>
+            MATERIALS 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MATERIALS.Delete">
+            <summary>
+            MATERIALS 테이블 삭제 쿼리
             </summary>
             <returns></returns>
         </member>

@@ -197,6 +197,17 @@
             
             </remarks>
         </member>
+        <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQuery(System.String,System.String[],System.String,System.String[],System.Data.DataTable)">
+            <summary>
+            DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+            </summary>
+            <param name="dbName">DB 연결정보</param>
+            <param name="command">Command String</param>
+            <param name="cmdType">Command Type</param>
+            <param name="paramList">Command Parameters</param>
+            <param name="dt">Command Parameters Values(DataTable)</param>
+            <returns></returns>
+        </member>
         <member name="M:EBAP.Business.WSBiz.OraBiz.Tx_ExecuteNonQuery(System.String,System.String,System.String,System.String[],System.Object[],System.String[],System.Object[]@)">
             <summary>
             쿼리를 실행하여 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.

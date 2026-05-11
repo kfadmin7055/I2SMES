@@ -1,7 +1,7 @@
 ﻿namespace EBAP.Core.Info
 {
     /// <summary>
-    /// Grid Export Type
+    /// DB Type
     /// </summary>
     public enum DB_TYPE
     {
@@ -9,6 +9,9 @@
         MSSQL
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public static class clsDBHelper
     {
         public static DB_TYPE GetDBType(string connName)

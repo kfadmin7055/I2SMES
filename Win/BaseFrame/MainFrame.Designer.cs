@@ -111,12 +111,12 @@
             this.barManagerTop = new DevExpress.XtraBars.BarManager(this.components);
             this.barTop = new DevExpress.XtraBars.Bar();
             this.iLoadMenu = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtn_MainPLC = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtn_SubPLC = new DevExpress.XtraBars.BarButtonItem();
             this.iVendorCode = new DevExpress.XtraBars.BarEditItem();
             this.cboVendorCode = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.iPlantCode = new DevExpress.XtraBars.BarEditItem();
             this.cboPlantCode = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.barBtn_MainPLC = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtn_SubPLC = new DevExpress.XtraBars.BarButtonItem();
             this.iUserConfig = new DevExpress.XtraBars.BarSubItem();
             this.iUser = new DevExpress.XtraBars.BarButtonItem();
             this.iCellInfo = new DevExpress.XtraBars.BarButtonItem();
@@ -225,6 +225,7 @@
             this.hideContainerLeft,
             this.hideContainerRight});
             this.dockManager.Form = this;
+            this.dockManager.MenuManager = this.barManagerStatus;
             this.dockManager.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -243,9 +244,9 @@
             this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.hideContainerLeft.Controls.Add(this.pnlTreeMenu);
             this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.hideContainerLeft.Location = new System.Drawing.Point(0, 166);
+            this.hideContainerLeft.Location = new System.Drawing.Point(0, 164);
             this.hideContainerLeft.Name = "hideContainerLeft";
-            this.hideContainerLeft.Size = new System.Drawing.Size(34, 418);
+            this.hideContainerLeft.Size = new System.Drawing.Size(34, 420);
             // 
             // pnlTreeMenu
             // 
@@ -400,9 +401,9 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.hideContainerRight.Controls.Add(this.pnlMessage);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1284, 166);
+            this.hideContainerRight.Location = new System.Drawing.Point(1284, 164);
             this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(34, 418);
+            this.hideContainerRight.Size = new System.Drawing.Size(34, 420);
             // 
             // pnlMessage
             // 
@@ -794,14 +795,14 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 41);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1318, 49);
+            this.pnlTop.Size = new System.Drawing.Size(1318, 47);
             this.pnlTop.TabIndex = 8;
             // 
             // barDockControl3
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 49);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 47);
             this.barDockControl3.Manager = null;
             this.barDockControl3.Size = new System.Drawing.Size(0, 0);
             // 
@@ -809,7 +810,7 @@
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(1318, 49);
+            this.barDockControl4.Location = new System.Drawing.Point(1318, 47);
             this.barDockControl4.Manager = null;
             this.barDockControl4.Size = new System.Drawing.Size(0, 0);
             // 
@@ -817,7 +818,7 @@
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 49);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 47);
             this.barDockControl2.Manager = null;
             this.barDockControl2.Size = new System.Drawing.Size(1318, 0);
             // 
@@ -827,7 +828,7 @@
             this.barDockControl1.Appearance.Options.UseBackColor = true;
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl1.Location = new System.Drawing.Point(0, 49);
+            this.barDockControl1.Location = new System.Drawing.Point(0, 47);
             this.barDockControl1.Manager = null;
             this.barDockControl1.Size = new System.Drawing.Size(1318, 0);
             // 
@@ -835,7 +836,7 @@
             // 
             this.barDockControl7.CausesValidation = false;
             this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl7.Location = new System.Drawing.Point(0, 49);
+            this.barDockControl7.Location = new System.Drawing.Point(0, 47);
             this.barDockControl7.Manager = null;
             this.barDockControl7.Size = new System.Drawing.Size(0, 0);
             // 
@@ -843,7 +844,7 @@
             // 
             this.barDockControl8.CausesValidation = false;
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl8.Location = new System.Drawing.Point(1318, 49);
+            this.barDockControl8.Location = new System.Drawing.Point(1318, 47);
             this.barDockControl8.Manager = null;
             this.barDockControl8.Size = new System.Drawing.Size(0, 0);
             // 
@@ -854,7 +855,7 @@
             this.barDockControl6.Appearance.Options.UseFont = true;
             this.barDockControl6.CausesValidation = false;
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl6.Location = new System.Drawing.Point(0, 49);
+            this.barDockControl6.Location = new System.Drawing.Point(0, 47);
             this.barDockControl6.Manager = null;
             this.barDockControl6.Size = new System.Drawing.Size(1318, 0);
             // 
@@ -866,7 +867,7 @@
             this.barDockControl5.Appearance.Options.UseForeColor = true;
             this.barDockControl5.CausesValidation = false;
             this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl5.Location = new System.Drawing.Point(0, 49);
+            this.barDockControl5.Location = new System.Drawing.Point(0, 47);
             this.barDockControl5.Manager = null;
             this.barDockControl5.Size = new System.Drawing.Size(1318, 0);
             // 
@@ -874,7 +875,7 @@
             // 
             this.barDockControl15.CausesValidation = false;
             this.barDockControl15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl15.Location = new System.Drawing.Point(0, 49);
+            this.barDockControl15.Location = new System.Drawing.Point(0, 47);
             this.barDockControl15.Manager = this.barManagerTop;
             this.barDockControl15.Size = new System.Drawing.Size(0, 0);
             // 
@@ -953,27 +954,8 @@
             // iLoadMenu
             // 
             this.iLoadMenu.Id = 4;
-            this.iLoadMenu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("iLoadMenu.ImageOptions.Image")));
             this.iLoadMenu.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.iLoadMenu.Name = "iLoadMenu";
-            // 
-            // barBtn_MainPLC
-            // 
-            this.barBtn_MainPLC.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barBtn_MainPLC.Caption = "1번 PLC";
-            this.barBtn_MainPLC.ContentHorizontalAlignment = DevExpress.XtraBars.BarItemContentAlignment.Near;
-            this.barBtn_MainPLC.Id = 24;
-            this.barBtn_MainPLC.LargeWidth = 50;
-            this.barBtn_MainPLC.Name = "barBtn_MainPLC";
-            this.barBtn_MainPLC.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // barBtn_SubPLC
-            // 
-            this.barBtn_SubPLC.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barBtn_SubPLC.Caption = "2번 PLC";
-            this.barBtn_SubPLC.Id = 25;
-            this.barBtn_SubPLC.Name = "barBtn_SubPLC";
-            this.barBtn_SubPLC.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // iVendorCode
             // 
@@ -1009,6 +991,24 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboPlantCode.Name = "cboPlantCode";
             this.cboPlantCode.NullText = "Plant";
+            // 
+            // barBtn_MainPLC
+            // 
+            this.barBtn_MainPLC.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barBtn_MainPLC.Caption = "1번 PLC";
+            this.barBtn_MainPLC.ContentHorizontalAlignment = DevExpress.XtraBars.BarItemContentAlignment.Near;
+            this.barBtn_MainPLC.Id = 24;
+            this.barBtn_MainPLC.LargeWidth = 50;
+            this.barBtn_MainPLC.Name = "barBtn_MainPLC";
+            this.barBtn_MainPLC.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barBtn_SubPLC
+            // 
+            this.barBtn_SubPLC.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barBtn_SubPLC.Caption = "2번 PLC";
+            this.barBtn_SubPLC.Id = 25;
+            this.barBtn_SubPLC.Name = "barBtn_SubPLC";
+            this.barBtn_SubPLC.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // iUserConfig
             // 
@@ -1099,13 +1099,13 @@
             this.barDockControl13.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl13.Location = new System.Drawing.Point(0, 0);
             this.barDockControl13.Manager = this.barManagerTop;
-            this.barDockControl13.Size = new System.Drawing.Size(1318, 49);
+            this.barDockControl13.Size = new System.Drawing.Size(1318, 47);
             // 
             // barDockControl14
             // 
             this.barDockControl14.CausesValidation = false;
             this.barDockControl14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl14.Location = new System.Drawing.Point(0, 49);
+            this.barDockControl14.Location = new System.Drawing.Point(0, 47);
             this.barDockControl14.Manager = this.barManagerTop;
             this.barDockControl14.Size = new System.Drawing.Size(1318, 0);
             // 
@@ -1113,7 +1113,7 @@
             // 
             this.barDockControl16.CausesValidation = false;
             this.barDockControl16.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl16.Location = new System.Drawing.Point(1318, 49);
+            this.barDockControl16.Location = new System.Drawing.Point(1318, 47);
             this.barDockControl16.Manager = this.barManagerTop;
             this.barDockControl16.Size = new System.Drawing.Size(0, 0);
             // 
@@ -1238,7 +1238,7 @@
             this.pnlMiddle.Controls.Add(this.barDockControlBottom);
             this.pnlMiddle.Controls.Add(this.barDockControlTop);
             this.pnlMiddle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMiddle.Location = new System.Drawing.Point(0, 90);
+            this.pnlMiddle.Location = new System.Drawing.Point(0, 88);
             this.pnlMiddle.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMiddle.Name = "pnlMiddle";
             this.pnlMiddle.Size = new System.Drawing.Size(1318, 39);
@@ -1459,7 +1459,7 @@
             this.pnlMenu.Controls.Add(this.barDockControl18);
             this.pnlMenu.Controls.Add(this.barDockControl17);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 129);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 127);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(1318, 37);

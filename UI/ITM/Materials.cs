@@ -1,19 +1,18 @@
-﻿#region 어셈블리 EBAP.UI.BSE.Product, v3.24
-// C:\EBAP-CORE.NET\EBAP.UI.BSE.Product.dll
+﻿#region 어셈블리 EBAP.UI.ITM, v3.24
+// C:\EBAP-CORE.NET\EBAP.UI.ITM.dll
 // CLR Version :  4.0.30319.42000
 #endregion
 
 using DevExpress.XtraGrid.Views.Grid;
 using EBAP.Business.WSBiz;
-using EBAP.Core.Collections;
 using EBAP.Core.Info;
-using I2S.SQL.COMMON.DATA.OraData.ProductInfo;
+using I2S.SQL.COMMON.DATA.OraData.Item;
 using System;
 using System.Data;
 
-namespace EBAP.UI.BSE.Product
+namespace EBAP.UI.ITM
 {
-    #region :: EBAP.UI.BSE.Product.ScaleMaster ::
+    #region :: EBAP.UI.ITM.Material ::
 
     /// <summary>
     /// Form의 업무내용을 기술합니다.
@@ -23,11 +22,11 @@ namespace EBAP.UI.BSE.Product
     ///               1.  
     ///               2. 
     /// History     :
-    ///               1. (2026-04-27 오후 3:33:49 - easto - KFES) : 최초 생성
+    ///               1. (2026-05-11 오전 10:02:57 - easto - KFES) : 최초 생성
     ///               2.
     ///               3.
     /// </remarks>
-    public partial class ScaleMaster : EBAP.Win.BaseFrame.UIFrame
+    public partial class Materials : EBAP.Win.BaseFrame.UIFrame
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////
         // Constructor & Global Instance
@@ -38,10 +37,9 @@ namespace EBAP.UI.BSE.Product
         /// <summary>
         /// TemplateForm Form을 생성합니다.
         /// </summary>
-        public ScaleMaster()
+        public Materials()
         {
             InitializeComponent();
-
             AppConfig.CurrentDB = ConnectionString.ORAMESDB;
         }
 
@@ -59,17 +57,17 @@ namespace EBAP.UI.BSE.Product
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////
-        // Event Handler(ScaleMaster Common Event)
+        // Event Handler(Material Common Event)
         ///////////////////////////////////////////////////////////////////////////////////////////////
 
-        #region :: ScaleMaster_Load :: Form이 Load 시 발생합니다.
+        #region :: Material_Load :: Form이 Load 시 발생합니다.
 
         /// <summary>
         /// Form이 Load 시 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Load(object sender, EventArgs e)
+        private void Material_Load(object sender, EventArgs e)
         {
             try
             {
@@ -109,18 +107,18 @@ namespace EBAP.UI.BSE.Product
         /// </summary>
         private void InitGridControl()
         {
-            viewList.BeginInit();
+            //viewList.BeginInit();
 
             // 코드로 컬럼 셋팅
-            viewList.InitColumn(AppConfig.CHECKCOLUMNNAME, "Select", 50, 0, true, true, DataType.CheckEdit);
+            //viewList.InitColumn(AppConfig.CHECKCOLUMNNAME, "Select", 50, 0, true, true, DataType.CheckEdit);
             //viewList.InitColumn("FIELD", "Caption", 75, 0, false, true, DataType.Default, HorzAlign.Default);
             //viewList.InitColumn("CHANGEBY", "ChangeBy", 80, 0, false, false);
             //viewList.InitColumn("CHANGEDTTM", "ChangeDttm", 130, 0, false, false, DataType.DateTime, HorzAlign.Center);
 
             // DB에서 컬럼 셋팅
-            viewList.InitColumnFromDB();
+            //viewList.InitColumnFromDB();
 
-            viewList.EndInit();
+            //viewList.EndInit();
         }
 
         /// <summary>
@@ -141,14 +139,14 @@ namespace EBAP.UI.BSE.Product
 
         #endregion
 
-        #region :: ScaleMaster_Link :: Form 간 Data 전송 시 발생합니다.
+        #region :: Material_Link :: Form 간 Data 전송 시 발생합니다.
 
         /// <summary>
         /// Form 간 Data 전송 시 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Link(object sender, EventArgs e)
+        private void Material_Link(object sender, EventArgs e)
         {
             try
             {
@@ -172,14 +170,14 @@ namespace EBAP.UI.BSE.Product
 
         #endregion
 
-        #region :: ScaleMaster_Selection :: MainForm의 조회 Button을 Click 하면 발생합니다.
+        #region :: Material_Selection :: MainForm의 조회 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 조회 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Selection(object sender, EventArgs e)
+        private void Material_Selection(object sender, EventArgs e)
         {
             try
             {
@@ -214,27 +212,29 @@ namespace EBAP.UI.BSE.Product
         {
             DataSet ds;
 
-            string queryId = Q_Scale.SelectQuery("Q_Scale.SelectQuery");
+            string queryId = Q_MATERIALS.SelectQuery("reference");
 
-            string[] paramList = new string[] { "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "VENDORCODE",
-                                                "PLANTCODE" };
+            string[] paramList = new string[] { ""
+                                                , ""
+                                                , ""
+                                                , ""
+                                                , ""
+                                                , "COMPANY_CODE"
+                                                , "PLANT_CODE"
+                                                , "PROCESS_CODE"
+                                                , "LINE_CODE"
+                                                };
 
-            object[] valueList = new object[] { "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                CurrentUser.VENDORCODE,
-                                                CurrentUser.PLANTCODE };
+            object[] valueList = new object[] { ""
+                                                , ""
+                                                , ""
+                                                , ""
+                                                , ""
+                                                , CurrentUser.COMPANY
+                                                , CurrentUser.PLANTCODE
+                                                , ""
+                                                , ""
+                                                };
 
             //컨트롤에서 파라미터를 생성할 경우 사용하세요.
             //ParamCollection param = DatabaseParams;
@@ -249,31 +249,31 @@ namespace EBAP.UI.BSE.Product
             gridList.FillData(ds);
 
             // 그리드와 컨트롤이 바인딩이 필요하다면 주석을 제거하세요.
-            //InitDataBindings(ds);
+            //InitDataTableNamedings(ds);
         }
 
         /// <summary>
         /// 컨트롤과 데이터를 바인딩합니다.
         /// </summary>
-        private void InitDataBindings(DataSet ds)
+        private void InitDataTableNamedings(DataSet ds)
         {
             //DataTable dt = ds.Tables[0];
 
-            //txtUserId.BindingMapping(dt,"USERID");
-            //txtUserName.BindingMapping(dt,"USERNAME");
-            //txtEmpNo.BindingMapping(dt, "EMPNO");
+            //txtUserId.TableNamedingMapping(dt,"USERID");
+            //txtUserName.TableNamedingMapping(dt,"USERNAME");
+            //txtEmpNo.TableNamedingMapping(dt, "EMPNO");
         }
 
         #endregion
 
-        #region :: ScaleMaster_New :: MainForm의 신규 Button을 Click 하면 발생합니다.
+        #region :: Material_New :: MainForm의 신규 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 신규 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_New(object sender, EventArgs e)
+        private void Material_New(object sender, EventArgs e)
         {
             try
             {
@@ -291,19 +291,19 @@ namespace EBAP.UI.BSE.Product
         private void NewData()
         {
             //viewList.AddNewRow();
-            viewList.AddNewRow("SCALE_CODE");
+            //viewList.AddNewRow("FIELDNAME");
         }
 
         #endregion
 
-        #region :: ScaleMaster_Save :: MainForm의 저장 Button을 Click 하면 발생합니다.
+        #region :: Material_Save :: MainForm의 저장 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 저장 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Save(object sender, EventArgs e)
+        private void Material_Save(object sender, EventArgs e)
         {
             try
             {
@@ -326,49 +326,32 @@ namespace EBAP.UI.BSE.Product
         /// </summary>
         private void SaveData()
         {
-            //string[] queryId = null;
+            string[] queryId = null;
 
-            //DataTable dt = viewList.GetAddedModifedData();
+            DataTable dt = viewList.GetAddedModifedData();
 
-            //string[] paramList = new string[] { "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "VENDORCODE",
-            //                                    "PLANTCODE", 
-            //                                    "CHANGEBY" };
+            string[] paramList = new string[] { ":CHANGEDTTM",
+                                                ":CHANGEBY"
+                                                };
 
-            //object[] valueList = new object[] { "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    CurrentUser.VENDORCODE,
-            //                                    CurrentUser.PLANTCODE,
-            //                                    CurrentUser.USERID };
+            queryId = new string[] { Q_MATERIALS.Merge() };
 
-            //using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
-            //{
-            //    wb.Tx_ExecuteNonQuery(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, paramList, valueList);
-            //    wb.Tx_ExecuteNonQuery(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, paramList, viewList.GetAddedModifedData());
-            //}
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
+            {
+                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
+            }
         }
 
         #endregion
 
-        #region :: ScaleMaster_Delete :: MainForm의 삭제 Button을 Click 하면 발생합니다.
+        #region :: Material_Delete :: MainForm의 삭제 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 삭제 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Delete(object sender, EventArgs e)
+        private void Material_Delete(object sender, EventArgs e)
         {
             try
             {
@@ -391,35 +374,18 @@ namespace EBAP.UI.BSE.Product
         /// </summary>
         private void DeleteData()
         {
-            //const string queryId = @"dbo.";
+            string[] queryId = null;
 
-            //string[] paramList = new string[] { "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "VENDORCODE",
-            //                                    "PLANTCODE", 
-            //                                    "CHANGEBY" };
+            DataTable dt = viewList.GetAddedModifedData();
 
-            //object[] valueList = new object[] { "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    CurrentUser.VENDORCODE,
-            //                                    CurrentUser.PLANTCODE,
-            //                                    CurrentUser.USERID };
+            string[] paramList = new string[] { ":CODE" };
 
-            //using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
-            //{
-            //    wb.Tx_ExecuteNonQuery(ConnectionString.KFMETA, queryId, AppConfig.COMMANDTEXT, paramList, valueList);
-            //    wb.Tx_ExecuteNonQuery(ConnectionString.KFMETA, queryId, AppConfig.COMMANDTEXT, paramList, viewList.GetCheckedData());
-            //}
+            queryId = new string[] { Q_MATERIALS.Delete() };
+
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
+            {
+                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
+            }
         }
 
         #endregion

@@ -11,19 +11,19 @@
     public enum HorzAlign
     {
         /// <summary>
-        /// 
+        /// 기본
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        /// 중앙
         /// </summary>
         Center,
         /// <summary>
-        /// 
+        /// 오른쪽
         /// </summary>
         Far,
         /// <summary>
-        /// 
+        /// 왼쪽
         /// </summary>
         Near
     }

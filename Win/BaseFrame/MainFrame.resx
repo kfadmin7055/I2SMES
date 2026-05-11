@@ -121,7 +121,7 @@
     <value>338, 17</value>
   </metadata>
   <metadata name="imgMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>321, 54</value>
+    <value>577, 54</value>
   </metadata>
   <assembly alias="DevExpress.Utils.v24.1" name="DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="imgMenu.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v24.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -197,7 +197,7 @@
 </value>
   </data>
   <metadata name="barManagerMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 54</value>
+    <value>428, 54</value>
   </metadata>
   <data name="iFMenu.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v24.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -215,7 +215,7 @@
 </value>
   </data>
   <metadata name="barManagerMiddle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 54</value>
+    <value>273, 54</value>
   </metadata>
   <data name="txtNavigator.ContextImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v24.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -321,29 +321,6 @@
   <metadata name="barManagerTop.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>616, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="iLoadMenu.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAs
-        SgAALEoBd3p0TQAAA9VJREFUWEfll1uMXVMYx0sRlFLUZYiGSohqG9Gqa5mqIqhLvLjFPaYShOqDSBq3
-        Bw8SIiGEtJ5QqiRSVR7wQCKZhIRISF9ckgkmcV5mJufsvX5/+Z98e7JnzbkhjQf/ZOes/a21129dvvWt
-        78yZkwnYAlyV27up1WqtBH4EdgIfAq8BS/J2fQVsA3YMAgcM/Rj4pGZbDLwP3DizdR8Bb0k6WNLbwNV5
-        faWAfiTpMOCDep2kucC7wPK6vacCPFfSAQFf36HN2Z6pofE+A2xNTk4uAt7I7V1VgV3uBDc0pbQbOLIo
-        irXNZnN5J7CVUtqV27qqDrYMj32/BlgF7JZ0OPAO8ChwTjcw8J6kfXJ7R+VgqzZzz3S+Zwu8WdWnlHbW
-        21sGppSmna6vOoGtmPn8KNt5PgXOk3Q78HzeHlgDvJDbu6obOBdwPPA08CAwlNUtkvRZrNCF9bquGgQs
-        aV9JR1VP7Lt/TwU2+lxLOhk41Csj6ZC8j1kaEHxsRKutkl4HfnEZeM5O6IFVbR1IgHtn9tBBfwO8pXrv
-        5tUWcLQHl9tnaS+AfQr6B5K9AL6oLMvNuX2WAuxz67DZ8QGOGwQcZ3k7cFJeN0uSHo/rrdfjMNkTbAeL
-        47Ypr/vHiqXeFUFiYZxZl9dIWgtsiDM8kn/7rwTMK8tyox/gFB+X6r0sy4ckXTvQ2f1/yfuS2yxguLrS
-        fBkArwAvApeF7XLvdfbNUu+vy61Wa1VZlreGfTXwavRxv6QDbfy50WgsyDoYAvYYHJfBr0VRXGkYcF+0
-        eQD41jG69t0VwPYoO1S+HOV7fDcD10ccf8YeKp/d6uM4Bk7g/gzwCuAH52FVm+jM4O9TSl83Go0jwrau
-        B/jZKN+UUtrqwh8eRW1ZHokl+d3gGMhLwE/A5upONjil9ER49leR9F3aDSxp1Pc28B2wzMbfJiYmhlJK
-        e4DrUkrfjI+PO762wbUZOnnzDfR5bcZPRXkT8EUsZUdwBJ7bIm/f0QZH5XpgCjhT0v61GU/Dvdxuk4Ot
-        siydf431ALeXemxsbF67jwocDVYEYBoco3SyN+Jbxk7SCRy2x3qAvwSeDP/ZZuPN9Y+t2Ndbomz4MPCw
-        O/MFEp0tkXRW/q2zzvj1P4rzo4/TgLuBu+wH/W6//0bOnyJvOsiBwqMOe9urp6amFrs+tuWEyL/sAwsj
-        6/DfoBPzfnsqltoBY6TVap0LXALc6QEURbFO0oKiKJzg+yitlHRxURTDjlZeXjuoIxxwx8AJfaXY1w0x
-        cp/RGzwD4HTgmOh8taT9ov6M0dFRz95eu6zZbC6VdEE38F9XhIsUzAHYDAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="iUserConfig.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v24.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjI0LjEsIFZlcnNpb249MjQuMS4z
@@ -775,12 +752,12 @@
     <value>754, 17</value>
   </metadata>
   <metadata name="taskbarAssistant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>935, 17</value>
+    <value>17, 54</value>
   </metadata>
   <metadata name="alertControl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1074, 17</value>
+    <value>156, 54</value>
   </metadata>
   <metadata name="popMenuTab.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>427, 54</value>
+    <value>683, 54</value>
   </metadata>
 </root>

@@ -1,19 +1,22 @@
-﻿#region 어셈블리 EBAP.UI.BSE.Product, v3.24
-// C:\EBAP-CORE.NET\EBAP.UI.BSE.Product.dll
+﻿#region 어셈블리 EBAP.UI.BSE.COM, v3.24
+// C:\EBAP-CORE.NET\EBAP.UI.BSE.COM.dll
 // CLR Version :  4.0.30319.42000
 #endregion
 
+using DevExpress.DataProcessing.InMemoryDataProcessor;
+using DevExpress.XtraEditors.Filtering;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraScheduler.Native;
 using EBAP.Business.WSBiz;
-using EBAP.Core.Collections;
 using EBAP.Core.Info;
-using I2S.SQL.COMMON.DATA.OraData.ProductInfo;
+using EBAP.Win.ControlLibrary;
+using I2S.SQL.COMMON.DATA.OraData._01.Base;
 using System;
 using System.Data;
 
-namespace EBAP.UI.BSE.Product
+namespace EBAP.UI.BSE.COM
 {
-    #region :: EBAP.UI.BSE.Product.ScaleMaster ::
+    #region :: EBAP.UI.BSE.COM.CommonCode ::
 
     /// <summary>
     /// Form의 업무내용을 기술합니다.
@@ -23,11 +26,11 @@ namespace EBAP.UI.BSE.Product
     ///               1.  
     ///               2. 
     /// History     :
-    ///               1. (2026-04-27 오후 3:33:49 - easto - KFES) : 최초 생성
+    ///               1. (2026-05-11 오전 11:01:52 - easto - KFES) : 최초 생성
     ///               2.
     ///               3.
     /// </remarks>
-    public partial class ScaleMaster : EBAP.Win.BaseFrame.UIFrame
+    public partial class CommonCode : EBAP.Win.BaseFrame.UIFrame
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////
         // Constructor & Global Instance
@@ -38,10 +41,9 @@ namespace EBAP.UI.BSE.Product
         /// <summary>
         /// TemplateForm Form을 생성합니다.
         /// </summary>
-        public ScaleMaster()
+        public CommonCode()
         {
             InitializeComponent();
-
             AppConfig.CurrentDB = ConnectionString.ORAMESDB;
         }
 
@@ -59,24 +61,25 @@ namespace EBAP.UI.BSE.Product
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////
-        // Event Handler(ScaleMaster Common Event)
+        // Event Handler(CommonCode Common Event)
         ///////////////////////////////////////////////////////////////////////////////////////////////
 
-        #region :: ScaleMaster_Load :: Form이 Load 시 발생합니다.
+        #region :: CommonCode_Load :: Form이 Load 시 발생합니다.
 
         /// <summary>
         /// Form이 Load 시 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Load(object sender, EventArgs e)
+        private void CommonCode_Load(object sender, EventArgs e)
         {
             try
             {
                 InitLocalization();
                 InitGlobalInstance();
                 InitComboBox();
-                InitGridControl();
+                InitGroupGridControl();
+                InitDetailGridControl();
                 InitControls();
 
                 //Form Load 후 조회를 실행해야 한다면 주석을 제거하세요.
@@ -107,20 +110,47 @@ namespace EBAP.UI.BSE.Product
         /// <summary>
         /// Grid Control Initialize
         /// </summary>
-        private void InitGridControl()
+        private void InitGroupGridControl()
         {
-            viewList.BeginInit();
+            viewGroup.BeginInit();
 
             // 코드로 컬럼 셋팅
-            viewList.InitColumn(AppConfig.CHECKCOLUMNNAME, "Select", 50, 0, true, true, DataType.CheckEdit);
-            //viewList.InitColumn("FIELD", "Caption", 75, 0, false, true, DataType.Default, HorzAlign.Default);
-            //viewList.InitColumn("CHANGEBY", "ChangeBy", 80, 0, false, false);
-            //viewList.InitColumn("CHANGEDTTM", "ChangeDttm", 130, 0, false, false, DataType.DateTime, HorzAlign.Center);
+            viewGroup.InitColumn(AppConfig.CHECKCOLUMNNAME, "Select", 50, 0, true, true, DataType.CheckEdit);
+            viewGroup.InitColumn("PCODEVALUE", "CodeValue", 100, 10, false, true, DataType.Default, HorzAlign.Default);
+            viewGroup.InitColumn("DISPLAYVALUE", "DisplayValue", 200, 50, false, true, DataType.Memo, HorzAlign.Default);
+            viewGroup.InitColumn("CHANGEBY", "ChangeBy", 80, 0, false, false);
+            viewGroup.InitColumn("CHANGEDTTM", "ChangeDttm", 130, 0, false, false, DataType.DateTime, HorzAlign.Center);
 
             // DB에서 컬럼 셋팅
-            viewList.InitColumnFromDB();
+            //viewList.InitColumnFromDB();
 
-            viewList.EndInit();
+            viewGroup.EndInit();
+        }
+
+        private void InitDetailGridControl()
+        {
+            viewDetail.BeginInit();
+
+            // 코드로 컬럼 셋팅
+            viewDetail.InitColumn(AppConfig.CHECKCOLUMNNAME, "Select", 50, 0, true, true, DataType.CheckEdit);
+            viewDetail.InitColumn("PCODEVALUE", "Group", 100, 10, false, false, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("CODEVALUE", "Detail", 160, 50, false, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("DISPLAYVALUE", "DetailName", 200, 50, false, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("SORT_NUM", "SortNumber", 200, 50, false, true, DataType.Number, HorzAlign.Far);
+            viewDetail.InitColumn("OPTIONFCODE", "Option1", 200, 50, false, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("OPTIONFNAME", "OptionName1", 200, 50, false, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("OPTIONSCODE", "Option2", 200, 50, false, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("OPTIONSNAME", "OptionName2", 200, 50, false, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("OPTIONTCODE", "Option3", 200, 50, false, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("OPTIONTNAME", "OptionName3", 200, 50, false, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("USEFLAG", "UseFlag", 200, 50, false, true, DataType.CheckEdit, HorzAlign.Default);
+            viewDetail.InitColumn("CHANGEBY", "ChangeBy", 80, 0, false, false);
+            viewDetail.InitColumn("CHANGEDTTM", "ChangeDttm", 130, 0, false, false, DataType.DateTime, HorzAlign.Center);
+
+            // DB에서 컬럼 셋팅
+            //viewList.InitColumnFromDB();
+
+            viewDetail.EndInit();
         }
 
         /// <summary>
@@ -141,14 +171,14 @@ namespace EBAP.UI.BSE.Product
 
         #endregion
 
-        #region :: ScaleMaster_Link :: Form 간 Data 전송 시 발생합니다.
+        #region :: CommonCode_Link :: Form 간 Data 전송 시 발생합니다.
 
         /// <summary>
         /// Form 간 Data 전송 시 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Link(object sender, EventArgs e)
+        private void CommonCode_Link(object sender, EventArgs e)
         {
             try
             {
@@ -172,20 +202,20 @@ namespace EBAP.UI.BSE.Product
 
         #endregion
 
-        #region :: ScaleMaster_Selection :: MainForm의 조회 Button을 Click 하면 발생합니다.
+        #region :: CommonCode_Selection :: MainForm의 조회 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 조회 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Selection(object sender, EventArgs e)
+        private void CommonCode_Selection(object sender, EventArgs e)
         {
             try
             {
                 SetFormLayout();
                 SetGridLayout();
-                SelectionData();
+                SelectionGroupData();
             }
             catch
             {
@@ -210,31 +240,19 @@ namespace EBAP.UI.BSE.Product
         /// <summary>
         /// 조회 처리 Method
         /// </summary>
-        private void SelectionData()
+        private void SelectionGroupData()
         {
             DataSet ds;
 
-            string queryId = Q_Scale.SelectQuery("Q_Scale.SelectQuery");
+            string queryId = Q_COMMON_CODE.SelectQuery("EBAP.UI.BSE.COM.CommonCode");
 
-            string[] paramList = new string[] { "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "VENDORCODE",
-                                                "PLANTCODE" };
+            string[] paramList = new string[] { "PCODEVALUE"
+                                                , "USEFLAG"
+                                                };
 
-            object[] valueList = new object[] { "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                "",
-                                                CurrentUser.VENDORCODE,
-                                                CurrentUser.PLANTCODE };
+            object[] valueList = new object[] { txtGroup.EditValue
+                                                , cboUseFlag.EditValue
+                                                };
 
             //컨트롤에서 파라미터를 생성할 경우 사용하세요.
             //ParamCollection param = DatabaseParams;
@@ -246,34 +264,66 @@ namespace EBAP.UI.BSE.Product
                 //ds = wb.NTx_ExecuteDataSet(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, param);
             }
 
-            gridList.FillData(ds);
+            gridGroup.FillData(ds);
 
             // 그리드와 컨트롤이 바인딩이 필요하다면 주석을 제거하세요.
-            //InitDataBindings(ds);
+            //InitDataTableNamedings(ds);
+        }
+
+        private void SelectionDetialData(string pGroupCode)
+        {
+            DataSet ds;
+
+            string queryId = Q_COMMON_CODE.SelectQuery("EBAP.UI.BSE.COM.CommonCode");
+
+            string[] paramList = new string[] { "PCODEVALUE"
+                                                , "GROUPNAME"
+                                                , "USEFLAG"
+                                                };
+
+            object[] valueList = new object[] { pGroupCode
+                                                , txtGroup.EditValue
+                                                , cboUseFlag.EditValue
+                                                };
+
+            //컨트롤에서 파라미터를 생성할 경우 사용하세요.
+            //ParamCollection param = DatabaseParams;
+            //param.Add("", "");
+
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
+            {
+                ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, valueList);
+                //ds = wb.NTx_ExecuteDataSet(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, param);
+            }
+
+            gridGroup.FillData(ds);
+
+            // 그리드와 컨트롤이 바인딩이 필요하다면 주석을 제거하세요.
+            //InitDataTableNamedings(ds);
         }
 
         /// <summary>
         /// 컨트롤과 데이터를 바인딩합니다.
         /// </summary>
-        private void InitDataBindings(DataSet ds)
+        private void InitDataTableNamedings(DataSet ds)
         {
             //DataTable dt = ds.Tables[0];
 
-            //txtUserId.BindingMapping(dt,"USERID");
-            //txtUserName.BindingMapping(dt,"USERNAME");
-            //txtEmpNo.BindingMapping(dt, "EMPNO");
+            //txtUserId.TableNamedingMapping(dt,"USERID");
+            //txtUserName.TableNamedingMapping(dt,"USERNAME");
+            //txtEmpNo.TableNamedingMapping(dt, "EMPNO");
         }
 
         #endregion
 
-        #region :: ScaleMaster_New :: MainForm의 신규 Button을 Click 하면 발생합니다.
+        #region :: CommonCode_New :: MainForm의 신규 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 신규 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_New(object sender, EventArgs e)
+        private void CommonCode_New(object sender, EventArgs e)
         {
             try
             {
@@ -290,20 +340,23 @@ namespace EBAP.UI.BSE.Product
         /// </summary>
         private void NewData()
         {
-            //viewList.AddNewRow();
-            viewList.AddNewRow("SCALE_CODE");
+            PGridView viewGrid = gridGroup.FocusedView as PGridView ?? gridDetail.FocusedView as PGridView;
+
+            viewGrid.AddNewRow();
+
+            //viewList.AddNewRow("FIELDNAME");
         }
 
         #endregion
 
-        #region :: ScaleMaster_Save :: MainForm의 저장 Button을 Click 하면 발생합니다.
+        #region :: CommonCode_Save :: MainForm의 저장 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 저장 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Save(object sender, EventArgs e)
+        private void CommonCode_Save(object sender, EventArgs e)
         {
             try
             {
@@ -313,7 +366,7 @@ namespace EBAP.UI.BSE.Product
                 //RaiseSelectEvent();
 
                 // 저장 후 DataTable에 변경사항만 처리할 경우 주석을 제거하세요(DB 접속 필요없을 경우)
-                viewList.AcceptChanges();
+                viewGroup.AcceptChanges();
             }
             catch
             {
@@ -326,49 +379,44 @@ namespace EBAP.UI.BSE.Product
         /// </summary>
         private void SaveData()
         {
-            //string[] queryId = null;
+            PGridView viewGrid = gridGroup.FocusedView as PGridView ?? gridDetail.FocusedView as PGridView;
 
-            //DataTable dt = viewList.GetAddedModifedData();
+            string[] queryId = null;
 
-            //string[] paramList = new string[] { "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "VENDORCODE",
-            //                                    "PLANTCODE", 
-            //                                    "CHANGEBY" };
+            DataTable dt = viewGrid.GetAddedModifedData();
 
-            //object[] valueList = new object[] { "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    CurrentUser.VENDORCODE,
-            //                                    CurrentUser.PLANTCODE,
-            //                                    CurrentUser.USERID };
+            string[] paramList = new string[] { ":CODEVALUE"
+                                            , ":DISPLAYVALUE"
+                                            , ":PCODEVALUE"
+                                            , ":SORT_NUM"
+                                            , ":REF1"
+                                            , ":REF1_NAME"
+                                            , ":REF2"
+                                            , ":REF2_NAME"
+                                            , ":REF3"
+                                            , ":REF3_NAME"
+                                            , ":USEFLAG"
+                                            , ":CHANGEBY"
+                                                };
 
-            //using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
-            //{
-            //    wb.Tx_ExecuteNonQuery(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, paramList, valueList);
-            //    wb.Tx_ExecuteNonQuery(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, paramList, viewList.GetAddedModifedData());
-            //}
+            queryId = new string[] { Q_COMMON_CODE.Merge("EBAP.UI.BSE.COM.CommonCode") };
+
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
+            {
+                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
+            }
         }
 
         #endregion
 
-        #region :: ScaleMaster_Delete :: MainForm의 삭제 Button을 Click 하면 발생합니다.
+        #region :: CommonCode_Delete :: MainForm의 삭제 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 삭제 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ScaleMaster_Delete(object sender, EventArgs e)
+        private void CommonCode_Delete(object sender, EventArgs e)
         {
             try
             {
@@ -378,7 +426,7 @@ namespace EBAP.UI.BSE.Product
                 //RaiseSelectEvent();
 
                 // 삭제 후 Check 된 ROW 만 삭제하려면 주석을 제거하세요(DB 접속 필요없을 경우)
-                viewList.RemoveCheckedRow();
+                viewGroup.RemoveCheckedRow();
             }
             catch
             {
@@ -391,35 +439,22 @@ namespace EBAP.UI.BSE.Product
         /// </summary>
         private void DeleteData()
         {
-            //const string queryId = @"dbo.";
+            PGridView viewGrid = gridGroup.FocusedView as PGridView ?? gridDetail.FocusedView as PGridView;
 
-            //string[] paramList = new string[] { "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "VENDORCODE",
-            //                                    "PLANTCODE", 
-            //                                    "CHANGEBY" };
+            string[] queryId = null;
 
-            //object[] valueList = new object[] { "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    "",
-            //                                    CurrentUser.VENDORCODE,
-            //                                    CurrentUser.PLANTCODE,
-            //                                    CurrentUser.USERID };
+            DataTable dt = viewGrid.GetAddedModifedData();
 
-            //using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
-            //{
-            //    wb.Tx_ExecuteNonQuery(ConnectionString.KFMETA, queryId, AppConfig.COMMANDTEXT, paramList, valueList);
-            //    wb.Tx_ExecuteNonQuery(ConnectionString.KFMETA, queryId, AppConfig.COMMANDTEXT, paramList, viewList.GetCheckedData());
-            //}
+            string[] paramList = new string[] { ":PCODEVALUE"
+                                            , ":CODEVALUE"
+                                                };
+
+            queryId = new string[] { Q_COMMON_CODE.Delete("EBAP.UI.BSE.COM.CommonCode") };
+
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
+            {
+                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
+            }
         }
 
         #endregion
@@ -467,6 +502,11 @@ namespace EBAP.UI.BSE.Product
                 //viewList.SetRowCellValue(e.RowHandle, "COLUMN", "");
                 //viewList.SetRowCellValue(e.RowHandle, "COLUMN", "");
                 //viewList.SetRowCellValue(e.RowHandle, "COLUMN", "");
+
+                if (gridDetail.FocusedView == viewDetail)
+                {
+                    viewDetail.SetRowCellValue(e.RowHandle, "GROUPCODE", viewGroup.GetFocusedRowCellValue("GROUPCODE"));
+                }
             }
             catch (Exception ex)
             {
@@ -635,9 +675,12 @@ namespace EBAP.UI.BSE.Product
         {
             try
             {
-                //DataRow dr = viewList.GetFocusedDataRow();
+                DataRow dr = viewGroup.GetFocusedDataRow();
 
-                //if (dr == null) return;
+                if (dr == null) return;
+
+                SelectionDetialData(dr["GROUPCODE"]?.ToString());
+
             }
             catch (Exception ex)
             {

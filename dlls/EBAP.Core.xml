@@ -484,7 +484,7 @@
         <member name="F:EBAP.Core.Info.AppConfig.CurrentDB">
             <summary>
             사용DB TYPE
-            오라클 DB 사용 UI 에서는 오라클로 필히 변경 해줘야 함
+            ConnectionString.METADB, ConnectionString.ORAMESDB
             </summary>
         </member>
         <member name="F:EBAP.Core.Info.AppConfig.VALUEMEMBER">
@@ -798,7 +798,12 @@
         </member>
         <member name="T:EBAP.Core.Info.DB_TYPE">
             <summary>
-            Grid Export Type
+            DB Type
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.clsDBHelper">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:EBAP.Core.Info.ExportType">
@@ -912,22 +917,22 @@
         </member>
         <member name="F:EBAP.Core.Info.HorzAlign.Default">
             <summary>
-            
+            기본
             </summary>
         </member>
         <member name="F:EBAP.Core.Info.HorzAlign.Center">
             <summary>
-            
+            중앙
             </summary>
         </member>
         <member name="F:EBAP.Core.Info.HorzAlign.Far">
             <summary>
-            
+            오른쪽
             </summary>
         </member>
         <member name="F:EBAP.Core.Info.HorzAlign.Near">
             <summary>
-            
+            왼쪽
             </summary>
         </member>
         <member name="T:EBAP.Core.Info.MsgType">

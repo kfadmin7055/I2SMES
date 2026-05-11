@@ -3,6 +3,7 @@
 // CLR Version :  $clrversion$
 #endregion
 
+using DevExpress.XtraGrid.Views.Grid;
 using EBAP.Business.WSBiz;
 using EBAP.Core.Info;
 using System;
@@ -38,6 +39,8 @@ namespace Template
         public Ora_TemplateForm()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.ORAMESDB;
         }
 
         #endregion
@@ -209,7 +212,7 @@ namespace Template
         {
             DataSet ds;
 
-            string queryId = Q_TableName.SelectQuery("reference");
+            string queryId = Q_TableName.SelectQuery($"{$rootnamespace$.$safeitemname$}");
 
             string[] paramList = new string[] { ""
                                                 , ""
@@ -232,12 +235,12 @@ namespace Template
                                                 , ""
                                                 , ""
                                                 };
-            
+
             //컨트롤에서 파라미터를 생성할 경우 사용하세요.
             //ParamCollection param = DatabaseParams;
             //param.Add("", "");
-            
-            using (OraBiz_CS wb = new OraBiz_CS())
+
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
                 ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, valueList);
                 //ds = wb.NTx_ExecuteDataSet(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, param);
@@ -331,9 +334,9 @@ namespace Template
                                                 ":CHANGEBY"
                                                 };
 
-            queryId = new string[] { Q_TableName.Merge() };
+            queryId = new string[] { Q_TableName.Merge($"{$rootnamespace$.$safeitemname$}") };
 
-            using (OraBiz_CS wb = new OraBiz_CS())
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
                 wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
             }
@@ -377,9 +380,9 @@ namespace Template
 
             string[] paramList = new string[] { ":CODE" };
 
-            queryId = new string[] { Q_TableName.Delete() };
+            queryId = new string[] { Q_TableName.Delete($"{$rootnamespace$.$safeitemname$}") };
 
-            using (OraBiz_CS wb = new OraBiz_CS())
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
                 wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
             }

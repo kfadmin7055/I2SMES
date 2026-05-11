@@ -95,5 +95,13 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Materials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials.Designer.cs">
+      <DependentUpon>Materials.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -96,6 +96,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="COM\CommonCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COM\CommonCode.Designer.cs">
+      <DependentUpon>CommonCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Disp\frm_Vehicle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="COM\CommonCode.resx">
+      <DependentUpon>CommonCode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Disp\frm_Vehicle.resx">
       <DependentUpon>frm_Vehicle.cs</DependentUpon>
     </EmbeddedResource>

@@ -2,6 +2,7 @@
 using EBAP.Core.Info;
 using EBAP.Core.Interface;
 using EBAP.Data.Compaction;
+using EBAP.Data.Factory;
 using EBAP.Web.Proxy;
 using System;
 using System.Collections;
@@ -671,6 +672,38 @@ namespace EBAP.Business.WSBiz
             finally
             {
                 //UseLogSave("OTx_ExecuteNonQuery", command, startDttm);
+            }
+        }
+
+        /// <summary>
+        /// DataTable을 사용하여 쿼리를 실행하여 Multi 처리하고 영향을 받은 Row 수를 반환하는 Web Method를 실행합니다.
+        /// </summary>
+        /// <param name="dbName">DB 연결정보</param>
+        /// <param name="command">Command String</param>
+        /// <param name="cmdType">Command Type</param>
+        /// <param name="paramList">Command Parameters</param>
+        /// <param name="dt">Command Parameters Values(DataTable)</param>
+        /// <returns></returns>
+        public int Tx_ExecuteNonQuery(string dbName, string[] command, string cmdType, string[] paramList, DataTable dt)
+        {
+            //DateTime startDttm = DateTime.Now;
+
+            try
+            {
+                if (dt == null) return 0;
+
+                using (OracleFactory oraFactory = new OracleFactory(dbName))
+                {
+                    return oraFactory.Tx_ExecuteNonQueryByDataTable(command, cmdType, paramList, dt);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                //UseLogSave("OTx_ExecuteNonQueryByDataTableCompress", command, startDttm);
             }
         }
 
