@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DevExpress.XtraEditors.Repository;
-using System.Data;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Utils;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Mask;
-using DevExpress.Utils;
-using DevExpress.LookAndFeel;
+using DevExpress.XtraEditors.Repository;
+using EBAP.Core.Info;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Odbc;
+using System.Linq;
+using System.Text;
 
 namespace EBAP.Win.ControlLibrary.Repository
 {
@@ -28,8 +30,17 @@ namespace EBAP.Win.ControlLibrary.Repository
 
             edit.Appearance.Font = ControlConfig.DEFAULTFONT;
             edit.NullStyle = StyleIndeterminate.Unchecked;
-            edit.ValueChecked = "1";
-            edit.ValueUnchecked = "0";
+
+            if (clsDBHelper.GetDBType(AppConfig.CurrentDB) == DB_TYPE.ORACLE)
+            {
+                edit.ValueChecked = "1";
+                edit.ValueUnchecked = "0";
+            }
+            else
+            {
+                edit.ValueChecked = true;
+                edit.ValueUnchecked = false;
+            }
 
             return edit;
         }

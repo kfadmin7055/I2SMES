@@ -41,6 +41,8 @@ namespace EBAP.UI.ADM.Management
         public LocaleMaster()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

@@ -40,6 +40,8 @@ namespace EBAP.UI.ADM.Management
         public CodeMasterVendor()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

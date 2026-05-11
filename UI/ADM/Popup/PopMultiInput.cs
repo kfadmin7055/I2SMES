@@ -39,6 +39,8 @@ namespace EBAP.UI.ADM.Popup
         public PopMultiInput()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

@@ -44,6 +44,8 @@ namespace EBAP.UI.ADM.Management
         public MenuMaster()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

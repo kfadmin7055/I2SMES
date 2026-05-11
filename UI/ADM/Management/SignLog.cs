@@ -40,6 +40,8 @@ namespace EBAP.UI.ADM.Management
         public SignLog()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

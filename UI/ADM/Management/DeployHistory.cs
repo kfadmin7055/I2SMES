@@ -40,6 +40,8 @@ namespace EBAP.UI.ADM.Management
         public DeployHistory()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

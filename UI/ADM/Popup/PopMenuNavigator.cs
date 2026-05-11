@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EBAP.Core.Info;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -21,6 +22,8 @@ namespace EBAP.UI.ADM.Popup
         public PopMenuNavigator()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

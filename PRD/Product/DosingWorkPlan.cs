@@ -50,6 +50,7 @@ namespace EBAP.UI.PRD.Product
         public DosingWorkPlan()
         {
             InitializeComponent();
+            AppConfig.CurrentDB = ConnectionString.ORAMESDB;
         }
 
         #endregion
@@ -349,7 +350,7 @@ namespace EBAP.UI.PRD.Product
             {
                 
 
-                ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMETADB, queryId, AppConfig.COMMANDSP, paramList, valueList);
+                ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDSP, paramList, valueList);
                 //ds = wb.NTx_ExecuteDataSet(ConnectionString.METADB, queryId, AppConfig.COMMANDSP, param);
             }
 
@@ -395,7 +396,7 @@ namespace EBAP.UI.PRD.Product
 
             using (OraBiz_CS wb = new OraBiz_CS())
             {
-                ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMETADB, query, AppConfig.COMMANDSP, paramList, valueList);
+                ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMESDB, query, AppConfig.COMMANDSP, paramList, valueList);
                 //ds = wb.NTx_ExecuteDataSet(ConnectionString.METADB, queryId, AppConfig.COMMANDSP, param);
             }
 
@@ -471,7 +472,7 @@ namespace EBAP.UI.PRD.Product
 
             using (OraBiz_CS wb = new OraBiz_CS())
             {
-                ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMETADB, queryId, AppConfig.COMMANDSP, paramList, valueList);
+                ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDSP, paramList, valueList);
                 //ds = wb.NTx_ExecuteDataSet(ConnectionString.METADB, queryId, AppConfig.COMMANDSP, param);
             }
 

@@ -47,6 +47,8 @@ namespace EBAP.UI.ADM.Management
         public FileMaster()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

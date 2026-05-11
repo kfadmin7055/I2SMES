@@ -30,7 +30,7 @@
         /// 기준정보 Oracle Database를 사용합니다.
         /// Value : "MetaDB"
         /// </summary>
-        public static string ORAMETADB = "ORAMETADB";
+        public static string ORAMESDB = "ORAMETADB";
         /// <summary>
         /// MES Database를 사용합니다.
         /// Value : "MES"

@@ -23,6 +23,12 @@ namespace EBAP.Core.Info
         public const string SYSTEMNAME = "EBAP-CORE.NET";
 
         /// <summary>
+        /// 사용DB TYPE
+        /// ConnectionString.METADB, ConnectionString.ORAMESDB
+        /// </summary>
+        public static string CurrentDB = ConnectionString.METADB;
+
+        /// <summary>
         /// ComboBox 에서 사용할 ValueMember
         /// Value : "CODEVALUE"
         /// </summary>

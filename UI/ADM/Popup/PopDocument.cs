@@ -4,6 +4,7 @@
 #endregion
 
 using DevExpress.XtraGrid.Views.Grid;
+using EBAP.Core.Info;
 using System;
 using System.Windows.Forms;
 
@@ -37,6 +38,8 @@ namespace EBAP.UI.ADM.Popup
         public PopDocument()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

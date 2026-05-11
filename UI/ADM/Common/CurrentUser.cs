@@ -33,6 +33,8 @@ namespace EBAP.UI.ADM.Common
         public CurrentUser()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

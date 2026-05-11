@@ -481,6 +481,12 @@
             Value : "EBAP™"
             </summary>
         </member>
+        <member name="F:EBAP.Core.Info.AppConfig.CurrentDB">
+            <summary>
+            사용DB TYPE
+            오라클 DB 사용 UI 에서는 오라클로 필히 변경 해줘야 함
+            </summary>
+        </member>
         <member name="F:EBAP.Core.Info.AppConfig.VALUEMEMBER">
             <summary>
             ComboBox 에서 사용할 ValueMember
@@ -626,7 +632,7 @@
             Value : "MetaDB"
             </summary>
         </member>
-        <member name="F:EBAP.Core.Info.ConnectionString.ORAMETADB">
+        <member name="F:EBAP.Core.Info.ConnectionString.ORAMESDB">
             <summary>
             기준정보 Oracle Database를 사용합니다.
             Value : "MetaDB"
@@ -788,6 +794,11 @@
         <member name="F:EBAP.Core.Info.DataType.Language">
             <summary>
             다국어 입력 형태
+            </summary>
+        </member>
+        <member name="T:EBAP.Core.Info.DB_TYPE">
+            <summary>
+            Grid Export Type
             </summary>
         </member>
         <member name="T:EBAP.Core.Info.ExportType">

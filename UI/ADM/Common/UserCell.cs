@@ -42,6 +42,8 @@ namespace EBAP.UI.ADM.Common
         public UserCell()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

@@ -227,7 +227,7 @@ namespace EBAP.UI.BSE.Disp
 
             using (OraBiz_CS wb = new OraBiz_CS())
             {
-                ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMETADB, queryId, AppConfig.COMMANDTEXT, paramList, valueList);
+                ds = wb.NTx_ExecuteDataSet(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, valueList);
                 //ds = wb.NTx_ExecuteDataSet(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, param);
             }
 
@@ -325,7 +325,7 @@ namespace EBAP.UI.BSE.Disp
 
             using (OraBiz_CS wb = new OraBiz_CS())
             {
-                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMETADB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
+                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
             }
         }
 
@@ -371,7 +371,7 @@ namespace EBAP.UI.BSE.Disp
 
             using (OraBiz_CS wb = new OraBiz_CS())
             {
-                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMETADB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
+                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
             }
         }
 

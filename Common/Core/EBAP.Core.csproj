@@ -53,6 +53,7 @@
     <Compile Include="Info\AppConfig.cs" />
     <Compile Include="Info\ConnectionString.cs" />
     <Compile Include="Info\DataType.cs" />
+    <Compile Include="Info\DBHelper.cs" />
     <Compile Include="Info\ExportType.cs" />
     <Compile Include="Info\PlcStatus.cs" />
     <Compile Include="Info\PlcType.cs" />

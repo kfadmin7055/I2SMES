@@ -39,6 +39,8 @@ namespace EBAP.UI.ADM.Management
         public ScreenMaster()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

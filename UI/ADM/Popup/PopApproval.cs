@@ -43,6 +43,8 @@ namespace EBAP.UI.ADM.Popup
         public PopApproval()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion

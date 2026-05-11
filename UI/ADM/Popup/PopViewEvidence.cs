@@ -4,6 +4,7 @@
 #endregion
 
 using DevExpress.XtraPivotGrid;
+using EBAP.Core.Info;
 using System;
 
 namespace EBAP.UI.ADM.Popup
@@ -36,6 +37,8 @@ namespace EBAP.UI.ADM.Popup
         public PopViewEvidence()
         {
             InitializeComponent();
+
+            AppConfig.CurrentDB = ConnectionString.METADB;
         }
 
         #endregion
