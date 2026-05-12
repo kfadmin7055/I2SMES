@@ -63,12 +63,12 @@
             this.groupControl1.Controls.Add(this.txtID);
             this.groupControl1.Controls.Add(this.cboLanguage);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 24);
+            this.groupControl1.Location = new System.Drawing.Point(0, 33);
             this.groupControl1.LookAndFeel.SkinName = "WXI";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(480, 376);
+            this.groupControl1.Size = new System.Drawing.Size(480, 367);
             this.groupControl1.TabIndex = 71;
             // 
             // pLabelEdit4

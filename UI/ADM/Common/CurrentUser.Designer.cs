@@ -200,7 +200,7 @@ namespace EBAP.UI.ADM.Common
             this.splitContainerControl.CaptionLocation = DevExpress.Utils.Locations.Top;
             this.splitContainerControl.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1;
             this.splitContainerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl.Location = new System.Drawing.Point(0, 24);
+            this.splitContainerControl.Location = new System.Drawing.Point(0, 33);
             this.splitContainerControl.Name = "splitContainerControl";
             // 
             // splitContainerControl.Panel1
@@ -215,7 +215,7 @@ namespace EBAP.UI.ADM.Common
             this.splitContainerControl.Panel2.Controls.Add(this.layoutControl2);
             this.splitContainerControl.Panel2.Text = "Panel2";
             this.splitContainerControl.ShowCaption = true;
-            this.splitContainerControl.Size = new System.Drawing.Size(1264, 738);
+            this.splitContainerControl.Size = new System.Drawing.Size(1264, 731);
             this.splitContainerControl.SplitterPosition = 260;
             this.splitContainerControl.TabIndex = 4;
             this.splitContainerControl.Text = "splitContainerControl1";
@@ -228,7 +228,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(260, 738);
+            this.layoutControl1.Size = new System.Drawing.Size(260, 731);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -241,7 +241,7 @@ namespace EBAP.UI.ADM.Common
             this.txtSearchUserId.EqualControlNextSeq = 0;
             this.txtSearchUserId.EqualTotalControlNextSeq = 0;
             this.txtSearchUserId.LocaleEnumClass = "ID";
-            this.txtSearchUserId.Location = new System.Drawing.Point(9, 30);
+            this.txtSearchUserId.Location = new System.Drawing.Point(9, 29);
             this.txtSearchUserId.Name = "txtSearchUserId";
             this.txtSearchUserId.ParamName = null;
             this.txtSearchUserId.Properties.AdvancedModeOptions.Label = "ID";
@@ -249,7 +249,7 @@ namespace EBAP.UI.ADM.Common
             this.txtSearchUserId.Properties.Appearance.Options.UseFont = true;
             this.txtSearchUserId.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtSearchUserId.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtSearchUserId.Size = new System.Drawing.Size(242, 36);
+            this.txtSearchUserId.Size = new System.Drawing.Size(242, 38);
             this.txtSearchUserId.StyleController = this.layoutControl1;
             this.txtSearchUserId.TabIndex = 21;
             // 
@@ -258,7 +258,7 @@ namespace EBAP.UI.ADM.Common
             this.btnSelection.Appearance.Font = new System.Drawing.Font("나눔고딕", 12F);
             this.btnSelection.Appearance.Options.UseFont = true;
             this.btnSelection.ImageOptions.ImageUri.Uri = "Find;GrayScaled";
-            this.btnSelection.Location = new System.Drawing.Point(9, 693);
+            this.btnSelection.Location = new System.Drawing.Point(9, 686);
             this.btnSelection.Name = "btnSelection";
             this.btnSelection.Size = new System.Drawing.Size(242, 36);
             this.btnSelection.StyleController = this.layoutControl1;
@@ -273,7 +273,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutFilter});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(260, 738);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(260, 731);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutFilter
@@ -287,21 +287,21 @@ namespace EBAP.UI.ADM.Common
             this.layoutFilter.Location = new System.Drawing.Point(0, 0);
             this.layoutFilter.Name = "layoutFilter";
             this.layoutFilter.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutFilter.Size = new System.Drawing.Size(258, 736);
+            this.layoutFilter.Size = new System.Drawing.Size(258, 729);
             this.layoutFilter.Text = "조회 조건";
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 40);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 42);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(246, 623);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(246, 615);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnSelection;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 663);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 657);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(246, 40);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -312,7 +312,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem18.Control = this.txtSearchUserId;
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(246, 40);
+            this.layoutControlItem18.Size = new System.Drawing.Size(246, 42);
             this.layoutControlItem18.Text = "ID";
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
@@ -324,7 +324,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup3;
-            this.layoutControl2.Size = new System.Drawing.Size(994, 738);
+            this.layoutControl2.Size = new System.Drawing.Size(992, 731);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -361,7 +361,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutControl.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(55, 0, 648, 683);
             this.layoutControl.OptionsView.HighlightFocusedItem = true;
             this.layoutControl.Root = this.layoutControlGroup4;
-            this.layoutControl.Size = new System.Drawing.Size(984, 728);
+            this.layoutControl.Size = new System.Drawing.Size(982, 721);
             this.layoutControl.TabIndex = 4;
             this.layoutControl.Text = "layoutControl1";
             // 
@@ -373,14 +373,14 @@ namespace EBAP.UI.ADM.Common
             this.txtIP.EqualControlNextSeq = 0;
             this.txtIP.EqualTotalControlNextSeq = 0;
             this.txtIP.LocaleEnumClass = null;
-            this.txtIP.Location = new System.Drawing.Point(114, 135);
+            this.txtIP.Location = new System.Drawing.Point(114, 138);
             this.txtIP.Name = "txtIP";
             this.txtIP.ParamName = null;
             this.txtIP.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
             this.txtIP.Properties.Appearance.Options.UseFont = true;
             this.txtIP.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtIP.Properties.ReadOnly = true;
-            this.txtIP.Size = new System.Drawing.Size(374, 20);
+            this.txtIP.Size = new System.Drawing.Size(373, 22);
             this.txtIP.StyleController = this.layoutControl;
             this.txtIP.TabIndex = 32;
             // 
@@ -390,7 +390,7 @@ namespace EBAP.UI.ADM.Common
             this.btnCapicom.Appearance.Options.UseFont = true;
             this.btnCapicom.ImageOptions.ImageIndex = 41;
             this.btnCapicom.LocaleEnumClass = null;
-            this.btnCapicom.Location = new System.Drawing.Point(818, 109);
+            this.btnCapicom.Location = new System.Drawing.Point(816, 112);
             this.btnCapicom.Name = "btnCapicom";
             this.btnCapicom.SAVELOG = null;
             this.btnCapicom.Size = new System.Drawing.Size(158, 22);
@@ -408,14 +408,14 @@ namespace EBAP.UI.ADM.Common
             this.txtMsgKey.EqualTotalControlNextSeq = 0;
             this.txtMsgKey.IsInitEditValue = true;
             this.txtMsgKey.LocaleEnumClass = null;
-            this.txtMsgKey.Location = new System.Drawing.Point(114, 109);
+            this.txtMsgKey.Location = new System.Drawing.Point(114, 112);
             this.txtMsgKey.Name = "txtMsgKey";
             this.txtMsgKey.ParamName = null;
             this.txtMsgKey.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
             this.txtMsgKey.Properties.Appearance.Options.UseFont = true;
             this.txtMsgKey.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtMsgKey.Properties.ReadOnly = true;
-            this.txtMsgKey.Size = new System.Drawing.Size(700, 20);
+            this.txtMsgKey.Size = new System.Drawing.Size(698, 22);
             this.txtMsgKey.StyleController = this.layoutControl;
             this.txtMsgKey.TabIndex = 30;
             // 
@@ -428,10 +428,10 @@ namespace EBAP.UI.ADM.Common
             this.gridVendorAuth.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.gridVendorAuth.FixViewCaption = true;
             this.gridVendorAuth.IsInitEditValue = true;
-            this.gridVendorAuth.Location = new System.Drawing.Point(597, 246);
+            this.gridVendorAuth.Location = new System.Drawing.Point(598, 254);
             this.gridVendorAuth.MainView = this.viewVendorAuth;
             this.gridVendorAuth.Name = "gridVendorAuth";
-            this.gridVendorAuth.Size = new System.Drawing.Size(385, 263);
+            this.gridVendorAuth.Size = new System.Drawing.Size(382, 255);
             this.gridVendorAuth.TabIndex = 29;
             this.gridVendorAuth.UseEmbeddedNavigator = true;
             this.gridVendorAuth.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -487,7 +487,7 @@ namespace EBAP.UI.ADM.Common
             this.btnDeleteShortCut.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteShortCut.ImageOptions.SvgImage")));
             this.btnDeleteShortCut.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnDeleteShortCut.LocaleEnumClass = null;
-            this.btnDeleteShortCut.Location = new System.Drawing.Point(337, 698);
+            this.btnDeleteShortCut.Location = new System.Drawing.Point(336, 691);
             this.btnDeleteShortCut.Name = "btnDeleteShortCut";
             this.btnDeleteShortCut.SAVELOG = null;
             this.btnDeleteShortCut.Size = new System.Drawing.Size(95, 22);
@@ -504,9 +504,9 @@ namespace EBAP.UI.ADM.Common
             this.lbShortCut.HighlightedItemStyle = DevExpress.XtraEditors.HighlightStyle.Skinned;
             this.lbShortCut.IsInitEditValue = true;
             this.lbShortCut.ItemHeight = 21;
-            this.lbShortCut.Location = new System.Drawing.Point(337, 540);
+            this.lbShortCut.Location = new System.Drawing.Point(336, 539);
             this.lbShortCut.Name = "lbShortCut";
-            this.lbShortCut.Size = new System.Drawing.Size(310, 154);
+            this.lbShortCut.Size = new System.Drawing.Size(309, 148);
             this.lbShortCut.StyleController = this.layoutControl;
             this.lbShortCut.TabIndex = 27;
             // 
@@ -517,7 +517,7 @@ namespace EBAP.UI.ADM.Common
             this.btnDeleteFMenu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteFMenu.ImageOptions.SvgImage")));
             this.btnDeleteFMenu.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnDeleteFMenu.LocaleEnumClass = null;
-            this.btnDeleteFMenu.Location = new System.Drawing.Point(663, 698);
+            this.btnDeleteFMenu.Location = new System.Drawing.Point(661, 691);
             this.btnDeleteFMenu.Name = "btnDeleteFMenu";
             this.btnDeleteFMenu.SAVELOG = null;
             this.btnDeleteFMenu.ShowMsgBoxAfterClick = true;
@@ -534,7 +534,7 @@ namespace EBAP.UI.ADM.Common
             this.btnDeleteSMenu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteSMenu.ImageOptions.SvgImage")));
             this.btnDeleteSMenu.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnDeleteSMenu.LocaleEnumClass = null;
-            this.btnDeleteSMenu.Location = new System.Drawing.Point(8, 698);
+            this.btnDeleteSMenu.Location = new System.Drawing.Point(8, 691);
             this.btnDeleteSMenu.Name = "btnDeleteSMenu";
             this.btnDeleteSMenu.SAVELOG = null;
             this.btnDeleteSMenu.Size = new System.Drawing.Size(95, 22);
@@ -552,13 +552,13 @@ namespace EBAP.UI.ADM.Common
             this.txtEncriptPwd.EqualTotalControlNextSeq = 0;
             this.txtEncriptPwd.IsInitEditValue = true;
             this.txtEncriptPwd.LocaleEnumClass = null;
-            this.txtEncriptPwd.Location = new System.Drawing.Point(557, 192);
+            this.txtEncriptPwd.Location = new System.Drawing.Point(556, 196);
             this.txtEncriptPwd.Name = "txtEncriptPwd";
             this.txtEncriptPwd.ParamName = null;
             this.txtEncriptPwd.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
             this.txtEncriptPwd.Properties.Appearance.Options.UseFont = true;
             this.txtEncriptPwd.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtEncriptPwd.Size = new System.Drawing.Size(328, 20);
+            this.txtEncriptPwd.Size = new System.Drawing.Size(327, 22);
             this.txtEncriptPwd.StyleController = this.layoutControl;
             this.txtEncriptPwd.TabIndex = 22;
             // 
@@ -570,11 +570,11 @@ namespace EBAP.UI.ADM.Common
             this.btnChangePwd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnChangePwd.ImageOptions.SvgImage")));
             this.btnChangePwd.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnChangePwd.LocaleEnumClass = "Change";
-            this.btnChangePwd.Location = new System.Drawing.Point(889, 192);
+            this.btnChangePwd.Location = new System.Drawing.Point(887, 196);
             this.btnChangePwd.Name = "btnChangePwd";
             this.btnChangePwd.SAVELOG = "CHGPWD";
             this.btnChangePwd.ShowMsgBoxAfterClick = true;
-            this.btnChangePwd.Size = new System.Drawing.Size(87, 44);
+            this.btnChangePwd.Size = new System.Drawing.Size(87, 48);
             this.btnChangePwd.StyleController = this.layoutControl;
             this.btnChangePwd.TabIndex = 21;
             this.btnChangePwd.Text = "변경";
@@ -589,14 +589,14 @@ namespace EBAP.UI.ADM.Common
             this.txtCurrentPwd.EqualTotalControlNextSeq = 0;
             this.txtCurrentPwd.IsInitEditValue = true;
             this.txtCurrentPwd.LocaleEnumClass = "CurrentPassword";
-            this.txtCurrentPwd.Location = new System.Drawing.Point(114, 192);
+            this.txtCurrentPwd.Location = new System.Drawing.Point(114, 196);
             this.txtCurrentPwd.Name = "txtCurrentPwd";
             this.txtCurrentPwd.ParamName = null;
             this.txtCurrentPwd.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
             this.txtCurrentPwd.Properties.Appearance.Options.UseFont = true;
             this.txtCurrentPwd.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCurrentPwd.Properties.UseSystemPasswordChar = true;
-            this.txtCurrentPwd.Size = new System.Drawing.Size(333, 20);
+            this.txtCurrentPwd.Size = new System.Drawing.Size(332, 22);
             this.txtCurrentPwd.StyleController = this.layoutControl;
             this.txtCurrentPwd.TabIndex = 20;
             // 
@@ -608,9 +608,9 @@ namespace EBAP.UI.ADM.Common
             this.lbFavoritesMenu.HighlightedItemStyle = DevExpress.XtraEditors.HighlightStyle.Skinned;
             this.lbFavoritesMenu.IsInitEditValue = true;
             this.lbFavoritesMenu.ItemHeight = 21;
-            this.lbFavoritesMenu.Location = new System.Drawing.Point(663, 540);
+            this.lbFavoritesMenu.Location = new System.Drawing.Point(661, 539);
             this.lbFavoritesMenu.Name = "lbFavoritesMenu";
-            this.lbFavoritesMenu.Size = new System.Drawing.Size(313, 154);
+            this.lbFavoritesMenu.Size = new System.Drawing.Size(313, 148);
             this.lbFavoritesMenu.StyleController = this.layoutControl;
             this.lbFavoritesMenu.TabIndex = 18;
             // 
@@ -626,12 +626,12 @@ namespace EBAP.UI.ADM.Common
             this.gridAuthGroup.FixViewCaption = true;
             this.gridAuthGroup.Font = new System.Drawing.Font("나눔고딕", 8.75F);
             this.gridAuthGroup.IsInitEditValue = true;
-            this.gridAuthGroup.Location = new System.Drawing.Point(2, 246);
+            this.gridAuthGroup.Location = new System.Drawing.Point(2, 254);
             this.gridAuthGroup.MainView = this.viewAuthGroup;
             this.gridAuthGroup.Name = "gridAuthGroup";
             this.gridAuthGroup.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.gridAuthGroup.Size = new System.Drawing.Size(581, 263);
+            this.gridAuthGroup.Size = new System.Drawing.Size(580, 255);
             this.gridAuthGroup.TabIndex = 17;
             this.gridAuthGroup.UseEmbeddedNavigator = true;
             this.gridAuthGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -689,9 +689,9 @@ namespace EBAP.UI.ADM.Common
             this.lbStartMenu.HighlightedItemStyle = DevExpress.XtraEditors.HighlightStyle.Skinned;
             this.lbStartMenu.IsInitEditValue = true;
             this.lbStartMenu.ItemHeight = 21;
-            this.lbStartMenu.Location = new System.Drawing.Point(8, 540);
+            this.lbStartMenu.Location = new System.Drawing.Point(8, 539);
             this.lbStartMenu.Name = "lbStartMenu";
-            this.lbStartMenu.Size = new System.Drawing.Size(313, 154);
+            this.lbStartMenu.Size = new System.Drawing.Size(312, 148);
             this.lbStartMenu.StyleController = this.layoutControl;
             this.lbStartMenu.TabIndex = 16;
             // 
@@ -704,14 +704,14 @@ namespace EBAP.UI.ADM.Common
             this.txtConfirmPwd.EqualTotalControlNextSeq = 0;
             this.txtConfirmPwd.IsInitEditValue = true;
             this.txtConfirmPwd.LocaleEnumClass = "ConfirmNewPassword";
-            this.txtConfirmPwd.Location = new System.Drawing.Point(557, 216);
+            this.txtConfirmPwd.Location = new System.Drawing.Point(556, 222);
             this.txtConfirmPwd.Name = "txtConfirmPwd";
             this.txtConfirmPwd.ParamName = null;
             this.txtConfirmPwd.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
             this.txtConfirmPwd.Properties.Appearance.Options.UseFont = true;
             this.txtConfirmPwd.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtConfirmPwd.Properties.UseSystemPasswordChar = true;
-            this.txtConfirmPwd.Size = new System.Drawing.Size(328, 20);
+            this.txtConfirmPwd.Size = new System.Drawing.Size(327, 22);
             this.txtConfirmPwd.StyleController = this.layoutControl;
             this.txtConfirmPwd.TabIndex = 15;
             // 
@@ -724,14 +724,14 @@ namespace EBAP.UI.ADM.Common
             this.txtPwd.EqualTotalControlNextSeq = 0;
             this.txtPwd.IsInitEditValue = true;
             this.txtPwd.LocaleEnumClass = "NewPassword";
-            this.txtPwd.Location = new System.Drawing.Point(114, 216);
+            this.txtPwd.Location = new System.Drawing.Point(114, 222);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.ParamName = null;
             this.txtPwd.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
             this.txtPwd.Properties.Appearance.Options.UseFont = true;
             this.txtPwd.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPwd.Properties.UseSystemPasswordChar = true;
-            this.txtPwd.Size = new System.Drawing.Size(333, 20);
+            this.txtPwd.Size = new System.Drawing.Size(332, 22);
             this.txtPwd.StyleController = this.layoutControl;
             this.txtPwd.TabIndex = 14;
             // 
@@ -740,13 +740,13 @@ namespace EBAP.UI.ADM.Common
             this.chkAdminFlag.BindingMember = null;
             this.chkAdminFlag.IsInitEditValue = true;
             this.chkAdminFlag.LocaleEnumClass = null;
-            this.chkAdminFlag.Location = new System.Drawing.Point(492, 135);
+            this.chkAdminFlag.Location = new System.Drawing.Point(491, 138);
             this.chkAdminFlag.Name = "chkAdminFlag";
             this.chkAdminFlag.ParamName = null;
             this.chkAdminFlag.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
             this.chkAdminFlag.Properties.Appearance.Options.UseFont = true;
             this.chkAdminFlag.Properties.Caption = "관리자구분";
-            this.chkAdminFlag.Size = new System.Drawing.Size(484, 20);
+            this.chkAdminFlag.Size = new System.Drawing.Size(483, 20);
             this.chkAdminFlag.StyleController = this.layoutControl;
             this.chkAdminFlag.TabIndex = 13;
             // 
@@ -759,7 +759,7 @@ namespace EBAP.UI.ADM.Common
             this.txtWork.EqualTotalControlNextSeq = 0;
             this.txtWork.IsInitEditValue = true;
             this.txtWork.LocaleEnumClass = "담당업무";
-            this.txtWork.Location = new System.Drawing.Point(591, 69);
+            this.txtWork.Location = new System.Drawing.Point(590, 70);
             this.txtWork.Name = "txtWork";
             this.txtWork.ParamName = null;
             this.txtWork.Properties.AdvancedModeOptions.Label = "담당업무";
@@ -767,7 +767,7 @@ namespace EBAP.UI.ADM.Common
             this.txtWork.Properties.Appearance.Options.UseFont = true;
             this.txtWork.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtWork.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtWork.Size = new System.Drawing.Size(385, 36);
+            this.txtWork.Size = new System.Drawing.Size(384, 38);
             this.txtWork.StyleController = this.layoutControl;
             this.txtWork.TabIndex = 12;
             // 
@@ -781,7 +781,7 @@ namespace EBAP.UI.ADM.Common
             this.txtCellPhone.IsInitEditValue = true;
             this.txtCellPhone.IsMandatoryForSave = true;
             this.txtCellPhone.LocaleEnumClass = "CellPhoneNo";
-            this.txtCellPhone.Location = new System.Drawing.Point(396, 69);
+            this.txtCellPhone.Location = new System.Drawing.Point(395, 70);
             this.txtCellPhone.Name = "txtCellPhone";
             this.txtCellPhone.ParamName = null;
             this.txtCellPhone.Properties.AdvancedModeOptions.Label = "CellPhoneNo";
@@ -789,7 +789,7 @@ namespace EBAP.UI.ADM.Common
             this.txtCellPhone.Properties.Appearance.Options.UseFont = true;
             this.txtCellPhone.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCellPhone.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtCellPhone.Size = new System.Drawing.Size(191, 36);
+            this.txtCellPhone.Size = new System.Drawing.Size(191, 38);
             this.txtCellPhone.StyleController = this.layoutControl;
             this.txtCellPhone.TabIndex = 11;
             // 
@@ -802,7 +802,7 @@ namespace EBAP.UI.ADM.Common
             this.txtOfficePhone.EqualTotalControlNextSeq = 0;
             this.txtOfficePhone.IsInitEditValue = true;
             this.txtOfficePhone.LocaleEnumClass = "OfficePhone";
-            this.txtOfficePhone.Location = new System.Drawing.Point(202, 69);
+            this.txtOfficePhone.Location = new System.Drawing.Point(202, 70);
             this.txtOfficePhone.Name = "txtOfficePhone";
             this.txtOfficePhone.ParamName = null;
             this.txtOfficePhone.Properties.AdvancedModeOptions.Label = "회사전화";
@@ -810,7 +810,7 @@ namespace EBAP.UI.ADM.Common
             this.txtOfficePhone.Properties.Appearance.Options.UseFont = true;
             this.txtOfficePhone.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtOfficePhone.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtOfficePhone.Size = new System.Drawing.Size(190, 36);
+            this.txtOfficePhone.Size = new System.Drawing.Size(189, 38);
             this.txtOfficePhone.StyleController = this.layoutControl;
             this.txtOfficePhone.TabIndex = 10;
             // 
@@ -823,7 +823,7 @@ namespace EBAP.UI.ADM.Common
             this.txtPhone.EqualTotalControlNextSeq = 0;
             this.txtPhone.IsInitEditValue = true;
             this.txtPhone.LocaleEnumClass = "Phone";
-            this.txtPhone.Location = new System.Drawing.Point(8, 69);
+            this.txtPhone.Location = new System.Drawing.Point(8, 70);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ParamName = null;
             this.txtPhone.Properties.AdvancedModeOptions.Label = "Phone";
@@ -831,7 +831,7 @@ namespace EBAP.UI.ADM.Common
             this.txtPhone.Properties.Appearance.Options.UseFont = true;
             this.txtPhone.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtPhone.Size = new System.Drawing.Size(190, 36);
+            this.txtPhone.Size = new System.Drawing.Size(190, 38);
             this.txtPhone.StyleController = this.layoutControl;
             this.txtPhone.TabIndex = 9;
             // 
@@ -845,7 +845,7 @@ namespace EBAP.UI.ADM.Common
             this.txtDeptName.IsInitEditValue = true;
             this.txtDeptName.IsMandatoryForSave = true;
             this.txtDeptName.LocaleEnumClass = "DeptName";
-            this.txtDeptName.Location = new System.Drawing.Point(784, 29);
+            this.txtDeptName.Location = new System.Drawing.Point(782, 28);
             this.txtDeptName.Name = "txtDeptName";
             this.txtDeptName.ParamName = null;
             this.txtDeptName.Properties.AdvancedModeOptions.Label = "DeptName";
@@ -853,7 +853,7 @@ namespace EBAP.UI.ADM.Common
             this.txtDeptName.Properties.Appearance.Options.UseFont = true;
             this.txtDeptName.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtDeptName.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtDeptName.Size = new System.Drawing.Size(192, 36);
+            this.txtDeptName.Size = new System.Drawing.Size(192, 38);
             this.txtDeptName.StyleController = this.layoutControl;
             this.txtDeptName.TabIndex = 8;
             // 
@@ -866,7 +866,7 @@ namespace EBAP.UI.ADM.Common
             this.txtDeptCode.EqualTotalControlNextSeq = 0;
             this.txtDeptCode.IsInitEditValue = true;
             this.txtDeptCode.LocaleEnumClass = "DeptCode";
-            this.txtDeptCode.Location = new System.Drawing.Point(591, 29);
+            this.txtDeptCode.Location = new System.Drawing.Point(590, 28);
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.ParamName = null;
             this.txtDeptCode.Properties.AdvancedModeOptions.Label = "DeptCode";
@@ -874,7 +874,7 @@ namespace EBAP.UI.ADM.Common
             this.txtDeptCode.Properties.Appearance.Options.UseFont = true;
             this.txtDeptCode.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtDeptCode.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtDeptCode.Size = new System.Drawing.Size(189, 36);
+            this.txtDeptCode.Size = new System.Drawing.Size(188, 38);
             this.txtDeptCode.StyleController = this.layoutControl;
             this.txtDeptCode.TabIndex = 7;
             // 
@@ -887,7 +887,7 @@ namespace EBAP.UI.ADM.Common
             this.txtEmail.EqualTotalControlNextSeq = 0;
             this.txtEmail.IsInitEditValue = true;
             this.txtEmail.LocaleEnumClass = "Email";
-            this.txtEmail.Location = new System.Drawing.Point(396, 29);
+            this.txtEmail.Location = new System.Drawing.Point(395, 28);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ParamName = null;
             this.txtEmail.Properties.AdvancedModeOptions.Label = "Email";
@@ -895,7 +895,7 @@ namespace EBAP.UI.ADM.Common
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
             this.txtEmail.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtEmail.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtEmail.Size = new System.Drawing.Size(191, 36);
+            this.txtEmail.Size = new System.Drawing.Size(191, 38);
             this.txtEmail.StyleController = this.layoutControl;
             this.txtEmail.TabIndex = 6;
             // 
@@ -909,7 +909,7 @@ namespace EBAP.UI.ADM.Common
             this.txtUserName.IsInitEditValue = true;
             this.txtUserName.IsMandatoryForSave = true;
             this.txtUserName.LocaleEnumClass = "UserName";
-            this.txtUserName.Location = new System.Drawing.Point(202, 29);
+            this.txtUserName.Location = new System.Drawing.Point(202, 28);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ParamName = null;
             this.txtUserName.Properties.AdvancedModeOptions.Label = "UserName";
@@ -917,7 +917,7 @@ namespace EBAP.UI.ADM.Common
             this.txtUserName.Properties.Appearance.Options.UseFont = true;
             this.txtUserName.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtUserName.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtUserName.Size = new System.Drawing.Size(190, 36);
+            this.txtUserName.Size = new System.Drawing.Size(189, 38);
             this.txtUserName.StyleController = this.layoutControl;
             this.txtUserName.TabIndex = 5;
             // 
@@ -929,7 +929,7 @@ namespace EBAP.UI.ADM.Common
             this.txtUserId.EqualControlNextSeq = 0;
             this.txtUserId.EqualTotalControlNextSeq = 0;
             this.txtUserId.LocaleEnumClass = "ID";
-            this.txtUserId.Location = new System.Drawing.Point(8, 29);
+            this.txtUserId.Location = new System.Drawing.Point(8, 28);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.ParamName = null;
             this.txtUserId.Properties.AdvancedModeOptions.Label = "ID";
@@ -937,7 +937,7 @@ namespace EBAP.UI.ADM.Common
             this.txtUserId.Properties.Appearance.Options.UseFont = true;
             this.txtUserId.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtUserId.Properties.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.True;
-            this.txtUserId.Size = new System.Drawing.Size(190, 36);
+            this.txtUserId.Size = new System.Drawing.Size(190, 38);
             this.txtUserId.StyleController = this.layoutControl;
             this.txtUserId.TabIndex = 4;
             // 
@@ -971,7 +971,7 @@ namespace EBAP.UI.ADM.Common
             this.splitterItem1});
             this.layoutControlGroup4.Name = "Root";
             this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup4.Size = new System.Drawing.Size(984, 728);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(982, 721);
             this.layoutControlGroup4.TextVisible = false;
             // 
             // layoutControlGroup5
@@ -994,16 +994,16 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup5.Name = "layoutFilter";
             this.layoutControlGroup5.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutControlGroup5.Size = new System.Drawing.Size(984, 163);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(982, 168);
             this.layoutControlGroup5.Text = "사용자 기본정보";
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.chkAdminFlag;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem10";
-            this.layoutControlItem2.Location = new System.Drawing.Point(484, 106);
+            this.layoutControlItem2.Location = new System.Drawing.Point(483, 110);
             this.layoutControlItem2.Name = "layoutControlItem10";
-            this.layoutControlItem2.Size = new System.Drawing.Size(488, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(487, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -1013,7 +1013,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem13.CustomizationFormText = "사용자 ID";
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem13.Name = "layoutControlItem1";
-            this.layoutControlItem13.Size = new System.Drawing.Size(194, 40);
+            this.layoutControlItem13.Size = new System.Drawing.Size(194, 42);
             this.layoutControlItem13.Text = "사용자 ID";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
@@ -1024,7 +1024,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem25.CustomizationFormText = "사용자명";
             this.layoutControlItem25.Location = new System.Drawing.Point(194, 0);
             this.layoutControlItem25.Name = "layoutControlItem2";
-            this.layoutControlItem25.Size = new System.Drawing.Size(194, 40);
+            this.layoutControlItem25.Size = new System.Drawing.Size(193, 42);
             this.layoutControlItem25.Text = "사용자명";
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextVisible = false;
@@ -1033,9 +1033,9 @@ namespace EBAP.UI.ADM.Common
             // 
             this.layoutControlItem26.Control = this.txtEmail;
             this.layoutControlItem26.CustomizationFormText = "이메일";
-            this.layoutControlItem26.Location = new System.Drawing.Point(388, 0);
+            this.layoutControlItem26.Location = new System.Drawing.Point(387, 0);
             this.layoutControlItem26.Name = "layoutControlItem3";
-            this.layoutControlItem26.Size = new System.Drawing.Size(195, 40);
+            this.layoutControlItem26.Size = new System.Drawing.Size(195, 42);
             this.layoutControlItem26.Text = "이메일";
             this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem26.TextVisible = false;
@@ -1044,9 +1044,9 @@ namespace EBAP.UI.ADM.Common
             // 
             this.layoutControlItem27.Control = this.txtDeptCode;
             this.layoutControlItem27.CustomizationFormText = "부서코드";
-            this.layoutControlItem27.Location = new System.Drawing.Point(583, 0);
+            this.layoutControlItem27.Location = new System.Drawing.Point(582, 0);
             this.layoutControlItem27.Name = "layoutControlItem4";
-            this.layoutControlItem27.Size = new System.Drawing.Size(193, 40);
+            this.layoutControlItem27.Size = new System.Drawing.Size(192, 42);
             this.layoutControlItem27.Text = "부서코드";
             this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem27.TextVisible = false;
@@ -1055,9 +1055,9 @@ namespace EBAP.UI.ADM.Common
             // 
             this.layoutControlItem28.Control = this.txtDeptName;
             this.layoutControlItem28.CustomizationFormText = "부서명";
-            this.layoutControlItem28.Location = new System.Drawing.Point(776, 0);
+            this.layoutControlItem28.Location = new System.Drawing.Point(774, 0);
             this.layoutControlItem28.Name = "layoutControlItem5";
-            this.layoutControlItem28.Size = new System.Drawing.Size(196, 40);
+            this.layoutControlItem28.Size = new System.Drawing.Size(196, 42);
             this.layoutControlItem28.Text = "부서명";
             this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem28.TextVisible = false;
@@ -1066,9 +1066,9 @@ namespace EBAP.UI.ADM.Common
             // 
             this.layoutControlItem29.Control = this.txtPhone;
             this.layoutControlItem29.CustomizationFormText = "전화번호";
-            this.layoutControlItem29.Location = new System.Drawing.Point(0, 40);
+            this.layoutControlItem29.Location = new System.Drawing.Point(0, 42);
             this.layoutControlItem29.Name = "layoutControlItem6";
-            this.layoutControlItem29.Size = new System.Drawing.Size(194, 40);
+            this.layoutControlItem29.Size = new System.Drawing.Size(194, 42);
             this.layoutControlItem29.Text = "전화번호";
             this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem29.TextVisible = false;
@@ -1077,9 +1077,9 @@ namespace EBAP.UI.ADM.Common
             // 
             this.layoutControlItem30.Control = this.txtOfficePhone;
             this.layoutControlItem30.CustomizationFormText = "회사전화";
-            this.layoutControlItem30.Location = new System.Drawing.Point(194, 40);
+            this.layoutControlItem30.Location = new System.Drawing.Point(194, 42);
             this.layoutControlItem30.Name = "layoutControlItem7";
-            this.layoutControlItem30.Size = new System.Drawing.Size(194, 40);
+            this.layoutControlItem30.Size = new System.Drawing.Size(193, 42);
             this.layoutControlItem30.Text = "회사전화";
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextVisible = false;
@@ -1088,9 +1088,9 @@ namespace EBAP.UI.ADM.Common
             // 
             this.layoutControlItem31.Control = this.txtCellPhone;
             this.layoutControlItem31.CustomizationFormText = "핸드폰";
-            this.layoutControlItem31.Location = new System.Drawing.Point(388, 40);
+            this.layoutControlItem31.Location = new System.Drawing.Point(387, 42);
             this.layoutControlItem31.Name = "layoutControlItem8";
-            this.layoutControlItem31.Size = new System.Drawing.Size(195, 40);
+            this.layoutControlItem31.Size = new System.Drawing.Size(195, 42);
             this.layoutControlItem31.Text = "핸드폰";
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextVisible = false;
@@ -1099,9 +1099,9 @@ namespace EBAP.UI.ADM.Common
             // 
             this.layoutControlItem32.Control = this.txtWork;
             this.layoutControlItem32.CustomizationFormText = "담당업무";
-            this.layoutControlItem32.Location = new System.Drawing.Point(583, 40);
+            this.layoutControlItem32.Location = new System.Drawing.Point(582, 42);
             this.layoutControlItem32.Name = "layoutControlItem9";
-            this.layoutControlItem32.Size = new System.Drawing.Size(389, 40);
+            this.layoutControlItem32.Size = new System.Drawing.Size(388, 42);
             this.layoutControlItem32.Text = "담당업무";
             this.layoutControlItem32.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem32.TextVisible = false;
@@ -1109,16 +1109,16 @@ namespace EBAP.UI.ADM.Common
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtMsgKey;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 80);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(810, 26);
+            this.layoutControlItem1.Size = new System.Drawing.Size(808, 26);
             this.layoutControlItem1.Text = "메시지 키";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(94, 14);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnCapicom;
-            this.layoutControlItem3.Location = new System.Drawing.Point(810, 80);
+            this.layoutControlItem3.Location = new System.Drawing.Point(808, 84);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(162, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -1128,9 +1128,9 @@ namespace EBAP.UI.ADM.Common
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtIP;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 106);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 110);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(484, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(483, 26);
             this.layoutControlItem4.Text = "IP 주소";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(94, 14);
             // 
@@ -1143,19 +1143,19 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem35,
             this.layoutControlItem36,
             this.layoutControlItem37});
-            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 163);
+            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 168);
             this.layoutControlGroup6.Name = "layoutControlGroup3";
             this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutControlGroup6.Size = new System.Drawing.Size(984, 81);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(982, 84);
             this.layoutControlGroup6.Text = "비밀번호 변경";
             // 
             // layoutControlItem33
             // 
             this.layoutControlItem33.Control = this.txtPwd;
             this.layoutControlItem33.CustomizationFormText = "변경 비밀번호";
-            this.layoutControlItem33.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem33.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem33.Name = "layoutControlItem11";
-            this.layoutControlItem33.Size = new System.Drawing.Size(443, 24);
+            this.layoutControlItem33.Size = new System.Drawing.Size(442, 26);
             this.layoutControlItem33.Text = "변경 비밀번호";
             this.layoutControlItem33.TextSize = new System.Drawing.Size(94, 14);
             // 
@@ -1163,19 +1163,19 @@ namespace EBAP.UI.ADM.Common
             // 
             this.layoutControlItem34.Control = this.txtConfirmPwd;
             this.layoutControlItem34.CustomizationFormText = "변경 비밀번호 확인";
-            this.layoutControlItem34.Location = new System.Drawing.Point(443, 24);
+            this.layoutControlItem34.Location = new System.Drawing.Point(442, 26);
             this.layoutControlItem34.Name = "layoutControlItem12";
-            this.layoutControlItem34.Size = new System.Drawing.Size(438, 24);
+            this.layoutControlItem34.Size = new System.Drawing.Size(437, 26);
             this.layoutControlItem34.Text = "변경 비밀번호 확인";
             this.layoutControlItem34.TextSize = new System.Drawing.Size(94, 14);
             // 
             // layoutControlItem35
             // 
             this.layoutControlItem35.Control = this.btnChangePwd;
-            this.layoutControlItem35.Location = new System.Drawing.Point(881, 0);
+            this.layoutControlItem35.Location = new System.Drawing.Point(879, 0);
             this.layoutControlItem35.MinSize = new System.Drawing.Size(31, 26);
             this.layoutControlItem35.Name = "layoutControlItem18";
-            this.layoutControlItem35.Size = new System.Drawing.Size(91, 48);
+            this.layoutControlItem35.Size = new System.Drawing.Size(91, 52);
             this.layoutControlItem35.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem35.TextVisible = false;
@@ -1185,16 +1185,16 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem36.Control = this.txtCurrentPwd;
             this.layoutControlItem36.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem36.Name = "layoutControlItem17";
-            this.layoutControlItem36.Size = new System.Drawing.Size(443, 24);
+            this.layoutControlItem36.Size = new System.Drawing.Size(442, 26);
             this.layoutControlItem36.Text = "현재 비밀번호";
             this.layoutControlItem36.TextSize = new System.Drawing.Size(94, 14);
             // 
             // layoutControlItem37
             // 
             this.layoutControlItem37.Control = this.txtEncriptPwd;
-            this.layoutControlItem37.Location = new System.Drawing.Point(443, 0);
+            this.layoutControlItem37.Location = new System.Drawing.Point(442, 0);
             this.layoutControlItem37.Name = "layoutControlItem19";
-            this.layoutControlItem37.Size = new System.Drawing.Size(438, 24);
+            this.layoutControlItem37.Size = new System.Drawing.Size(437, 26);
             this.layoutControlItem37.Text = "현재 비밀번호";
             this.layoutControlItem37.TextSize = new System.Drawing.Size(94, 14);
             this.layoutControlItem37.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -1208,7 +1208,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlGroup7.Location = new System.Drawing.Point(0, 511);
             this.layoutControlGroup7.Name = "layoutControlGroup4";
             this.layoutControlGroup7.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutControlGroup7.Size = new System.Drawing.Size(329, 217);
+            this.layoutControlGroup7.Size = new System.Drawing.Size(328, 210);
             this.layoutControlGroup7.Text = "시작메뉴";
             // 
             // layoutControlItem38
@@ -1217,22 +1217,22 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem38.CustomizationFormText = "layoutControlItem13";
             this.layoutControlItem38.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem38.Name = "layoutControlItem13";
-            this.layoutControlItem38.Size = new System.Drawing.Size(317, 158);
+            this.layoutControlItem38.Size = new System.Drawing.Size(316, 152);
             this.layoutControlItem38.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem38.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(99, 158);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(99, 152);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(218, 26);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(217, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem39
             // 
             this.layoutControlItem39.Control = this.btnDeleteSMenu;
-            this.layoutControlItem39.Location = new System.Drawing.Point(0, 158);
+            this.layoutControlItem39.Location = new System.Drawing.Point(0, 152);
             this.layoutControlItem39.Name = "layoutControlItem21";
             this.layoutControlItem39.Size = new System.Drawing.Size(99, 26);
             this.layoutControlItem39.TextSize = new System.Drawing.Size(0, 0);
@@ -1244,16 +1244,16 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem40,
             this.layoutControlItem41,
             this.emptySpaceItem3});
-            this.layoutControlGroup8.Location = new System.Drawing.Point(329, 511);
+            this.layoutControlGroup8.Location = new System.Drawing.Point(328, 511);
             this.layoutControlGroup8.Name = "layoutControlGroup6";
             this.layoutControlGroup8.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutControlGroup8.Size = new System.Drawing.Size(326, 217);
+            this.layoutControlGroup8.Size = new System.Drawing.Size(325, 210);
             this.layoutControlGroup8.Text = "바로가기";
             // 
             // layoutControlItem40
             // 
             this.layoutControlItem40.Control = this.btnDeleteShortCut;
-            this.layoutControlItem40.Location = new System.Drawing.Point(0, 158);
+            this.layoutControlItem40.Location = new System.Drawing.Point(0, 152);
             this.layoutControlItem40.Name = "layoutControlItem22";
             this.layoutControlItem40.Size = new System.Drawing.Size(99, 26);
             this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
@@ -1264,25 +1264,25 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem41.Control = this.lbShortCut;
             this.layoutControlItem41.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem41.Name = "layoutControlItem20";
-            this.layoutControlItem41.Size = new System.Drawing.Size(314, 158);
+            this.layoutControlItem41.Size = new System.Drawing.Size(313, 152);
             this.layoutControlItem41.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem41.TextVisible = false;
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(99, 158);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(99, 152);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(215, 26);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(214, 26);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem42
             // 
             this.layoutControlItem42.Control = this.gridAuthGroup;
             this.layoutControlItem42.CustomizationFormText = "layoutControlItem14";
-            this.layoutControlItem42.Location = new System.Drawing.Point(0, 244);
+            this.layoutControlItem42.Location = new System.Drawing.Point(0, 252);
             this.layoutControlItem42.Name = "layoutControlItem14";
-            this.layoutControlItem42.Size = new System.Drawing.Size(585, 267);
+            this.layoutControlItem42.Size = new System.Drawing.Size(584, 259);
             this.layoutControlItem42.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem42.TextVisible = false;
             // 
@@ -1292,10 +1292,10 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem43,
             this.emptySpaceItem4,
             this.layoutControlItem44});
-            this.layoutControlGroup9.Location = new System.Drawing.Point(655, 511);
+            this.layoutControlGroup9.Location = new System.Drawing.Point(653, 511);
             this.layoutControlGroup9.Name = "layoutControlGroup5";
             this.layoutControlGroup9.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutControlGroup9.Size = new System.Drawing.Size(329, 217);
+            this.layoutControlGroup9.Size = new System.Drawing.Size(329, 210);
             this.layoutControlGroup9.Text = "즐겨찾는 메뉴";
             // 
             // layoutControlItem43
@@ -1304,14 +1304,14 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem43.CustomizationFormText = "layoutControlItem15";
             this.layoutControlItem43.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem43.Name = "layoutControlItem16";
-            this.layoutControlItem43.Size = new System.Drawing.Size(317, 158);
+            this.layoutControlItem43.Size = new System.Drawing.Size(317, 152);
             this.layoutControlItem43.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem43.TextVisible = false;
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(124, 158);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(124, 152);
             this.emptySpaceItem4.Name = "emptySpaceItem1";
             this.emptySpaceItem4.Size = new System.Drawing.Size(193, 26);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -1319,7 +1319,7 @@ namespace EBAP.UI.ADM.Common
             // layoutControlItem44
             // 
             this.layoutControlItem44.Control = this.btnDeleteFMenu;
-            this.layoutControlItem44.Location = new System.Drawing.Point(0, 158);
+            this.layoutControlItem44.Location = new System.Drawing.Point(0, 152);
             this.layoutControlItem44.Name = "layoutControlItem15";
             this.layoutControlItem44.Size = new System.Drawing.Size(124, 26);
             this.layoutControlItem44.TextSize = new System.Drawing.Size(0, 0);
@@ -1328,18 +1328,18 @@ namespace EBAP.UI.ADM.Common
             // layoutControlItem45
             // 
             this.layoutControlItem45.Control = this.gridVendorAuth;
-            this.layoutControlItem45.Location = new System.Drawing.Point(595, 244);
+            this.layoutControlItem45.Location = new System.Drawing.Point(596, 252);
             this.layoutControlItem45.Name = "layoutControlItem23";
-            this.layoutControlItem45.Size = new System.Drawing.Size(389, 267);
+            this.layoutControlItem45.Size = new System.Drawing.Size(386, 259);
             this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem45.TextVisible = false;
             // 
             // splitterItem1
             // 
             this.splitterItem1.AllowHotTrack = true;
-            this.splitterItem1.Location = new System.Drawing.Point(585, 244);
+            this.splitterItem1.Location = new System.Drawing.Point(584, 252);
             this.splitterItem1.Name = "splitterItem1";
-            this.splitterItem1.Size = new System.Drawing.Size(10, 267);
+            this.splitterItem1.Size = new System.Drawing.Size(12, 259);
             // 
             // layoutControlGroup3
             // 
@@ -1349,7 +1349,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem46});
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(994, 738);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(992, 731);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem46
@@ -1357,7 +1357,7 @@ namespace EBAP.UI.ADM.Common
             this.layoutControlItem46.Control = this.layoutControl;
             this.layoutControlItem46.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem46.Name = "layoutControlItem46";
-            this.layoutControlItem46.Size = new System.Drawing.Size(988, 732);
+            this.layoutControlItem46.Size = new System.Drawing.Size(986, 725);
             this.layoutControlItem46.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem46.TextVisible = false;
             // 
@@ -1365,7 +1365,7 @@ namespace EBAP.UI.ADM.Common
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1264, 762);
+            this.ClientSize = new System.Drawing.Size(1264, 764);
             this.Controls.Add(this.splitContainerControl);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("CurrentUser.IconOptions.SvgImage")));
             this.ISLOADING = true;
