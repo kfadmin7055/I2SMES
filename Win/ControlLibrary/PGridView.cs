@@ -590,7 +590,8 @@ namespace EBAP.Win.ControlLibrary
 
             DataTable dt = GetAddedModifedData();
 
-            if (dt.Rows.Count == 0) return;
+            // 주동석 dt == null 추가
+            if (dt == null || dt.Rows.Count == 0) return;
 
             foreach (DataRow dr in dt.Rows)
             {

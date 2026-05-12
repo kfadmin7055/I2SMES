@@ -32,6 +32,7 @@ namespace EBAP.UI.BSE.COM
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommonCode));
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cboUseFlag = new EBAP.Win.ControlLibrary.PComboBoxEdit();
             this.txtGroup = new EBAP.Win.ControlLibrary.PTextEdit();
             this.btnSelection = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -39,22 +40,21 @@ namespace EBAP.UI.BSE.COM
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.gridGroup = new EBAP.Win.ControlLibrary.PGridControl();
             this.viewGroup = new EBAP.Win.ControlLibrary.PGridView();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.grpLarge = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
             this.gridDetail = new EBAP.Win.ControlLibrary.PGridControl();
             this.viewDetail = new EBAP.Win.ControlLibrary.PGridView();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.grpSmall = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cboUseFlag = new EBAP.Win.ControlLibrary.PComboBoxEdit();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl.Panel1)).BeginInit();
             this.splitContainerControl.Panel1.SuspendLayout();
@@ -63,12 +63,14 @@ namespace EBAP.UI.BSE.COM
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboUseFlag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutFilter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -81,18 +83,16 @@ namespace EBAP.UI.BSE.COM
             this.layoutControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewGroup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
             this.layoutControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSmall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboUseFlag.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl
@@ -102,7 +102,7 @@ namespace EBAP.UI.BSE.COM
             this.splitContainerControl.CaptionLocation = DevExpress.Utils.Locations.Top;
             this.splitContainerControl.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1;
             this.splitContainerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl.Location = new System.Drawing.Point(0, 33);
+            this.splitContainerControl.Location = new System.Drawing.Point(0, 24);
             this.splitContainerControl.Name = "splitContainerControl";
             // 
             // splitContainerControl.Panel1
@@ -116,7 +116,7 @@ namespace EBAP.UI.BSE.COM
             this.splitContainerControl.Panel2.Controls.Add(this.layoutControl2);
             this.splitContainerControl.Panel2.Text = "Panel2";
             this.splitContainerControl.ShowCaption = true;
-            this.splitContainerControl.Size = new System.Drawing.Size(1264, 729);
+            this.splitContainerControl.Size = new System.Drawing.Size(1264, 738);
             this.splitContainerControl.SplitterPosition = 260;
             this.splitContainerControl.TabIndex = 4;
             this.splitContainerControl.Text = "splitContainerControl1";
@@ -130,9 +130,31 @@ namespace EBAP.UI.BSE.COM
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(260, 729);
+            this.layoutControl1.Size = new System.Drawing.Size(260, 738);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cboUseFlag
+            // 
+            this.cboUseFlag.BindingMember = null;
+            this.cboUseFlag.EditValue = "";
+            this.cboUseFlag.LocaleEnumClass = null;
+            this.cboUseFlag.Location = new System.Drawing.Point(61, 54);
+            this.cboUseFlag.Name = "cboUseFlag";
+            this.cboUseFlag.ParamName = null;
+            this.cboUseFlag.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.cboUseFlag.Properties.Appearance.Options.UseFont = true;
+            this.cboUseFlag.Properties.AppearanceDropDown.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.cboUseFlag.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cboUseFlag.Properties.AppearanceDropDownHeader.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.cboUseFlag.Properties.AppearanceDropDownHeader.Options.UseFont = true;
+            this.cboUseFlag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboUseFlag.Properties.HighlightedItemStyle = DevExpress.XtraEditors.HighlightStyle.Skinned;
+            this.cboUseFlag.Properties.NullText = "";
+            this.cboUseFlag.Size = new System.Drawing.Size(190, 20);
+            this.cboUseFlag.StyleController = this.layoutControl1;
+            this.cboUseFlag.TabIndex = 18;
             // 
             // txtGroup
             // 
@@ -142,12 +164,12 @@ namespace EBAP.UI.BSE.COM
             this.txtGroup.EqualControlNextSeq = 0;
             this.txtGroup.EqualTotalControlNextSeq = 0;
             this.txtGroup.LocaleEnumClass = null;
-            this.txtGroup.Location = new System.Drawing.Point(61, 29);
+            this.txtGroup.Location = new System.Drawing.Point(61, 30);
             this.txtGroup.Name = "txtGroup";
             this.txtGroup.ParamName = null;
             this.txtGroup.Properties.Appearance.Options.UseFont = true;
             this.txtGroup.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtGroup.Size = new System.Drawing.Size(190, 22);
+            this.txtGroup.Size = new System.Drawing.Size(190, 20);
             this.txtGroup.StyleController = this.layoutControl1;
             this.txtGroup.TabIndex = 17;
             // 
@@ -156,7 +178,7 @@ namespace EBAP.UI.BSE.COM
             this.btnSelection.Appearance.Font = new System.Drawing.Font("나눔고딕", 12F);
             this.btnSelection.Appearance.Options.UseFont = true;
             this.btnSelection.ImageOptions.ImageUri.Uri = "Find;GrayScaled";
-            this.btnSelection.Location = new System.Drawing.Point(9, 684);
+            this.btnSelection.Location = new System.Drawing.Point(9, 693);
             this.btnSelection.Name = "btnSelection";
             this.btnSelection.Size = new System.Drawing.Size(242, 36);
             this.btnSelection.StyleController = this.layoutControl1;
@@ -171,7 +193,7 @@ namespace EBAP.UI.BSE.COM
             this.layoutFilter});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(260, 729);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(260, 738);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutFilter
@@ -186,21 +208,21 @@ namespace EBAP.UI.BSE.COM
             this.layoutFilter.Location = new System.Drawing.Point(0, 0);
             this.layoutFilter.Name = "layoutFilter";
             this.layoutFilter.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutFilter.Size = new System.Drawing.Size(258, 727);
+            this.layoutFilter.Size = new System.Drawing.Size(258, 736);
             this.layoutFilter.Text = "조회 조건";
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 52);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 48);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(246, 603);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(246, 615);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnSelection;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 655);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 663);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(246, 40);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -211,9 +233,18 @@ namespace EBAP.UI.BSE.COM
             this.layoutControlItem14.Control = this.txtGroup;
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(246, 26);
+            this.layoutControlItem14.Size = new System.Drawing.Size(246, 24);
             this.layoutControlItem14.Text = "그룹";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(40, 14);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.cboUseFlag;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(246, 24);
+            this.layoutControlItem4.Text = "사용여부";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(40, 14);
             // 
             // layoutControl2
             // 
@@ -222,7 +253,7 @@ namespace EBAP.UI.BSE.COM
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup3;
-            this.layoutControl2.Size = new System.Drawing.Size(992, 729);
+            this.layoutControl2.Size = new System.Drawing.Size(994, 738);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -241,7 +272,7 @@ namespace EBAP.UI.BSE.COM
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.layoutControl4);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(982, 719);
+            this.splitContainerControl1.Size = new System.Drawing.Size(984, 728);
             this.splitContainerControl1.SplitterPosition = 306;
             this.splitContainerControl1.TabIndex = 5;
             // 
@@ -251,8 +282,8 @@ namespace EBAP.UI.BSE.COM
             this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl3.Location = new System.Drawing.Point(0, 0);
             this.layoutControl3.Name = "layoutControl3";
-            this.layoutControl3.Root = this.Root;
-            this.layoutControl3.Size = new System.Drawing.Size(982, 306);
+            this.layoutControl3.Root = this.grpLarge;
+            this.layoutControl3.Size = new System.Drawing.Size(984, 306);
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -263,10 +294,10 @@ namespace EBAP.UI.BSE.COM
             this.gridGroup.EmbeddedNavigator.Buttons.Edit.Visible = false;
             this.gridGroup.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
             this.gridGroup.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this.gridGroup.Location = new System.Drawing.Point(12, 12);
+            this.gridGroup.Location = new System.Drawing.Point(12, 33);
             this.gridGroup.MainView = this.viewGroup;
             this.gridGroup.Name = "gridGroup";
-            this.gridGroup.Size = new System.Drawing.Size(958, 282);
+            this.gridGroup.Size = new System.Drawing.Size(960, 261);
             this.gridGroup.TabIndex = 4;
             this.gridGroup.UseEmbeddedNavigator = true;
             this.gridGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -303,23 +334,24 @@ namespace EBAP.UI.BSE.COM
             this.viewGroup.OptionsView.ShowGroupPanel = false;
             this.viewGroup.RowHeight = 29;
             this.viewGroup.ViewCaptionHeight = 25;
+            this.viewGroup.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
+            this.viewGroup.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.viewList_FocusedRowChanged);
             // 
-            // Root
+            // grpLarge
             // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.grpLarge.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.grpLarge.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(982, 306);
-            this.Root.TextVisible = false;
+            this.grpLarge.Name = "grpLarge";
+            this.grpLarge.Size = new System.Drawing.Size(984, 306);
+            this.grpLarge.Text = "대분류";
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridGroup;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(962, 286);
+            this.layoutControlItem2.Size = new System.Drawing.Size(964, 265);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -329,8 +361,8 @@ namespace EBAP.UI.BSE.COM
             this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl4.Location = new System.Drawing.Point(0, 0);
             this.layoutControl4.Name = "layoutControl4";
-            this.layoutControl4.Root = this.layoutControlGroup2;
-            this.layoutControl4.Size = new System.Drawing.Size(982, 401);
+            this.layoutControl4.Root = this.grpSmall;
+            this.layoutControl4.Size = new System.Drawing.Size(984, 412);
             this.layoutControl4.TabIndex = 0;
             this.layoutControl4.Text = "layoutControl4";
             // 
@@ -341,10 +373,10 @@ namespace EBAP.UI.BSE.COM
             this.gridDetail.EmbeddedNavigator.Buttons.Edit.Visible = false;
             this.gridDetail.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
             this.gridDetail.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this.gridDetail.Location = new System.Drawing.Point(12, 12);
+            this.gridDetail.Location = new System.Drawing.Point(12, 33);
             this.gridDetail.MainView = this.viewDetail;
             this.gridDetail.Name = "gridDetail";
-            this.gridDetail.Size = new System.Drawing.Size(958, 377);
+            this.gridDetail.Size = new System.Drawing.Size(960, 367);
             this.gridDetail.TabIndex = 4;
             this.gridDetail.UseEmbeddedNavigator = true;
             this.gridDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -399,23 +431,23 @@ namespace EBAP.UI.BSE.COM
             this.viewDetail.OptionsView.ShowGroupPanelColumnsAsSingleRow = true;
             this.viewDetail.RowHeight = 29;
             this.viewDetail.ViewCaptionHeight = 25;
+            this.viewDetail.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
             // 
-            // layoutControlGroup2
+            // grpSmall
             // 
-            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup2.GroupBordersVisible = false;
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.grpSmall.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.grpSmall.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3});
-            this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(982, 401);
-            this.layoutControlGroup2.TextVisible = false;
+            this.grpSmall.Name = "grpSmall";
+            this.grpSmall.Size = new System.Drawing.Size(984, 412);
+            this.grpSmall.Text = "소분류";
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.gridDetail;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(962, 381);
+            this.layoutControlItem3.Size = new System.Drawing.Size(964, 371);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -427,7 +459,7 @@ namespace EBAP.UI.BSE.COM
             this.layoutControlItem1});
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(992, 729);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(994, 738);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem1
@@ -435,39 +467,9 @@ namespace EBAP.UI.BSE.COM
             this.layoutControlItem1.Control = this.splitContainerControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(986, 723);
+            this.layoutControlItem1.Size = new System.Drawing.Size(988, 732);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // cboUseFlag
-            // 
-            this.cboUseFlag.BindingMember = null;
-            this.cboUseFlag.LocaleEnumClass = null;
-            this.cboUseFlag.Location = new System.Drawing.Point(61, 55);
-            this.cboUseFlag.Name = "cboUseFlag";
-            this.cboUseFlag.ParamName = null;
-            this.cboUseFlag.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.cboUseFlag.Properties.Appearance.Options.UseFont = true;
-            this.cboUseFlag.Properties.AppearanceDropDown.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.cboUseFlag.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cboUseFlag.Properties.AppearanceDropDownHeader.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.cboUseFlag.Properties.AppearanceDropDownHeader.Options.UseFont = true;
-            this.cboUseFlag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboUseFlag.Properties.HighlightedItemStyle = DevExpress.XtraEditors.HighlightStyle.Skinned;
-            this.cboUseFlag.Properties.NullText = "";
-            this.cboUseFlag.Size = new System.Drawing.Size(190, 22);
-            this.cboUseFlag.StyleController = this.layoutControl1;
-            this.cboUseFlag.TabIndex = 18;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.cboUseFlag;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 26);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(246, 26);
-            this.layoutControlItem4.Text = "사용여부";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(40, 14);
             // 
             // CommonCode
             // 
@@ -494,12 +496,14 @@ namespace EBAP.UI.BSE.COM
             this.splitContainerControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cboUseFlag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutFilter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
@@ -512,18 +516,16 @@ namespace EBAP.UI.BSE.COM
             this.layoutControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewGroup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
             this.layoutControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSmall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboUseFlag.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,12 +549,12 @@ namespace EBAP.UI.BSE.COM
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControl layoutControl3;
-        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlGroup grpLarge;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControl layoutControl4;
         private Win.ControlLibrary.PGridControl gridDetail;
         private Win.ControlLibrary.PGridView viewDetail;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlGroup grpSmall;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private Win.ControlLibrary.PComboBoxEdit cboUseFlag;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;

@@ -8,6 +8,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -175,6 +176,21 @@ namespace EBAP.Business.WSBiz
 
             try
             {
+                string queryText = command;
+
+                if (paramList != null)
+                {
+                    for (int idx = 0; idx < paramList.Length; idx++)
+                    {
+                        if (queryText.Contains(!paramList[idx].ToString().Contains(":") ? $":{paramList[idx]}".ToUpper() : paramList[idx].ToUpper()))
+                        {
+                            queryText = queryText.Replace(!paramList[idx].ToString().Contains(":") ? $":{paramList[idx]}".ToUpper() : paramList[idx].ToUpper(), "'" + valueList[idx] + "'");
+                        }
+                    }
+                }
+
+                if (Debugger.IsAttached) Console.WriteLine(queryText);
+
                 using (WSProxy wsProxy = new WSProxy(_webUrl))
                 {
                     object[] outValue = new object[] { };

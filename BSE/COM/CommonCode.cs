@@ -5,6 +5,7 @@
 
 using DevExpress.DataProcessing.InMemoryDataProcessor;
 using DevExpress.XtraEditors.Filtering;
+using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraScheduler.Native;
 using EBAP.Business.WSBiz;
@@ -83,7 +84,7 @@ namespace EBAP.UI.BSE.COM
                 InitControls();
 
                 //Form Load 후 조회를 실행해야 한다면 주석을 제거하세요.
-                //IsLoadSelectEvent = true;
+                IsLoadSelectEvent = true;
             }
             catch (Exception ex)
             {
@@ -116,10 +117,20 @@ namespace EBAP.UI.BSE.COM
 
             // 코드로 컬럼 셋팅
             viewGroup.InitColumn(AppConfig.CHECKCOLUMNNAME, "Select", 50, 0, true, true, DataType.CheckEdit);
-            viewGroup.InitColumn("PCODEVALUE", "CodeValue", 100, 10, false, true, DataType.Default, HorzAlign.Default);
-            viewGroup.InitColumn("DISPLAYVALUE", "DisplayValue", 200, 50, false, true, DataType.Memo, HorzAlign.Default);
+            viewGroup.InitColumn("PCODEVALUE", "CodeValue", 100, 40, false, true, DataType.Default, HorzAlign.Default);
+            viewGroup.InitColumn("CODEVALUE", "CodeValue", 160, 50, false, false, DataType.Default, HorzAlign.Default);
+            viewGroup.InitColumn("DISPLAYVALUE", "DisplayValue", 200, 50, true, true, DataType.Memo, HorzAlign.Default);
+            viewGroup.InitColumn("SORT_NUM", "SortNumber", 200, 50, false, false, DataType.Number, HorzAlign.Far);
             viewGroup.InitColumn("CHANGEBY", "ChangeBy", 80, 0, false, false);
             viewGroup.InitColumn("CHANGEDTTM", "ChangeDttm", 130, 0, false, false, DataType.DateTime, HorzAlign.Center);
+
+            // 신규 입력만 가능한 컬럼
+            viewGroup.NewRowEnableColumns = new string[] { "PCODEVALUE" };
+
+            // 필수 입력 컬럼
+            viewGroup.MandatoryColumns = new string[] { "PCODEVALUE", "CODEVALUE", "DISPLAYVALUE" };
+
+            viewGroup.KeyColumns = new string[] { "PCODEVALUE", "CODEVALUE" };
 
             // DB에서 컬럼 셋팅
             //viewList.InitColumnFromDB();
@@ -133,19 +144,27 @@ namespace EBAP.UI.BSE.COM
 
             // 코드로 컬럼 셋팅
             viewDetail.InitColumn(AppConfig.CHECKCOLUMNNAME, "Select", 50, 0, true, true, DataType.CheckEdit);
-            viewDetail.InitColumn("PCODEVALUE", "Group", 100, 10, false, false, DataType.Default, HorzAlign.Default);
-            viewDetail.InitColumn("CODEVALUE", "Detail", 160, 50, false, true, DataType.Default, HorzAlign.Default);
-            viewDetail.InitColumn("DISPLAYVALUE", "DetailName", 200, 50, false, true, DataType.Default, HorzAlign.Default);
-            viewDetail.InitColumn("SORT_NUM", "SortNumber", 200, 50, false, true, DataType.Number, HorzAlign.Far);
-            viewDetail.InitColumn("OPTIONFCODE", "Option1", 200, 50, false, true, DataType.Default, HorzAlign.Default);
-            viewDetail.InitColumn("OPTIONFNAME", "OptionName1", 200, 50, false, true, DataType.Default, HorzAlign.Default);
-            viewDetail.InitColumn("OPTIONSCODE", "Option2", 200, 50, false, true, DataType.Default, HorzAlign.Default);
-            viewDetail.InitColumn("OPTIONSNAME", "OptionName2", 200, 50, false, true, DataType.Default, HorzAlign.Default);
-            viewDetail.InitColumn("OPTIONTCODE", "Option3", 200, 50, false, true, DataType.Default, HorzAlign.Default);
-            viewDetail.InitColumn("OPTIONTNAME", "OptionName3", 200, 50, false, true, DataType.Default, HorzAlign.Default);
-            viewDetail.InitColumn("USEFLAG", "UseFlag", 200, 50, false, true, DataType.CheckEdit, HorzAlign.Default);
+            viewDetail.InitColumn("PCODEVALUE", "Group", 100, 40, false, false, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("CODEVALUE", "CodeValue", 160, 50, false, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("DISPLAYVALUE", "DisplayValue", 200, 50, true, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("SORT_NUM", "SortNumber", 200, 50, true, true, DataType.Number, HorzAlign.Far);
+            viewDetail.InitColumn("REF1", "Reference1", 200, 50, true, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("REF1NAME", "ReferenceName1", 200, 50, true, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("REF2", "Reference2", 200, 50, true, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("REF2NAME", "ReferenceName2", 200, 50, true, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("REF3", "Reference3", 200, 50, true, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("REF3NAME", "ReferenceName3", 200, 50, true, true, DataType.Default, HorzAlign.Default);
+            viewDetail.InitColumn("USEFLAG", "UseFlag", 200, 50, true, true, DataType.CheckEdit, HorzAlign.Default);
             viewDetail.InitColumn("CHANGEBY", "ChangeBy", 80, 0, false, false);
             viewDetail.InitColumn("CHANGEDTTM", "ChangeDttm", 130, 0, false, false, DataType.DateTime, HorzAlign.Center);
+
+            // 신규 입력만 가능한 컬럼
+            viewDetail.NewRowEnableColumns = new string[] { "CODEVALUE" };
+
+            // 필수 입력 컬럼
+            viewDetail.MandatoryColumns = new string[] { "CODEVALUE", "DISPLAYVALUE" };
+
+            viewDetail.KeyColumns = new string[] { "PCODEVALUE", "CODEVALUE" };
 
             // DB에서 컬럼 셋팅
             //viewList.InitColumnFromDB();
@@ -244,13 +263,15 @@ namespace EBAP.UI.BSE.COM
         {
             DataSet ds;
 
-            string queryId = Q_COMMON_CODE.SelectQuery("EBAP.UI.BSE.COM.CommonCode");
+            string queryId = Q_COMMON_CODE.SelectGroupQuery("EBAP.UI.BSE.COM.CommonCode");
 
-            string[] paramList = new string[] { "PCODEVALUE"
+            string[] paramList = new string[] { "CODEVALUE"
+                                                , "DISPLAYVALUE"
                                                 , "USEFLAG"
                                                 };
 
-            object[] valueList = new object[] { txtGroup.EditValue
+            object[] valueList = new object[] { "$COMMON"
+                                                ,txtGroup.EditValue
                                                 , cboUseFlag.EditValue
                                                 };
 
@@ -266,18 +287,25 @@ namespace EBAP.UI.BSE.COM
 
             gridGroup.FillData(ds);
 
+            //if (viewGroup.RowCount > 0)
+            //{
+            //    viewGroup.FocusedRowHandle = 0;
+            //    viewList_FocusedRowChanged(viewGroup,
+            //        new FocusedRowChangedEventArgs(-1, 0));
+            //}
+
             // 그리드와 컨트롤이 바인딩이 필요하다면 주석을 제거하세요.
             //InitDataTableNamedings(ds);
         }
 
-        private void SelectionDetialData(string pGroupCode)
+        private void SelectionDetailData(string pGroupCode)
         {
             DataSet ds;
 
-            string queryId = Q_COMMON_CODE.SelectQuery("EBAP.UI.BSE.COM.CommonCode");
+            string queryId = Q_COMMON_CODE.SelectDetailQuery("EBAP.UI.BSE.COM.CommonCode");
 
             string[] paramList = new string[] { "PCODEVALUE"
-                                                , "GROUPNAME"
+                                                , "DISPLAYVALUE"
                                                 , "USEFLAG"
                                                 };
 
@@ -296,7 +324,7 @@ namespace EBAP.UI.BSE.COM
                 //ds = wb.NTx_ExecuteDataSet(ConnectionString.KFAT, queryId, AppConfig.COMMANDTEXT, param);
             }
 
-            gridGroup.FillData(ds);
+            gridDetail.FillData(ds);
 
             // 그리드와 컨트롤이 바인딩이 필요하다면 주석을 제거하세요.
             //InitDataTableNamedings(ds);
@@ -340,9 +368,14 @@ namespace EBAP.UI.BSE.COM
         /// </summary>
         private void NewData()
         {
-            PGridView viewGrid = gridGroup.FocusedView as PGridView ?? gridDetail.FocusedView as PGridView;
+            const string code = "CODEVALUE";
 
-            viewGrid.AddNewRow();
+            if (gridGroup.IsFocused || gridGroup.ContainsFocus)
+                viewGroup.AddNewRow(code);
+            else if (gridDetail.IsFocused || gridDetail.ContainsFocus)
+                viewDetail.AddNewRow(code);
+            else
+                viewGroup.AddNewRow(code);
 
             //viewList.AddNewRow("FIELDNAME");
         }
@@ -363,7 +396,7 @@ namespace EBAP.UI.BSE.COM
                 SaveData();
 
                 // 저장 후 조회를 실행해야 한다면 주석을 제거하세요.
-                //RaiseSelectEvent();
+                RaiseSelectEvent();
 
                 // 저장 후 DataTable에 변경사항만 처리할 경우 주석을 제거하세요(DB 접속 필요없을 경우)
                 viewGroup.AcceptChanges();
@@ -379,11 +412,36 @@ namespace EBAP.UI.BSE.COM
         /// </summary>
         private void SaveData()
         {
-            PGridView viewGrid = gridGroup.FocusedView as PGridView ?? gridDetail.FocusedView as PGridView;
+            DataTable dtMaster = viewGroup.GetAddedModifedData();
+            DataTable dtDetail = viewDetail.GetAddedModifedData();
 
+            if (dtMaster.Rows.Count > 0) SaveGroupData(dtMaster);
+            if (dtDetail.Rows.Count > 0) SaveDetailData(dtDetail);
+        }
+                
+        private void SaveGroupData(DataTable dt)
+        {
             string[] queryId = null;
 
-            DataTable dt = viewGrid.GetAddedModifedData();
+            string[] paramList = new string[] { ":CODEVALUE"
+                                            , ":DISPLAYVALUE"
+                                            , ":PCODEVALUE"
+                                            , ":SORT_NUM"
+                                            , ":USEFLAG"
+                                            , ":CHANGEBY"
+                                                };
+
+            queryId = new string[] { Q_COMMON_CODE.MergeGroup("EBAP.UI.BSE.COM.CommonCode.SaveGroupData") };
+
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
+            {
+                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
+            }
+        }
+
+        private void SaveDetailData(DataTable dt)
+        {
+            string[] queryId = null;
 
             string[] paramList = new string[] { ":CODEVALUE"
                                             , ":DISPLAYVALUE"
@@ -399,7 +457,7 @@ namespace EBAP.UI.BSE.COM
                                             , ":CHANGEBY"
                                                 };
 
-            queryId = new string[] { Q_COMMON_CODE.Merge("EBAP.UI.BSE.COM.CommonCode") };
+            queryId = new string[] { Q_COMMON_CODE.MergeDetail("EBAP.UI.BSE.COM.CommonCode.SaveDetailData") };
 
             using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
@@ -423,7 +481,7 @@ namespace EBAP.UI.BSE.COM
                 DeleteData();
 
                 // 삭제 후 조회를 실행해야 한다면 주석을 제거하세요.
-                //RaiseSelectEvent();
+                RaiseSelectEvent();
 
                 // 삭제 후 Check 된 ROW 만 삭제하려면 주석을 제거하세요(DB 접속 필요없을 경우)
                 viewGroup.RemoveCheckedRow();
@@ -439,17 +497,40 @@ namespace EBAP.UI.BSE.COM
         /// </summary>
         private void DeleteData()
         {
-            PGridView viewGrid = gridGroup.FocusedView as PGridView ?? gridDetail.FocusedView as PGridView;
+            DataTable dtMaster = viewGroup.GetCheckedData();
+            DataTable dtDetail = viewDetail.GetCheckedData();
 
+            if (dtMaster.Rows.Count > 0) DeleteGroupData(dtMaster);
+            if (dtDetail.Rows.Count > 0) DeleteDetailData(dtDetail);
+        }
+        
+        /// <summary>
+        /// 삭제 처리 Method
+        /// </summary>
+        private void DeleteGroupData(DataTable dt)
+        {
             string[] queryId = null;
 
-            DataTable dt = viewGrid.GetAddedModifedData();
+            string[] paramList = new string[] { ":PCODEVALUE"
+                                                };
+
+            queryId = new string[] { Q_COMMON_CODE.DeleteGroup("EBAP.UI.BSE.COM.CommonCode") };
+
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
+            {
+                wb.Tx_ExecuteNonQuery(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, dt);
+            }
+        }
+
+        private void DeleteDetailData(DataTable dt)
+        {
+            string[] queryId = null;
 
             string[] paramList = new string[] { ":PCODEVALUE"
                                             , ":CODEVALUE"
                                                 };
 
-            queryId = new string[] { Q_COMMON_CODE.Delete("EBAP.UI.BSE.COM.CommonCode") };
+            queryId = new string[] { Q_COMMON_CODE.DeleteDetail("EBAP.UI.BSE.COM.CommonCode") };
 
             using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
@@ -503,9 +584,16 @@ namespace EBAP.UI.BSE.COM
                 //viewList.SetRowCellValue(e.RowHandle, "COLUMN", "");
                 //viewList.SetRowCellValue(e.RowHandle, "COLUMN", "");
 
-                if (gridDetail.FocusedView == viewDetail)
+                if (sender.Equals(viewGroup))
                 {
-                    viewDetail.SetRowCellValue(e.RowHandle, "GROUPCODE", viewGroup.GetFocusedRowCellValue("GROUPCODE"));
+                    viewGroup.SetRowCellValue(e.RowHandle, "CODEVALUE", "$COMMON");
+                    viewGroup.SetRowCellValue(e.RowHandle, "SORT_NUM", 0);
+                }
+
+                if (sender.Equals(viewDetail))
+                {
+                    viewDetail.SetRowCellValue(e.RowHandle, "PCODEVALUE", viewGroup.GetFocusedRowCellValue("PCODEVALUE"));
+                    viewDetail.SetRowCellValue(e.RowHandle, "SORT_NUM", viewDetail.RowCount);
                 }
             }
             catch (Exception ex)
@@ -679,7 +767,9 @@ namespace EBAP.UI.BSE.COM
 
                 if (dr == null) return;
 
-                SelectionDetialData(dr["GROUPCODE"]?.ToString());
+                viewDetail.ViewCaption = $"[ {grpLarge.Text} :          {dr["CODEVALUE"]} - {dr["DISPLAYVALUE"]} ]";
+                SelectionDetailData(dr["PCODEVALUE"].ToString());
+                
 
             }
             catch (Exception ex)

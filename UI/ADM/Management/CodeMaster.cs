@@ -374,7 +374,6 @@ namespace EBAP.UI.ADM.Management
 
             if (dtMaster.Rows.Count > 0) SaveMasterData(dtMaster);
             if (dtDetail.Rows.Count > 0) SaveDetailData(dtDetail);
-
         }
 
         /// <summary>

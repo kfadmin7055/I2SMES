@@ -41,6 +41,15 @@ namespace EBAP.UI.ITM
         {
             InitializeComponent();
             AppConfig.CurrentDB = ConnectionString.ORAMESDB;
+
+            this.Save += new System.EventHandler(this.Material_Save);
+            this.Delete += new System.EventHandler(this.Material_Delete);
+            this.New += new System.EventHandler(this.Material_New);
+        }
+
+        private void Materials_Save(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -212,7 +221,7 @@ namespace EBAP.UI.ITM
         {
             DataSet ds;
 
-            string queryId = Q_MATERIALS.SelectQuery("reference");
+            string queryId = Q_PRODUCT.SelectQuery("reference");
 
             string[] paramList = new string[] { ""
                                                 , ""
@@ -334,7 +343,7 @@ namespace EBAP.UI.ITM
                                                 ":CHANGEBY"
                                                 };
 
-            queryId = new string[] { Q_MATERIALS.Merge() };
+            queryId = new string[] { Q_PRODUCT.Merge() };
 
             using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
@@ -380,7 +389,7 @@ namespace EBAP.UI.ITM
 
             string[] paramList = new string[] { ":CODE" };
 
-            queryId = new string[] { Q_MATERIALS.Delete() };
+            queryId = new string[] { Q_PRODUCT.Delete() };
 
             using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {

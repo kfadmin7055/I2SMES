@@ -6,6 +6,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace EBAP.Data.Factory
 {
@@ -595,8 +596,12 @@ namespace EBAP.Data.Factory
                                         break;
                                 }
 
+                                string baseQuery = queryText;   // ⭐ 원본 보관
+
                                 foreach (DataRow dr in dt.Rows)
                                 {
+                                    queryText = baseQuery;      // ⭐ 매번 초기화
+
                                     if (paramList != null)
                                     {
                                         for (int idx = 0; idx < paramList.Length; idx++)
@@ -610,25 +615,27 @@ namespace EBAP.Data.Factory
 
                                                 if (queryText.ToUpper().Contains(param.ToUpper()))
                                                 {
-                                                    cmd.Parameters.Add(paramList[idx], GetParameterOracleType(dr[paramList[idx].Replace(":", "")])).Value = dr[paramList[idx].Replace(":", "")];
+                                                    cmd.Parameters.Add(
+                                                        param,
+                                                        GetParameterOracleType(dr[param.Replace(":", "")])
+                                                    ).Value = dr[param.Replace(":", "")];
 
-                                                    queryText = queryText.Replace(!paramList[idx].ToString().Contains(":") ? $":{paramList[idx]}".ToUpper() : paramList[idx].ToUpper(), "'" + dr[paramList[idx].Replace(":", "")].ToString() + "'");
+                                                    queryText = Regex.Replace(
+                                                        queryText,
+                                                        Regex.Escape(param.ToUpper()) + @"(?![A-Za-z0-9_])",
+                                                        "'" + dr[param.Replace(":", "")].ToString() + "'"
+                                                    );
                                                 }
                                             }
-
-                                            //if (queryText.Contains(!paramList[idx].ToString().Contains(":") ? $":{paramList[idx]}".ToUpper() : paramList[idx].ToUpper()))
-                                            //{
-                                            //    cmd.Parameters.Add(paramList[idx], GetParameterOracleType(dr[paramList[idx].Replace(":", "")])).Value = dr[paramList[idx].Replace(":", "")];
-
-                                            //    queryText = queryText.Replace(!paramList[idx].ToString().Contains(":") ? $":{paramList[idx]}".ToUpper() : paramList[idx].ToUpper(), "'" + dr[paramList[idx].Replace(":", "")].ToString() + "'");
-                                            //}
                                         }
 
                                         if (Debugger.IsAttached) Console.WriteLine(queryText);
                                     }
-                                }
 
-                                cmd.ExecuteNonQuery();
+                                    // ⭐ 여기서 실행
+                                    cmd.CommandText = queryText;
+                                    cmd.ExecuteNonQuery();
+                                }
                             }
                         }
 

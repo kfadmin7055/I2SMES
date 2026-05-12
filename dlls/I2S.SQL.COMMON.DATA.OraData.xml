@@ -32,30 +32,36 @@
             COMMON_CODE 테이블 쿼리
             </summary>
         </member>
-        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.Merge(System.String)">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.MergeGroup(System.String)">
             <summary>
             COMMON_CODE 테이블 머지 쿼리
             </summary>
             <returns></returns>
         </member>
-        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.Delete(System.String)">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.DeleteGroup(System.String)">
             <summary>
             COMMON_CODE 테이블 삭제 쿼리
             </summary>
             <returns></returns>
         </member>
-        <member name="T:I2S.SQL.COMMON.DATA.OraData.Item.Q_MATERIALS">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.DeleteDetail(System.String)">
+            <summary>
+            COMMON_CODE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Item.Q_PRODUCT">
             <summary>
             MATERIALS 테이블 쿼리
             </summary>
         </member>
-        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MATERIALS.Merge">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_PRODUCT.Merge">
             <summary>
             MATERIALS 테이블 머지 쿼리
             </summary>
             <returns></returns>
         </member>
-        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MATERIALS.Delete">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_PRODUCT.Delete">
             <summary>
             MATERIALS 테이블 삭제 쿼리
             </summary>

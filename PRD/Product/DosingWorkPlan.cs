@@ -148,7 +148,7 @@ namespace EBAP.UI.PRD.Product
             viewList.InitColumn("CHANGE_USER", "ChangeUser", 120, 11, false, false, DataType.DateTime, HorzAlign.Center);
 
             // DB에서 컬럼 셋팅
-            viewList.InitColumnFromDB();
+            //viewList.InitColumnFromDB();
 
             viewList.EndInit();
         }
@@ -180,7 +180,7 @@ namespace EBAP.UI.PRD.Product
             viewResult.Columns["SCALE_CODE"].GroupIndex = 0;
 
             // DB에서 컬럼 셋팅
-            viewResult.InitColumnFromDB();
+            //viewResult.InitColumnFromDB();
 
             // 🔥 Summary
             viewResult.GroupSummary.Add(SummaryItemType.Count, "SCALE_CODE", null);

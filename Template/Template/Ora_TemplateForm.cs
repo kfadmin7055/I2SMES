@@ -41,6 +41,39 @@ namespace Template
             InitializeComponent();
 
             AppConfig.CurrentDB = ConnectionString.ORAMESDB;
+
+            DetachEvents();
+            AttachEvents();
+        }
+
+        /// <summary>
+        /// 이벤트 연결
+        /// </summary>
+        private void AttachEvents()
+        {
+            this.Save += Ora_TemplateForm_Save;
+            this.Delete += Ora_TemplateForm_Delete;
+            this.New += Ora_TemplateForm_New;
+        }
+
+        /// <summary>
+        /// 이벤트 해제
+        /// </summary>
+        private void DetachEvents()
+        {
+            this.Save -= Ora_TemplateForm_Save;
+            this.Delete -= Ora_TemplateForm_Delete;
+            this.New -= Ora_TemplateForm_New;
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                DetachEvents();
+            }
+
+            base.Dispose(disposing);
         }
 
         #endregion

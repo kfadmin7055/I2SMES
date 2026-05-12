@@ -29,7 +29,6 @@ namespace EBAP.UI.ITM
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Materials));
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.pTextEdit11 = new EBAP.Win.ControlLibrary.PTextEdit();
@@ -887,6 +886,7 @@ namespace EBAP.UI.ITM
             this.viewList.Appearance.ViewCaption.Options.UseForeColor = true;
             this.viewList.Appearance.ViewCaption.Options.UseTextOptions = true;
             this.viewList.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.viewList.ColumnPanelRowHeight = 30;
             this.viewList.GridControl = this.gridList;
             this.viewList.KeyColumns = null;
             this.viewList.MandatoryColumns = null;
@@ -899,6 +899,8 @@ namespace EBAP.UI.ITM
             this.viewList.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.viewList.OptionsView.ColumnAutoWidth = false;
             this.viewList.OptionsView.ShowGroupPanel = false;
+            this.viewList.RowHeight = 29;
+            this.viewList.ViewCaptionHeight = 25;
             // 
             // layoutControlGroup3
             // 
@@ -920,15 +922,14 @@ namespace EBAP.UI.ITM
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // TemplateForm
+            // Materials
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1264, 762);
             this.Controls.Add(this.splitContainerControl);
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Material.IconOptions.SvgImage")));
             this.ISLOADING = true;
-            this.Name = "TemplateForm";
+            this.Name = "Materials";
             this.Text = "TemplateForm";
             this.Selection += new System.EventHandler(this.Material_Selection);
             this.Reload += new System.EventHandler(this.Material_Load);

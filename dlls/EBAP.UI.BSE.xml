@@ -130,6 +130,11 @@
             삭제 처리 Method
             </summary>
         </member>
+        <member name="M:EBAP.UI.BSE.COM.CommonCode.DeleteGroupData(System.Data.DataTable)">
+            <summary>
+            삭제 처리 Method
+            </summary>
+        </member>
         <member name="M:EBAP.UI.BSE.COM.CommonCode.ComboBox_EditValueChanged(System.Object,System.EventArgs)">
             <summary>
             ComboBox 값을 변경하면 발생합니다.
