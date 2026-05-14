@@ -154,6 +154,12 @@
     <Compile Include="PCheckedListBoxControl.Designer.cs">
       <DependentUpon>PCheckedListBoxControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PSearchComboBoxEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PSearchComboBoxEdit.Designer.cs">
+      <DependentUpon>PSearchComboBoxEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="PComboBoxEdit.cs">
       <SubType>Component</SubType>
     </Compile>

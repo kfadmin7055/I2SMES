@@ -4,7 +4,246 @@
         <name>EBAP.UI.ITM</name>
     </assembly>
     <members>
-        <member name="T:EBAP.UI.ITM.Materials">
+        <member name="T:EBAP.UI.ITM.Product.Material">
+            <summary>
+            Form의 업무내용을 기술합니다.
+            </summary>
+            <remarks>
+            Comment     : Form 기능 및 특이사항 기록
+                          1.  원료관리
+                          2. 
+            History     :
+                          1. (2026-05-13 오전 10:40:29 - easto - KFES) : 최초 생성
+                          2.
+                          3.
+            </remarks>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.#ctor">
+            <summary>
+            TemplateForm Form을 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.AttachEvents">
+            <summary>
+            이벤트 생성
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.DetachEvents">
+            <summary>
+            이벤트 해제
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.OnFormClosed(System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            폼닫을 때 이벤트
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.Material_Load(System.Object,System.EventArgs)">
+            <summary>
+            Form이 Load 시 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.InitLocalization">
+            <summary>
+            다국어 Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.InitGlobalInstance">
+            <summary>
+            전역변수 Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.InitGridControl">
+            <summary>
+            Grid Control Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.InitComboBox">
+            <summary>
+            ComboBox Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.InitControls">
+            <summary>
+            기타 Control Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.Material_Link(System.Object,System.EventArgs)">
+            <summary>
+            Form 간 Data 전송 시 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.LinkData">
+            <summary>
+            Form 간 Data 전송 처리
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.Material_Selection(System.Object,System.EventArgs)">
+            <summary>
+            MainForm의 조회 Button을 Click 하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.SetFormLayout">
+            <summary>
+            Form의 Layout을 변경합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.SetGridLayout">
+            <summary>
+            Grid의 Layout을 변경합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.SelectionData">
+            <summary>
+            조회 처리 Method
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.InitDataTableNamedings(System.Data.DataSet)">
+            <summary>
+            컨트롤과 데이터를 바인딩합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.Material_New(System.Object,System.EventArgs)">
+            <summary>
+            MainForm의 신규 Button을 Click 하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.NewData">
+            <summary>
+            신규 처리 Method
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.Material_Save(System.Object,System.EventArgs)">
+            <summary>
+            MainForm의 저장 Button을 Click 하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.SaveData">
+            <summary>
+            저장 처리 Method
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.Material_Delete(System.Object,System.EventArgs)">
+            <summary>
+            MainForm의 삭제 Button을 Click 하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.DeleteData">
+            <summary>
+            삭제 처리 Method
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.ComboBox_EditValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            ComboBox 값을 변경하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.viewList_InitNewRow(System.Object,DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs)">
+            <summary>
+            신규로 생성되는 Row의 기본값을 정의합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.viewList_CustomRowCellEditForEditing(System.Object,DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs)">
+            <summary>
+            클릭하면 해당 CELL을 Combo로 표시합니다. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.viewList_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            더블 클릭하면 해당 이벤트를 발생합니다. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.viewList_ButtonEditClick(System.Object,DevExpress.XtraEditors.Controls.ButtonPressedEventArgs)">
+            <summary>
+            Button, ButtonEdit 컬럼을 클릭하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.viewList_ShowingEditor(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            조건에 따라 셀 수정 여부를 지정합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.viewList_FocusedRowChanged(System.Object,DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)">
+            <summary>
+            선택한 Row가 변경되면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.viewList_CellValueChanged(System.Object,DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs)">
+            <summary>
+            Grid 값이 변경되면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.CheckSelectionCondition">
+            <summary>
+            조회 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.CheckNewCondition">
+            <summary>
+            신규 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.CheckDeleteCondition">
+            <summary>
+            삭제 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.CheckSaveCondition">
+            <summary>
+            저장 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EBAP.UI.ITM.Product.Material.components">
+            <summary> 
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Material.InitializeComponent">
+            <summary> 
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+            </summary>
+        </member>
+        <member name="T:EBAP.UI.ITM.Product.MixingRecipe">
             <summary>
             Form의 업무내용을 기술합니다.
             </summary>
@@ -13,218 +252,522 @@
                           1.  
                           2. 
             History     :
-                          1. (2026-05-11 오전 10:02:57 - easto - KFES) : 최초 생성
+                          1. (2026-05-14 오전 8:45:19 - easto - KFES) : 최초 생성
                           2.
                           3.
             </remarks>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.#ctor">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.#ctor">
             <summary>
             TemplateForm Form을 생성합니다.
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.Material_Load(System.Object,System.EventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.AttachEvents">
+            <summary>
+            이벤트 생성
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.DetachEvents">
+            <summary>
+            이벤트 해제
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.OnFormClosed(System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            폼닫을 때 이벤트
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.MixingRecipe_Load(System.Object,System.EventArgs)">
             <summary>
             Form이 Load 시 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.InitLocalization">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.InitLocalization">
             <summary>
             다국어 Initialize
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.InitGlobalInstance">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.InitGlobalInstance">
             <summary>
             전역변수 Initialize
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.InitGridControl">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.InitMainGridControl">
             <summary>
             Grid Control Initialize
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.InitComboBox">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.InitComboBox">
             <summary>
             ComboBox Initialize
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.InitControls">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.InitControls">
             <summary>
             기타 Control Initialize
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.Material_Link(System.Object,System.EventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.MixingRecipe_Link(System.Object,System.EventArgs)">
             <summary>
             Form 간 Data 전송 시 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.LinkData">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.LinkData">
             <summary>
             Form 간 Data 전송 처리
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.Material_Selection(System.Object,System.EventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.MixingRecipe_Selection(System.Object,System.EventArgs)">
             <summary>
             MainForm의 조회 Button을 Click 하면 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.SetFormLayout">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.SetFormLayout">
             <summary>
             Form의 Layout을 변경합니다.
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.SetGridLayout">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.SetGridLayout">
             <summary>
             Grid의 Layout을 변경합니다.
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.SelectionData">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.SelectionMainData">
             <summary>
             조회 처리 Method
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.InitDataTableNamedings(System.Data.DataSet)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.SelectionSubData">
+            <summary>
+            레시피 조회 처리 Method
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.InitDataTableNamedings(System.Data.DataSet)">
             <summary>
             컨트롤과 데이터를 바인딩합니다.
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.Material_New(System.Object,System.EventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.MixingRecipe_New(System.Object,System.EventArgs)">
             <summary>
             MainForm의 신규 Button을 Click 하면 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.NewData">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.NewData">
             <summary>
             신규 처리 Method
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.Material_Save(System.Object,System.EventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.MixingRecipe_Save(System.Object,System.EventArgs)">
             <summary>
             MainForm의 저장 Button을 Click 하면 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.SaveData">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.SaveData">
             <summary>
             저장 처리 Method
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.Material_Delete(System.Object,System.EventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.MixingRecipe_Delete(System.Object,System.EventArgs)">
             <summary>
             MainForm의 삭제 Button을 Click 하면 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.DeleteData">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.DeleteData">
             <summary>
             삭제 처리 Method
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.ComboBox_EditValueChanged(System.Object,System.EventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.ComboBox_EditValueChanged(System.Object,System.EventArgs)">
             <summary>
             ComboBox 값을 변경하면 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.viewList_InitNewRow(System.Object,DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.viewMain_InitNewRow(System.Object,DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs)">
             <summary>
             신규로 생성되는 Row의 기본값을 정의합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.viewList_CustomRowCellEditForEditing(System.Object,DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.viewMain_CustomRowCellEditForEditing(System.Object,DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs)">
             <summary>
             클릭하면 해당 CELL을 Combo로 표시합니다. 
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.viewList_DoubleClick(System.Object,System.EventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.viewMain_DoubleClick(System.Object,System.EventArgs)">
             <summary>
             더블 클릭하면 해당 이벤트를 발생합니다. 
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.viewList_ButtonEditClick(System.Object,DevExpress.XtraEditors.Controls.ButtonPressedEventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.viewMain_ButtonEditClick(System.Object,DevExpress.XtraEditors.Controls.ButtonPressedEventArgs)">
             <summary>
             Button, ButtonEdit 컬럼을 클릭하면 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.viewList_ShowingEditor(System.Object,System.ComponentModel.CancelEventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.viewMain_ShowingEditor(System.Object,System.ComponentModel.CancelEventArgs)">
             <summary>
             조건에 따라 셀 수정 여부를 지정합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.viewList_FocusedRowChanged(System.Object,DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.viewMain_FocusedRowChanged(System.Object,DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)">
             <summary>
             선택한 Row가 변경되면 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.viewList_CellValueChanged(System.Object,DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.viewMain_CellValueChanged(System.Object,DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs)">
             <summary>
             Grid 값이 변경되면 발생합니다.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.CheckSelectionCondition">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.CheckSelectionCondition">
             <summary>
             조회 조건 Check Method
             </summary>
             <returns></returns>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.CheckNewCondition">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.CheckNewCondition">
             <summary>
             신규 조건 Check Method
             </summary>
             <returns></returns>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.CheckDeleteCondition">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.CheckDeleteCondition">
             <summary>
             삭제 조건 Check Method
             </summary>
             <returns></returns>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.CheckSaveCondition">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.CheckSaveCondition">
             <summary>
             저장 조건 Check Method
             </summary>
             <returns></returns>
         </member>
-        <member name="F:EBAP.UI.ITM.Materials.components">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.btnRecipeAdd_Click(System.Object,System.EventArgs)">
+            <summary>
+            레시피 버전 추가
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.btnVerChangeHis_Click(System.Object,System.EventArgs)">
+            <summary>
+            버전 변경 이력 조회
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.btnSelectedRecipeConfirm_Click(System.Object,System.EventArgs)">
+            <summary>
+            선택배합비 전체 확정
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.btnRecipeConfirm_Click(System.Object,System.EventArgs)">
+            <summary>
+            배합비 확정
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:EBAP.UI.ITM.Product.MixingRecipe.components">
             <summary> 
             필수 디자이너 변수입니다.
             </summary>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.Dispose(System.Boolean)">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.Dispose(System.Boolean)">
             <summary> 
             사용 중인 모든 리소스를 정리합니다.
             </summary>
             <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
         </member>
-        <member name="M:EBAP.UI.ITM.Materials.InitializeComponent">
+        <member name="M:EBAP.UI.ITM.Product.MixingRecipe.InitializeComponent">
             <summary> 
             디자이너 지원에 필요한 메서드입니다. 
             이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+            </summary>
+        </member>
+        <member name="T:EBAP.UI.ITM.Product.Product">
+            <summary>
+            Form의 업무내용을 기술합니다.
+            </summary>
+            <remarks>
+            Comment     : Form 기능 및 특이사항 기록
+                          1.  제품관리
+                          2. 
+            History     :
+                          1. (2026-05-13 오전 10:40:29 - easto - KFES) : 최초 생성
+                          2.
+                          3.
+            </remarks>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.#ctor">
+            <summary>
+            TemplateForm Form을 생성합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.AttachEvents">
+            <summary>
+            이벤트 생성
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.DetachEvents">
+            <summary>
+            이벤트 해제
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.OnFormClosed(System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            폼닫을 때 이벤트
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.Product_Load(System.Object,System.EventArgs)">
+            <summary>
+            Form이 Load 시 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.InitLocalization">
+            <summary>
+            다국어 Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.InitGlobalInstance">
+            <summary>
+            전역변수 Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.InitGridControl">
+            <summary>
+            Grid Control Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.InitComboBox">
+            <summary>
+            ComboBox Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.InitControls">
+            <summary>
+            기타 Control Initialize
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.Product_Link(System.Object,System.EventArgs)">
+            <summary>
+            Form 간 Data 전송 시 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.LinkData">
+            <summary>
+            Form 간 Data 전송 처리
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.Product_Selection(System.Object,System.EventArgs)">
+            <summary>
+            MainForm의 조회 Button을 Click 하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.SetFormLayout">
+            <summary>
+            Form의 Layout을 변경합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.SetGridLayout">
+            <summary>
+            Grid의 Layout을 변경합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.SelectionData">
+            <summary>
+            조회 처리 Method
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.InitDataTableNamedings(System.Data.DataSet)">
+            <summary>
+            컨트롤과 데이터를 바인딩합니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.Product_New(System.Object,System.EventArgs)">
+            <summary>
+            MainForm의 신규 Button을 Click 하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.NewData">
+            <summary>
+            신규 처리 Method
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.Product_Save(System.Object,System.EventArgs)">
+            <summary>
+            MainForm의 저장 Button을 Click 하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.SaveData">
+            <summary>
+            저장 처리 Method
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.Product_Delete(System.Object,System.EventArgs)">
+            <summary>
+            MainForm의 삭제 Button을 Click 하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.DeleteData">
+            <summary>
+            삭제 처리 Method
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.ComboBox_EditValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            ComboBox 값을 변경하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.viewList_InitNewRow(System.Object,DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs)">
+            <summary>
+            신규로 생성되는 Row의 기본값을 정의합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.viewList_CustomRowCellEditForEditing(System.Object,DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs)">
+            <summary>
+            클릭하면 해당 CELL을 Combo로 표시합니다. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.viewList_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            더블 클릭하면 해당 이벤트를 발생합니다. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.viewList_ButtonEditClick(System.Object,DevExpress.XtraEditors.Controls.ButtonPressedEventArgs)">
+            <summary>
+            Button, ButtonEdit 컬럼을 클릭하면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.viewList_ShowingEditor(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            조건에 따라 셀 수정 여부를 지정합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.viewList_FocusedRowChanged(System.Object,DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)">
+            <summary>
+            선택한 Row가 변경되면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.viewList_CellValueChanged(System.Object,DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs)">
+            <summary>
+            Grid 값이 변경되면 발생합니다.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.CheckSelectionCondition">
+            <summary>
+            조회 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.CheckNewCondition">
+            <summary>
+            신규 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.CheckDeleteCondition">
+            <summary>
+            삭제 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.CheckSaveCondition">
+            <summary>
+            저장 조건 Check Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EBAP.UI.ITM.Product.Product.components">
+            <summary> 
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:EBAP.UI.ITM.Product.Product.InitializeComponent">
+            <summary> 
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+            </summary>
+        </member>
+        <member name="T:EBAP.UI.ITM.Properties.Resources">
+            <summary>
+              지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.UI.ITM.Properties.Resources.ResourceManager">
+            <summary>
+              이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:EBAP.UI.ITM.Properties.Resources.Culture">
+            <summary>
+              이 강력한 형식의 리소스 클래스를 사용하여 모든 리소스 조회에 대해 현재 스레드의 CurrentUICulture 속성을
+              재정의합니다.
             </summary>
         </member>
     </members>

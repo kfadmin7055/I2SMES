@@ -27,26 +27,98 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE">
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Base.Q_COMMON_CODE">
             <summary>
             COMMON_CODE 테이블 쿼리
             </summary>
         </member>
-        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.MergeGroup(System.String)">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Base.Q_COMMON_CODE.SelectMainQuery(System.String)">
+            <summary>
+            COMMON_CODE 테이블 그룹 조회
+            </summary>
+            <param name="reference"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Base.Q_COMMON_CODE.SelectSubQuery(System.String)">
+            <summary>
+            COMMON_CODE 테이블 상세 조회
+            </summary>
+            <param name="reference"></param>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Base.Q_COMMON_CODE.MergeMain(System.String)">
             <summary>
             COMMON_CODE 테이블 머지 쿼리
             </summary>
             <returns></returns>
         </member>
-        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.DeleteGroup(System.String)">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Base.Q_COMMON_CODE.DeleteMain(System.String)">
             <summary>
             COMMON_CODE 테이블 삭제 쿼리
             </summary>
             <returns></returns>
         </member>
-        <member name="M:I2S.SQL.COMMON.DATA.OraData._01.Base.Q_COMMON_CODE.DeleteDetail(System.String)">
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Base.Q_COMMON_CODE.DeleteSub(System.String)">
             <summary>
             COMMON_CODE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Base.Q_COMMON_CODE.GetCommonCombo(System.String)">
+            <summary>
+            공통코드의 PCODEVALUE 를 기준으로 (CODEVALUE, DISPLAYVALUE)필드를 가져옵니다.
+            </summary>
+            <param name="reference">호출하는 곳</param>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Item.Q_MIXING_RECIPE_DETAIL">
+            <summary>
+            MIXING_RECIPE_DETAIL 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MIXING_RECIPE_DETAIL.Merge(System.String)">
+            <summary>
+            MIXING_RECIPE_DETAIL 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MIXING_RECIPE_DETAIL.Delete(System.String)">
+            <summary>
+            MIXING_RECIPE_DETAIL 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Item.Q_MIXING_RECIPE">
+            <summary>
+            MIXING_RECIPE 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MIXING_RECIPE.Merge(System.String)">
+            <summary>
+            MIXING_RECIPE 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MIXING_RECIPE.Delete(System.String)">
+            <summary>
+            MIXING_RECIPE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Item.Q_MATERIAL">
+            <summary>
+            MATERIALS 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MATERIAL.Merge">
+            <summary>
+            MATERIALS 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Item.Q_MATERIAL.Delete">
+            <summary>
+            MATERIALS 테이블 삭제 쿼리
             </summary>
             <returns></returns>
         </member>
@@ -826,6 +898,23 @@
             <returns></returns>
         </member>
         <member name="M:I2S.SQL.COMMON.DATA.OraData.Common.Q_VendorAuth.Delete">
+            <summary>
+            TEMPTABLE 테이블 삭제 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:I2S.SQL.COMMON.DATA.OraData.Sample.Q_TableName">
+            <summary>
+            TEMPTABLE 테이블 쿼리
+            </summary>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Sample.Q_TableName.Merge(System.String)">
+            <summary>
+            TEMPTABLE 테이블 머지 쿼리
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:I2S.SQL.COMMON.DATA.OraData.Sample.Q_TableName.Delete(System.String)">
             <summary>
             TEMPTABLE 테이블 삭제 쿼리
             </summary>

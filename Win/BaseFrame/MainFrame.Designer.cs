@@ -954,7 +954,8 @@
             // iLoadMenu
             // 
             this.iLoadMenu.Id = 4;
-            this.iLoadMenu.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.iLoadMenu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("iLoadMenu.ImageOptions.SvgImage")));
+            this.iLoadMenu.ImageOptions.SvgImageSize = new System.Drawing.Size(5, 5);
             this.iLoadMenu.Name = "iLoadMenu";
             // 
             // iVendorCode

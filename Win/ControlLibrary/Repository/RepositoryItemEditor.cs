@@ -1,15 +1,20 @@
 ﻿using DevExpress.LookAndFeel;
 using DevExpress.Utils;
+using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Mask;
 using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Grid;
 using EBAP.Core.Info;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace EBAP.Win.ControlLibrary.Repository
 {
@@ -305,6 +310,87 @@ namespace EBAP.Win.ControlLibrary.Repository
             return edit;
         }
 
+        internal static RepositoryItemSearchLookUpEdit SearchComboBoxEdit(DataTable dt, bool selectAllItemVisible, bool showCodeColumn, string valueMember, string displayMember)
+        {
+            RepositoryItemSearchLookUpEdit edit = new RepositoryItemSearchLookUpEdit();
+
+            if (dt == null)
+                return edit;
+
+            DataRow dr;
+
+            if (selectAllItemVisible)
+            {
+                dr = dt.NewRow();
+
+                if (dt.Columns[valueMember].DataType == typeof(string))
+                    dr[valueMember] = "";
+                else
+                    dr[valueMember] = -1;
+
+                dr[displayMember] = "전체";
+
+                dt.Rows.InsertAt(dr, 0);
+            }
+
+            edit.Appearance.Font = ControlConfig.DROPDOWNFONT;
+            edit.AppearanceDropDown.Font = ControlConfig.DROPDOWNFONT;
+
+            edit.NullText = "";
+
+            edit.DataSource = dt;
+            edit.ValueMember = valueMember;
+            edit.DisplayMember = displayMember;
+
+            edit.PopupFormMinSize = new Size(200, 300);
+
+            edit.PopupFilterMode = PopupFilterMode.Contains;
+            edit.TextEditStyle = TextEditStyles.Standard;
+            edit.ImmediatePopup = true;
+            edit.PopupSizeable = true;
+
+            GridView view = edit.View;
+
+            view.OptionsView.ColumnAutoWidth = false;
+
+            view.FocusRectStyle = DrawFocusRectStyle.RowFocus;
+            view.OptionsSelection.EnableAppearanceFocusedCell = false;
+
+            view.OptionsBehavior.AllowIncrementalSearch = true;
+
+            // 검색 패널
+            view.OptionsFind.AlwaysVisible = true;
+
+            // 검색 시 필터 적용
+            view.OptionsFind.FindMode = FindMode.FindClick;
+
+            // 검색 강조
+            view.OptionsFind.HighlightFindResults = true;
+
+            // 컬럼 추가
+            view.Columns.Clear();
+
+            GridColumn codeColumn = view.Columns.AddField(valueMember);
+            codeColumn.Caption = valueMember;
+            codeColumn.Visible = showCodeColumn;
+            codeColumn.Width = 70;
+
+            GridColumn nameColumn = view.Columns.AddField(displayMember);
+            nameColumn.Caption = displayMember;
+            nameColumn.Visible = true;
+            nameColumn.Width = 120;
+
+            codeColumn.VisibleIndex = 0;
+            nameColumn.VisibleIndex = 1;
+
+            // 검색 컬럼
+            view.OptionsFind.FindFilterColumns = $"{valueMember};{displayMember}";
+
+            view.BestFitColumns();
+
+            return edit;
+        }
+
         internal static RepositoryItemCheckedComboBoxEdit CheckedComboBoxEdit(DataTable dt, bool selectAllItemVisible, string valueMember, string displayMember)
         {
             RepositoryItemCheckedComboBoxEdit edit = new RepositoryItemCheckedComboBoxEdit { SelectAllItemCaption = "전체", SelectAllItemVisible = selectAllItemVisible };
@@ -318,7 +404,34 @@ namespace EBAP.Win.ControlLibrary.Repository
             edit.DisplayMember = displayMember;
             edit.TextEditStyle = TextEditStyles.DisableTextEditor;
 
+            edit.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+
+            edit.Enter += (s, e) =>
+            {
+                if (s is CheckedComboBoxEdit editor)
+                {
+                    editor.KeyDown -= Editor_KeyDown;
+                    editor.KeyDown += Editor_KeyDown;
+                }
+            };
+
             return edit;
+        }
+
+        private static void Editor_KeyDown(object sender, KeyEventArgs e)
+        {
+            CheckedComboBoxEdit edit = sender as CheckedComboBoxEdit;
+
+            if (edit == null)
+                return;
+
+            if (!char.IsControl((char)e.KeyCode))
+            {
+                if (!edit.IsPopupOpen)
+                {
+                    edit.ShowPopup();
+                }
+            }
         }
     }
 }

@@ -40,7 +40,7 @@
             전역변수 Initialize
             </summary>
         </member>
-        <member name="M:EBAP.UI.BSE.COM.CommonCode.InitGroupGridControl">
+        <member name="M:EBAP.UI.BSE.COM.CommonCode.InitMainGridControl">
             <summary>
             Grid Control Initialize
             </summary>
@@ -84,7 +84,7 @@
             Grid의 Layout을 변경합니다.
             </summary>
         </member>
-        <member name="M:EBAP.UI.BSE.COM.CommonCode.SelectionGroupData">
+        <member name="M:EBAP.UI.BSE.COM.CommonCode.SelectionMainData">
             <summary>
             조회 처리 Method
             </summary>
@@ -130,7 +130,7 @@
             삭제 처리 Method
             </summary>
         </member>
-        <member name="M:EBAP.UI.BSE.COM.CommonCode.DeleteGroupData(System.Data.DataTable)">
+        <member name="M:EBAP.UI.BSE.COM.CommonCode.DeleteMainData(System.Data.DataTable)">
             <summary>
             삭제 처리 Method
             </summary>

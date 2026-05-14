@@ -376,6 +376,9 @@
     <EmbeddedResource Include="Management\PlantAuth.resx">
       <DependentUpon>PlantAuth.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Management\QueryMaster.resx">
+      <DependentUpon>QueryMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Management\ScreenColumnSet.resx">
       <DependentUpon>ScreenColumnSet.cs</DependentUpon>
     </EmbeddedResource>

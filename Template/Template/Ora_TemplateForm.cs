@@ -6,8 +6,10 @@
 using DevExpress.XtraGrid.Views.Grid;
 using EBAP.Business.WSBiz;
 using EBAP.Core.Info;
+using EBAP.Win.ControlLibrary;
 using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Template
 {
@@ -42,18 +44,30 @@ namespace Template
 
             AppConfig.CurrentDB = ConnectionString.ORAMESDB;
 
-            DetachEvents();
             AttachEvents();
+
+            programId = GetType().FullName;
         }
 
         /// <summary>
-        /// 이벤트 연결
+        /// 이벤트 생성
         /// </summary>
         private void AttachEvents()
         {
-            this.Save += Ora_TemplateForm_Save;
-            this.Delete += Ora_TemplateForm_Delete;
-            this.New += Ora_TemplateForm_New;
+            //this.Save -= $safeitemname$_Save;
+            //this.Save += $safeitemname$_Save;
+
+            //this.Delete -= $safeitemname$_Delete;
+            //this.Delete += $safeitemname$_Delete;
+
+            //this.New -= $safeitemname$_New;
+            //this.New += $safeitemname$_New;
+
+            //this.viewList.InitNewRow -= new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
+            //this.viewList.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
+
+            //this.viewList.FocusedRowChanged -= new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.viewList_FocusedRowChanged);
+            //this.viewList.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.viewList_FocusedRowChanged);
         }
 
         /// <summary>
@@ -61,25 +75,30 @@ namespace Template
         /// </summary>
         private void DetachEvents()
         {
-            this.Save -= Ora_TemplateForm_Save;
-            this.Delete -= Ora_TemplateForm_Delete;
-            this.New -= Ora_TemplateForm_New;
+            //this.Save -= $safeitemname$_Save;
+            //this.Delete -= $safeitemname$_Delete;
+            //this.New -= $safeitemname$_New;
+
+            //this.viewList.InitNewRow -= new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
+            //this.viewList.FocusedRowChanged -= new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.viewList_FocusedRowChanged);
         }
 
-        protected override void Dispose(bool disposing)
+        /// <summary>
+        /// 폼닫을 때 이벤트
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnFormClosed(FormClosedEventArgs e)
         {
-            if (disposing)
-            {
-                DetachEvents();
-            }
+            DetachEvents();
 
-            base.Dispose(disposing);
+            base.OnFormClosed(e);
         }
 
         #endregion
 
         #region :: 전역변수 ::
 
+        private readonly string programId;
 
         #endregion
 
@@ -167,7 +186,7 @@ namespace Template
         /// </summary>
         private void InitControls()
         {
-
+            searchControl.SetSearchClient(gridList, "검색할 단어를 입력하세요.", 100);
         }
 
         #endregion
@@ -245,7 +264,7 @@ namespace Template
         {
             DataSet ds;
 
-            string queryId = Q_TableName.SelectQuery($"{$rootnamespace$.$safeitemname$}");
+            string queryId = Q_TableName.SelectQuery(programId);
 
             string[] paramList = new string[] { ""
                                                 , ""
@@ -367,7 +386,7 @@ namespace Template
                                                 ":CHANGEBY"
                                                 };
 
-            queryId = new string[] { Q_TableName.Merge($"{$rootnamespace$.$safeitemname$}") };
+            queryId = new string[] { Q_TableName.Merge(programId) };
 
             using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
@@ -413,7 +432,7 @@ namespace Template
 
             string[] paramList = new string[] { ":CODE" };
 
-            queryId = new string[] { Q_TableName.Delete($"{$rootnamespace$.$safeitemname$}") };
+            queryId = new string[] { Q_TableName.Delete(programId) };
 
             using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {

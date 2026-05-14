@@ -1,18 +1,21 @@
-﻿#region 어셈블리 EBAP.UI.ITM, v3.24
-// C:\EBAP-CORE.NET\EBAP.UI.ITM.dll
+﻿#region 어셈블리 Sample.Sample, v3.24
+// C:\EBAP-CORE.NET\Sample.Sample.dll
 // CLR Version :  4.0.30319.42000
 #endregion
 
 using DevExpress.XtraGrid.Views.Grid;
 using EBAP.Business.WSBiz;
 using EBAP.Core.Info;
-using I2S.SQL.COMMON.DATA.OraData.Item;
+using EBAP.Data.CodeUtil;
+using I2S.SQL.COMMON.DATA.OraData.Sample;
 using System;
 using System.Data;
+using System.Security.AccessControl;
+using System.Windows.Forms;
 
-namespace EBAP.UI.ITM
+namespace EBAP.UI.Sample.Sample
 {
-    #region :: EBAP.UI.ITM.Material ::
+    #region :: EBAP.UI.Sample.Sample.UiSample ::
 
     /// <summary>
     /// Form의 업무내용을 기술합니다.
@@ -22,11 +25,11 @@ namespace EBAP.UI.ITM
     ///               1.  
     ///               2. 
     /// History     :
-    ///               1. (2026-05-11 오전 10:02:57 - easto - KFES) : 최초 생성
+    ///               1. (2026-05-14 오후 3:16:56 - easto - KFES) : 최초 생성
     ///               2.
     ///               3.
     /// </remarks>
-    public partial class Materials : EBAP.Win.BaseFrame.UIFrame
+    public partial class UiSample : Win.BaseFrame.UIFrame
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////
         // Constructor & Global Instance
@@ -37,25 +40,67 @@ namespace EBAP.UI.ITM
         /// <summary>
         /// TemplateForm Form을 생성합니다.
         /// </summary>
-        public Materials()
+        public UiSample()
         {
             InitializeComponent();
+
             AppConfig.CurrentDB = ConnectionString.ORAMESDB;
 
-            this.Save += new System.EventHandler(this.Material_Save);
-            this.Delete += new System.EventHandler(this.Material_Delete);
-            this.New += new System.EventHandler(this.Material_New);
+            AttachEvents();
+
+            programId = GetType().FullName;
         }
 
-        private void Materials_Save(object sender, EventArgs e)
+        /// <summary>
+        /// 이벤트 생성
+        /// </summary>
+        private void AttachEvents()
         {
-            throw new NotImplementedException();
+            this.Save -= UiSample_Save;
+            this.Save += UiSample_Save;
+
+            this.Delete -= UiSample_Delete;
+            this.Delete += UiSample_Delete;
+
+            this.New -= UiSample_New;
+            this.New += UiSample_New;
+
+            //this.viewList.InitNewRow -= new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
+            //this.viewList.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
+
+            //this.viewList.FocusedRowChanged -= new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.viewList_FocusedRowChanged);
+            //this.viewList.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.viewList_FocusedRowChanged);
+        }
+
+        /// <summary>
+        /// 이벤트 해제
+        /// </summary>
+        private void DetachEvents()
+        {
+            this.Save -= UiSample_Save;
+            this.Delete -= UiSample_Delete;
+            this.New -= UiSample_New;
+
+            //this.viewList.InitNewRow -= new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
+            //this.viewList.FocusedRowChanged -= new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.viewList_FocusedRowChanged);
+        }
+
+        /// <summary>
+        /// 폼닫을 때 이벤트
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            DetachEvents();
+
+            base.OnFormClosed(e);
         }
 
         #endregion
 
         #region :: 전역변수 ::
 
+        private readonly string programId;
 
         #endregion
 
@@ -66,17 +111,17 @@ namespace EBAP.UI.ITM
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////
-        // Event Handler(Material Common Event)
+        // Event Handler(UiSample Common Event)
         ///////////////////////////////////////////////////////////////////////////////////////////////
 
-        #region :: Material_Load :: Form이 Load 시 발생합니다.
+        #region :: UiSample_Load :: Form이 Load 시 발생합니다.
 
         /// <summary>
         /// Form이 Load 시 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Material_Load(object sender, EventArgs e)
+        private void UiSample_Load(object sender, EventArgs e)
         {
             try
             {
@@ -116,18 +161,37 @@ namespace EBAP.UI.ITM
         /// </summary>
         private void InitGridControl()
         {
-            //viewList.BeginInit();
+            viewList.BeginInit();
 
             // 코드로 컬럼 셋팅
-            //viewList.InitColumn(AppConfig.CHECKCOLUMNNAME, "Select", 50, 0, true, true, DataType.CheckEdit);
-            //viewList.InitColumn("FIELD", "Caption", 75, 0, false, true, DataType.Default, HorzAlign.Default);
-            //viewList.InitColumn("CHANGEBY", "ChangeBy", 80, 0, false, false);
-            //viewList.InitColumn("CHANGEDTTM", "ChangeDttm", 130, 0, false, false, DataType.DateTime, HorzAlign.Center);
+            viewList.InitColumn(AppConfig.CHECKCOLUMNNAME, "Select", 50, 0, true, true, DataType.CheckEdit);
+            viewList.InitColumn("ID", "ID", 100, 50, 0, false, true, DataType.Default, HorzAlign.Center);
+            viewList.InitColumn("SMALL_NUM", "작은수", 100, 10, 0, true, true, DataType.Number, HorzAlign.Far);
+            viewList.InitColumn("LARGE_NUM", "큰수", 120, 20, 0, true, true, DataType.Number, HorzAlign.Far);
+            viewList.InitColumn("FIXED_CHAR", "고정문자", 120, 100, 0, true, true, DataType.Default, HorzAlign.Near);
+            viewList.InitColumn("VARIABLE_CHAR", "가변문자", 150, 4000, 0, true, true, DataType.Default, HorzAlign.Near);
+            viewList.InitColumn("COMBO_TEST", "콤보박스", 120, 50, 0, true, true, DataType.ComboBox, HorzAlign.Near);
+
+            viewList.InitColumn("LONG_STRING", "긴문자열", 250, 4000, 0, true, true, DataType.Memo, HorzAlign.Near);
+            viewList.InitColumn("DATE_COL", "날짜", 120, 20, 0, true, true, DataType.Date, HorzAlign.Center);
+            viewList.InitColumn("TIMESTAMP_COL", "타임스탬프", 160, 30, 0, true, true, DataType.DateTime, HorzAlign.Center);
+            viewList.InitColumn("TIMESTAMPLTZ_COL", "로컬타임존", 180, 30, 0, true, true, DataType.DateTime, HorzAlign.Center);
+            viewList.InitColumn("TIMESTAMPTZ_COL", "타임존", 180, 30, 0, true, true, DataType.DateTime, HorzAlign.Center);
+            
+            viewList.InitColumn("RAW_COL", "RAW데이터", 150, 2000, 0, true, true, DataType.Default, HorzAlign.Near);
+            viewList.InitColumn("BLOB_COL", "BLOB", 100, 0, 0, true, true, DataType.Picture, HorzAlign.Center);
+            viewList.InitColumn("XML_COL", "XML", 250, 4000, 0, true, true, DataType.MemoEx, HorzAlign.Near);
+            viewList.InitColumn("JSON_COL", "JSON", 250, 4000, 0, true, true, DataType.MemoEx, HorzAlign.Near);
+            viewList.InitColumn("USEFLAG", "사용여부", 80, 1, 0, true, true, DataType.CheckEdit, HorzAlign.Center);
+            viewList.InitColumn("CHANGEBY", "ChangeBy", 80, 0, false, false);
+            viewList.InitColumn("CHANGEDTTM", "ChangeDttm", 130, 0, false, false, DataType.DateTime, HorzAlign.Center);
+
+            viewList.InitComboBoxColumn("COMBO_TEST", AppCode.GetMESCommonCode(programId, "ComboTest"));
 
             // DB에서 컬럼 셋팅
             //viewList.InitColumnFromDB();
 
-            //viewList.EndInit();
+            viewList.EndInit();
         }
 
         /// <summary>
@@ -135,7 +199,12 @@ namespace EBAP.UI.ITM
         /// </summary>
         private void InitComboBox()
         {
+            cboComboTest.InitData(AppCode.GetMESCommonCode(programId, "ComboTest"));
+            cboCheckCombo.InitData(AppCode.GetMESCommonCode(programId, "ComboTest"));
+            searchcbo.InitData(AppCode.GetMESCommonCode(programId, "ComboTest"));
 
+            pListBoxControl1.InitData(AppCode.GetMESCommonCode(programId, "ComboTest"));
+            pCheckedListBoxControl1.InitData(AppCode.GetMESCommonCode(programId, "ComboTest"));
         }
 
         /// <summary>
@@ -143,19 +212,19 @@ namespace EBAP.UI.ITM
         /// </summary>
         private void InitControls()
         {
-
+            pSearchControl1.SetSearchClient(gridList, "검색할 단어를 입력하세요.", 100);
         }
 
         #endregion
 
-        #region :: Material_Link :: Form 간 Data 전송 시 발생합니다.
+        #region :: UiSample_Link :: Form 간 Data 전송 시 발생합니다.
 
         /// <summary>
         /// Form 간 Data 전송 시 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Material_Link(object sender, EventArgs e)
+        private void UiSample_Link(object sender, EventArgs e)
         {
             try
             {
@@ -179,14 +248,14 @@ namespace EBAP.UI.ITM
 
         #endregion
 
-        #region :: Material_Selection :: MainForm의 조회 Button을 Click 하면 발생합니다.
+        #region :: UiSample_Selection :: MainForm의 조회 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 조회 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Material_Selection(object sender, EventArgs e)
+        private void UiSample_Selection(object sender, EventArgs e)
         {
             try
             {
@@ -221,7 +290,30 @@ namespace EBAP.UI.ITM
         {
             DataSet ds;
 
-            string queryId = Q_PRODUCT.SelectQuery("reference");
+            string queryId = Q_TableName.SelectQuery(programId);
+
+            //queryId = $@"
+            //SELECT E.ID
+            //    , E.SMALL_NUM
+            //    , E.LARGE_NUM
+            //    , E.FIXED_CHAR
+            //    , E.VARIABLE_CHAR
+            //    , DBMS_LOB.SUBSTR(E.LONG_STRING, 4000, 1) AS LONG_STRING
+            //    , E.DATE_COL
+            //    , E.TIMESTAMP_COL
+            //    , E.TIMESTAMPLTZ_COL
+            //    , E.TIMESTAMPTZ_COL
+            //    , E.RAW_COL
+            //    , E.BLOB_COL
+            //    , E.XML_COL
+            //    , E.JSON_COL
+            //    , E.USEFLAG
+            //    , E.INITDTTM
+            //    , E.INITBY
+            //    , E.UPDTTM
+            //    , E.UPBY
+            //FROM EXAMTEMP E
+            //";
 
             string[] paramList = new string[] { ""
                                                 , ""
@@ -275,14 +367,14 @@ namespace EBAP.UI.ITM
 
         #endregion
 
-        #region :: Material_New :: MainForm의 신규 Button을 Click 하면 발생합니다.
+        #region :: UiSample_New :: MainForm의 신규 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 신규 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Material_New(object sender, EventArgs e)
+        private void UiSample_New(object sender, EventArgs e)
         {
             try
             {
@@ -305,14 +397,14 @@ namespace EBAP.UI.ITM
 
         #endregion
 
-        #region :: Material_Save :: MainForm의 저장 Button을 Click 하면 발생합니다.
+        #region :: UiSample_Save :: MainForm의 저장 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 저장 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Material_Save(object sender, EventArgs e)
+        private void UiSample_Save(object sender, EventArgs e)
         {
             try
             {
@@ -339,11 +431,26 @@ namespace EBAP.UI.ITM
 
             DataTable dt = viewList.GetAddedModifedData();
 
-            string[] paramList = new string[] { ":CHANGEDTTM",
-                                                ":CHANGEBY"
+            string[] paramList = new string[] { ":ID"
+                                        ,       ":SMALL_NUM"
+                                        ,       ":LARGE_NUM"
+                                        ,       ":FIXED_CHAR"
+                                        ,       ":VARIABLE_CHAR"
+                                        ,       ":COMBO_TEST"
+                                        ,       ":LONG_STRING"
+                                        ,       ":DATE_COL"
+                                        ,       ":TIMESTAMP_COL"
+                                        ,       ":TIMESTAMPLTZ_COL"
+                                        ,       ":TIMESTAMPTZ_COL"
+                                        ,       ":RAW_COL"
+                                        ,       ":BLOB_COL"
+                                        ,       ":XML_COL"
+                                        ,       ":JSON_COL"
+                                        ,       ":USEFLAG"
+                                        ,       ":CHANGEBY"
                                                 };
 
-            queryId = new string[] { Q_PRODUCT.Merge() };
+            queryId = new string[] { Q_TableName.Merge(programId) };
 
             using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {
@@ -353,14 +460,14 @@ namespace EBAP.UI.ITM
 
         #endregion
 
-        #region :: Material_Delete :: MainForm의 삭제 Button을 Click 하면 발생합니다.
+        #region :: UiSample_Delete :: MainForm의 삭제 Button을 Click 하면 발생합니다.
 
         /// <summary>
         /// MainForm의 삭제 Button을 Click 하면 발생합니다.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Material_Delete(object sender, EventArgs e)
+        private void UiSample_Delete(object sender, EventArgs e)
         {
             try
             {
@@ -389,7 +496,7 @@ namespace EBAP.UI.ITM
 
             string[] paramList = new string[] { ":CODE" };
 
-            queryId = new string[] { Q_PRODUCT.Delete() };
+            queryId = new string[] { Q_TableName.Delete(programId) };
 
             using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
             {

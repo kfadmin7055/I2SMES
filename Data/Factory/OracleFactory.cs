@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -571,36 +572,44 @@ namespace EBAP.Data.Factory
             {
                 connection.Open();
 
-                // 트랜잭션 시작
                 using (var transaction = connection.BeginTransaction())
                 {
                     try
                     {
-                        // 각 테이블의 데이터를 DataSet에 추가
                         for (int i = 0; i < command.Length; i++)
                         {
                             string queryText = command[i];
-                            // 첫 번째 테이블의 DELETE 쿼리
+
                             using (OracleCommand cmd = new OracleCommand(queryText, connection))
                             {
+                                cmd.Transaction = transaction;
+                                cmd.BindByName = true;
+
                                 switch (cmdType)
                                 {
                                     case "StoredProcedure":
                                         cmd.CommandType = CommandType.StoredProcedure;
                                         break;
+
                                     case "Text":
                                         cmd.CommandType = CommandType.Text;
                                         break;
+
                                     default:
                                         cmd.CommandType = CommandType.Text;
                                         break;
                                 }
 
-                                string baseQuery = queryText;   // ⭐ 원본 보관
+                                string baseQuery = queryText;
 
                                 foreach (DataRow dr in dt.Rows)
                                 {
-                                    queryText = baseQuery;      // ⭐ 매번 초기화
+                                    queryText = baseQuery;
+
+                                    // 중요 : Parameter 누적 방지
+                                    cmd.Parameters.Clear();
+
+                                    string debugQuery = queryText;
 
                                     if (paramList != null)
                                     {
@@ -615,48 +624,193 @@ namespace EBAP.Data.Factory
 
                                                 if (queryText.ToUpper().Contains(param.ToUpper()))
                                                 {
-                                                    cmd.Parameters.Add(
-                                                        param,
-                                                        GetParameterOracleType(dr[param.Replace(":", "")])
-                                                    ).Value = dr[param.Replace(":", "")];
+                                                    object value = dr[param.Replace(":", "")];
 
-                                                    queryText = Regex.Replace(
-                                                        queryText,
-                                                        Regex.Escape(param.ToUpper()) + @"(?![A-Za-z0-9_])",
-                                                        "'" + dr[param.Replace(":", "")].ToString() + "'"
+                                                    OracleParameter oracleParam = new OracleParameter();
+
+                                                    oracleParam.ParameterName = param;
+                                                    oracleParam.OracleDbType = GetParameterOracleType(value);
+                                                    oracleParam.Direction = ParameterDirection.Input;
+
+                                                    // DBNull 처리
+                                                    oracleParam.Value = value == null || value == DBNull.Value
+                                                        ? DBNull.Value
+                                                        : value;
+
+                                                    // CLOB 안정화
+                                                    if (oracleParam.OracleDbType == OracleDbType.Clob)
+                                                    {
+                                                        oracleParam.Size = -1;
+                                                    }
+
+                                                    cmd.Parameters.Add(oracleParam);
+
+                                                    // 디버그 출력용 SQL만 생성
+                                                    string replaceValue = "NULL";
+
+                                                    if (value != null && value != DBNull.Value)
+                                                    {
+                                                        switch (oracleParam.OracleDbType)
+                                                        {
+                                                            case OracleDbType.Date:
+                                                                replaceValue = $"TO_DATE('{Convert.ToDateTime(value):yyyy-MM-dd HH:mm:ss}', 'YYYY-MM-DD HH24:MI:SS')";
+                                                                break;
+
+                                                            case OracleDbType.TimeStamp:
+                                                                replaceValue = $"TO_TIMESTAMP('{Convert.ToDateTime(value):yyyy-MM-dd HH:mm:ss.fff}', 'YYYY-MM-DD HH24:MI:SS.FF3')";
+                                                                break;
+
+                                                            case OracleDbType.Clob:
+                                                                replaceValue = "'[CLOB DATA]'";
+                                                                break;
+
+                                                            case OracleDbType.Blob:
+                                                                replaceValue = "'[BLOB DATA]'";
+                                                                break;
+
+                                                            default:
+                                                                replaceValue = $"'{value.ToString().Replace("'", "''")}'";
+                                                                break;
+                                                        }
+                                                    }
+
+                                                    debugQuery = Regex.Replace(
+                                                        debugQuery,
+                                                        Regex.Escape(param) + @"(?![A-Za-z0-9_])",
+                                                        replaceValue,
+                                                        RegexOptions.IgnoreCase
                                                     );
                                                 }
                                             }
                                         }
 
-                                        if (Debugger.IsAttached) Console.WriteLine(queryText);
+                                        if (Debugger.IsAttached)
+                                            Console.WriteLine(debugQuery);
                                     }
 
-                                    // ⭐ 여기서 실행
+                                    // 실제 실행은 Bind Parameter 유지
                                     cmd.CommandText = queryText;
-                                    cmd.ExecuteNonQuery();
+
+                                    retValue += cmd.ExecuteNonQuery();
                                 }
                             }
                         }
 
                         dt.AcceptChanges();
-                        // 모든 작업이 성공하면 커밋
+
                         transaction.Commit();
-                        Console.WriteLine("두 테이블의 레코드가 성공적으로 삭제되었습니다.");
+
+                        Console.WriteLine("정상 처리 완료");
                     }
                     catch (Exception ex)
                     {
-                        // 오류가 발생하면 롤백
                         transaction.Rollback();
-                        Console.WriteLine("오류 발생: " + ex.Message);
-                    }
 
-                    connection.Close();
+                        Console.WriteLine("오류 발생: " + ex);
+
+                        throw;
+                    }
                 }
+
+                connection.Close();
             }
 
             return retValue;
         }
+        //public int Tx_ExecuteNonQueryByDataTable(string[] command, string cmdType, string[] paramList, DataTable dt)
+        //{
+        //    int retValue = 0;
+
+        //    using (OracleConnection connection = new OracleConnection(con.ConnectionString))
+        //    {
+        //        connection.Open();
+
+        //        // 트랜잭션 시작
+        //        using (var transaction = connection.BeginTransaction())
+        //        {
+        //            try
+        //            {
+        //                // 각 테이블의 데이터를 DataSet에 추가
+        //                for (int i = 0; i < command.Length; i++)
+        //                {
+        //                    string queryText = command[i];
+        //                    // 첫 번째 테이블의 DELETE 쿼리
+        //                    using (OracleCommand cmd = new OracleCommand(queryText, connection))
+        //                    {
+        //                        switch (cmdType)
+        //                        {
+        //                            case "StoredProcedure":
+        //                                cmd.CommandType = CommandType.StoredProcedure;
+        //                                break;
+        //                            case "Text":
+        //                                cmd.CommandType = CommandType.Text;
+        //                                break;
+        //                            default:
+        //                                cmd.CommandType = CommandType.Text;
+        //                                break;
+        //                        }
+
+        //                        string baseQuery = queryText;   // ⭐ 원본 보관
+
+        //                        foreach (DataRow dr in dt.Rows)
+        //                        {
+        //                            queryText = baseQuery;      // ⭐ 매번 초기화
+
+        //                            if (paramList != null)
+        //                            {
+        //                                for (int idx = 0; idx < paramList.Length; idx++)
+        //                                {
+        //                                    string param = paramList[idx]?.ToString();
+
+        //                                    if (!string.IsNullOrEmpty(param))
+        //                                    {
+        //                                        if (!param.StartsWith(":"))
+        //                                            param = $":{param}";
+
+        //                                        if (queryText.ToUpper().Contains(param.ToUpper()))
+        //                                        {
+        //                                            cmd.Parameters.Add(
+        //                                                param,
+        //                                                GetParameterOracleType(dr[param.Replace(":", "")])
+        //                                            ).Value = dr[param.Replace(":", "")];
+
+        //                                            queryText = Regex.Replace(
+        //                                                queryText,
+        //                                                Regex.Escape(param.ToUpper()) + @"(?![A-Za-z0-9_])",
+        //                                                "'" + dr[param.Replace(":", "")].ToString() + "'"
+        //                                            );
+        //                                        }
+        //                                    }
+        //                                }
+
+        //                                if (Debugger.IsAttached) Console.WriteLine(queryText);
+        //                            }
+
+        //                            // ⭐ 여기서 실행
+        //                            cmd.CommandText = queryText;
+        //                            cmd.ExecuteNonQuery();
+        //                        }
+        //                    }
+        //                }
+
+        //                dt.AcceptChanges();
+        //                // 모든 작업이 성공하면 커밋
+        //                transaction.Commit();
+        //                Console.WriteLine("두 테이블의 레코드가 성공적으로 삭제되었습니다.");
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                // 오류가 발생하면 롤백
+        //                transaction.Rollback();
+        //                Console.WriteLine("오류 발생: " + ex.Message);
+        //            }
+
+        //            connection.Close();
+        //        }
+        //    }
+
+        //    return retValue;
+        //}
 
         #endregion
 
@@ -679,46 +833,36 @@ namespace EBAP.Data.Factory
         /// </remarks>
         private OracleDbType GetParameterOracleType(object value)
         {
-            if (value == null)
+            if (value == null || value == DBNull.Value)
             {
                 return OracleDbType.Varchar2;
             }
-            else if (value.GetType().Equals(Type.GetType("System.Byte[]")))
+
+            Type type = value.GetType();
+
+            if (type == typeof(byte[])) { return OracleDbType.Blob; }
+            else if (type == typeof(decimal)) { return OracleDbType.Decimal; }
+            else if (type == typeof(long)) { return OracleDbType.Int64; }
+            else if (type == typeof(int)) { return OracleDbType.Int32; }
+            else if (type == typeof(short)) { return OracleDbType.Int16; }
+            else if (type == typeof(DateTime)) { return OracleDbType.Date; }
+            else if (type == typeof(float)) { return OracleDbType.Single; }
+            else if (type == typeof(double)) { return OracleDbType.Double; }
+            else if (type == typeof(bool)) { return OracleDbType.Boolean; }
+            else if (type == typeof(string))
             {
-                return OracleDbType.Blob;
-            }
-            else if (value.GetType().Equals(Type.GetType(String.Format("System.{0}", TypeCode.Decimal))))
-            {
-                return OracleDbType.Decimal;
-            }
-            else if (value.GetType().Equals(Type.GetType(String.Format("System.{0}", TypeCode.Int64))))
-            {
-                return OracleDbType.Int64;
-            }
-            else if (value.GetType().Equals(Type.GetType(String.Format("System.{0}", TypeCode.Int32))))
-            {
-                return OracleDbType.Int32;
-            }
-            else if (value.GetType().Equals(Type.GetType(String.Format("System.{0}", TypeCode.Int16))))
-            {
-                return OracleDbType.Int16;
-            }
-            else if (value.GetType().Equals(Type.GetType(String.Format("System.{0}", TypeCode.DateTime))))
-            {
-                return OracleDbType.Date;
-            }
-            else if (value.GetType().Equals(Type.GetType(String.Format("System.{0}", TypeCode.Single))))
-            {
-                return OracleDbType.Single;
-            }
-            else if (value.GetType().Equals(Type.GetType(String.Format("System.{0}", TypeCode.Boolean))))
-            {
-                return OracleDbType.Boolean;
-            }
-            else
-            {
+                string strValue = value.ToString();
+
+                // CLOB 처리
+                if (strValue.Length > 4000)
+                {
+                    return OracleDbType.Clob;
+                }
+
                 return OracleDbType.Varchar2;
             }
+
+            return OracleDbType.Varchar2;
         }
 
         #endregion

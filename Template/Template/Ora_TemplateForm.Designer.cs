@@ -29,7 +29,6 @@ namespace Template
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ora_TemplateForm));
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.pTextEdit11 = new EBAP.Win.ControlLibrary.PTextEdit();
@@ -84,6 +83,9 @@ namespace Template
             this.viewList = new EBAP.Win.ControlLibrary.PGridView();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.searchControl = new EBAP.Win.ControlLibrary.PSearchControl();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl.Panel1)).BeginInit();
             this.splitContainerControl.Panel1.SuspendLayout();
@@ -144,6 +146,9 @@ namespace Template
             ((System.ComponentModel.ISupportInitialize)(this.viewList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl
@@ -846,6 +851,7 @@ namespace Template
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.searchControl);
             this.layoutControl2.Controls.Add(this.gridList);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
@@ -862,10 +868,10 @@ namespace Template
             this.gridList.EmbeddedNavigator.Buttons.Edit.Visible = false;
             this.gridList.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
             this.gridList.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this.gridList.Location = new System.Drawing.Point(5, 5);
+            this.gridList.Location = new System.Drawing.Point(5, 29);
             this.gridList.MainView = this.viewList;
             this.gridList.Name = "gridList";
-            this.gridList.Size = new System.Drawing.Size(984, 728);
+            this.gridList.Size = new System.Drawing.Size(984, 704);
             this.gridList.TabIndex = 4;
             this.gridList.UseEmbeddedNavigator = true;
             this.gridList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -887,6 +893,7 @@ namespace Template
             this.viewList.Appearance.ViewCaption.Options.UseForeColor = true;
             this.viewList.Appearance.ViewCaption.Options.UseTextOptions = true;
             this.viewList.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.viewList.ColumnPanelRowHeight = 30;
             this.viewList.GridControl = this.gridList;
             this.viewList.KeyColumns = null;
             this.viewList.MandatoryColumns = null;
@@ -899,13 +906,17 @@ namespace Template
             this.viewList.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.viewList.OptionsView.ColumnAutoWidth = false;
             this.viewList.OptionsView.ShowGroupPanel = false;
+            this.viewList.RowHeight = 29;
+            this.viewList.ViewCaptionHeight = 25;
             // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup3.GroupBordersVisible = false;
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem13,
+            this.emptySpaceItem2});
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
             this.layoutControlGroup3.Size = new System.Drawing.Size(994, 738);
@@ -914,22 +925,60 @@ namespace Template
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridList;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(988, 732);
+            this.layoutControlItem2.Size = new System.Drawing.Size(988, 708);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // TemplateForm
+            // searchControl
+            // 
+            this.searchControl.AutoSelectLength = 0;
+            this.searchControl.BindingMember = null;
+            this.searchControl.EqualControlNextSeq = 0;
+            this.searchControl.EqualTotalControlNextSeq = 0;
+            this.searchControl.LocaleEnumClass = null;
+            this.searchControl.Location = new System.Drawing.Point(57, 5);
+            this.searchControl.Name = "searchControl";
+            this.searchControl.ParamName = null;
+            this.searchControl.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
+            this.searchControl.Properties.Appearance.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.searchControl.Properties.Appearance.Options.UseFont = true;
+            this.searchControl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl.Properties.FindDelay = 100;
+            this.searchControl.Properties.NullValuePrompt = "검색어 입력";
+            this.searchControl.Size = new System.Drawing.Size(438, 20);
+            this.searchControl.StyleController = this.layoutControl2;
+            this.searchControl.TabIndex = 5;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.searchControl;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(494, 24);
+            this.layoutControlItem13.Text = "통합검색";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(40, 14);
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(494, 0);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(494, 24);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // Ora_TemplateForm
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1264, 762);
             this.Controls.Add(this.splitContainerControl);
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("$safeitemname$.IconOptions.SvgImage")));
             this.ISLOADING = true;
-            this.Name = "TemplateForm";
-            this.Text = "TemplateForm";
+            this.Name = "Ora_TemplateForm";
+            this.Text = "Ora_TemplateForm";
             this.Selection += new System.EventHandler(this.$safeitemname$_Selection);
             this.Reload += new System.EventHandler(this.$safeitemname$_Load);
             this.Load += new System.EventHandler(this.$safeitemname$_Load);
@@ -994,6 +1043,9 @@ namespace Template
             ((System.ComponentModel.ISupportInitialize)(this.viewList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1055,5 +1107,8 @@ namespace Template
         private Win.ControlLibrary.PGridControl gridList;
         private Win.ControlLibrary.PGridView viewList;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private Win.ControlLibrary.PSearchControl searchControl;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }

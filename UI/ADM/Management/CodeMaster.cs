@@ -183,7 +183,6 @@ namespace EBAP.UI.ADM.Management
         /// </summary>
         private void InitComboBox()
         {
-
         }
 
         /// <summary>

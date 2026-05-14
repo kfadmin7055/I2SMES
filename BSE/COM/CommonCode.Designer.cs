@@ -44,13 +44,13 @@ namespace EBAP.UI.BSE.COM
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
-            this.gridGroup = new EBAP.Win.ControlLibrary.PGridControl();
-            this.viewGroup = new EBAP.Win.ControlLibrary.PGridView();
+            this.gridMain = new EBAP.Win.ControlLibrary.PGridControl();
+            this.viewMain = new EBAP.Win.ControlLibrary.PGridView();
             this.grpLarge = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
-            this.gridDetail = new EBAP.Win.ControlLibrary.PGridControl();
-            this.viewDetail = new EBAP.Win.ControlLibrary.PGridView();
+            this.gridSub = new EBAP.Win.ControlLibrary.PGridControl();
+            this.viewSub = new EBAP.Win.ControlLibrary.PGridView();
             this.grpSmall = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -81,14 +81,14 @@ namespace EBAP.UI.BSE.COM
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridGroup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
             this.layoutControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewSub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpSmall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
@@ -278,7 +278,7 @@ namespace EBAP.UI.BSE.COM
             // 
             // layoutControl3
             // 
-            this.layoutControl3.Controls.Add(this.gridGroup);
+            this.layoutControl3.Controls.Add(this.gridMain);
             this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl3.Location = new System.Drawing.Point(0, 0);
             this.layoutControl3.Name = "layoutControl3";
@@ -287,55 +287,55 @@ namespace EBAP.UI.BSE.COM
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
-            // gridGroup
+            // gridMain
             // 
-            this.gridGroup.EmbeddedNavigator.Buttons.Append.Visible = false;
-            this.gridGroup.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
-            this.gridGroup.EmbeddedNavigator.Buttons.Edit.Visible = false;
-            this.gridGroup.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
-            this.gridGroup.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this.gridGroup.Location = new System.Drawing.Point(12, 33);
-            this.gridGroup.MainView = this.viewGroup;
-            this.gridGroup.Name = "gridGroup";
-            this.gridGroup.Size = new System.Drawing.Size(960, 261);
-            this.gridGroup.TabIndex = 4;
-            this.gridGroup.UseEmbeddedNavigator = true;
-            this.gridGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.viewGroup});
+            this.gridMain.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gridMain.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gridMain.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gridMain.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gridMain.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.gridMain.Location = new System.Drawing.Point(12, 33);
+            this.gridMain.MainView = this.viewMain;
+            this.gridMain.Name = "gridMain";
+            this.gridMain.Size = new System.Drawing.Size(960, 261);
+            this.gridMain.TabIndex = 4;
+            this.gridMain.UseEmbeddedNavigator = true;
+            this.gridMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.viewMain});
             // 
-            // viewGroup
+            // viewMain
             // 
-            this.viewGroup.Appearance.FilterPanel.Options.UseFont = true;
-            this.viewGroup.Appearance.FooterPanel.Options.UseFont = true;
-            this.viewGroup.Appearance.GroupButton.Options.UseFont = true;
-            this.viewGroup.Appearance.GroupPanel.Options.UseFont = true;
-            this.viewGroup.Appearance.GroupRow.Options.UseFont = true;
-            this.viewGroup.Appearance.HeaderPanel.Options.UseFont = true;
-            this.viewGroup.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.viewGroup.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.viewGroup.Appearance.Row.Options.UseFont = true;
-            this.viewGroup.Appearance.TopNewRow.Options.UseFont = true;
-            this.viewGroup.Appearance.ViewCaption.Options.UseFont = true;
-            this.viewGroup.Appearance.ViewCaption.Options.UseForeColor = true;
-            this.viewGroup.Appearance.ViewCaption.Options.UseTextOptions = true;
-            this.viewGroup.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.viewGroup.ColumnPanelRowHeight = 30;
-            this.viewGroup.GridControl = this.gridGroup;
-            this.viewGroup.KeyColumns = null;
-            this.viewGroup.MandatoryColumns = null;
-            this.viewGroup.Name = "viewGroup";
-            this.viewGroup.NewRowCopyColumns = null;
-            this.viewGroup.NewRowEnableColumns = null;
-            this.viewGroup.OptionsBehavior.AutoExpandAllGroups = true;
-            this.viewGroup.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
-            this.viewGroup.OptionsClipboard.CopyColumnHeaders = DevExpress.Utils.DefaultBoolean.False;
-            this.viewGroup.OptionsMenu.ShowGroupSummaryEditorItem = true;
-            this.viewGroup.OptionsView.ColumnAutoWidth = false;
-            this.viewGroup.OptionsView.ShowGroupPanel = false;
-            this.viewGroup.RowHeight = 29;
-            this.viewGroup.ViewCaptionHeight = 25;
-            this.viewGroup.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
-            this.viewGroup.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.viewList_FocusedRowChanged);
+            this.viewMain.Appearance.FilterPanel.Options.UseFont = true;
+            this.viewMain.Appearance.FooterPanel.Options.UseFont = true;
+            this.viewMain.Appearance.GroupButton.Options.UseFont = true;
+            this.viewMain.Appearance.GroupPanel.Options.UseFont = true;
+            this.viewMain.Appearance.GroupRow.Options.UseFont = true;
+            this.viewMain.Appearance.HeaderPanel.Options.UseFont = true;
+            this.viewMain.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.viewMain.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.viewMain.Appearance.Row.Options.UseFont = true;
+            this.viewMain.Appearance.TopNewRow.Options.UseFont = true;
+            this.viewMain.Appearance.ViewCaption.Options.UseFont = true;
+            this.viewMain.Appearance.ViewCaption.Options.UseForeColor = true;
+            this.viewMain.Appearance.ViewCaption.Options.UseTextOptions = true;
+            this.viewMain.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.viewMain.ColumnPanelRowHeight = 30;
+            this.viewMain.GridControl = this.gridMain;
+            this.viewMain.KeyColumns = null;
+            this.viewMain.MandatoryColumns = null;
+            this.viewMain.Name = "viewMain";
+            this.viewMain.NewRowCopyColumns = null;
+            this.viewMain.NewRowEnableColumns = null;
+            this.viewMain.OptionsBehavior.AutoExpandAllGroups = true;
+            this.viewMain.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
+            this.viewMain.OptionsClipboard.CopyColumnHeaders = DevExpress.Utils.DefaultBoolean.False;
+            this.viewMain.OptionsMenu.ShowGroupSummaryEditorItem = true;
+            this.viewMain.OptionsView.ColumnAutoWidth = false;
+            this.viewMain.OptionsView.ShowGroupPanel = false;
+            this.viewMain.RowHeight = 29;
+            this.viewMain.ViewCaptionHeight = 25;
+            this.viewMain.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
+            this.viewMain.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.viewList_FocusedRowChanged);
             // 
             // grpLarge
             // 
@@ -348,7 +348,7 @@ namespace EBAP.UI.BSE.COM
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.gridGroup;
+            this.layoutControlItem2.Control = this.gridMain;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(964, 265);
@@ -357,7 +357,7 @@ namespace EBAP.UI.BSE.COM
             // 
             // layoutControl4
             // 
-            this.layoutControl4.Controls.Add(this.gridDetail);
+            this.layoutControl4.Controls.Add(this.gridSub);
             this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl4.Location = new System.Drawing.Point(0, 0);
             this.layoutControl4.Name = "layoutControl4";
@@ -366,72 +366,72 @@ namespace EBAP.UI.BSE.COM
             this.layoutControl4.TabIndex = 0;
             this.layoutControl4.Text = "layoutControl4";
             // 
-            // gridDetail
+            // gridSub
             // 
-            this.gridDetail.EmbeddedNavigator.Buttons.Append.Visible = false;
-            this.gridDetail.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
-            this.gridDetail.EmbeddedNavigator.Buttons.Edit.Visible = false;
-            this.gridDetail.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
-            this.gridDetail.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this.gridDetail.Location = new System.Drawing.Point(12, 33);
-            this.gridDetail.MainView = this.viewDetail;
-            this.gridDetail.Name = "gridDetail";
-            this.gridDetail.Size = new System.Drawing.Size(960, 367);
-            this.gridDetail.TabIndex = 4;
-            this.gridDetail.UseEmbeddedNavigator = true;
-            this.gridDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.viewDetail});
+            this.gridSub.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gridSub.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gridSub.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gridSub.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gridSub.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.gridSub.Location = new System.Drawing.Point(12, 33);
+            this.gridSub.MainView = this.viewSub;
+            this.gridSub.Name = "gridSub";
+            this.gridSub.Size = new System.Drawing.Size(960, 367);
+            this.gridSub.TabIndex = 4;
+            this.gridSub.UseEmbeddedNavigator = true;
+            this.gridSub.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.viewSub});
             // 
-            // viewDetail
+            // viewSub
             // 
-            this.viewDetail.Appearance.FilterPanel.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.viewDetail.Appearance.FilterPanel.Options.UseFont = true;
-            this.viewDetail.Appearance.FooterPanel.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.viewDetail.Appearance.FooterPanel.Options.UseFont = true;
-            this.viewDetail.Appearance.GroupButton.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.viewDetail.Appearance.GroupButton.Options.UseFont = true;
-            this.viewDetail.Appearance.GroupPanel.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.viewDetail.Appearance.GroupPanel.Options.UseFont = true;
-            this.viewDetail.Appearance.GroupRow.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.viewDetail.Appearance.GroupRow.Options.UseFont = true;
-            this.viewDetail.Appearance.HeaderPanel.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.viewDetail.Appearance.HeaderPanel.Options.UseFont = true;
-            this.viewDetail.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.viewDetail.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.viewDetail.Appearance.HotTrackedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(56)))), ((int)(((byte)(152)))), ((int)(((byte)(83)))));
-            this.viewDetail.Appearance.HotTrackedRow.Options.UseBackColor = true;
-            this.viewDetail.Appearance.Row.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.viewDetail.Appearance.Row.Options.UseFont = true;
-            this.viewDetail.Appearance.TopNewRow.Font = new System.Drawing.Font("나눔고딕", 8.75F);
-            this.viewDetail.Appearance.TopNewRow.Options.UseFont = true;
-            this.viewDetail.Appearance.ViewCaption.Font = new System.Drawing.Font("나눔고딕", 8.75F, System.Drawing.FontStyle.Bold);
-            this.viewDetail.Appearance.ViewCaption.ForeColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
-            this.viewDetail.Appearance.ViewCaption.Options.UseFont = true;
-            this.viewDetail.Appearance.ViewCaption.Options.UseForeColor = true;
-            this.viewDetail.Appearance.ViewCaption.Options.UseTextOptions = true;
-            this.viewDetail.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.viewDetail.ColumnPanelRowHeight = 30;
-            this.viewDetail.GridControl = this.gridDetail;
-            this.viewDetail.KeyColumns = null;
-            this.viewDetail.MandatoryColumns = null;
-            this.viewDetail.Name = "viewDetail";
-            this.viewDetail.NewRowCopyColumns = null;
-            this.viewDetail.NewRowEnableColumns = null;
-            this.viewDetail.OptionsBehavior.AutoExpandAllGroups = true;
-            this.viewDetail.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
-            this.viewDetail.OptionsClipboard.CopyColumnHeaders = DevExpress.Utils.DefaultBoolean.False;
-            this.viewDetail.OptionsMenu.ShowGroupSummaryEditorItem = true;
-            this.viewDetail.OptionsNavigation.AutoMoveRowFocus = false;
-            this.viewDetail.OptionsPrint.AutoWidth = false;
-            this.viewDetail.OptionsScrollAnnotations.ShowFocusedRow = DevExpress.Utils.DefaultBoolean.True;
-            this.viewDetail.OptionsSelection.EnableAppearanceHotTrackedRow = DevExpress.Utils.DefaultBoolean.True;
-            this.viewDetail.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
-            this.viewDetail.OptionsView.ColumnAutoWidth = false;
-            this.viewDetail.OptionsView.ShowGroupPanel = false;
-            this.viewDetail.OptionsView.ShowGroupPanelColumnsAsSingleRow = true;
-            this.viewDetail.RowHeight = 29;
-            this.viewDetail.ViewCaptionHeight = 25;
-            this.viewDetail.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
+            this.viewSub.Appearance.FilterPanel.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.viewSub.Appearance.FilterPanel.Options.UseFont = true;
+            this.viewSub.Appearance.FooterPanel.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.viewSub.Appearance.FooterPanel.Options.UseFont = true;
+            this.viewSub.Appearance.GroupButton.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.viewSub.Appearance.GroupButton.Options.UseFont = true;
+            this.viewSub.Appearance.GroupPanel.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.viewSub.Appearance.GroupPanel.Options.UseFont = true;
+            this.viewSub.Appearance.GroupRow.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.viewSub.Appearance.GroupRow.Options.UseFont = true;
+            this.viewSub.Appearance.HeaderPanel.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.viewSub.Appearance.HeaderPanel.Options.UseFont = true;
+            this.viewSub.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.viewSub.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.viewSub.Appearance.HotTrackedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(56)))), ((int)(((byte)(152)))), ((int)(((byte)(83)))));
+            this.viewSub.Appearance.HotTrackedRow.Options.UseBackColor = true;
+            this.viewSub.Appearance.Row.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.viewSub.Appearance.Row.Options.UseFont = true;
+            this.viewSub.Appearance.TopNewRow.Font = new System.Drawing.Font("나눔고딕", 8.75F);
+            this.viewSub.Appearance.TopNewRow.Options.UseFont = true;
+            this.viewSub.Appearance.ViewCaption.Font = new System.Drawing.Font("나눔고딕", 8.75F, System.Drawing.FontStyle.Bold);
+            this.viewSub.Appearance.ViewCaption.ForeColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
+            this.viewSub.Appearance.ViewCaption.Options.UseFont = true;
+            this.viewSub.Appearance.ViewCaption.Options.UseForeColor = true;
+            this.viewSub.Appearance.ViewCaption.Options.UseTextOptions = true;
+            this.viewSub.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.viewSub.ColumnPanelRowHeight = 30;
+            this.viewSub.GridControl = this.gridSub;
+            this.viewSub.KeyColumns = null;
+            this.viewSub.MandatoryColumns = null;
+            this.viewSub.Name = "viewSub";
+            this.viewSub.NewRowCopyColumns = null;
+            this.viewSub.NewRowEnableColumns = null;
+            this.viewSub.OptionsBehavior.AutoExpandAllGroups = true;
+            this.viewSub.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
+            this.viewSub.OptionsClipboard.CopyColumnHeaders = DevExpress.Utils.DefaultBoolean.False;
+            this.viewSub.OptionsMenu.ShowGroupSummaryEditorItem = true;
+            this.viewSub.OptionsNavigation.AutoMoveRowFocus = false;
+            this.viewSub.OptionsPrint.AutoWidth = false;
+            this.viewSub.OptionsScrollAnnotations.ShowFocusedRow = DevExpress.Utils.DefaultBoolean.True;
+            this.viewSub.OptionsSelection.EnableAppearanceHotTrackedRow = DevExpress.Utils.DefaultBoolean.True;
+            this.viewSub.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.viewSub.OptionsView.ColumnAutoWidth = false;
+            this.viewSub.OptionsView.ShowGroupPanel = false;
+            this.viewSub.OptionsView.ShowGroupPanelColumnsAsSingleRow = true;
+            this.viewSub.RowHeight = 29;
+            this.viewSub.ViewCaptionHeight = 25;
+            this.viewSub.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.viewList_InitNewRow);
             // 
             // grpSmall
             // 
@@ -444,7 +444,7 @@ namespace EBAP.UI.BSE.COM
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.gridDetail;
+            this.layoutControlItem3.Control = this.gridSub;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(964, 371);
@@ -514,14 +514,14 @@ namespace EBAP.UI.BSE.COM
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridGroup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
             this.layoutControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewSub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpSmall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
@@ -544,16 +544,16 @@ namespace EBAP.UI.BSE.COM
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private Win.ControlLibrary.PTextEdit txtGroup;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
-        private Win.ControlLibrary.PGridControl gridGroup;
-        private Win.ControlLibrary.PGridView viewGroup;
+        private Win.ControlLibrary.PGridControl gridMain;
+        private Win.ControlLibrary.PGridView viewMain;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControl layoutControl3;
         private DevExpress.XtraLayout.LayoutControlGroup grpLarge;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControl layoutControl4;
-        private Win.ControlLibrary.PGridControl gridDetail;
-        private Win.ControlLibrary.PGridView viewDetail;
+        private Win.ControlLibrary.PGridControl gridSub;
+        private Win.ControlLibrary.PGridView viewSub;
         private DevExpress.XtraLayout.LayoutControlGroup grpSmall;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private Win.ControlLibrary.PComboBoxEdit cboUseFlag;

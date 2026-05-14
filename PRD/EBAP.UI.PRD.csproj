@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>D:\004.%28주%29한국제일_소스\EBAP23%28한국제일_240823%29\dlls\EBAP.UI.PRD.xml</DocumentationFile>
+    <DocumentationFile>..\..\dlls\EBAP.UI.PRD.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

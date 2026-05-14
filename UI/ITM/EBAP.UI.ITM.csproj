@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>D:\004.%28주%29한국제일_소스\EBAP23%28한국제일_240823%29\dlls\EBAP.UI.ITM.xml</DocumentationFile>
+    <DocumentationFile>..\..\dlls\EBAP.UI.ITM.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -87,23 +87,54 @@
       <Project>{5eb313de-1422-4db5-9061-a53f61eecd48}</Project>
       <Name>EBAP.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Data\CodeUtil\EBAP.Data.CodeUtil.csproj">
+      <Project>{DFC71D88-7E59-4F0D-943D-FC97D7F69EF1}</Project>
+      <Name>EBAP.Data.CodeUtil</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Win\BaseFrame\EBAP.Win.BaseFrame.csproj">
       <Project>{5939a38b-f978-4e0c-bc98-63f44135ab1a}</Project>
       <Name>EBAP.Win.BaseFrame</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Materials.resx">
-      <DependentUpon>Materials.cs</DependentUpon>
+    <EmbeddedResource Include="Product\Material.resx">
+      <DependentUpon>Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\MixingRecipe.resx">
+      <DependentUpon>MixingRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Materials.cs">
+    <Compile Include="Product\Material.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materials.Designer.cs">
-      <DependentUpon>Materials.cs</DependentUpon>
+    <Compile Include="Product\Material.Designer.cs">
+      <DependentUpon>Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\MixingRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\MixingRecipe.Designer.cs">
+      <DependentUpon>MixingRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

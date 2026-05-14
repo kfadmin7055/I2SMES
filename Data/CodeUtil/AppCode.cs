@@ -2,6 +2,8 @@
 using EBAP.Business.WSBiz;
 using EBAP.Core.Collections;
 using EBAP.Core.Info;
+using I2S.SQL.COMMON.DATA.OraData.Base;
+using I2S.SQL.COMMON.DATA.OraData.Item;
 
 namespace EBAP.Data.CodeUtil
 {
@@ -11,7 +13,7 @@ namespace EBAP.Data.CodeUtil
     /// <remarks>
     /// 2016-06-17 최초생성 : 오인봉
     /// 변경내역
-    /// 
+    /// EBAP.Data.CodeUtil.AppCode
     /// </remarks>
     public static class AppCode
     {
@@ -562,6 +564,38 @@ namespace EBAP.Data.CodeUtil
             }
 
             return obj == null ? "" : obj.ToString();
+        }
+
+        #endregion
+
+        #region :: PRODUCT :: Product Type를 가져옵니다.
+
+        /// <summary>
+        /// MES 의 공통코드 데이터를 가져옵니다.
+        /// </summary>
+        /// <param name="reference"></param>
+        /// <param name="pCodeValue"></param>
+        /// <param name="codeValue"></param>
+        /// <param name="includedisplay"></param>
+        /// <returns></returns>
+        public static DataTable GetMESCommonCode(string reference, string pCodeValue, string codeValue = "", string includedisplay = "N")
+        {
+            DataTable dt;
+
+            string queryId = Q_COMMON_CODE.GetCommonCombo(reference);
+
+            string[] paramList = new string[] { "PCODEVALUE",
+                                                "INCLUDEDISPLAY" };
+
+            object[] valueList = new object[] { pCodeValue,
+                                                includedisplay };
+
+            using (OraBiz wb = new OraBiz(AppConfig.WEBSERVICEURL))
+            {
+                dt = wb.NTx_ExecuteDataSet(ConnectionString.ORAMESDB, queryId, AppConfig.COMMANDTEXT, paramList, valueList).Tables[0];
+            }
+
+            return dt;
         }
 
         #endregion

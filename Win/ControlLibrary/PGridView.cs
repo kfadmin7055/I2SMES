@@ -1089,40 +1089,117 @@ namespace EBAP.Win.ControlLibrary
 
             RepositoryItemLookUpEdit edit = RepositoryItemEditor.ComboBoxEdit(dt, selectAllItemVisible, showCodeColumn, valueMember, displayMember);
 
-            //RepositoryItemLookUpEdit edit = new RepositoryItemLookUpEdit();
+            gridColumn.ColumnEdit = edit;
+        }
 
-            //DataRow dr;
-            //if (selectAllItemVisible)
-            //{
-            //    dr = dt.NewRow();
+        #endregion
 
-            //    if (dt.Columns[valueMember].DataType == Type.GetType("System.String"))
-            //        dr[valueMember] = "";
-            //    else
-            //        dr[valueMember] = -1;
+        #region :: InitSearchComboBoxColumn(+1 Overloading) :: ComboBoxColumn Data를 초기화합니다.
 
-            //    dr[displayMember] = "전체";
-            //    dt.Rows.InsertAt(dr, 0);
-            //}
+        /// <summary>
+        /// ComboBoxColumn Data를 초기화합니다.
+        /// </summary>
+        /// <param name="fieldName">Column Field 명</param>
+        /// <param name="valueList">Value가 될 배열</param>
+        /// <param name="displayList">Text가 될 배열</param>
+        /// <remarks>
+        /// 2016-05-17 최초생성 : 오인봉
+        /// 변경내역
+        /// 
+        /// </remarks>
+        public void InitSearchComboBoxColumn(string fieldName, object[] valueList, string[] displayList)
+        {
+            InitSearchComboBoxColumn(fieldName, valueList, displayList, false, false);
+        }
 
-            //edit.Appearance.Font = ControlConfig.DEFAULTFONT;
-            //edit.AppearanceDropDown.Font = ControlConfig.DEFAULTFONT;
-            //edit.AppearanceDropDownHeader.Font = ControlConfig.DEFAULTFONT;
-            //edit.NullText = "";
-            //edit.DataSource = dt;
-            //edit.ValueMember = valueMember;
-            //edit.DisplayMember = displayMember;
-            ////string[] columns = dt.GetColumnsFromDataTable();
-            ////Array.ForEach(columns, column =>
-            ////{
-            ////    edit.Columns.Add(column == valueMember ? CreateColumn(column, column, 70, HorzAlignment.Center, showCodeColumnVisible) : CreateColumn(column, column, 120, HorzAlignment.Default, true));
-            ////});
+        /// <summary>
+        /// ComboBoxColumn Data를 초기화합니다.
+        /// </summary>
+        /// <param name="fieldName">Column Field 명</param>
+        /// <param name="valueList">Value가 될 배열</param>
+        /// <param name="displayList">Text가 될 배열</param>
+        /// <param name="selectAllItemVisible">전체선택 숨김/보임</param>
+        /// <param name="showCodeColumn">Code Column 숨김/보임</param>
+        /// <remarks>
+        /// 2016-05-17 최초생성 : 오인봉
+        /// 변경내역
+        /// 
+        /// </remarks>
+        public void InitSearchComboBoxColumn(string fieldName, object[] valueList, string[] displayList, bool selectAllItemVisible, bool showCodeColumn)
+        {
+            if (valueList.Length != displayList.Length)
+                return;
 
-            //edit.Columns.Add(ControlUtil.CreateLookUpColumn(valueMember, valueMember, 70, HorzAlignment.Center, showCodeColumn));
-            //edit.Columns.Add(ControlUtil.CreateLookUpColumn(displayMember, displayMember, 120, HorzAlignment.Default, true));
+            ILocaleConverter ui = (GridControl.FindForm()) as ILocaleConverter;
 
-            //edit.ShowHeader = false;
-            //edit.TextEditStyle = TextEditStyles.DisableTextEditor;
+            using (DataTable dt = new DataTable())
+            {
+                dt.Columns.Add(AppConfig.VALUEMEMBER);
+                dt.Columns.Add(AppConfig.DISPLAYMEMBER);
+                for (int idx = 0; idx < valueList.Length; idx++)
+                {
+                    DataRow dr = dt.NewRow();
+                    dr[AppConfig.VALUEMEMBER] = valueList[idx].ToString().Trim();
+                    dr[AppConfig.DISPLAYMEMBER] = ui == null ? displayList[idx] : ui.LOCALECONVERTER.GetLocaleString(displayList[idx]);
+                    dt.Rows.Add(dr);
+                }
+                InitSearchComboBoxColumn(fieldName, dt, selectAllItemVisible, showCodeColumn);
+            }
+        }
+
+        /// <summary>
+        /// ComboBoxColumn Data를 초기화합니다.
+        /// </summary>
+        /// <param name="fieldName">Column Field 명</param>
+        /// <param name="dt">Datasource 가 될 DataTable</param>
+        /// <remarks>
+        /// 2016-05-17 최초생성 : 오인봉
+        /// 변경내역
+        /// 
+        /// </remarks>
+        public void InitSearchComboBoxColumn(string fieldName, DataTable dt)
+        {
+            InitSearchComboBoxColumn(fieldName, dt, false, false, AppConfig.VALUEMEMBER, AppConfig.DISPLAYMEMBER);
+        }
+
+        /// <summary>
+        /// ComboBoxColumn Data를 초기화합니다.
+        /// </summary>
+        /// <param name="fieldName">Column Field 명</param>
+        /// <param name="dt">Datasource 가 될 DataTable</param>
+        /// <param name="selectAllItemVisible">전체선택 숨김/보임</param>
+        /// <param name="showCodeColumn">Code Column 숨김/보임</param>
+        /// <remarks>
+        /// 2016-05-17 최초생성 : 오인봉
+        /// 변경내역
+        /// 
+        /// </remarks>
+        public void InitSearchComboBoxColumn(string fieldName, DataTable dt, bool selectAllItemVisible, bool showCodeColumn)
+        {
+            InitSearchComboBoxColumn(fieldName, dt, selectAllItemVisible, showCodeColumn, AppConfig.VALUEMEMBER, AppConfig.DISPLAYMEMBER);
+        }
+
+        /// <summary>
+        /// ComboBoxColumn Data를 초기화합니다.
+        /// </summary>
+        /// <param name="fieldName">Column Field 명</param>
+        /// <param name="dt">Datasource 가 될 DataTable</param>
+        /// <param name="selectAllItemVisible">전체선택 숨김/보임</param>
+        /// <param name="showCodeColumn">Code Column 숨김/보임</param>
+        /// <param name="valueMember">ValueMember 명</param>
+        /// <param name="displayMember">DisplayMemeber 명</param>
+        /// <remarks>
+        /// 2016-05-17 최초생성 : 오인봉
+        /// 변경내역
+        /// 
+        /// </remarks>
+        public void InitSearchComboBoxColumn(string fieldName, DataTable dt, bool selectAllItemVisible, bool showCodeColumn, string valueMember, string displayMember)
+        {
+            GridColumn gridColumn = Columns[fieldName];
+
+            if (gridColumn == null) return;
+
+            RepositoryItemLookUpEdit edit = RepositoryItemEditor.ComboBoxEdit(dt, selectAllItemVisible, showCodeColumn, valueMember, displayMember);
 
             gridColumn.ColumnEdit = edit;
         }

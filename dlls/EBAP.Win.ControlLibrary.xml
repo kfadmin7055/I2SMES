@@ -2397,6 +2397,28 @@
             이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
             </summary>
         </member>
+        <member name="T:EBAP.Win.ControlLibrary.PSearchComboBoxEdit">
+            <summary>
+            SearchLookUpEdit Control
+            </summary>
+        </member>
+        <member name="F:EBAP.Win.ControlLibrary.PSearchComboBoxEdit.components">
+            <summary>
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PSearchComboBoxEdit.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PSearchComboBoxEdit.InitializeComponent">
+            <summary>
+            디자이너 지원에 필요한 메서드입니다.
+            이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+            </summary>
+        </member>
         <member name="T:EBAP.Win.ControlLibrary.PComboBoxEdit">
              <summary>
              ComboBox Edit 입니다.
@@ -3397,6 +3419,76 @@
             </remarks>
         </member>
         <member name="M:EBAP.Win.ControlLibrary.PGridView.InitComboBoxColumn(System.String,System.Data.DataTable,System.Boolean,System.Boolean,System.String,System.String)">
+            <summary>
+            ComboBoxColumn Data를 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="dt">Datasource 가 될 DataTable</param>
+            <param name="selectAllItemVisible">전체선택 숨김/보임</param>
+            <param name="showCodeColumn">Code Column 숨김/보임</param>
+            <param name="valueMember">ValueMember 명</param>
+            <param name="displayMember">DisplayMemeber 명</param>
+            <remarks>
+            2016-05-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PGridView.InitSearchComboBoxColumn(System.String,System.Object[],System.String[])">
+            <summary>
+            ComboBoxColumn Data를 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="valueList">Value가 될 배열</param>
+            <param name="displayList">Text가 될 배열</param>
+            <remarks>
+            2016-05-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PGridView.InitSearchComboBoxColumn(System.String,System.Object[],System.String[],System.Boolean,System.Boolean)">
+            <summary>
+            ComboBoxColumn Data를 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="valueList">Value가 될 배열</param>
+            <param name="displayList">Text가 될 배열</param>
+            <param name="selectAllItemVisible">전체선택 숨김/보임</param>
+            <param name="showCodeColumn">Code Column 숨김/보임</param>
+            <remarks>
+            2016-05-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PGridView.InitSearchComboBoxColumn(System.String,System.Data.DataTable)">
+            <summary>
+            ComboBoxColumn Data를 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="dt">Datasource 가 될 DataTable</param>
+            <remarks>
+            2016-05-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PGridView.InitSearchComboBoxColumn(System.String,System.Data.DataTable,System.Boolean,System.Boolean)">
+            <summary>
+            ComboBoxColumn Data를 초기화합니다.
+            </summary>
+            <param name="fieldName">Column Field 명</param>
+            <param name="dt">Datasource 가 될 DataTable</param>
+            <param name="selectAllItemVisible">전체선택 숨김/보임</param>
+            <param name="showCodeColumn">Code Column 숨김/보임</param>
+            <remarks>
+            2016-05-17 최초생성 : 오인봉
+            변경내역
+            
+            </remarks>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PGridView.InitSearchComboBoxColumn(System.String,System.Data.DataTable,System.Boolean,System.Boolean,System.String,System.String)">
             <summary>
             ComboBoxColumn Data를 초기화합니다.
             </summary>
@@ -5656,20 +5748,34 @@
             </summary>
         </member>
         <member name="T:EBAP.Win.ControlLibrary.PSearchControl">
-             <summary>
-             SearchControl 입니다.
-             DevExpress SearchControl을 Wrapping 하여 사용합니다.
-             </summary>
-             <remarks>
-             2023-02-01 최초생성 : 오인봉
-             변경내역
-            
-             </remarks>
+            <summary>
+            SearchControl 입니다.
+            DevExpress SearchControl을 Wrapping 하여 사용합니다.
+            </summary>
         </member>
         <member name="M:EBAP.Win.ControlLibrary.PSearchControl.#ctor">
             <summary>
             Search Control을 생성합니다.
             </summary>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PSearchControl.InitControl">
+            <summary>
+            기본 설정 초기화
+            </summary>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PSearchControl.SetSearchClient(DevExpress.Utils.ISearchControlClient)">
+            <summary>
+            SearchControl Client 설정
+            </summary>
+            <param name="clientControl"></param>
+        </member>
+        <member name="M:EBAP.Win.ControlLibrary.PSearchControl.SetSearchClient(DevExpress.Utils.ISearchControlClient,System.String,System.Int32)">
+            <summary>
+            SearchControl Client 설정
+            </summary>
+            <param name="clientControl"></param>
+            <param name="promptText"></param>
+            <param name="findDelay"></param>
         </member>
         <member name="P:EBAP.Win.ControlLibrary.PSearchControl.IsInitEditValue">
             <summary>
@@ -5683,7 +5789,7 @@
         </member>
         <member name="P:EBAP.Win.ControlLibrary.PSearchControl.CheckModified">
             <summary>
-            일괄 초기화 여부를 설정합니다.
+            EditValue의 변경 Check 여부를 설정합니다.
             </summary>
         </member>
         <member name="P:EBAP.Win.ControlLibrary.PSearchControl.IsMandatoryForSave">
@@ -5703,7 +5809,7 @@
         </member>
         <member name="M:EBAP.Win.ControlLibrary.PSearchControl.GetControlParamValue">
             <summary>
-            
+            Parameter Value 반환
             </summary>
             <returns></returns>
         </member>
@@ -5714,7 +5820,7 @@
         </member>
         <member name="P:EBAP.Win.ControlLibrary.PSearchControl.LocaleEnumClass">
             <summary>
-            Database Parameter Name 입니다.
+            다국어 ID
             </summary>
         </member>
         <member name="M:EBAP.Win.ControlLibrary.PSearchControl.SetLocaleString">
@@ -5744,32 +5850,22 @@
             자동으로 조회되는 길이를 설정합니다.
             </summary>
         </member>
-        <member name="P:EBAP.Win.ControlLibrary.PSearchControl.EqualControlNextSeq">
-            <summary>
-            동일한 Type의 컨트롤 다음 Seq를 반환합니다.
-            </summary>
-        </member>
-        <member name="P:EBAP.Win.ControlLibrary.PSearchControl.EqualTotalControlNextSeq">
-            <summary>
-            종속된 상위 컨트롤내에서 동일한 Type의 컨트롤 다음 Seq를 반환합니다.
-            </summary>
-        </member>
         <member name="M:EBAP.Win.ControlLibrary.PSearchControl.SetSuperToolTip(System.String,System.String)">
             <summary>
-            ToolTip을 설정합니다.
+            ToolTip 설정
             </summary>
-            <param name="title">ToolTip 제목</param>
-            <param name="contents">내용</param>
+            <param name="title"></param>
+            <param name="contents"></param>
         </member>
         <member name="M:EBAP.Win.ControlLibrary.PSearchControl.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
             <summary>
-            Enter Key를 입력하면 조회 이벤트를 실행합니다.
+            Enter Key 입력시 조회 이벤트 실행
             </summary>
             <param name="e"></param>
         </member>
         <member name="M:EBAP.Win.ControlLibrary.PSearchControl.OnPopupSelectedIndexChanged">
             <summary>
-            
+            Popup 선택 변경시 조회 이벤트 실행
             </summary>
         </member>
         <member name="M:EBAP.Win.ControlLibrary.PSearchControl.OnLostFocus(System.EventArgs)">

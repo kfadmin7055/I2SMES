@@ -1,4 +1,6 @@
 ﻿using DevExpress.Utils;
+using DevExpress.Utils.Menu;
+using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Drawing;
 using DevExpress.XtraLayout;
 using EBAP.Core.Interface;
@@ -13,13 +15,15 @@ namespace EBAP.Win.ControlLibrary
     /// SearchControl 입니다.
     /// DevExpress SearchControl을 Wrapping 하여 사용합니다.
     /// </summary>
-    /// <remarks>
-    /// 2023-02-01 최초생성 : 오인봉
-    /// 변경내역
-    ///
-    /// </remarks>
     [ToolboxItem(true)]
-    public partial class PSearchControl : DevExpress.XtraEditors.SearchControl, IInitEditValue, ICheckModified, IDBParams, IEnterKeySelectEvent, IBindings, ILocaleCtrl, IMandatory
+    public partial class PSearchControl : DevExpress.XtraEditors.SearchControl
+        , IInitEditValue
+        , ICheckModified
+        , IDBParams
+        , IEnterKeySelectEvent
+        , IBindings
+        , ILocaleCtrl
+        , IMandatory
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////
         // Constructor & Global Instance
@@ -33,11 +37,71 @@ namespace EBAP.Win.ControlLibrary
         public PSearchControl()
         {
             InitializeComponent();
+
+            InitControl();
         }
 
         #endregion
 
         #region :: 전역변수 ::
+
+        #endregion
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        // Initialize
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+
+        #region :: InitControl ::
+
+        /// <summary>
+        /// 기본 설정 초기화
+        /// </summary>
+        private void InitControl()
+        {
+            Properties.FindDelay = 100;
+
+            Properties.NullValuePrompt = "검색어 입력";
+
+            Properties.NullValuePromptShowForEmptyValue = true;
+
+            Properties.ShowClearButton = true;
+
+            Properties.ShowSearchButton = true;
+
+            Properties.AllowHtmlDraw = DefaultBoolean.True;
+        }
+
+        #endregion
+
+        #region :: SetSearchClient ::
+
+        /// <summary>
+        /// SearchControl Client 설정
+        /// </summary>
+        /// <param name="clientControl"></param>
+        public void SetSearchClient(ISearchControlClient clientControl)
+        {
+            Client = clientControl;
+        }
+
+        /// <summary>
+        /// SearchControl Client 설정
+        /// </summary>
+        /// <param name="clientControl"></param>
+        /// <param name="promptText"></param>
+        /// <param name="findDelay"></param>
+        public void SetSearchClient(
+            ISearchControlClient clientControl,
+            string promptText,
+            int findDelay = 100)
+        {
+            Client = clientControl;
+
+            Properties.FindDelay = findDelay;
+
+            Properties.NullValuePrompt = promptText;
+        }
 
         #endregion
 
@@ -72,7 +136,7 @@ namespace EBAP.Win.ControlLibrary
         #region IModifiedCheck 멤버
 
         /// <summary>
-        /// 일괄 초기화 여부를 설정합니다.
+        /// EditValue의 변경 Check 여부를 설정합니다.
         /// </summary>
         [Category("EBAP"), DefaultValue(false), Browsable(true)]
         [Description("EditValue의 변경 Check 여부를 설정합니다.")]
@@ -100,13 +164,16 @@ namespace EBAP.Win.ControlLibrary
             {
                 _ismandatoryforsave = value;
 
-                if (DesignMode) return;
+                if (DesignMode)
+                    return;
 
-                //BackColor = value ? ControlConfig.MANDATORYBACKCOLOR : ControlConfig.EMPTYCOLOR;
-                //ForeColor = value ? ControlConfig.SELECTEVENTFORECOLOR : ControlConfig.EMPTYCOLOR;
+                BorderStyle = value
+                    ? DevExpress.XtraEditors.Controls.BorderStyles.Simple
+                    : DevExpress.XtraEditors.Controls.BorderStyles.Default;
 
-                BorderStyle = value ? DevExpress.XtraEditors.Controls.BorderStyles.Simple : DevExpress.XtraEditors.Controls.BorderStyles.Default;
-                Properties.Appearance.BorderColor = value ? ControlConfig.MANDATORYBORDERCOLOR : ControlConfig.EMPTYCOLOR;
+                Properties.Appearance.BorderColor = value
+                    ? ControlConfig.MANDATORYBORDERCOLOR
+                    : ControlConfig.EMPTYCOLOR;
             }
         }
 
@@ -124,10 +191,16 @@ namespace EBAP.Win.ControlLibrary
             {
                 _ismandatoryforselect = value;
 
-                if (DesignMode) return;
+                if (DesignMode)
+                    return;
 
-                BorderStyle = value ? DevExpress.XtraEditors.Controls.BorderStyles.Simple : DevExpress.XtraEditors.Controls.BorderStyles.Default;
-                Properties.Appearance.BorderColor = value ? ControlConfig.MANDATORYBORDERCOLOR : ControlConfig.EMPTYCOLOR;
+                BorderStyle = value
+                    ? DevExpress.XtraEditors.Controls.BorderStyles.Simple
+                    : DevExpress.XtraEditors.Controls.BorderStyles.Default;
+
+                Properties.Appearance.BorderColor = value
+                    ? ControlConfig.MANDATORYBORDERCOLOR
+                    : ControlConfig.EMPTYCOLOR;
             }
         }
 
@@ -147,7 +220,7 @@ namespace EBAP.Win.ControlLibrary
         }
 
         /// <summary>
-        /// 
+        /// Parameter Value 반환
         /// </summary>
         /// <returns></returns>
         public object GetControlParamValue()
@@ -173,13 +246,16 @@ namespace EBAP.Win.ControlLibrary
             {
                 _enterkeyselectevent = value;
 
-                if (DesignMode) return;
+                if (DesignMode)
+                    return;
 
-                BorderStyle = value ? DevExpress.XtraEditors.Controls.BorderStyles.Simple : DevExpress.XtraEditors.Controls.BorderStyles.Default;
-                Properties.Appearance.BorderColor = value ? ControlConfig.SELECTEVENTBORDERCOLOR : ControlConfig.EMPTYCOLOR;
+                BorderStyle = value
+                    ? DevExpress.XtraEditors.Controls.BorderStyles.Simple
+                    : DevExpress.XtraEditors.Controls.BorderStyles.Default;
 
-                //BackColor = value ? ControlConfig.SELECTEVENTBACKCOLOR : ControlConfig.EMPTYCOLOR;
-                //ForeColor = value ? ControlConfig.SELECTEVENTFORECOLOR : ControlConfig.EMPTYCOLOR;
+                Properties.Appearance.BorderColor = value
+                    ? ControlConfig.SELECTEVENTBORDERCOLOR
+                    : ControlConfig.EMPTYCOLOR;
             }
         }
 
@@ -188,7 +264,7 @@ namespace EBAP.Win.ControlLibrary
         #region ILocaleCtrl 멤버
 
         /// <summary>
-        /// Database Parameter Name 입니다.
+        /// 다국어 ID
         /// </summary>
         [Category("EBAP"), DefaultValue(""), Browsable(true)]
         [Description("다국어 ID 입니다.")]
@@ -205,24 +281,33 @@ namespace EBAP.Win.ControlLibrary
         {
             if (AdvancedMode && Properties.UseAdvancedMode == DefaultBoolean.True)
             {
-                if (Parent is LayoutControl) (Parent as LayoutControl).GetItemByControl(this).TextVisible = false;
+                if (Parent is LayoutControl)
+                    (Parent as LayoutControl).GetItemByControl(this).TextVisible = false;
 
                 if (LocaleEnumClass == null || LocaleEnumClass == string.Empty)
                 {
-                    if (Parent is LayoutControl) Properties.AdvancedModeOptions.Label = (Parent as LayoutControl).GetItemByControl(this).Text;
+                    if (Parent is LayoutControl)
+                        Properties.AdvancedModeOptions.Label =
+                            (Parent as LayoutControl).GetItemByControl(this).Text;
                 }
                 else
-                    Properties.AdvancedModeOptions.Label = (FindForm() as ILocaleConverter).LOCALECONVERTER.GetLocaleString(LocaleEnumClass);
+                {
+                    Properties.AdvancedModeOptions.Label =
+                        (FindForm() as ILocaleConverter)
+                        .LOCALECONVERTER
+                        .GetLocaleString(LocaleEnumClass);
+                }
             }
 
             if (Parent is LayoutControl)
-                (Parent as LayoutControl).GetItemByControl(this).Text = (FindForm() as ILocaleConverter).LOCALECONVERTER.GetLocaleString(LocaleEnumClass);
-
-            //if (AdvancedMode && Parent is LayoutControl && !(Parent as LayoutControl).GetItemByControl(this).TextVisible)
-            //    Properties.AdvancedModeOptions.Label = (FindForm() as ILocaleConverter).LOCALECONVERTER.GetLocaleString(LocaleEnumClass);
-
-            //if (Parent is LayoutControl)
-            //    (Parent as LayoutControl).GetItemByControl(this).Text = (FindForm() as ILocaleConverter).LOCALECONVERTER.GetLocaleString(LocaleEnumClass);
+            {
+                (Parent as LayoutControl)
+                    .GetItemByControl(this)
+                    .Text =
+                    (FindForm() as ILocaleConverter)
+                    .LOCALECONVERTER
+                    .GetLocaleString(LocaleEnumClass);
+            }
         }
 
         #endregion
@@ -248,12 +333,20 @@ namespace EBAP.Win.ControlLibrary
         public void BindingMapping(DataTable dt, string dataMember)
         {
             DataBindings.Clear();
-            DataBindings.Add("EditValue", dt, dataMember, false, DataSourceUpdateMode.OnPropertyChanged, "");
+
+            DataBindings.Add(
+                "EditValue",
+                dt,
+                dataMember,
+                false,
+                DataSourceUpdateMode.OnPropertyChanged,
+                ""
+            );
         }
 
         #endregion
 
-        #region :: TrimText :: Trim 된 텍스트를 반환합니다.
+        #region :: TrimText ::
 
         /// <summary>
         /// Trim 된 텍스트를 반환합니다.
@@ -262,12 +355,17 @@ namespace EBAP.Win.ControlLibrary
         [Description("Trim 된 텍스트를 반환합니다.")]
         public string TrimText
         {
-            get { return EditValue.ToString().Trim(); }
+            get
+            {
+                return EditValue == null
+                    ? string.Empty
+                    : EditValue.ToString().Trim();
+            }
         }
 
         #endregion
 
-        #region :: AutoSelectLength :: 자동으로 조회되는 길이를 설정합니다.
+        #region :: AutoSelectLength ::
 
         /// <summary>
         /// 자동으로 조회되는 길이를 설정합니다.
@@ -282,13 +380,9 @@ namespace EBAP.Win.ControlLibrary
 
         #endregion
 
-        #region :: EqualControlNextSeq :: 동일한 Type의 컨트롤 다음 Seq를 반환합니다.
+        #region :: EqualControlNextSeq ::
 
-        /// <summary>
-        /// 동일한 Type의 컨트롤 다음 Seq를 반환합니다.
-        /// </summary>
         [Category("EBAP"), DefaultValue(""), Browsable(true)]
-        [Description("동일한 Type의 컨트롤 다음 Seq를 반환합니다.")]
         public int EqualControlNextSeq
         {
             get;
@@ -297,13 +391,9 @@ namespace EBAP.Win.ControlLibrary
 
         #endregion
 
-        #region :: EqualTotalControlNextSeq :: 종속된 상위 컨트롤내에서 동일한 Type의 컨트롤 다음 Seq를 반환합니다.
+        #region :: EqualTotalControlNextSeq ::
 
-        /// <summary>
-        /// 종속된 상위 컨트롤내에서 동일한 Type의 컨트롤 다음 Seq를 반환합니다.
-        /// </summary>
         [Category("EBAP"), DefaultValue(""), Browsable(true)]
-        [Description("종속된 상위 컨트롤내에서 동일한 Type의 컨트롤 다음 Seq를 반환합니다.")]
         public int EqualTotalControlNextSeq
         {
             get;
@@ -317,23 +407,29 @@ namespace EBAP.Win.ControlLibrary
         // Method(Public)
         ///////////////////////////////////////////////////////////////////////////////////////////////
 
-        #region :: SetSuperToolTip :: ToolTip을 설정합니다.
+        #region :: SetSuperToolTip ::
 
         /// <summary>
-        /// ToolTip을 설정합니다.
+        /// ToolTip 설정
         /// </summary>
-        /// <param name="title">ToolTip 제목</param>
-        /// <param name="contents">내용</param>
+        /// <param name="title"></param>
+        /// <param name="contents"></param>
         public void SetSuperToolTip(string title, string contents)
         {
             SuperToolTip sTip = new SuperToolTip();
+
             ToolTipTitleItem tTitle = new ToolTipTitleItem();
+
             ToolTipItem tContents = new ToolTipItem();
 
             tTitle.Text = title;
+
             tContents.Text = contents;
+
             tContents.LeftIndent = 6;
+
             sTip.Items.Add(tTitle);
+
             sTip.Items.Add(tContents);
 
             SuperTip = sTip;
@@ -343,51 +439,41 @@ namespace EBAP.Win.ControlLibrary
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////
-        // Override(Event, Properties, Method...)
+        // Override
         ///////////////////////////////////////////////////////////////////////////////////////////////
 
-        #region :: OnKeyDown :: Enter Key를 입력하면 조회 이벤트를 실행합니다.
+        #region :: OnKeyDown ::
 
         /// <summary>
-        /// Enter Key를 입력하면 조회 이벤트를 실행합니다.
+        /// Enter Key 입력시 조회 이벤트 실행
         /// </summary>
         /// <param name="e"></param>
         protected override void OnKeyDown(KeyEventArgs e)
         {
             base.OnKeyDown(e);
 
-            if (!EnterKeySelectEvent || e.KeyCode != Keys.Enter) return;
+            if (!EnterKeySelectEvent || e.KeyCode != Keys.Enter)
+                return;
 
             (FindForm() as IRaiseEvent).RaiseSelectEvent();
         }
 
         /// <summary>
-        /// 
+        /// Popup 선택 변경시 조회 이벤트 실행
         /// </summary>
         protected override void OnPopupSelectedIndexChanged()
         {
             base.OnPopupSelectedIndexChanged();
 
-            if (!EnterKeySelectEvent) return;
+            if (!EnterKeySelectEvent)
+                return;
 
             (FindForm() as IRaiseEvent).RaiseSelectEvent();
         }
 
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        //protected override void OnEditValueChanged()
-        //{
-        //    base.OnEditValueChanged();
-
-        //    if (AutoSelectLength == 0 || TrimText.Length < AutoSelectLength) return;
-
-        //    (FindForm() as IRaiseEvent).RaiseSelectEvent();
-        //}
-
         #endregion
 
-        #region :: OnLostFocus :: Focus를 잃을 때 수정된 내용이 있으면 MainFrame 에 표시합니다.
+        #region :: OnLostFocus ::
 
         /// <summary>
         /// Focus를 잃을 때 수정된 내용이 있으면 MainFrame 에 표시합니다.
@@ -397,7 +483,8 @@ namespace EBAP.Win.ControlLibrary
         {
             base.OnLostFocus(e);
 
-            if (!CheckModified || !IsModified) return;
+            if (!CheckModified || !IsModified)
+                return;
 
             (FindForm() as IFrameUI).ISMODIFIED = true;
         }
